@@ -1,0 +1,25 @@
+{
+  "completed_units": [
+    "finish",
+    "reservation"
+  ],
+  "executed_units": [
+    "reconcile:reservation",
+    "approval_without_obligation:reservation",
+    "reservation",
+    "finish"
+  ],
+  "final_ledger": {
+    "reserve": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-2fd72f5d-8ae6-4ef4-99e2-5cbe3516989b",
+    "checkpoint_count": 6,
+    "native_action_executors": 4
+  }
+}

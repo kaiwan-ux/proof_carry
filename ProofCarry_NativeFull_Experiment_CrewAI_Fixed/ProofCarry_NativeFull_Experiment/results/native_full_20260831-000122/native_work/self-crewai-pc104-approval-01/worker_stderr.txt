@@ -1,0 +1,14 @@
+
+thread '<unnamed>' (13504) panicked at C:\Users\runneradmin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-0.26.0\src\types\dict.rs:448:21:
+dictionary changed size during iteration
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+--- PyO3 is resuming a panic after fetching a PanicException from Python. ---
+Python stack trace below:
+Traceback (most recent call last):
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\crewai\state\runtime.py", line 197, in _serialize
+    "event_record": self._event_record.model_dump(mode="json"),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\pydantic\main.py", line 464, in model_dump
+    return self.__pydantic_serializer__.to_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyo3_runtime.PanicException: dictionary changed size during iteration

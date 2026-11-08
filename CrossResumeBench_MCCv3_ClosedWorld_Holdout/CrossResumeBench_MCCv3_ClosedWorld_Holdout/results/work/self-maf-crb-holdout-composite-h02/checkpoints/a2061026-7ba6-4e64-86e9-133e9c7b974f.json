@@ -1,0 +1,19 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-composite-h02-self-maf-crb-holdout-composite-h02",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "a2061026-7ba6-4e64-86e9-133e9c7b974f",
+  "previous_checkpoint_id": "6d419b9c-1aa6-4a9e-bf90-bf3651931e64",
+  "timestamp": "2026-08-27T19:10:07.151546+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

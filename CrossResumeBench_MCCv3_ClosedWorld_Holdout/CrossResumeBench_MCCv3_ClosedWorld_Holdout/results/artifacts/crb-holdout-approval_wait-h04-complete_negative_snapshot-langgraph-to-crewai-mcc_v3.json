@@ -1,0 +1,123 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h04-complete_negative_snapshot-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-approval_wait-h04",
+    "family": "approval_wait",
+    "evidence_variant": "complete_negative_snapshot",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 915,
+    "payload_sha256": "d9d7c37be82f102f182154cc9e1abcbf3381508808b0f7b9847f79eff777a6ee",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-approval_wait-h04",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "e5df9785170b0edbbb3d3f27abcc6539f597a4ede1e15d8310973e590964ae2d",
+    "continuation_contract_hash": "1ec0a87d81fe1f78edd176ee7fbce1beb6ee6716b7ed3fb57b42d44463895515",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": [
+      {
+        "certificate_id": "e16ac34035cb00ae0da5",
+        "fact_type": "obligation_snapshot",
+        "subject": "approval",
+        "value": {
+          "kind": "approval",
+          "members": [],
+          "universe": [
+            "approve_record_purge"
+          ],
+          "complete": true
+        },
+        "scope": "crb-holdout-approval_wait-h04",
+        "evidence": {
+          "kind": "approval",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-approval_wait-h04-source-langgraph-crb-holdout-approval_wait-h04"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "1a98cad4b19220e2526dceb2d1c11ba14ca5260c5da5fdef3ce302273948cf1c"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "approval_state|approve_record_purge": [
+        "certificate:complete_snapshot"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

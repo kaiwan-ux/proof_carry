@@ -1,0 +1,12 @@
+{
+  "run_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_smoke8_fixed_20260831\\native_work\\self-crewai-pc104-callback-01",
+  "case_id": "pc104-callback-01",
+  "checkpoint_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_smoke8_fixed_20260831\\native_work\\self-crewai-pc104-callback-01\\checkpoints",
+  "store_path": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_smoke8_fixed_20260831\\native_work\\self-crewai-pc104-callback-01\\semantic_store.json",
+  "resume_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_smoke8_fixed_20260831\\native_work\\self-crewai-pc104-callback-01\\resume.gate",
+  "stop_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_smoke8_fixed_20260831\\native_work\\self-crewai-pc104-callback-01\\stop.gate",
+  "signal": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_smoke8_fixed_20260831\\native_work\\self-crewai-pc104-callback-01\\source_ready.signal",
+  "on_events": [
+    "method_execution_finished"
+  ]
+}

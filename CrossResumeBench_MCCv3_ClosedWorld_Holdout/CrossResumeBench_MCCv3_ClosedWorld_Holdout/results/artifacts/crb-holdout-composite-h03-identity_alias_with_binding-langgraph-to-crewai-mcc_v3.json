@@ -1,0 +1,333 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h03-identity_alias_with_binding-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-composite-h03",
+    "family": "composite",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 2584,
+    "payload_sha256": "df1d4f7218e7ebf58d24ebff0812618db08fe5296b489d499e3ed5e666b10662",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "kind": "compensation",
+        "action": "release_hold",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-composite-h03",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "adb89c89a09e3276e7ae3d5d0a8e3b805f4e9449c9092b67dc31dfbc19045d93",
+    "continuation_contract_hash": "2fe42dd61b81f88dd47136e1666d0dde8320d376c42961cd94743f8acbccb915",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "release_join",
+        "data": {
+          "requires": [
+            "src_alias__prepare",
+            "validate",
+            "publish"
+          ]
+        }
+      },
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "hold_attempt",
+        "data": {
+          "operation": "reservation_hold",
+          "commit_status": "unknown",
+          "parent_unit": "hold_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "compensation_required",
+        "semantic_unit": "release_comp",
+        "data": {
+          "compensation_action": "release_hold",
+          "effect": "reservation_hold"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "6f7e81ab79137d2dc0e3",
+        "fact_type": "completion_snapshot",
+        "subject": "release_join",
+        "value": {
+          "members": [
+            "src_alias__prepare"
+          ],
+          "universe": [
+            "src_alias__prepare",
+            "validate",
+            "publish"
+          ],
+          "complete": true
+        },
+        "scope": "crb-holdout-composite-h03",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h03-source-langgraph-crb-holdout-composite-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "b1859c4c2e581398796865aa752210d817e8e56377041a6a4bcdb0eb9851c597"
+      },
+      {
+        "certificate_id": "2a5a253d61419dc134ed",
+        "fact_type": "effect_commitment",
+        "subject": "reservation_hold",
+        "value": "committed",
+        "scope": "crb-holdout-composite-h03",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h03-source-langgraph-crb-holdout-composite-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "40becff47138ee5038655fb0fe5f71a3c49648d6c3fa321302dc1f54e55af8ee"
+      },
+      {
+        "certificate_id": "13a70381249d6e009aeb",
+        "fact_type": "obligation_state",
+        "subject": "release_hold",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h03",
+        "evidence": {
+          "kind": "compensation",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h03-source-langgraph-crb-holdout-composite-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "06e825a1914fb364e1ec607b56b7842a74d87216718874bbae7dc07edaaeb79e"
+      },
+      {
+        "certificate_id": "01191a97931953337f8d",
+        "fact_type": "identity_binding",
+        "subject": "src_alias__prepare",
+        "value": "prepare",
+        "scope": "crb-holdout-composite-h03",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h03-source-langgraph-crb-holdout-composite-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0a271b70aadb819a8b6f035278713fe22929f460f31f8d9f9ef9093d7c81fba7"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {
+      "src_alias__prepare": "prepare"
+    },
+    "provenance": {
+      "dependency_state|release_join": [
+        "history"
+      ],
+      "compensation_state|release_hold": [
+        "history",
+        "certificate"
+      ],
+      "effect_status|reservation_hold": [
+        "certificate"
+      ],
+      "semantic_completion|prepare": [
+        "certificate:complete_snapshot"
+      ],
+      "semantic_completion|validate": [
+        "certificate:complete_snapshot"
+      ],
+      "semantic_completion|publish": [
+        "certificate:complete_snapshot"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "validate"
+    },
+    {
+      "kind": "unit",
+      "unit": "publish"
+    },
+    {
+      "kind": "unit",
+      "unit": "release_join"
+    },
+    {
+      "kind": "compensation",
+      "action": "release_hold",
+      "unit": "release_comp"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "reservation_hold": 1
+    },
+    "units": {
+      "error_detected": 1,
+      "hold_attempt": 1,
+      "prepare": 1,
+      "publish": 1,
+      "release_comp": 1,
+      "release_join": 1,
+      "validate": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_hold": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "prepare"
+      },
+      {
+        "kind": "effect",
+        "operation": "reservation_hold",
+        "unit": "hold_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "reservation_hold": 1
+    },
+    "units": {
+      "error_detected": 1,
+      "hold_attempt": 1,
+      "prepare": 1,
+      "publish": 1,
+      "release_comp": 1,
+      "release_join": 1,
+      "validate": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_hold": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "prepare"
+      },
+      {
+        "kind": "effect",
+        "operation": "reservation_hold",
+        "unit": "hold_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

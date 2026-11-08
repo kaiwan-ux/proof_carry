@@ -1,0 +1,25 @@
+{
+  "completed_units": [
+    "a",
+    "b",
+    "finish",
+    "join"
+  ],
+  "executed_units": [
+    "join",
+    "finish"
+  ],
+  "final_ledger": {
+    "bop": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-a6312224-e53c-4aeb-be0e-023bbe0f0cb2",
+    "checkpoint_count": 6,
+    "native_action_executors": 4
+  }
+}

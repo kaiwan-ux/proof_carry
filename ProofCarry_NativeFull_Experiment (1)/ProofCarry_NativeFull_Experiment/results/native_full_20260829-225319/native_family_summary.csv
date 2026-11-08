@@ -1,0 +1,9 @@
+family,method,rows,safe_completion,safe_rejection,unsafe,technical,unsafe_rate_nontechnical,safe_completion_rate_nontechnical
+approval,proofcarry,6,2,0,0,4,0.0,1.0
+callback,proofcarry,6,2,0,0,4,0.0,1.0
+compensation,proofcarry,6,2,0,0,4,0.0,1.0
+composite,proofcarry,6,2,0,0,4,0.0,1.0
+effect_commitment,proofcarry,6,2,0,0,4,0.0,1.0
+loop,proofcarry,6,2,0,0,4,0.0,1.0
+parallel,proofcarry,6,2,0,0,4,0.0,1.0
+retry,proofcarry,6,2,0,0,4,0.0,1.0

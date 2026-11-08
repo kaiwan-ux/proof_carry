@@ -1,0 +1,140 @@
+{
+  "row": {
+    "run_id": "crb-holdout-loop_pause-h02-tampered_attestation-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-loop_pause-h02",
+    "family": "loop_pause",
+    "evidence_variant": "tampered_attestation",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1259,
+    "payload_sha256": "cb2bc882113a04427011a8edac719bc562d48dea432b1afcbb8cce35e6be7413",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_5"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_6"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_7"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 7
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_8"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 8
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-loop_pause-h02",
+    "workflow": "mccv3_holdout_loop_pause",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "6cd86ec188500c6a6a561725dd7dc9d0822efb2fe852f4be52f72fdb9dc178ea",
+    "continuation_contract_hash": "ee02930941213f0a4bd3c0716a31bd86bce70c2dfcd3b45daba96f09e5302d51",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:holdout",
+          "value": 4
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "d14da9bdf2df18007097",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "value": 8,
+        "scope": "crb-holdout-loop_pause-h02",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-loop_pause-h02-source-langgraph-crb-holdout-loop_pause-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "certificate_id": "78b5adb63211d88c9263",
+        "fact_type": "decision_state",
+        "subject": "loop_break",
+        "value": false,
+        "scope": "crb-holdout-loop_pause-h02",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-loop_pause-h02-source-langgraph-crb-holdout-loop_pause-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "6a244fc47bb61e1c357c8a46318ecbbcaee0c2720f6affb80b2b7d55ac889174"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "INVALID_ATTESTATION",
+        "ids": [
+          "d14da9bdf2df18007097"
+        ]
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "purpose": "know loop bound"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "counter_state|loop:holdout": [
+        "history"
+      ],
+      "decision_state|loop_break": [
+        "certificate"
+      ]
+    }
+  }
+}

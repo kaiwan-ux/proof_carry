@@ -1,0 +1,205 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h03-irrelevant_noise-crewai-to-maf-explicit_minimal",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-composite-h03",
+    "family": "composite",
+    "evidence_variant": "irrelevant_noise",
+    "method": "explicit_minimal",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 47,
+    "payload_sha256": "cee19dee5b7e52dec8f153c4b12e9fab5ce95850cc08d2996d2da4de23f25b46",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "explicit_minimal",
+    "privileged": true
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "validate"
+    },
+    {
+      "kind": "unit",
+      "unit": "publish"
+    },
+    {
+      "kind": "unit",
+      "unit": "release_join"
+    },
+    {
+      "action": "release_hold",
+      "kind": "compensation",
+      "unit": "release_comp"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "reservation_hold": 1
+    },
+    "units": {
+      "error_detected": 1,
+      "hold_attempt": 1,
+      "prepare": 1,
+      "publish": 1,
+      "release_comp": 1,
+      "release_join": 1,
+      "validate": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_hold": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "prepare"
+      },
+      {
+        "kind": "effect",
+        "operation": "reservation_hold",
+        "unit": "hold_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "reservation_hold": 1
+    },
+    "units": {
+      "error_detected": 1,
+      "hold_attempt": 1,
+      "prepare": 1,
+      "publish": 1,
+      "release_comp": 1,
+      "release_join": 1,
+      "validate": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_hold": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "prepare"
+      },
+      {
+        "kind": "effect",
+        "operation": "reservation_hold",
+        "unit": "hold_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

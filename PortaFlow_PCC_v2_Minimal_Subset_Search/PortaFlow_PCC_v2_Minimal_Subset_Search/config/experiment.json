@@ -1,0 +1,36 @@
+{
+  "experiment_name": "PortaFlow_PCC_v2_Minimal_Subset_Search",
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "workflows": [
+    "branch_effect_approval",
+    "loop_effect",
+    "parallel_retry_join",
+    "retry_effect_uncertain",
+    "approval_loop",
+    "saga_compensation",
+    "nested_parallel_effect",
+    "branch_parallel_merge"
+  ],
+  "component_families": [
+    "progress",
+    "history",
+    "frontier",
+    "obligations",
+    "receipts",
+    "contract"
+  ],
+  "inference_modes": [
+    "explicit",
+    "hybrid"
+  ],
+  "stage_a_expected_workflow_rows": 1024,
+  "stage_a_expected_subset_rows": 128,
+  "source_capture_count": 24,
+  "native_cases_per_condition": 48,
+  "llm_enabled": false,
+  "claim_scope": "Minimality only over this component vocabulary, deterministic hold-out suite, and declared safe migration boundaries."
+}

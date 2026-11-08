@@ -1,0 +1,82 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h04-missing_critical_fact-crewai-to-langgraph-aaif_reference",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-approval_wait-h04",
+    "family": "approval_wait",
+    "evidence_variant": "missing_critical_fact",
+    "method": "aaif_reference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 40,
+    "payload_sha256": "3b07f7418274a50e399035bf2790fc7aeb13687f950ebded3c6a79c610e70149",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_reference",
+    "history": []
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

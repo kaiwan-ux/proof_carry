@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "audit_event_publish_op::partial": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "audit_event_publish_op::partial",
+      "unit": "audit_event_publish_partial_started"
+    }
+  ],
+  "units": {
+    "audit_event_publish_partial_started": 1
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h04-irrelevant_noise-langgraph-to-maf-mcc_v2_frozen",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-parallel_join-h04",
+    "family": "parallel_join",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH"
+    ],
+    "payload_bytes": 481,
+    "payload_sha256": "fae7637d3c4fa0b6a87fef2be9d7b29503379704a925d4f4c184205473220fb5",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-parallel_join-h04",
+    "workflow": "mccv3_holdout_parallel_join",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "226560b59b0ecd89aa38f7e7e1e6070094ee9c2117db7a7424e522d9ec50d87a",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "p",
+            "q",
+            "r"
+          ]
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "p"
+    },
+    {
+      "kind": "unit",
+      "unit": "q"
+    },
+    {
+      "kind": "unit",
+      "unit": "r"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "merge_join": 1,
+      "p": 1,
+      "q": 1,
+      "r": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "merge_join": 1,
+      "p": 2,
+      "q": 2,
+      "r": 2
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      },
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

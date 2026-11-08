@@ -1,0 +1,19 @@
+{
+  "files": [
+    "mechanism/proofcarry.py",
+    "mechanism/crypto.py",
+    "mechanism/certificates.py",
+    "src/crossresumebench_proofcarry/evidence.py",
+    "src/crossresumebench_proofcarry/semantics.py",
+    "src/crossresumebench_proofcarry/baselines.py"
+  ],
+  "component_hashes": {
+    "mechanism/proofcarry.py": "93e647b7fc135dcdf8b24476aabae2637488e7f898cebb2992ea4e5093d95605",
+    "mechanism/crypto.py": "660405e1e07d83c1f8b86dd54420ddd65e431c3efd67190f9a02bd164a8bb33c",
+    "mechanism/certificates.py": "d2d2bc824593830b0a2d62d679f6add403131d4c43b6e74d9cab971a087ff221",
+    "src/crossresumebench_proofcarry/evidence.py": "6a195d0c3e5326d2b7185ef81e313937335f3e17a50ed81a62c6e69e5a729050",
+    "src/crossresumebench_proofcarry/semantics.py": "8c8c822c3b46e0b0688a0d0158e8d5fc983236c207660dc0cacff44e89f2131a",
+    "src/crossresumebench_proofcarry/baselines.py": "4daa22afee2cec7e63d471ae8412c3bd4e1caee0fe4937b32ca045abd9618667"
+  },
+  "bundle_sha256": "5900e121047a1a9e293102f5edaa5cd0bd47107a4a312663d8b7d3163cda29cc"
+}

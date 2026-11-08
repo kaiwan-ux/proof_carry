@@ -1,0 +1,36 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "p"
+    },
+    {
+      "kind": "unit",
+      "unit": "q"
+    },
+    {
+      "kind": "unit",
+      "unit": "r"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "merge_join": 1,
+    "p": 1,
+    "q": 1,
+    "r": 1
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-loop-09",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-loop-09-self-langgraph-pc104-loop-09",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bdb-d1dc-6fe1-8001-aae8f3acb09f",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-loop-09-self-langgraph-pc104-loop-09"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "sync_loop_index": 3
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "sync_loop_index",
+            "kind": "counter",
+            "value": 3
+          }
+        ],
+        "units": {}
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "sync_loop_index": 3
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "sync_loop_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "sync_loop_exit"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "sync_loop_exit": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.625
+}

@@ -1,0 +1,39 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h01-enough_evidence-langgraph-to-maf-aaif_reference",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-composite-h01",
+    "family": "composite",
+    "evidence_variant": "enough_evidence",
+    "method": "aaif_reference",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "AAIF_REFERENCE_AMBIGUOUS_EFFECT",
+    "failure_types": [],
+    "payload_bytes": 27,
+    "payload_sha256": "30b59045728f87352e5814d03f6c612dd199df93afa42457760610c2bea98186",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_reference"
+  },
+  "report": {}
+}

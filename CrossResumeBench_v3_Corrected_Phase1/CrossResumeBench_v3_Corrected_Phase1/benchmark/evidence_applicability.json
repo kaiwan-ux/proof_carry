@@ -1,0 +1,19 @@
+{
+  "effect_committed_ack_pending": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "retry_only_default": [
+    "enough_evidence",
+    "missing_semantic_completion",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "approval_only_default": [
+    "enough_evidence",
+    "missing_semantic_completion",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "rule": "ambiguous_external_commit applies only when an external effect exists"
+}

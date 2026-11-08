@@ -1,0 +1,19 @@
+{
+  "workflow_name": "proofcarry-104-pc104-effect_commitment-04-self-maf-pc104-effect_commitment-04",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "b31d9552-d32f-46e5-add1-aeac1a078e89",
+  "previous_checkpoint_id": "fe7a3860-81af-4e9d-9e57-fe60a21c0d34",
+  "timestamp": "2026-08-29T17:45:45.533340+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

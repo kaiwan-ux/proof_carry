@@ -1,0 +1,159 @@
+{
+  "row": {
+    "run_id": "crb-holdout-retry_pause-h02-missing_critical_fact-maf-to-langgraph-aaif_reference",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-retry_pause-h02",
+    "family": "retry_pause",
+    "evidence_variant": "missing_critical_fact",
+    "method": "aaif_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "COUNTERS_MISMATCH"
+    ],
+    "payload_bytes": 112,
+    "payload_sha256": "3e5abaefa03db11abe75cd1026883612e2050c9f3d88de98d47e1fb2c1c6926e",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_terminal"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_reference",
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "retry_job",
+        "data": {
+          "attempt": 3
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "retry_terminal"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1,
+      "retry_try_4": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 4
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "retry_terminal": 1,
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 3
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_terminal"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

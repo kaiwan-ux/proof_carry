@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "credential_comp_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "credential_comp_op",
+      "unit": "credential_comp_effect"
+    }
+  ],
+  "units": {
+    "credential_comp_effect": 1
+  }
+}

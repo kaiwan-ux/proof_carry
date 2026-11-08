@@ -1,0 +1,133 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h04-irrelevant_noise-langgraph-to-crewai-oracle",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-effect_commitment-h04",
+    "family": "effect_commitment",
+    "evidence_variant": "irrelevant_noise",
+    "method": "oracle",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 37,
+    "payload_sha256": "fe969aba0f1ec6d31492bcae82d1aee5564e9e530c26e05c6f8e9c88e3b40bab",
+    "expected_plan": [
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "oracle",
+    "privileged": true
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "effect",
+      "operation": "device_command",
+      "unit": "effect_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "device_command": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 2
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "device_command": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 2
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

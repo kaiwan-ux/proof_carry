@@ -1,0 +1,88 @@
+{
+  "native": {
+    "framework": "langgraph",
+    "case_id": "effect_committed_ack_pending",
+    "checkpoint_ref": "thread:crb3-lg-src-langgraph-ambiguous_external_commit-29178b2d",
+    "native_kind": "langgraph_state_snapshot",
+    "pending_work": [
+      "ack"
+    ],
+    "app_state": {
+      "phase": "effect_committed"
+    },
+    "history": [],
+    "certificates": [],
+    "native_observation": {
+      "next": [
+        "ack"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb3-lg-src-langgraph-ambiguous_external_commit-29178b2d",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a1802-bf39-67e7-8001-afde483f8818"
+        }
+      },
+      "values": {
+        "ledger_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_v3_Corrected_Phase1\\CrossResumeBench_v3_Corrected_Phase1\\results\\work\\src-langgraph-ambiguous_external_commit-29178b2d\\ledger.json",
+        "phase": "effect_committed"
+      }
+    },
+    "effect_count": 1
+  },
+  "capture": {
+    "case_id": "effect_committed_ack_pending",
+    "workflow": "phase1_effect_ack",
+    "app_state": {
+      "phase": "effect_committed"
+    },
+    "portable_history": [
+      {
+        "type": "tool_call_observed",
+        "step": "commit_effect",
+        "semantic_unit": "commit_effect",
+        "data": {
+          "operation": "effect",
+          "commit_status": "unknown",
+          "parent_unit": "commit_effect",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [],
+    "source_ledger": {
+      "effect": 1
+    },
+    "native_observation": {
+      "next": [
+        "ack"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb3-lg-src-langgraph-ambiguous_external_commit-29178b2d",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a1802-bf39-67e7-8001-afde483f8818"
+        }
+      },
+      "values": {
+        "ledger_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_v3_Corrected_Phase1\\CrossResumeBench_v3_Corrected_Phase1\\results\\work\\src-langgraph-ambiguous_external_commit-29178b2d\\ledger.json",
+        "phase": "effect_committed"
+      }
+    },
+    "truth_completed_units": [
+      "commit_effect"
+    ],
+    "truth_pending_obligations": [
+      {
+        "type": "ack"
+      }
+    ],
+    "truth_dependencies": {
+      "finish": [
+        "ack"
+      ]
+    },
+    "truth_decisions": {},
+    "truth_counters": {}
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h02-irrelevant_noise-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-composite-h02",
+    "family": "composite",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1889,
+    "payload_sha256": "4b21905d689b75bc845acdcd231cc40a290968f5ad22e39722d030057854805f",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "kind": "counter",
+        "key": "retry:sync_retry",
+        "value": 3
+      },
+      {
+        "kind": "callback",
+        "id": "sync_done_cb",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-composite-h02",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "0ea7bcef21fb1f387f65287847167981b9284c9da5d7cdfb725fe96b111ba392",
+    "continuation_contract_hash": "38b238c2fc97a785f42549efb6c6069761892b60c7f2cf5865aa1fec64b8ad50",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "sync_retry",
+        "data": {
+          "attempt": 2,
+          "max_attempts": 5
+        }
+      },
+      {
+        "type": "callback_pending",
+        "semantic_unit": "sync_callback",
+        "data": {
+          "callback_id": "sync_done_cb",
+          "operation": "sync_job",
+          "blocks": "sync_callback"
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "0d9378649ec9ec7c3ca5",
+        "fact_type": "obligation_state",
+        "subject": "sync_done_cb",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h02",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h02\\checkpoints\\main\\20260827T190917_e4d9864a_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "c831af553b7f730d57f0eadfd7a63c5fba8c40f616fdaae4a0b48580b69a7694"
+      },
+      {
+        "certificate_id": "a3a92cb89d05fcf1d76e",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-composite-h02",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h02\\checkpoints\\main\\20260827T190917_e4d9864a_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "e04a1f94b15c03acb6c27ec5469412958e75c547c08019ac6a3322993e65916a"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "retry_current|sync_retry": [
+        "history"
+      ],
+      "retry_bound|sync_retry": [
+        "history"
+      ],
+      "callback_state|sync_done_cb": [
+        "history",
+        "certificate"
+      ],
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "sync_try_3"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:sync_retry",
+      "value": 3
+    },
+    {
+      "kind": "callback",
+      "id": "sync_done_cb",
+      "unit": "sync_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1,
+      "sync_callback": 1,
+      "sync_try_1": 1,
+      "sync_try_2": 1,
+      "sync_try_3": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "sync_done_cb": 1
+    },
+    "compensations": {},
+    "counters": {
+      "retry:sync_retry": 3
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_2"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1,
+      "sync_callback": 1,
+      "sync_try_1": 1,
+      "sync_try_2": 1,
+      "sync_try_3": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "sync_done_cb": 1
+    },
+    "compensations": {},
+    "counters": {
+      "retry:sync_retry": 3
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_2"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

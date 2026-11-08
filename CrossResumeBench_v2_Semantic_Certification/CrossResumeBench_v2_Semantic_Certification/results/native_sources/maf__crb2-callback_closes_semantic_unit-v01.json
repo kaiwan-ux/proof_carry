@@ -1,0 +1,72 @@
+{
+  "case_id": "crb2-callback_closes_semantic_unit-v01",
+  "workflow": "callback_closes_semantic_unit",
+  "app_state": {
+    "variant": 1,
+    "request_id": "crb2-callback_closes_semantic_unit-v01",
+    "amount": 101
+  },
+  "portable_history": [
+    {
+      "seq": 1,
+      "type": "tool_call_observed",
+      "step": "submit",
+      "semantic_unit": "submission",
+      "data": {
+        "operation": "submit",
+        "commit_status": "unknown",
+        "result": "timeout",
+        "parent_unit": "submission",
+        "unit_completion_observable": false
+      }
+    },
+    {
+      "seq": 2,
+      "type": "callback_pending",
+      "step": "callback_wait",
+      "semantic_unit": "submission",
+      "data": {
+        "callback_id": "cb",
+        "operation": "submit"
+      }
+    }
+  ],
+  "certificates": [
+    {
+      "certificate_id": "f31a8f0b34a9c96aa9e0",
+      "fact_type": "effect_commitment",
+      "subject": "submit",
+      "value": "committed",
+      "scope": "submission",
+      "evidence": {
+        "operation_id": "crb2-callback_closes_semantic_unit-v01:submit",
+        "idempotency_key": "idem:crb2-callback_closes_semantic_unit-v01:submit",
+        "replay": "forbidden"
+      },
+      "issuer": "crossresumebench_witness",
+      "evidence_hash": "51333bf04cbdd0e861499049cc38bc92098908a909001c939b6446eeba82b667"
+    }
+  ],
+  "source_ledger": {
+    "submit": 1
+  },
+  "native_observation": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-47f841d5-349b-427e-a319-3f7eed8db35a",
+    "checkpoint_count": 4,
+    "native_action_executors": 2
+  },
+  "truth_completed_units": [],
+  "truth_pending_obligations": [
+    {
+      "type": "callback",
+      "id": "cb",
+      "operation": "submit"
+    }
+  ],
+  "truth_dependencies": {},
+  "truth_decisions": {},
+  "truth_counters": {}
+}

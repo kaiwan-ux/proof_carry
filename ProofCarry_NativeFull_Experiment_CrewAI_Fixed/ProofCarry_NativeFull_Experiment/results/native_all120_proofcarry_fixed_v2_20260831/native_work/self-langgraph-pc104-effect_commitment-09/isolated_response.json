@@ -1,0 +1,95 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-effect_commitment-09",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-effect_commitment-09-self-langgraph-pc104-effect_commitment-09",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bd8-2c6c-63f2-8001-d35a144cae65",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-effect_commitment-09-self-langgraph-pc104-effect_commitment-09"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "notification_send_attempt_recorded"
+          }
+        ],
+        "units": {
+          "notification_send_attempt_recorded": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "notification_send_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "notification_send_attempt_recorded"
+        },
+        {
+          "kind": "effect",
+          "operation": "notification_send_op",
+          "unit": "notification_send_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "notification_send_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "notification_send_ack": 1,
+        "notification_send_attempt": 1,
+        "notification_send_attempt_recorded": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.25
+}

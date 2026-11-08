@@ -1,0 +1,111 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h02-missing_critical_fact-langgraph-to-crewai-mcc_v2_frozen",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-async_callback-h02",
+    "family": "async_callback",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "CALLBACKS_MISMATCH"
+    ],
+    "payload_bytes": 318,
+    "payload_sha256": "5cc6ae7e8589bbb15d3397034956880baa81d7ca05cfd5366014f4530d23c8fb",
+    "expected_plan": [
+      {
+        "id": "webhook_delivery_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-async_callback-h02",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "5d58a30da986adc9090236106318351b72917269aa05f43100ca1f37877d739e",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": []
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "webhook_delivery_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "webhook_delivery_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

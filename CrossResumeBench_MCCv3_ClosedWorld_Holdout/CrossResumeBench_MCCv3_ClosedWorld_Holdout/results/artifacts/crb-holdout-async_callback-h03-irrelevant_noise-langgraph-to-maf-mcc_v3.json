@@ -1,0 +1,143 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h03-irrelevant_noise-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-async_callback-h03",
+    "family": "async_callback",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1374,
+    "payload_sha256": "063d03ce3c5312a6f82db31f91df1bb498cb18ec77981a84066723073d13f811",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-async_callback-h03",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "018aa024d0ff1f086ff6e713be78eca0147a422b4054a020e8fd8d46b8ec6b0f",
+    "continuation_contract_hash": "98e8a527a2dd98198bbf0d625fc22b891ff284fc74b2c88e2628250757a884c9",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "cee4aa05d6140f5ff1b5",
+        "fact_type": "callback_state",
+        "subject": "async_job_cb",
+        "value": "absent",
+        "scope": "crb-holdout-async_callback-h03",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-async_callback-h03-source-langgraph-crb-holdout-async_callback-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5d8626f84c88bcb378359b3cac672032dc55baf5cd51d986060811f0c7c5c0ef"
+      },
+      {
+        "certificate_id": "99773666dbc95f21f7af",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-async_callback-h03",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-async_callback-h03-source-langgraph-crb-holdout-async_callback-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "25b0494a13f8ec9e8bef478ec347f6caef53404bb18748918ae549c4f5631ac2"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "callback_state|async_job_cb": [
+        "certificate"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_closed": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_closed"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_closed": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_closed"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

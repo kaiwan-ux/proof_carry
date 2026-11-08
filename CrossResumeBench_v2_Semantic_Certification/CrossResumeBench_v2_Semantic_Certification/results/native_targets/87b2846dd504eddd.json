@@ -1,0 +1,28 @@
+{
+  "completed_units": [
+    "finish",
+    "prepare",
+    "purchase"
+  ],
+  "executed_units": [
+    "purchase",
+    "reconcile:purchase",
+    "finish"
+  ],
+  "final_ledger": {
+    "charge": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "a48e28c7-60bf-444b-b594-7395e2fb6739",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 4
+  }
+}

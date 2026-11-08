@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "webhook_callback_request_sent"
+    },
+    {
+      "kind": "unit",
+      "unit": "webhook_callback_process_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "webhook_callback_process_callback": 1,
+    "webhook_callback_request_sent": 1
+  }
+}

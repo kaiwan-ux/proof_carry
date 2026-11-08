@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "booking_comp_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "booking_comp_op",
+      "unit": "booking_comp_effect"
+    },
+    {
+      "kind": "unit",
+      "unit": "booking_comp_compensation_already_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "booking_comp_compensation_already_done": 1,
+    "booking_comp_effect": 1
+  }
+}

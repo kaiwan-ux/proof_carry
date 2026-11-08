@@ -1,0 +1,28 @@
+{
+  "completed_units": [
+    "a",
+    "b",
+    "finish",
+    "join"
+  ],
+  "executed_units": [
+    "join",
+    "finish"
+  ],
+  "final_ledger": {
+    "bop": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "440f535a-4681-4a9f-a3f0-663594f5d3e7",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 4
+  }
+}

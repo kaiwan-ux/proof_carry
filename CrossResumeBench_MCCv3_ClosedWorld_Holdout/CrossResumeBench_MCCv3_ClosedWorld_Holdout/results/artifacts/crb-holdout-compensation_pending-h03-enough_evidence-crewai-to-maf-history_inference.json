@@ -1,0 +1,127 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h03-enough_evidence-crewai-to-maf-history_inference",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-compensation_pending-h03",
+    "family": "compensation_pending",
+    "evidence_variant": "enough_evidence",
+    "method": "history_inference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 241,
+    "payload_sha256": "53fabda44a808902a632a57d71bb1329905b418730923adb173fb041cadc7f29",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "email_notice",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "compensation_none"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

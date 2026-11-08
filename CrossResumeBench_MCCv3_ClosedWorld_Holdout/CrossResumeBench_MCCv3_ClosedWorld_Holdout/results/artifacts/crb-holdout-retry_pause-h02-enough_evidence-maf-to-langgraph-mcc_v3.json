@@ -1,0 +1,195 @@
+{
+  "row": {
+    "run_id": "crb-holdout-retry_pause-h02-enough_evidence-maf-to-langgraph-mcc_v3",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-retry_pause-h02",
+    "family": "retry_pause",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 494,
+    "payload_sha256": "7a3added0dd577678b2910d86c341faf32b304ecc4eb648c313dce6728d96245",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "kind": "counter",
+        "key": "retry:retry_job",
+        "value": 4
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-retry_pause-h02",
+    "workflow": "mccv3_holdout_retry_pause",
+    "source_runtime": "maf",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "54196713d754fcd4c49383213da912a1989f5c682be48f390346753509165271",
+    "continuation_contract_hash": "59a7dec5ccb646b57b90cab1fe1dd829c870fd03ff9018c7280ae4577ec87171",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "retry_job",
+        "data": {
+          "attempt": 3,
+          "max_attempts": 6
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "retry_current|retry_job": [
+        "history"
+      ],
+      "retry_bound|retry_job": [
+        "history"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "retry_try_4"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:retry_job",
+      "value": 4
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1,
+      "retry_try_4": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 4
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1,
+      "retry_try_4": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 4
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

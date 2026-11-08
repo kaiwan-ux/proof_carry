@@ -1,0 +1,11 @@
+{
+  "rows_768": true,
+  "no_technical_column_needed": true,
+  "valid_controls_96_complete": true,
+  "in_model_zero_unsafe": true,
+  "in_model_mutations_reject_480": true,
+  "trust_boundary_exposed": true,
+  "paper_png_11": true,
+  "paper_pdf_11": true,
+  "paper_svg_11": true
+}

@@ -1,0 +1,57 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-effect_commitment-06",
+    "checkpoint_ref": "thread:proofcarry-104-pc104-effect_commitment-06-capture-langgraph-pc104-effect_commitment-06",
+    "framework": "langgraph",
+    "native_kind": "langgraph_checkpoint",
+    "native_observation": {
+      "config": {
+        "configurable": {
+          "checkpoint_id": "1f1a4bd7-92cd-6eb9-8001-7ef39d1a62a4",
+          "checkpoint_ns": "",
+          "thread_id": "proofcarry-104-pc104-effect_commitment-06-capture-langgraph-pc104-effect_commitment-06"
+        }
+      },
+      "framework": "langgraph",
+      "identifier_label": "node_id",
+      "next": [
+        "resume"
+      ],
+      "pause_status": "waiting",
+      "semantic_namespace": "lg.node",
+      "values_keys": [
+        "case_id",
+        "phase",
+        "store_path"
+      ]
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 0,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "webhook_dispatch_attempt_recorded"
+        }
+      ],
+      "units": {
+        "webhook_dispatch_attempt_recorded": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.3430000000007567
+}

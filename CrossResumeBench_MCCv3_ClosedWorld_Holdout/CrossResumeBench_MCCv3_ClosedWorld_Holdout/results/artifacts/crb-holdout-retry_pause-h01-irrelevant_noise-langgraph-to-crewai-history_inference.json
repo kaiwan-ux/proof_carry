@@ -1,0 +1,161 @@
+{
+  "row": {
+    "run_id": "crb-holdout-retry_pause-h01-irrelevant_noise-langgraph-to-crewai-history_inference",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-retry_pause-h01",
+    "family": "retry_pause",
+    "evidence_variant": "irrelevant_noise",
+    "method": "history_inference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 222,
+    "payload_sha256": "558f575680d5de6e4cf55d779ee0f7c4fc63158698d99178eaf90c06a3e84620",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "counter",
+        "key": "retry:retry_job",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "retry_job",
+        "data": {
+          "attempt": 1,
+          "max_attempts": 4
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "retry_try_2"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:retry_job",
+      "value": 2
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 2
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 1
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 2
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 1
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

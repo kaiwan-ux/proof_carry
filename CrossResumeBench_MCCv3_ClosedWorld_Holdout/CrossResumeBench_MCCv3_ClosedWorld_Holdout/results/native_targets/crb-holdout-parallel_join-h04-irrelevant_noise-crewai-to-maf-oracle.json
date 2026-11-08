@@ -1,0 +1,48 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "merge_join": 1,
+      "p": 1,
+      "q": 1,
+      "r": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "maf_target_workflow_explicit_handlers"
+}

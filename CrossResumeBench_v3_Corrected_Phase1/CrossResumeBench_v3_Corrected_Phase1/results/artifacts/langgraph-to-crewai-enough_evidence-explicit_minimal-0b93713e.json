@@ -1,0 +1,28 @@
+{
+  "run_id": "langgraph-to-crewai-enough_evidence-explicit_minimal-0b93713e",
+  "source": "langgraph",
+  "target": "crewai",
+  "case_id": "effect_committed_ack_pending",
+  "variant": "enough_evidence",
+  "method": "explicit_minimal",
+  "safe_completion": 1,
+  "safe_rejection": 0,
+  "unsafe_violation": 0,
+  "technical_failure": 0,
+  "reject_reason": null,
+  "failure_types": [],
+  "payload_bytes": 0,
+  "artifact": {
+    "target": {
+      "ledger": {
+        "ack_count": 1,
+        "effect_count": 1,
+        "finish_count": 1
+      },
+      "native_kind": "crewai_target_flow",
+      "flow_id": "de64725e-ed92-4658-936a-fd39de51256d",
+      "result": "finished"
+    },
+    "control": "privileged"
+  }
+}

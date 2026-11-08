@@ -1,0 +1,26 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-effect_commitment-h02-source-maf-crb-holdout-effect_commitment-h02",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "4035063d-72de-4312-9055-a1ed6c5bf012",
+  "previous_checkpoint_id": "7ba9b907-9242-4bb0-a09c-f715296e6d3e",
+  "timestamp": "2026-08-27T19:09:56.695390+00:00",
+  "messages": {
+    "source_boundary": [
+      {
+        "__pickled__": "gAWVFAIAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZRYJgEAAHsiY2FzZV9pZCI6ImNyYi1ob2xkb3V0LWVmZmVjdF9jb21taXRtZW50LWgwMiIsInBoYXNlIjoicGF1c2VkIiwic3RvcmVfcGF0aCI6IkM6XFxVc2Vyc1xcVGVjaCBNZWhhbFxcRGVza3RvcFxcYWdlbnRpYyB3YWxhXFxDcm9zc1Jlc3VtZUJlbmNoX01DQ3YzX0Nsb3NlZFdvcmxkX0hvbGRvdXRcXENyb3NzUmVzdW1lQmVuY2hfTUNDdjNfQ2xvc2VkV29ybGRfSG9sZG91dFxccmVzdWx0c1xcd29ya1xcc291cmNlLW1hZi1jcmItaG9sZG91dC1lZmZlY3RfY29tbWl0bWVudC1oMDJcXHNlbWFudGljX3N0b3JlLmpzb24ifZSMCXNvdXJjZV9pZJSMD3NvdXJjZV9ib3VuZGFyeZSMCXRhcmdldF9pZJROjAR0eXBllGgAjAtNZXNzYWdlVHlwZZSTlIwIc3RhbmRhcmSUhZRSlIwOdHJhY2VfY29udGV4dHOUTowPc291cmNlX3NwYW5faWRzlE6MG29yaWdpbmFsX3JlcXVlc3RfaW5mb19ldmVudJROdWIu",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 1,
+  "metadata": {},
+  "version": "1.0"
+}

@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "shipment_comp_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "shipment_comp_op",
+      "unit": "shipment_comp_effect"
+    }
+  ],
+  "units": {
+    "shipment_comp_effect": 1
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "case": {
+    "case_id": "crb2-subworkflow_return_gap-v02",
+    "family": "subworkflow_return_gap",
+    "variant": 2,
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-subworkflow_return_gap-v02",
+      "amount": 102
+    },
+    "source_actions": [
+      {
+        "action_id": "enter",
+        "semantic_unit": "parent",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "child_effect",
+        "semantic_unit": "child_work",
+        "kind": "effect",
+        "operation": "ticket",
+        "depends_on": [],
+        "parent_unit": "child_work",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": true,
+          "emit_completion": true,
+          "certify_completion": false
+        }
+      },
+      {
+        "action_id": "child_return",
+        "semantic_unit": "child_work",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "emit_completion": false,
+          "certify_completion": true
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "parent_t",
+        "semantic_unit": "parent",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "child_combined",
+        "semantic_unit": "child_work",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "ticket_t",
+        "semantic_unit": "child_work",
+        "kind": "effect",
+        "operation": "ticket",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": true
+        }
+      },
+      {
+        "action_id": "after_child",
+        "semantic_unit": "after_child",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "parent",
+      "child_work",
+      "after_child",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "ticket": 1
+    },
+    "mismatch_tags": [
+      "subworkflow-return",
+      "nested-granularity",
+      "source:pending_request",
+      "target:mid_node_interrupt"
+    ],
+    "source_boundary": "pending_request",
+    "target_boundary": "mid_node_interrupt",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-subworkflow_return_gap-v02",
+    "workflow": "subworkflow_return_gap",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-subworkflow_return_gap-v02",
+      "amount": 102
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "enter",
+        "semantic_unit": "parent",
+        "data": {
+          "source_label": "enter"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "enter",
+        "semantic_unit": "parent",
+        "data": {
+          "unit": "parent"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "child_effect",
+        "semantic_unit": "child_work",
+        "data": {
+          "operation": "ticket",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "child_work",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "seq": 4,
+        "type": "semantic_unit_completed",
+        "step": "child_effect",
+        "semantic_unit": "child_work",
+        "data": {
+          "unit": "child_work"
+        }
+      },
+      {
+        "seq": 5,
+        "type": "step_observed",
+        "step": "child_return",
+        "semantic_unit": "child_work",
+        "data": {
+          "source_label": "child_return"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "1a3ecbf4ab12ee0cde41",
+        "fact_type": "effect_commitment",
+        "subject": "ticket",
+        "value": "committed",
+        "scope": "child_work",
+        "evidence": {
+          "operation_id": "crb2-subworkflow_return_gap-v02:ticket",
+          "idempotency_key": "idem:crb2-subworkflow_return_gap-v02:ticket",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "f41456bac3bbe58f21e72c243cc5e13b8d9cc45c3610f65f5360b40b0d94939b"
+      },
+      {
+        "certificate_id": "cdd4c48d702a05090b9f",
+        "fact_type": "semantic_completion",
+        "subject": "child_work",
+        "value": "completed",
+        "scope": "child_work",
+        "evidence": {
+          "native_marker": "child_return",
+          "reason": "native_step_boundary"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "dc79dfae7dda0d43d6cce4809fbb6e3a2b44e49b019beacaca4c141dbf01b983"
+      }
+    ],
+    "source_ledger": {
+      "ticket": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [
+      "parent",
+      "child_work"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "case_id": "crb2-subworkflow_return_gap-v02",
+    "workflow": "subworkflow_return_gap",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-subworkflow_return_gap-v02",
+      "amount": 102
+    },
+    "history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "enter",
+        "semantic_unit": "parent",
+        "data": {
+          "source_label": "enter"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "enter",
+        "semantic_unit": "parent",
+        "data": {
+          "unit": "parent"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "child_effect",
+        "semantic_unit": "child_work",
+        "data": {
+          "operation": "ticket",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "child_work",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "seq": 4,
+        "type": "semantic_unit_completed",
+        "step": "child_effect",
+        "semantic_unit": "child_work",
+        "data": {
+          "unit": "child_work"
+        }
+      },
+      {
+        "seq": 5,
+        "type": "step_observed",
+        "step": "child_return",
+        "semantic_unit": "child_work",
+        "data": {
+          "source_label": "child_return"
+        }
+      }
+    ]
+  },
+  "inference": {
+    "ambiguities": [
+      {
+        "type": "AMBIGUOUS_EXTERNAL_COMMIT",
+        "operation": "ticket"
+      }
+    ],
+    "implementation": "independent_history_baseline"
+  },
+  "target": null,
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

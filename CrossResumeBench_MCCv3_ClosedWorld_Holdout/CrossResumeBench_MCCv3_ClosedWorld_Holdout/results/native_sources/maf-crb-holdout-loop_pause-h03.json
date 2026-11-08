@@ -1,0 +1,97 @@
+{
+  "framework": "maf",
+  "case_id": "crb-holdout-loop_pause-h03",
+  "checkpoint_ref": "62c8cbf6-7199-494d-a554-844320724750",
+  "native_kind": "maf_superstep_file_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "maf",
+    "workflow_name": "mccv3-holdout-crb-holdout-loop_pause-h03-source-maf-crb-holdout-loop_pause-h03",
+    "checkpoint_id": "62c8cbf6-7199-494d-a554-844320724750",
+    "checkpoint_count": 2,
+    "event_trace": [
+      {
+        "type": "started",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "status",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "superstep_started",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "executor_invoked",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "executor_completed",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "superstep_completed",
+        "class": "WorkflowEvent"
+      }
+    ],
+    "handler_typing_mode": "explicit"
+  },
+  "source_store": {
+    "effects": {},
+    "units": {
+      "loop_step_1": 1,
+      "loop_step_2": 1,
+      "loop_step_3": 1,
+      "loop_step_4": 1,
+      "loop_step_5": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:holdout": 5
+    },
+    "decisions": {
+      "loop_break": true
+    },
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_5"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "key": "loop_break",
+        "kind": "decision",
+        "value": true
+      }
+    ]
+  }
+}

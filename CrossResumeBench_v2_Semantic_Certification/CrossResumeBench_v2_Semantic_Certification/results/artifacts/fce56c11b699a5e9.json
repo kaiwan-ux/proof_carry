@@ -1,0 +1,255 @@
+{
+  "case": {
+    "case_id": "crb2-effect_parent_completion_gap-v04",
+    "family": "effect_parent_completion_gap",
+    "variant": 4,
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-effect_parent_completion_gap-v04",
+      "amount": 104
+    },
+    "source_actions": [
+      {
+        "action_id": "prepare",
+        "semantic_unit": "prepare",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "charge_native",
+        "semantic_unit": "purchase",
+        "kind": "effect",
+        "operation": "charge",
+        "depends_on": [],
+        "parent_unit": "purchase",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "committed",
+          "unit_completed": true,
+          "emit_completion": false,
+          "certify_effect": false,
+          "certify_completion": true
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "prepare_t",
+        "semantic_unit": "prepare",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "authorize",
+        "semantic_unit": "purchase",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "charge_t",
+        "semantic_unit": "purchase",
+        "kind": "effect",
+        "operation": "charge",
+        "depends_on": [],
+        "parent_unit": "purchase",
+        "metadata": {
+          "completes_unit": true
+        }
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "prepare",
+      "purchase",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "charge": 1
+    },
+    "mismatch_tags": [
+      "effect-vs-parent-completion",
+      "one-to-many",
+      "source:tool_timeout",
+      "target:callback_wait"
+    ],
+    "source_boundary": "tool_timeout",
+    "target_boundary": "callback_wait",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-effect_parent_completion_gap-v04",
+    "workflow": "effect_parent_completion_gap",
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-effect_parent_completion_gap-v04",
+      "amount": 104
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "source_label": "prepare"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "unit": "prepare"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "charge_native",
+        "semantic_unit": "purchase",
+        "data": {
+          "operation": "charge",
+          "commit_status": "committed",
+          "result": "timeout",
+          "parent_unit": "purchase",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "69e6293d6142f37dcc00",
+        "fact_type": "semantic_completion",
+        "subject": "purchase",
+        "value": "completed",
+        "scope": "purchase",
+        "evidence": {
+          "operation": "charge",
+          "native_marker": "charge_native",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "de207d2c26f63a80bb6f023dccc9432e9ebd68658d22107e738d83ba89736105"
+      }
+    ],
+    "source_ledger": {
+      "charge": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [
+      "prepare",
+      "purchase"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "case_id": "crb2-effect_parent_completion_gap-v04",
+    "workflow": "effect_parent_completion_gap",
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-effect_parent_completion_gap-v04",
+      "amount": 104
+    },
+    "history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "source_label": "prepare"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "unit": "prepare"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "charge_native",
+        "semantic_unit": "purchase",
+        "data": {
+          "operation": "charge",
+          "commit_status": "committed",
+          "result": "timeout",
+          "parent_unit": "purchase",
+          "unit_completion_observable": false
+        }
+      }
+    ]
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "prepare",
+      "purchase"
+    ],
+    "executed_units": [
+      "prepare",
+      "purchase",
+      "purchase",
+      "finish"
+    ],
+    "final_ledger": {
+      "charge": 2
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "failure_types": [
+      "COMPLETED_SEMANTIC_UNIT_REPLAYED",
+      "DUPLICATE_EXTERNAL_EFFECT",
+      "LEDGER_MISMATCH"
+    ],
+    "duplicate_effects": 1,
+    "replayed_units": 3,
+    "missing_units": 0,
+    "wrong_ledger": 1,
+    "wrong_outcome": 0
+  }
+}

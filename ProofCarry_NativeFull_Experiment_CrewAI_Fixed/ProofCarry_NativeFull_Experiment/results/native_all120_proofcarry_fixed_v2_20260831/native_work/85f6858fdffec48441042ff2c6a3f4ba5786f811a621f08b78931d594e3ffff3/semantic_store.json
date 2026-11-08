@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "db_commit_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "db_commit_op",
+      "unit": "db_commit_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "db_commit_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "db_commit_ack": 1,
+    "db_commit_attempt": 1
+  }
+}

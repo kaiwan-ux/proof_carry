@@ -1,0 +1,51 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "effect_plus_retry_b_task_attempt": 2
+  },
+  "decisions": {},
+  "effects": {
+    "effect_plus_retry_a_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "effect_plus_retry_a_op",
+      "unit": "effect_plus_retry_a_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_retry_b_task_failed_1"
+    },
+    {
+      "key": "effect_plus_retry_b_task_attempt",
+      "kind": "counter",
+      "value": 1
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_retry_a_ack"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_retry_b_task_attempt_2"
+    },
+    {
+      "key": "effect_plus_retry_b_task_attempt",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "effect_plus_retry_a_ack": 1,
+    "effect_plus_retry_a_attempt": 1,
+    "effect_plus_retry_b_task_attempt_2": 1,
+    "effect_plus_retry_b_task_failed_1": 1
+  }
+}

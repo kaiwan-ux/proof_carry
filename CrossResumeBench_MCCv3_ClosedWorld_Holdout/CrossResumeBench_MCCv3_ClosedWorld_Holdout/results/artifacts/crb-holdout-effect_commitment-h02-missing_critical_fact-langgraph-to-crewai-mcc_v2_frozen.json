@@ -1,0 +1,69 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h02-missing_critical_fact-langgraph-to-crewai-mcc_v2_frozen",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-effect_commitment-h02",
+    "family": "effect_commitment",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "AMBIGUOUS_EXTERNAL_COMMIT",
+    "failure_types": [],
+    "payload_bytes": 512,
+    "payload_sha256": "0ad384080822f2868bbc71fd0fd3b5bd64cf2e1d505b4e624cae0aaa8f7877f3",
+    "expected_plan": [
+      {
+        "kind": "effect",
+        "operation": "blob_upload",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-effect_commitment-h02",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "1b36c94bc14a08045ff5f8540fa073056f2fd9c3b39a6883117ff0612381f762",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "blob_upload",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "ambiguities": [
+      {
+        "type": "AMBIGUOUS_EXTERNAL_COMMIT",
+        "operation": "blob_upload"
+      }
+    ],
+    "certificate_log": [],
+    "inference_log": []
+  }
+}

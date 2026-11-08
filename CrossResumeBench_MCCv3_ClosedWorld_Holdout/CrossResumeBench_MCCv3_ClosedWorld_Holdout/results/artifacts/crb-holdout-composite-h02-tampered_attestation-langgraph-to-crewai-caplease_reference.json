@@ -1,0 +1,212 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h02-tampered_attestation-langgraph-to-crewai-caplease_reference",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-composite-h02",
+    "family": "composite",
+    "evidence_variant": "tampered_attestation",
+    "method": "caplease_reference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 280,
+    "payload_sha256": "722df39f292cacbd1cc430f9c310e8bc612da76eb49fabb5eb2d89edf3452e56",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "kind": "counter",
+        "key": "retry:sync_retry",
+        "value": 3
+      },
+      {
+        "kind": "callback",
+        "id": "sync_done_cb",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "caplease_reference",
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "sync_retry",
+        "data": {
+          "attempt": 2,
+          "max_attempts": 5
+        }
+      },
+      {
+        "type": "callback_pending",
+        "semantic_unit": "sync_callback",
+        "data": {
+          "callback_id": "sync_done_cb",
+          "operation": "sync_job",
+          "blocks": "sync_callback"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "sync_try_3"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:sync_retry",
+      "value": 3
+    },
+    {
+      "kind": "callback",
+      "id": "sync_done_cb",
+      "unit": "sync_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1,
+      "sync_callback": 1,
+      "sync_try_1": 1,
+      "sync_try_2": 1,
+      "sync_try_3": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "sync_done_cb": 1
+    },
+    "compensations": {},
+    "counters": {
+      "retry:sync_retry": 3
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_2"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1,
+      "sync_callback": 1,
+      "sync_try_1": 1,
+      "sync_try_2": 1,
+      "sync_try_3": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "sync_done_cb": 1
+    },
+    "compensations": {},
+    "counters": {
+      "retry:sync_retry": 3
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_2"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

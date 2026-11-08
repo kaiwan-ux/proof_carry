@@ -1,0 +1,48 @@
+framework,family,case_id,pass,lifecycle_returned,status,duration_ms,error
+langgraph,approval,pc104-approval-01,1,1,ok,4579.699799998707,
+langgraph,callback,pc104-callback-01,1,1,ok,4651.346700000431,
+langgraph,compensation,pc104-compensation-01,1,1,ok,4624.278400000549,
+langgraph,composite,pc104-composite-01,1,1,ok,4641.558000001169,
+langgraph,effect_commitment,pc104-effect_commitment-01,1,1,ok,4453.112799999872,
+langgraph,loop,pc104-loop-01,0,0,technical_failure,4534.477199998946,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 146, in native_family_gate
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 34, in self_resume_case
+    raise IsolatedCallError(d.get('error') or f'self resume failed: {d}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallError: Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\scripts\native_operation_worker.py"", line 33, in main
+    store=SemanticStore(run_dir/'semantic_store.json').read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\store.py"", line 11, in read
+    d=json.loads(self.path.read_text(encoding=""utf-8""))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 355, in raw_decode
+    raise JSONDecodeError(""Expecting value"", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+"
+langgraph,parallel,pc104-parallel-01,1,1,ok,4669.834299998911,
+langgraph,retry,pc104-retry-01,1,1,ok,4658.243800000491,
+crewai,approval,pc104-approval-01,1,1,ok,54370.662999999695,
+crewai,callback,pc104-callback-01,1,1,ok,51472.290599998814,
+crewai,compensation,pc104-compensation-01,1,1,ok,49609.19600000125,
+crewai,composite,pc104-composite-01,1,1,ok,50862.37419999998,
+crewai,effect_commitment,pc104-effect_commitment-01,0,0,semantic_complete_lifecycle_hang,57153.506200000265,
+crewai,loop,pc104-loop-01,1,1,ok,54108.51139999977,
+crewai,parallel,pc104-parallel-01,1,1,ok,29610.087799999746,
+crewai,retry,pc104-retry-01,1,1,ok,30757.09520000055,
+maf,approval,pc104-approval-01,1,1,ok,1096.938800001226,
+maf,callback,pc104-callback-01,1,1,ok,1085.3908999997657,
+maf,compensation,pc104-compensation-01,1,1,ok,1039.4797999997536,
+maf,composite,pc104-composite-01,1,1,ok,982.8374999997322,
+maf,effect_commitment,pc104-effect_commitment-01,1,1,ok,1112.0809000003646,
+maf,loop,pc104-loop-01,1,1,ok,1119.0409999999247,
+maf,parallel,pc104-parallel-01,1,1,ok,1032.8005000010307,
+maf,retry,pc104-retry-01,1,1,ok,1008.0780999996932,

@@ -1,0 +1,188 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h02-identity_alias_without_binding-langgraph-to-crewai-mcc_v2_frozen",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-compensation_pending-h02",
+    "family": "compensation_pending",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "COMPENSATIONS_MISMATCH"
+    ],
+    "payload_bytes": 1556,
+    "payload_sha256": "f2945affad0af9daa69eb7953bd9e418fb6d71bb503068e8be47138022e2a4a5",
+    "expected_plan": [
+      {
+        "action": "release_seat",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-compensation_pending-h02",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "799109b9622567b78f4b49f8ad55f0e5ca5f24c14ade9247af99b395cf703072",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "seat_hold",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "compensation_required",
+        "semantic_unit": "compensation",
+        "data": {
+          "compensation_action": "src_alias__release_seat",
+          "effect": "seat_hold"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "5189656acde06675070d",
+        "fact_type": "effect_commitment",
+        "subject": "seat_hold",
+        "value": "committed",
+        "scope": "crb-holdout-compensation_pending-h02",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h02-source-langgraph-crb-holdout-compensation_pending-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "53334a84219f40bc76715d56fdca889f2ef823f16ba67ab8111cebcc5324a1f1"
+      },
+      {
+        "certificate_id": "4a24b6813bcbf604eece",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__release_seat",
+        "value": "pending",
+        "scope": "crb-holdout-compensation_pending-h02",
+        "evidence": {
+          "kind": "compensation",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h02-source-langgraph-crb-holdout-compensation_pending-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "d87c5f02cef179b75fcb8bc83cecd10b188c83ff0a70e54114752194be850ea3"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "effect_commitment:seat_hold:committed",
+      "obligation_state:src_alias__release_seat:pending"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "compensation_none"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "seat_hold": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_seat": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "seat_hold",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "release_seat",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "seat_hold": 1
+    },
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "seat_hold",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

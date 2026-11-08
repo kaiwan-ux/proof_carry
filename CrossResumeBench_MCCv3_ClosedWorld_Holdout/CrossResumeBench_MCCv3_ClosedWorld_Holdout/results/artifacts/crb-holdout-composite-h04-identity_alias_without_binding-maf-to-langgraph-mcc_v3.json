@@ -1,0 +1,159 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h04-identity_alias_without_binding-maf-to-langgraph-mcc_v3",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-composite-h04",
+    "family": "composite",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1694,
+    "payload_sha256": "e3598dda784d6990f63eaf650dd23e15973c3c995e2db9b5d7e692386ef30684",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-composite-h04",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "maf",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "c637ca91c1292b651a82f075b0836856050b569d7923c9892fff243f82d497da",
+    "continuation_contract_hash": "4d23d7cd84039f9afb98814ae28f4ca47d0bcd99b6a20c9639203198e9bd6613",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:batch",
+          "value": 3
+        }
+      },
+      {
+        "type": "approval_requested",
+        "semantic_unit": "batch_approval",
+        "data": {
+          "request_id": "src_alias__approve_batch_commit",
+          "blocks": "batch_approval"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "581550047bcd39f01945",
+        "fact_type": "counter_bound",
+        "subject": "loop:batch",
+        "value": 6,
+        "scope": "crb-holdout-composite-h04",
+        "evidence": {
+          "native_checkpoint_ref": "7d01597a-1d31-4489-9581-eef4c3de900f"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "be70c6092def5a62d03ed89048e33099bdec58cb79938df96d9861b51cee5e27"
+      },
+      {
+        "certificate_id": "753ba07481d412b032e9",
+        "fact_type": "decision_state",
+        "subject": "batch_break",
+        "value": false,
+        "scope": "crb-holdout-composite-h04",
+        "evidence": {
+          "native_checkpoint_ref": "7d01597a-1d31-4489-9581-eef4c3de900f"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "d881f4de2976a667164f989ee51b3994e5149e0989440b2fa32d5f8232717d27"
+      },
+      {
+        "certificate_id": "bec00223e3cf88d90215",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__approve_batch_commit",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h04",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "batch_approval",
+          "native_checkpoint_ref": "7d01597a-1d31-4489-9581-eef4c3de900f"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "60a2a945f42be6daa0d8668adfc05c7d2ebca800b9fa93b792b64d5add0dfd09"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "approval_state",
+        "subject": "approve_batch_commit",
+        "purpose": "approval obligation"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "counter_state|loop:batch": [
+        "history"
+      ],
+      "approval_state|src_alias__approve_batch_commit": [
+        "history",
+        "certificate"
+      ],
+      "counter_bound|loop:batch": [
+        "certificate"
+      ],
+      "decision_state|batch_break": [
+        "certificate"
+      ]
+    }
+  }
+}

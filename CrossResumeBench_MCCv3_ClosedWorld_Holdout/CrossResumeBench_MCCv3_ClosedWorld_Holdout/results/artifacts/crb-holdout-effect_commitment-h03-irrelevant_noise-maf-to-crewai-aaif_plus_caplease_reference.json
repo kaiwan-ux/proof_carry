@@ -1,0 +1,128 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h03-irrelevant_noise-maf-to-crewai-aaif_plus_caplease_reference",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-effect_commitment-h03",
+    "family": "effect_commitment",
+    "evidence_variant": "irrelevant_noise",
+    "method": "aaif_plus_caplease_reference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 322,
+    "payload_sha256": "68579f0e4a2176590997e323aa6ef6ae5bb3b9bc543a11a21670b210c70c1d39",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_plus_caplease_reference",
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "audit_emit",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "effect_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "audit_emit": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "audit_emit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "audit_emit": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "audit_emit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

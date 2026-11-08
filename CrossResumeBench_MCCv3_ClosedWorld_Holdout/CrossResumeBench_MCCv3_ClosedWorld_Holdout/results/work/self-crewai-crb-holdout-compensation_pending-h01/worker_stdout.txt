@@ -1,0 +1,16 @@
++-----------------------------[CrewAIEventsBus] Sync handler error in on_flow_started: 'charmap' codec can't 
+encode character '\U0001f30a' in position 1: character maps to <undefined>
++-----------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' 
+codec can't encode character '\U0001f30a' in position 1: character maps to 
+<undefined>
++-----------------------------+--------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' 
+codec can't encode character '\U0001f504' in position 1: character maps to 
+<undefined>
+[CrewAIEventsBus] Sync handler error in on_method_execution_finished: 'charmap'
+codec can't encode character '\U0001f30a' in position 1: character maps to 
+<undefined>
++---------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_failed: 'charmap' 
+codec can't encode character '\u274c' in position 1: character maps to 
+<undefined>
++-----------------------------[CrewAIEventsBus] Sync handler error in on_flow_failed: 'charmap' codec can't 
+encode character '\U0001f30a' in position 1: character maps to <undefined>

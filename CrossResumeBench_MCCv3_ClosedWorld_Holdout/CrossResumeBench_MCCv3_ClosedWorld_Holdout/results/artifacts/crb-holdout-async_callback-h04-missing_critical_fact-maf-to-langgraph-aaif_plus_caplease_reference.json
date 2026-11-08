@@ -1,0 +1,98 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h04-missing_critical_fact-maf-to-langgraph-aaif_plus_caplease_reference",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-async_callback-h04",
+    "family": "async_callback",
+    "evidence_variant": "missing_critical_fact",
+    "method": "aaif_plus_caplease_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "CALLBACKS_MISMATCH"
+    ],
+    "payload_bytes": 54,
+    "payload_sha256": "ca514b1e7aeb22eb7491534268af62fa0653bb6266828fe535d47af2a5683177",
+    "expected_plan": [
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_plus_caplease_reference",
+    "history": []
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "timeout_race_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

@@ -1,0 +1,407 @@
+framework,framework_version,case_id,family,safe,technical_failure,lifecycle_returned,status,duration_ms,error
+langgraph,unknown,pc104-approval-01,approval,1,0,1,ok,3048.120899999958,
+langgraph,unknown,pc104-approval-02,approval,1,0,1,ok,2841.082400000232,
+langgraph,unknown,pc104-approval-03,approval,1,0,1,ok,2897.543400000359,
+langgraph,unknown,pc104-approval-04,approval,1,0,1,ok,3079.1931000003387,
+langgraph,unknown,pc104-approval-05,approval,1,0,1,ok,2671.015900000384,
+langgraph,unknown,pc104-approval-06,approval,1,0,1,ok,3288.5088000002725,
+langgraph,unknown,pc104-approval-07,approval,1,0,1,ok,2679.365400000279,
+langgraph,unknown,pc104-approval-08,approval,1,0,1,ok,2730.0941999992574,
+langgraph,unknown,pc104-approval-09,approval,1,0,1,ok,2669.0828000000693,
+langgraph,unknown,pc104-approval-10,approval,1,0,1,ok,2643.002300000262,
+langgraph,unknown,pc104-approval-11,approval,1,0,1,ok,2647.702800000843,
+langgraph,unknown,pc104-approval-12,approval,1,0,1,ok,2644.4037999999637,
+langgraph,unknown,pc104-approval-13,approval,1,0,1,ok,2610.678000000007,
+langgraph,unknown,pc104-approval-14,approval,1,0,1,ok,2594.369100000222,
+langgraph,unknown,pc104-approval-15,approval,1,0,1,ok,3264.730199999576,
+langgraph,unknown,pc104-callback-01,callback,1,0,1,ok,3091.1143000002994,
+langgraph,unknown,pc104-callback-02,callback,1,0,1,ok,3045.112299999346,
+langgraph,unknown,pc104-callback-03,callback,1,0,1,ok,3287.4229999997624,
+langgraph,unknown,pc104-callback-04,callback,1,0,1,ok,2973.855100000037,
+langgraph,unknown,pc104-callback-05,callback,1,0,1,ok,3643.5372000005373,
+langgraph,unknown,pc104-callback-06,callback,1,0,1,ok,2782.8551000002335,
+langgraph,unknown,pc104-callback-07,callback,1,0,1,ok,3325.303399999939,
+langgraph,unknown,pc104-callback-08,callback,1,0,1,ok,2976.070699999582,
+langgraph,unknown,pc104-callback-09,callback,1,0,1,ok,3090.0590000001102,
+langgraph,unknown,pc104-callback-10,callback,1,0,1,ok,2774.269700000332,
+langgraph,unknown,pc104-callback-11,callback,1,0,1,ok,2708.0619999996998,
+langgraph,unknown,pc104-callback-12,callback,1,0,1,ok,2903.795700000046,
+langgraph,unknown,pc104-callback-13,callback,1,0,1,ok,3014.9353999995583,
+langgraph,unknown,pc104-callback-14,callback,1,0,1,ok,3063.5274000005666,
+langgraph,unknown,pc104-callback-15,callback,1,0,1,ok,3028.377599999658,
+langgraph,unknown,pc104-compensation-01,compensation,1,0,1,ok,3658.1857999999556,
+langgraph,unknown,pc104-compensation-02,compensation,1,0,1,ok,3138.5725000000093,
+langgraph,unknown,pc104-compensation-03,compensation,1,0,1,ok,3415.952300000754,
+langgraph,unknown,pc104-compensation-04,compensation,1,0,1,ok,3036.0522000000856,
+langgraph,unknown,pc104-compensation-05,compensation,1,0,1,ok,3613.526300000558,
+langgraph,unknown,pc104-compensation-06,compensation,1,0,1,ok,3491.9589000000997,
+langgraph,unknown,pc104-compensation-07,compensation,1,0,1,ok,3140.437899999597,
+langgraph,unknown,pc104-compensation-08,compensation,1,0,1,ok,2674.8797999998715,
+langgraph,unknown,pc104-compensation-09,compensation,1,0,1,ok,3733.255399999507,
+langgraph,unknown,pc104-compensation-10,compensation,1,0,1,ok,2966.649199999665,
+langgraph,unknown,pc104-compensation-11,compensation,1,0,1,ok,2909.769399999277,
+langgraph,unknown,pc104-compensation-12,compensation,1,0,1,ok,3926.640299999235,
+langgraph,unknown,pc104-compensation-13,compensation,1,0,1,ok,4359.278400000221,
+langgraph,unknown,pc104-compensation-14,compensation,1,0,1,ok,4725.528899999517,
+langgraph,unknown,pc104-compensation-15,compensation,1,0,1,ok,3728.083300000435,
+langgraph,unknown,pc104-composite-01,composite,1,0,1,ok,5928.351599999587,
+langgraph,unknown,pc104-composite-02,composite,1,0,1,ok,5379.135700000006,
+langgraph,unknown,pc104-composite-03,composite,1,0,1,ok,5791.627800000242,
+langgraph,unknown,pc104-composite-04,composite,1,0,1,ok,5190.056299999924,
+langgraph,unknown,pc104-composite-05,composite,1,0,1,ok,5609.850499999993,
+langgraph,unknown,pc104-composite-06,composite,1,0,1,ok,6404.068400000142,
+langgraph,unknown,pc104-composite-07,composite,1,0,1,ok,7105.514200000471,
+langgraph,unknown,pc104-composite-08,composite,1,0,1,ok,6385.428199999296,
+langgraph,unknown,pc104-composite-09,composite,1,0,1,ok,5672.521699999379,
+langgraph,unknown,pc104-composite-10,composite,1,0,1,ok,5786.703299999317,
+langgraph,unknown,pc104-composite-11,composite,0,1,0,technical_failure,5523.633599999812,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 259, in run_native_full
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 34, in self_resume_case
+    raise IsolatedCallError(d.get('error') or f'self resume failed: {d}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallError: Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\scripts\native_operation_worker.py"", line 33, in main
+    store=SemanticStore(run_dir/'semantic_store.json').read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\store.py"", line 11, in read
+    d=json.loads(self.path.read_text(encoding=""utf-8""))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 355, in raw_decode
+    raise JSONDecodeError(""Expecting value"", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+"
+langgraph,unknown,pc104-composite-12,composite,1,0,1,ok,5610.821400000532,
+langgraph,unknown,pc104-composite-13,composite,1,0,1,ok,5822.792799999661,
+langgraph,unknown,pc104-composite-14,composite,1,0,1,ok,5674.026599999706,
+langgraph,unknown,pc104-composite-15,composite,1,0,1,ok,5044.423700000152,
+langgraph,unknown,pc104-effect_commitment-01,effect_commitment,1,0,1,ok,4974.576999999954,
+langgraph,unknown,pc104-effect_commitment-02,effect_commitment,1,0,1,ok,5213.518499999736,
+langgraph,unknown,pc104-effect_commitment-03,effect_commitment,1,0,1,ok,5461.969599999975,
+langgraph,unknown,pc104-effect_commitment-04,effect_commitment,1,0,1,ok,4912.455900000168,
+langgraph,unknown,pc104-effect_commitment-05,effect_commitment,1,0,1,ok,5055.5083999997805,
+langgraph,unknown,pc104-effect_commitment-06,effect_commitment,1,0,1,ok,5138.390099999924,
+langgraph,unknown,pc104-effect_commitment-07,effect_commitment,1,0,1,ok,5030.128600000353,
+langgraph,unknown,pc104-effect_commitment-08,effect_commitment,1,0,1,ok,5024.671400000443,
+langgraph,unknown,pc104-effect_commitment-09,effect_commitment,1,0,1,ok,5078.335799999877,
+langgraph,unknown,pc104-effect_commitment-10,effect_commitment,1,0,1,ok,5029.678799999601,
+langgraph,unknown,pc104-effect_commitment-11,effect_commitment,1,0,1,ok,5011.447500000031,
+langgraph,unknown,pc104-effect_commitment-12,effect_commitment,1,0,1,ok,5008.597500000178,
+langgraph,unknown,pc104-effect_commitment-13,effect_commitment,1,0,1,ok,5027.463099999295,
+langgraph,unknown,pc104-effect_commitment-14,effect_commitment,1,0,1,ok,5353.913099999772,
+langgraph,unknown,pc104-effect_commitment-15,effect_commitment,1,0,1,ok,5097.244700000374,
+langgraph,unknown,pc104-loop-01,loop,1,0,1,ok,5251.521899999716,
+langgraph,unknown,pc104-loop-02,loop,1,0,1,ok,5080.075299999407,
+langgraph,unknown,pc104-loop-03,loop,1,0,1,ok,5005.193300000428,
+langgraph,unknown,pc104-loop-04,loop,1,0,1,ok,6008.648100000755,
+langgraph,unknown,pc104-loop-05,loop,1,0,1,ok,5647.3040000000765,
+langgraph,unknown,pc104-loop-06,loop,1,0,1,ok,4929.438199999822,
+langgraph,unknown,pc104-loop-07,loop,1,0,1,ok,5105.850299999474,
+langgraph,unknown,pc104-loop-08,loop,1,0,1,ok,5114.194400000088,
+langgraph,unknown,pc104-loop-09,loop,1,0,1,ok,5001.821999999265,
+langgraph,unknown,pc104-loop-10,loop,1,0,1,ok,5087.470399999802,
+langgraph,unknown,pc104-loop-11,loop,1,0,1,ok,5243.740500000058,
+langgraph,unknown,pc104-loop-12,loop,1,0,1,ok,4925.260299999536,
+langgraph,unknown,pc104-loop-13,loop,1,0,1,ok,5058.802999999898,
+langgraph,unknown,pc104-loop-14,loop,1,0,1,ok,5259.39389999985,
+langgraph,unknown,pc104-loop-15,loop,1,0,1,ok,4950.107899999239,
+langgraph,unknown,pc104-parallel-01,parallel,1,0,1,ok,5101.625799999965,
+langgraph,unknown,pc104-parallel-02,parallel,1,0,1,ok,5213.07330000036,
+langgraph,unknown,pc104-parallel-03,parallel,1,0,1,ok,4952.322699999968,
+langgraph,unknown,pc104-parallel-04,parallel,1,0,1,ok,4986.558999999943,
+langgraph,unknown,pc104-parallel-05,parallel,1,0,1,ok,5045.748799999274,
+langgraph,unknown,pc104-parallel-06,parallel,1,0,1,ok,5031.058500000654,
+langgraph,unknown,pc104-parallel-07,parallel,1,0,1,ok,5489.397700000154,
+langgraph,unknown,pc104-parallel-08,parallel,1,0,1,ok,5196.914899999683,
+langgraph,unknown,pc104-parallel-09,parallel,0,1,0,technical_failure,5038.888200000656,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 259, in run_native_full
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 34, in self_resume_case
+    raise IsolatedCallError(d.get('error') or f'self resume failed: {d}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallError: Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\scripts\native_operation_worker.py"", line 33, in main
+    store=SemanticStore(run_dir/'semantic_store.json').read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\store.py"", line 11, in read
+    d=json.loads(self.path.read_text(encoding=""utf-8""))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 355, in raw_decode
+    raise JSONDecodeError(""Expecting value"", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+"
+langgraph,unknown,pc104-parallel-10,parallel,1,0,1,ok,6778.166899999633,
+langgraph,unknown,pc104-parallel-11,parallel,1,0,1,ok,6239.1373999998905,
+langgraph,unknown,pc104-parallel-12,parallel,1,0,1,ok,8278.553800000736,
+langgraph,unknown,pc104-parallel-13,parallel,1,0,1,ok,6263.780500000394,
+langgraph,unknown,pc104-parallel-14,parallel,1,0,1,ok,5053.782799999681,
+langgraph,unknown,pc104-parallel-15,parallel,1,0,1,ok,5328.973399999995,
+langgraph,unknown,pc104-retry-01,retry,1,0,1,ok,2724.0507999995316,
+langgraph,unknown,pc104-retry-02,retry,1,0,1,ok,3009.65559999986,
+langgraph,unknown,pc104-retry-03,retry,1,0,1,ok,3012.243099999978,
+langgraph,unknown,pc104-retry-04,retry,1,0,1,ok,3874.0253000005396,
+langgraph,unknown,pc104-retry-05,retry,1,0,1,ok,3092.347400000108,
+langgraph,unknown,pc104-retry-06,retry,1,0,1,ok,3322.8242000004684,
+langgraph,unknown,pc104-retry-07,retry,1,0,1,ok,2697.183000000223,
+langgraph,unknown,pc104-retry-08,retry,1,0,1,ok,2709.2431999999462,
+langgraph,unknown,pc104-retry-09,retry,1,0,1,ok,2671.999400000459,
+langgraph,unknown,pc104-retry-10,retry,1,0,1,ok,2884.3211000003066,
+langgraph,unknown,pc104-retry-11,retry,1,0,1,ok,2819.9053999996977,
+langgraph,unknown,pc104-retry-12,retry,1,0,1,ok,3124.716199999966,
+langgraph,unknown,pc104-retry-13,retry,1,0,1,ok,3157.864100000552,
+langgraph,unknown,pc104-retry-14,retry,1,0,1,ok,3831.85659999981,
+langgraph,unknown,pc104-retry-15,retry,1,0,1,ok,3612.386400000105,
+crewai,1.15.17,pc104-approval-01,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-02,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-03,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-04,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-05,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-06,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-07,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-08,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-09,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-10,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-11,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-12,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-13,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-14,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-approval-15,approval,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-01,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-02,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-03,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-04,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-05,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-06,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-07,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-08,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-09,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-10,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-11,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-12,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-13,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-14,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-callback-15,callback,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-01,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-02,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-03,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-04,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-05,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-06,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-07,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-08,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-09,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-10,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-11,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-12,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-13,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-14,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-compensation-15,compensation,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-01,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-02,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-03,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-04,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-05,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-06,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-07,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-08,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-09,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-10,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-11,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-12,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-13,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-14,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-composite-15,composite,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-01,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-02,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-03,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-04,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-05,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-06,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-07,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-08,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-09,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-10,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-11,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-12,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-13,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-14,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-effect_commitment-15,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-01,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-02,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-03,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-04,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-05,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-06,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-07,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-08,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-09,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-10,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-11,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-12,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-13,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-14,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-15,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-01,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-02,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-03,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-04,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-05,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-06,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-07,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-08,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-09,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-10,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-11,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-12,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-13,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-14,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-parallel-15,parallel,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-01,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-02,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-03,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-04,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-05,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-06,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-07,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-08,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-09,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-10,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-11,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-12,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-13,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-14,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-retry-15,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+maf,1.15.0,pc104-approval-01,approval,1,0,1,ok,1462.8075000000536,
+maf,1.15.0,pc104-approval-02,approval,1,0,1,ok,1388.13620000019,
+maf,1.15.0,pc104-approval-03,approval,1,0,1,ok,1164.2383999997037,
+maf,1.15.0,pc104-approval-04,approval,1,0,1,ok,1101.6810000000987,
+maf,1.15.0,pc104-approval-05,approval,1,0,1,ok,1061.569800000143,
+maf,1.15.0,pc104-approval-06,approval,1,0,1,ok,1143.6000000003332,
+maf,1.15.0,pc104-approval-07,approval,1,0,1,ok,1169.1793000009056,
+maf,1.15.0,pc104-approval-08,approval,1,0,1,ok,1178.7619999995513,
+maf,1.15.0,pc104-approval-09,approval,1,0,1,ok,1380.6617999998707,
+maf,1.15.0,pc104-approval-10,approval,1,0,1,ok,1507.0631000016874,
+maf,1.15.0,pc104-approval-11,approval,1,0,1,ok,1330.833399999392,
+maf,1.15.0,pc104-approval-12,approval,1,0,1,ok,1361.0814999992726,
+maf,1.15.0,pc104-approval-13,approval,1,0,1,ok,1180.6604000012157,
+maf,1.15.0,pc104-approval-14,approval,1,0,1,ok,1460.0639000000228,
+maf,1.15.0,pc104-approval-15,approval,1,0,1,ok,1314.1660000001139,
+maf,1.15.0,pc104-callback-01,callback,1,0,1,ok,1404.3291000016325,
+maf,1.15.0,pc104-callback-02,callback,1,0,1,ok,1234.657299999526,
+maf,1.15.0,pc104-callback-03,callback,1,0,1,ok,1283.0709999998362,
+maf,1.15.0,pc104-callback-04,callback,1,0,1,ok,1489.327899998898,
+maf,1.15.0,pc104-callback-05,callback,1,0,1,ok,1343.5644000001048,
+maf,1.15.0,pc104-callback-06,callback,1,0,1,ok,1201.4125999994576,
+maf,1.15.0,pc104-callback-07,callback,1,0,1,ok,1195.0551000009,
+maf,1.15.0,pc104-callback-08,callback,1,0,1,ok,1282.5866000002861,
+maf,1.15.0,pc104-callback-09,callback,1,0,1,ok,1270.8944999994856,
+maf,1.15.0,pc104-callback-10,callback,1,0,1,ok,1180.248600001505,
+maf,1.15.0,pc104-callback-11,callback,1,0,1,ok,1444.29129999844,
+maf,1.15.0,pc104-callback-12,callback,1,0,1,ok,1224.4852999992872,
+maf,1.15.0,pc104-callback-13,callback,1,0,1,ok,1236.3852999988012,
+maf,1.15.0,pc104-callback-14,callback,1,0,1,ok,1398.5529000001407,
+maf,1.15.0,pc104-callback-15,callback,1,0,1,ok,1197.0694999999978,
+maf,1.15.0,pc104-compensation-01,compensation,1,0,1,ok,1609.9322999998549,
+maf,1.15.0,pc104-compensation-02,compensation,1,0,1,ok,1318.1270000004588,
+maf,1.15.0,pc104-compensation-03,compensation,1,0,1,ok,1205.856999999014,
+maf,1.15.0,pc104-compensation-04,compensation,1,0,1,ok,1236.3814000000275,
+maf,1.15.0,pc104-compensation-05,compensation,1,0,1,ok,1674.2813000000751,
+maf,1.15.0,pc104-compensation-06,compensation,1,0,1,ok,1042.2503999998298,
+maf,1.15.0,pc104-compensation-07,compensation,1,0,1,ok,3456.792699998914,
+maf,1.15.0,pc104-compensation-08,compensation,1,0,1,ok,2233.4841000010783,
+maf,1.15.0,pc104-compensation-09,compensation,1,0,1,ok,2283.9722000007896,
+maf,1.15.0,pc104-compensation-10,compensation,1,0,1,ok,2267.3510999993596,
+maf,1.15.0,pc104-compensation-11,compensation,1,0,1,ok,3088.0065000001196,
+maf,1.15.0,pc104-compensation-12,compensation,1,0,1,ok,3125.5989000001136,
+maf,1.15.0,pc104-compensation-13,compensation,1,0,1,ok,2594.9436999999307,
+maf,1.15.0,pc104-compensation-14,compensation,1,0,1,ok,2732.985099999496,
+maf,1.15.0,pc104-compensation-15,compensation,1,0,1,ok,2407.794599999761,
+maf,1.15.0,pc104-composite-01,composite,1,0,1,ok,2603.017600000385,
+maf,1.15.0,pc104-composite-02,composite,1,0,1,ok,2623.7037000009877,
+maf,1.15.0,pc104-composite-03,composite,1,0,1,ok,2709.481500000038,
+maf,1.15.0,pc104-composite-04,composite,1,0,1,ok,3011.366700000508,
+maf,1.15.0,pc104-composite-05,composite,1,0,1,ok,2591.4664000010816,
+maf,1.15.0,pc104-composite-06,composite,1,0,1,ok,2398.309500000323,
+maf,1.15.0,pc104-composite-07,composite,1,0,1,ok,4560.7834000002185,
+maf,1.15.0,pc104-composite-08,composite,1,0,1,ok,4859.291900000244,
+maf,1.15.0,pc104-composite-09,composite,1,0,1,ok,4000.8424000006926,
+maf,1.15.0,pc104-composite-10,composite,1,0,1,ok,4141.167300000234,
+maf,1.15.0,pc104-composite-11,composite,1,0,1,ok,4594.694999999774,
+maf,1.15.0,pc104-composite-12,composite,1,0,1,ok,4871.105399999578,
+maf,1.15.0,pc104-composite-13,composite,1,0,1,ok,3896.4606000008644,
+maf,1.15.0,pc104-composite-14,composite,1,0,1,ok,4231.041400000322,
+maf,1.15.0,pc104-composite-15,composite,1,0,1,ok,4574.920900000507,
+maf,1.15.0,pc104-effect_commitment-01,effect_commitment,1,0,1,ok,5014.418200000364,
+maf,1.15.0,pc104-effect_commitment-02,effect_commitment,1,0,1,ok,4546.345899998414,
+maf,1.15.0,pc104-effect_commitment-03,effect_commitment,1,0,1,ok,4680.664499999693,
+maf,1.15.0,pc104-effect_commitment-04,effect_commitment,1,0,1,ok,4422.765600000275,
+maf,1.15.0,pc104-effect_commitment-05,effect_commitment,1,0,1,ok,4337.0646000003035,
+maf,1.15.0,pc104-effect_commitment-06,effect_commitment,1,0,1,ok,3946.8729000000167,
+maf,1.15.0,pc104-effect_commitment-07,effect_commitment,1,0,1,ok,4111.841500000082,
+maf,1.15.0,pc104-effect_commitment-08,effect_commitment,1,0,1,ok,4322.23729999896,
+maf,1.15.0,pc104-effect_commitment-09,effect_commitment,1,0,1,ok,3894.5636000007653,
+maf,1.15.0,pc104-effect_commitment-10,effect_commitment,1,0,1,ok,4228.0378000014025,
+maf,1.15.0,pc104-effect_commitment-11,effect_commitment,1,0,1,ok,4519.241300000431,
+maf,1.15.0,pc104-effect_commitment-12,effect_commitment,1,0,1,ok,4695.63350000135,
+maf,1.15.0,pc104-effect_commitment-13,effect_commitment,1,0,1,ok,5359.748000000764,
+maf,1.15.0,pc104-effect_commitment-14,effect_commitment,1,0,1,ok,4038.0012999994506,
+maf,1.15.0,pc104-effect_commitment-15,effect_commitment,1,0,1,ok,4186.259599999175,
+maf,1.15.0,pc104-loop-01,loop,1,0,1,ok,4292.826499999137,
+maf,1.15.0,pc104-loop-02,loop,1,0,1,ok,4253.408900000068,
+maf,1.15.0,pc104-loop-03,loop,1,0,1,ok,5131.331300000966,
+maf,1.15.0,pc104-loop-04,loop,1,0,1,ok,5651.80220000002,
+maf,1.15.0,pc104-loop-05,loop,1,0,1,ok,4226.174699999319,
+maf,1.15.0,pc104-loop-06,loop,1,0,1,ok,6704.8208999985945,
+maf,1.15.0,pc104-loop-07,loop,1,0,1,ok,6298.181599999225,
+maf,1.15.0,pc104-loop-08,loop,1,0,1,ok,4556.745100000626,
+maf,1.15.0,pc104-loop-09,loop,1,0,1,ok,4319.092300000193,
+maf,1.15.0,pc104-loop-10,loop,1,0,1,ok,4345.220699999118,
+maf,1.15.0,pc104-loop-11,loop,1,0,1,ok,5559.231499999441,
+maf,1.15.0,pc104-loop-12,loop,1,0,1,ok,5614.656199999445,
+maf,1.15.0,pc104-loop-13,loop,1,0,1,ok,5425.455699998565,
+maf,1.15.0,pc104-loop-14,loop,1,0,1,ok,5211.4080999999715,
+maf,1.15.0,pc104-loop-15,loop,1,0,1,ok,4625.059699999838,
+maf,1.15.0,pc104-parallel-01,parallel,1,0,1,ok,4264.01420000002,
+maf,1.15.0,pc104-parallel-02,parallel,1,0,1,ok,4908.315200000288,
+maf,1.15.0,pc104-parallel-03,parallel,1,0,1,ok,4756.350899999234,
+maf,1.15.0,pc104-parallel-04,parallel,1,0,1,ok,4419.497100001536,
+maf,1.15.0,pc104-parallel-05,parallel,1,0,1,ok,4558.8258000007045,
+maf,1.15.0,pc104-parallel-06,parallel,1,0,1,ok,4677.924199999325,
+maf,1.15.0,pc104-parallel-07,parallel,1,0,1,ok,5624.820899998667,
+maf,1.15.0,pc104-parallel-08,parallel,1,0,1,ok,3737.7087000004394,
+maf,1.15.0,pc104-parallel-09,parallel,1,0,1,ok,3980.937599999379,
+maf,1.15.0,pc104-parallel-10,parallel,1,0,1,ok,6382.192600000053,
+maf,1.15.0,pc104-parallel-11,parallel,1,0,1,ok,6572.372799999357,
+maf,1.15.0,pc104-parallel-12,parallel,1,0,1,ok,4098.149100000228,
+maf,1.15.0,pc104-parallel-13,parallel,1,0,1,ok,4377.544399998442,
+maf,1.15.0,pc104-parallel-14,parallel,1,0,1,ok,3807.3624999997264,
+maf,1.15.0,pc104-parallel-15,parallel,1,0,1,ok,4510.655699999916,
+maf,1.15.0,pc104-retry-01,retry,1,0,1,ok,3450.0879000006535,
+maf,1.15.0,pc104-retry-02,retry,1,0,1,ok,6528.372799999488,
+maf,1.15.0,pc104-retry-03,retry,1,0,1,ok,6092.353000000003,
+maf,1.15.0,pc104-retry-04,retry,1,0,1,ok,6285.801699999865,
+maf,1.15.0,pc104-retry-05,retry,1,0,1,ok,4864.599700000326,
+maf,1.15.0,pc104-retry-06,retry,1,0,1,ok,3307.298099998661,
+maf,1.15.0,pc104-retry-07,retry,1,0,1,ok,3282.9738999989786,
+maf,1.15.0,pc104-retry-08,retry,1,0,1,ok,2665.868699999919,
+maf,1.15.0,pc104-retry-09,retry,1,0,1,ok,2847.537799998463,
+maf,1.15.0,pc104-retry-10,retry,1,0,1,ok,2758.409300000494,
+maf,1.15.0,pc104-retry-11,retry,1,0,1,ok,3122.401100001298,
+maf,1.15.0,pc104-retry-12,retry,1,0,1,ok,3376.3908999990235,
+maf,1.15.0,pc104-retry-13,retry,1,0,1,ok,3294.9683999995614,
+maf,1.15.0,pc104-retry-14,retry,1,0,1,ok,2957.4754999994184,
+maf,1.15.0,pc104-retry-15,retry,1,0,1,ok,3529.8771999987366,

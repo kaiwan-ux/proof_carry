@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "payment_capture_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "payment_capture_op",
+      "unit": "payment_capture_attempt"
+    }
+  ],
+  "units": {
+    "payment_capture_attempt": 1
+  }
+}

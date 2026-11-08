@@ -1,0 +1,38 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "migration_loop_index": 3
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "migration_loop_index",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "migration_loop_iter_3"
+    },
+    {
+      "key": "migration_loop_index",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "migration_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "migration_loop_exit": 1,
+    "migration_loop_iter_3": 1
+  }
+}

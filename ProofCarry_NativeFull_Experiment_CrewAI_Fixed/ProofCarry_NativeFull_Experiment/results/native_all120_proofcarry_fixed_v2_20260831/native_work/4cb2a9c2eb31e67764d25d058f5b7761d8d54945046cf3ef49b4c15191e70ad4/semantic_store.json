@@ -1,0 +1,28 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "sync_loop_index": 3
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "sync_loop_index",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "sync_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "sync_loop_exit": 1
+  }
+}

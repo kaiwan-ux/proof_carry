@@ -1,0 +1,358 @@
+{
+  "row": {
+    "run_id": "crb-holdout-loop_pause-h01-irrelevant_noise-maf-to-crewai-mcc_v3",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-loop_pause-h01",
+    "family": "loop_pause",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1611,
+    "payload_sha256": "dd3874fa5f7efbd8090a63cf715766bc5ef50cae21846274e101b37ca13259c3",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:holdout",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:holdout",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:holdout",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-loop_pause-h01",
+    "workflow": "mccv3_holdout_loop_pause",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "6cd86ec188500c6a6a561725dd7dc9d0822efb2fe852f4be52f72fdb9dc178ea",
+    "continuation_contract_hash": "ee02930941213f0a4bd3c0716a31bd86bce70c2dfcd3b45daba96f09e5302d51",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:holdout",
+          "value": 1
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "ca21b28f202e5a63b992",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "value": 4,
+        "scope": "crb-holdout-loop_pause-h01",
+        "evidence": {
+          "native_checkpoint_ref": "00cbb5b5-a811-4b0b-84b0-b9b369bb3d78"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "a0c8d959e49229985c26f4633001c73ab5f4eb94107d5117bc96208140bd9e07"
+      },
+      {
+        "certificate_id": "94ff1cd7bdd9507bacd2",
+        "fact_type": "decision_state",
+        "subject": "loop_break",
+        "value": false,
+        "scope": "crb-holdout-loop_pause-h01",
+        "evidence": {
+          "native_checkpoint_ref": "00cbb5b5-a811-4b0b-84b0-b9b369bb3d78"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "db49fe4a151c64ff706cf6357249e19db59f0c5f4a0cc08e22d524e6be7960f8"
+      },
+      {
+        "certificate_id": "36d2182baf1853098387",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-loop_pause-h01",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "00cbb5b5-a811-4b0b-84b0-b9b369bb3d78"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "de950adf1997a869e6d5c91cb15a5946aceecdebc9c943b9cce2b1a75475f6f6"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "counter_state|loop:holdout": [
+        "history"
+      ],
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "counter_bound|loop:holdout": [
+        "certificate"
+      ],
+      "decision_state|loop_break": [
+        "certificate"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "loop_step_2"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:holdout",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_3"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:holdout",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_4"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:holdout",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "loop_done": 1,
+      "loop_step_1": 1,
+      "loop_step_2": 1,
+      "loop_step_3": 1,
+      "loop_step_4": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:holdout": 4
+    },
+    "decisions": {
+      "loop_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_1"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 1
+      },
+      {
+        "key": "loop_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "loop_done": 1,
+      "loop_step_1": 1,
+      "loop_step_2": 1,
+      "loop_step_3": 1,
+      "loop_step_4": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:holdout": 4
+    },
+    "decisions": {
+      "loop_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_1"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 1
+      },
+      {
+        "key": "loop_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

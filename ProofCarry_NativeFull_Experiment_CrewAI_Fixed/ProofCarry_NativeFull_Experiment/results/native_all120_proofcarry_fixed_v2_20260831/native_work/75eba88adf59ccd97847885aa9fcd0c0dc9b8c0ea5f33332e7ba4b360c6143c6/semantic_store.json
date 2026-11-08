@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "email_dispatch_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "email_dispatch_attempt_recorded"
+    },
+    {
+      "kind": "effect",
+      "operation": "email_dispatch_op",
+      "unit": "email_dispatch_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "email_dispatch_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "email_dispatch_ack": 1,
+    "email_dispatch_attempt": 1,
+    "email_dispatch_attempt_recorded": 1
+  }
+}

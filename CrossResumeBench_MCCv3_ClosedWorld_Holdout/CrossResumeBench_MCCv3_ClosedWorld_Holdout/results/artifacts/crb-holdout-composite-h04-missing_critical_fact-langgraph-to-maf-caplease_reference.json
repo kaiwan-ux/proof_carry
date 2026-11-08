@@ -1,0 +1,327 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h04-missing_critical_fact-langgraph-to-maf-caplease_reference",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-composite-h04",
+    "family": "composite",
+    "evidence_variant": "missing_critical_fact",
+    "method": "caplease_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "APPROVALS_MISMATCH"
+    ],
+    "payload_bytes": 109,
+    "payload_sha256": "5dab84e0c8350daa77d48f78c66f136e005aab0c5fb95090e25bffbd72bb4a07",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "caplease_reference",
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:batch",
+          "value": 3
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "batch_iter_4"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_5"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_6"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_approval": 1,
+      "batch_done": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1,
+      "batch_iter_4": 1,
+      "batch_iter_5": 1,
+      "batch_iter_6": 1
+    },
+    "approvals": {
+      "approve_batch_commit": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 6
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_done": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1,
+      "batch_iter_4": 1,
+      "batch_iter_5": 1,
+      "batch_iter_6": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 6
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

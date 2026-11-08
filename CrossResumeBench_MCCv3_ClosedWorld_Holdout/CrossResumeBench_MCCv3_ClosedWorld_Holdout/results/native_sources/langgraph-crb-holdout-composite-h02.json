@@ -1,0 +1,65 @@
+{
+  "framework": "langgraph",
+  "case_id": "crb-holdout-composite-h02",
+  "checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h02-source-langgraph-crb-holdout-composite-h02",
+  "native_kind": "langgraph_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "langgraph",
+    "next": [
+      "resume"
+    ],
+    "values_keys": [
+      "case_id",
+      "phase",
+      "store_path"
+    ],
+    "config": {
+      "configurable": {
+        "thread_id": "mccv3-holdout-crb-holdout-composite-h02-source-langgraph-crb-holdout-composite-h02",
+        "checkpoint_ns": "",
+        "checkpoint_id": "1f1a248c-c95c-613a-8001-3bb32c3c46d9"
+      }
+    }
+  },
+  "source_store": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1,
+      "sync_try_1": 1,
+      "sync_try_2": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:sync_retry": 2
+    },
+    "decisions": {},
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_2"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      }
+    ]
+  }
+}

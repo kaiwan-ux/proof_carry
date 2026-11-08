@@ -1,0 +1,139 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-04",
+      "checkpoint_ref": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-composite-04\\checkpoints\\main\\20260830T224724_c3965dc8_p-none.json",
+      "framework": "crewai",
+      "native_kind": "crewai_flow_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 1,
+        "checkpoint_event_mode": "method_execution_finished",
+        "checkpoint_file": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-composite-04\\checkpoints\\main\\20260830T224724_c3965dc8_p-none.json",
+        "framework": "crewai",
+        "identifier_label": "task_id",
+        "pause_protocol": "subprocess_external_gate",
+        "pause_status": "pending",
+        "semantic_namespace": "crew.task"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "loop_plus_approval_a_index": 2
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "loop_plus_approval_a_index",
+            "kind": "counter",
+            "value": 2
+          },
+          {
+            "kind": "unit",
+            "unit": "loop_plus_approval_b_requested"
+          }
+        ],
+        "units": {
+          "loop_plus_approval_b_requested": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "resume_api": "Flow.from_checkpoint",
+    "safe": true,
+    "store": {
+      "approvals": {
+        "loop_plus_approval_b_request": 1
+      },
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "loop_plus_approval_a_index": 6
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_b_requested"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_3"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_4"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_5"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_6"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_exit"
+        },
+        {
+          "id": "loop_plus_approval_b_request",
+          "kind": "approval",
+          "unit": "loop_plus_approval_b_approval_wait"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "loop_plus_approval_a_exit": 1,
+        "loop_plus_approval_a_iter_3": 1,
+        "loop_plus_approval_a_iter_4": 1,
+        "loop_plus_approval_a_iter_5": 1,
+        "loop_plus_approval_a_iter_6": 1,
+        "loop_plus_approval_b_approval_wait": 1,
+        "loop_plus_approval_b_requested": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 36.35900000000038
+}

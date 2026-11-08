@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "refund_comp_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "refund_comp_op",
+      "unit": "refund_comp_effect"
+    }
+  ],
+  "units": {
+    "refund_comp_effect": 1
+  }
+}

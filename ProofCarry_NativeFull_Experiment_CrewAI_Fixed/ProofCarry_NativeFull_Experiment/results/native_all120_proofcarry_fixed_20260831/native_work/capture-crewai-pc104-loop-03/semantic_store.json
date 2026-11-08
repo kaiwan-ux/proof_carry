@@ -1,0 +1,19 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "poll_loop_index": 3
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "key": "poll_loop_index",
+      "kind": "counter",
+      "value": 3
+    }
+  ],
+  "units": {}
+}

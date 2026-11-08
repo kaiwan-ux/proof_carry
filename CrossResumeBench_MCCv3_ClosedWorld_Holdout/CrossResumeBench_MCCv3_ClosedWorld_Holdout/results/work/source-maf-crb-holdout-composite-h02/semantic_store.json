@@ -1,0 +1,35 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "retry:sync_retry": 2
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "sync_try_1"
+    },
+    {
+      "kind": "unit",
+      "unit": "sync_try_2"
+    },
+    {
+      "key": "retry:sync_retry",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "callback_requested"
+    }
+  ],
+  "units": {
+    "callback_requested": 1,
+    "sync_try_1": 1,
+    "sync_try_2": 1
+  }
+}

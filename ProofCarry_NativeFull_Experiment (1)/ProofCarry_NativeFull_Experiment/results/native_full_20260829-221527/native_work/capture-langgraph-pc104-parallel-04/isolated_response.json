@@ -1,0 +1,67 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-parallel-04",
+    "checkpoint_ref": "thread:proofcarry-104-pc104-parallel-04-capture-langgraph-pc104-parallel-04",
+    "framework": "langgraph",
+    "native_kind": "langgraph_checkpoint",
+    "native_observation": {
+      "config": {
+        "configurable": {
+          "checkpoint_id": "1f1a3d04-f090-6064-8001-7540fb5f83ea",
+          "checkpoint_ns": "",
+          "thread_id": "proofcarry-104-pc104-parallel-04-capture-langgraph-pc104-parallel-04"
+        }
+      },
+      "framework": "langgraph",
+      "identifier_label": "node_id",
+      "next": [
+        "resume"
+      ],
+      "pause_status": "waiting",
+      "semantic_namespace": "lg.node",
+      "values_keys": [
+        "case_id",
+        "phase",
+        "store_path"
+      ]
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 0,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "order_parallel_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "order_parallel_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "order_parallel_b3_failed"
+        }
+      ],
+      "units": {
+        "order_parallel_b1": 1,
+        "order_parallel_b2": 1,
+        "order_parallel_b3_failed": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 4.125
+}

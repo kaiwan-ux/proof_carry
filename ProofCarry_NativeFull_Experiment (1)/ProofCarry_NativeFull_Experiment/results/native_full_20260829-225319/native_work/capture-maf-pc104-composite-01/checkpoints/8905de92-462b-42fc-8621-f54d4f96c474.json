@@ -1,0 +1,26 @@
+{
+  "workflow_name": "proofcarry-104-pc104-composite-01-capture-maf-pc104-composite-01",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "8905de92-462b-42fc-8621-f54d4f96c474",
+  "previous_checkpoint_id": null,
+  "timestamp": "2026-08-29T18:06:30.804791+00:00",
+  "messages": {
+    "internal:source_boundary": [
+      {
+        "__pickled__": "gAWVCAIAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZRYAAEAAHsiY2FzZV9pZCI6InBjMTA0LWNvbXBvc2l0ZS0wMSIsInBoYXNlIjoic3RhcnQiLCJzdG9yZV9wYXRoIjoiRjpcXGFnZW50aWMgd2FsYVxcUHJvb2ZDYXJyeV9OYXRpdmVGdWxsX0V4cGVyaW1lbnQgKDEpXFxQcm9vZkNhcnJ5X05hdGl2ZUZ1bGxfRXhwZXJpbWVudFxccmVzdWx0c1xcbmF0aXZlX2Z1bGxfMjAyNjA4MjktMjI1MzE5XFxuYXRpdmVfd29ya1xcY2FwdHVyZS1tYWYtcGMxMDQtY29tcG9zaXRlLTAxXFxzZW1hbnRpY19zdG9yZS5qc29uIn2UjAlzb3VyY2VfaWSUjBhpbnRlcm5hbDpzb3VyY2VfYm91bmRhcnmUjAl0YXJnZXRfaWSUjA9zb3VyY2VfYm91bmRhcnmUjAR0eXBllGgAjAtNZXNzYWdlVHlwZZSTlIwIc3RhbmRhcmSUhZRSlIwOdHJhY2VfY29udGV4dHOUTowPc291cmNlX3NwYW5faWRzlE6MG29yaWdpbmFsX3JlcXVlc3RfaW5mb19ldmVudJROdWIu",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 0,
+  "metadata": {},
+  "version": "1.0"
+}

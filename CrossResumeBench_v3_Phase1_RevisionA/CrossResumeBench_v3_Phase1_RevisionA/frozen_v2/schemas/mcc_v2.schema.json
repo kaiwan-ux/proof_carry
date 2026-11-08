@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "app_state": {
+      "type": "object"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "certificates": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "certificate_id": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "object"
+          },
+          "evidence_hash": {
+            "maxLength": 64,
+            "minLength": 64,
+            "type": "string"
+          },
+          "fact_type": {
+            "enum": [
+              "effect_commitment",
+              "semantic_completion",
+              "obligation_state",
+              "dependency_state"
+            ]
+          },
+          "issuer": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "value": {}
+        },
+        "required": [
+          "certificate_id",
+          "fact_type",
+          "subject",
+          "value",
+          "scope",
+          "evidence",
+          "issuer",
+          "evidence_hash"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "history": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "mcc_version": {
+      "const": "2.0"
+    },
+    "source_runtime": {
+      "type": "string"
+    },
+    "target_runtime": {
+      "type": "string"
+    },
+    "workflow": {
+      "type": "string"
+    },
+    "workflow_spec_hash": {
+      "maxLength": 64,
+      "minLength": 64,
+      "type": "string"
+    }
+  },
+  "required": [
+    "mcc_version",
+    "case_id",
+    "workflow",
+    "source_runtime",
+    "target_runtime",
+    "workflow_spec_hash",
+    "app_state",
+    "history",
+    "certificates"
+  ],
+  "title": "MCC v2 Transfer",
+  "type": "object"
+}

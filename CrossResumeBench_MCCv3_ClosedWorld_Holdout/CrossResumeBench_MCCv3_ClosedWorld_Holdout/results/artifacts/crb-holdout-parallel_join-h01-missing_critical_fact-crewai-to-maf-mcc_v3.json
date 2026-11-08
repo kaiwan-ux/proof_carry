@@ -1,0 +1,83 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h01-missing_critical_fact-crewai-to-maf-mcc_v3",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-parallel_join-h01",
+    "family": "parallel_join",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 496,
+    "payload_sha256": "8883ab77f1498bd0fbdbe3a325d87c9fdba1f6a92f04da46d9301615c5ffe4e4",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "beta"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-parallel_join-h01",
+    "workflow": "mccv3_holdout_parallel_join",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "eea28a2aefb3853a86805fff97ddabd2a7238c4221702fd4c75f90b8b140f1c1",
+    "continuation_contract_hash": "adaec1e51371cf191771a5bd90b81002a004795a3c03de2b8556f82cb5598161",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "alpha",
+            "beta"
+          ]
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "alpha",
+        "purpose": "avoid replay and premature join"
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "beta",
+        "purpose": "avoid replay and premature join"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "dependency_state|merge_join": [
+        "history"
+      ]
+    }
+  }
+}

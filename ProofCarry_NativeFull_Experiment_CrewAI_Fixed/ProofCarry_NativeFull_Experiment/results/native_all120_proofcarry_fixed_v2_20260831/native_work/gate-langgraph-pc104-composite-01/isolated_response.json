@@ -1,0 +1,111 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-01",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-composite-01-gate-langgraph-pc104-composite-01",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bc1-139b-6e5c-8001-ea6220e4038b",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-composite-01-gate-langgraph-pc104-composite-01"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {
+          "payment_plus_approval_a_op": 1
+        },
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "effect",
+            "operation": "payment_plus_approval_a_op",
+            "unit": "payment_plus_approval_a_attempt"
+          },
+          {
+            "kind": "unit",
+            "unit": "payment_plus_approval_b_requested"
+          }
+        ],
+        "units": {
+          "payment_plus_approval_a_attempt": 1,
+          "payment_plus_approval_b_requested": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {
+        "payment_plus_approval_b_request": 1
+      },
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "payment_plus_approval_a_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "payment_plus_approval_a_op",
+          "unit": "payment_plus_approval_a_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "payment_plus_approval_b_requested"
+        },
+        {
+          "kind": "unit",
+          "unit": "payment_plus_approval_a_ack"
+        },
+        {
+          "id": "payment_plus_approval_b_request",
+          "kind": "approval",
+          "unit": "payment_plus_approval_b_approval_wait"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "payment_plus_approval_a_ack": 1,
+        "payment_plus_approval_a_attempt": 1,
+        "payment_plus_approval_b_approval_wait": 1,
+        "payment_plus_approval_b_requested": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.7030000000013388
+}

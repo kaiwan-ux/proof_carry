@@ -1,0 +1,12 @@
+{
+  "run_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\capture-crewai-pc104-loop-05",
+  "case_id": "pc104-loop-05",
+  "checkpoint_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\capture-crewai-pc104-loop-05\\checkpoints",
+  "store_path": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\capture-crewai-pc104-loop-05\\semantic_store.json",
+  "resume_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\capture-crewai-pc104-loop-05\\resume.gate",
+  "stop_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\capture-crewai-pc104-loop-05\\stop.gate",
+  "signal": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\capture-crewai-pc104-loop-05\\source_ready.signal",
+  "on_events": [
+    "method_execution_finished"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "completed_units": [
+    "debit_scope",
+    "finish",
+    "refund"
+  ],
+  "executed_units": [
+    "reconcile:debit_scope",
+    "refund",
+    "finish"
+  ],
+  "final_ledger": {
+    "debit": 1,
+    "compensate:debit": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "21c792c0-32e6-420f-8b04-a5b0196fe688",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 3
+  }
+}

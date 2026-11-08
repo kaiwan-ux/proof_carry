@@ -1,0 +1,13 @@
+# ProofCarry NativeFull pinned environment
+# Recommended interpreter: Python 3.12.x
+langgraph==1.2.11
+crewai==1.15.17
+agent-framework-core==1.15.0
+cryptography>=46.0.4,<47
+pandas>=2.2,<3
+scipy>=1.13,<2
+psutil>=5.9,<8
+jsonschema>=4.23,<5
+pydantic>=2.12,<3
+pytest>=8,<10
+tabulate>=0.9,<1

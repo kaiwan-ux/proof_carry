@@ -1,0 +1,145 @@
+{
+  "source_capture": {
+    "case_id": "crb2-pending_tool_then_semantic_close-v01",
+    "workflow": "pending_tool_then_semantic_close",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-pending_tool_then_semantic_close-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "tool_send",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "operation": "toolop",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "tool_scope",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "callback_id": "toolcb",
+          "operation": "toolop"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "d40276d8dac3a0bce7ed",
+        "fact_type": "effect_commitment",
+        "subject": "toolop",
+        "value": "committed",
+        "scope": "tool_scope",
+        "evidence": {
+          "operation_id": "crb2-pending_tool_then_semantic_close-v01:toolop",
+          "idempotency_key": "idem:crb2-pending_tool_then_semantic_close-v01:toolop",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "378d3e8f79da183370fae2d6722cd354e7680c9a81111821e3361b1cede679d3"
+      }
+    ],
+    "source_ledger": {
+      "toolop": 1
+    },
+    "native_observation": {
+      "kind": "langgraph_checkpoint",
+      "framework": "langgraph",
+      "real_native": true,
+      "next": [],
+      "values_keys": [
+        "ctx"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb2-src-crb2-pending_tool_then_semantic_close-v01",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a17a2-8a34-644a-8002-7c03995455a7"
+        }
+      },
+      "native_action_nodes": 2
+    },
+    "truth_completed_units": [],
+    "truth_pending_obligations": [
+      {
+        "type": "callback",
+        "id": "toolcb",
+        "operation": "toolop"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "version": "aaif-reference-v2",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-pending_tool_then_semantic_close-v01",
+      "amount": 101
+    },
+    "pipeline": {
+      "completed_semantics": [],
+      "current_semantic": "tool_scope"
+    },
+    "pending": [
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "callback_id": "toolcb",
+          "operation": "toolop"
+        }
+      }
+    ],
+    "conversation": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "tool_send",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "operation": "toolop",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "tool_scope",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "callback_id": "toolcb",
+          "operation": "toolop"
+        }
+      }
+    ]
+  },
+  "inference": {},
+  "target": null,
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

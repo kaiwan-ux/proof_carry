@@ -1,0 +1,158 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h02-enough_evidence-maf-to-crewai-mcc_v3",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-async_callback-h02",
+    "family": "async_callback",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 944,
+    "payload_sha256": "9d9575bc077023624f91c449d2020244c07770e4f7c69484a870986646931ae8",
+    "expected_plan": [
+      {
+        "id": "webhook_delivery_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "callback",
+        "id": "webhook_delivery_cb",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-async_callback-h02",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "5d58a30da986adc9090236106318351b72917269aa05f43100ca1f37877d739e",
+    "continuation_contract_hash": "c4d706a45c6190bbd58395d7c746d80a530fffbc23dc8d48f97a22c4f16cd19e",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "callback_pending",
+        "semantic_unit": "callback_gate",
+        "data": {
+          "callback_id": "webhook_delivery_cb",
+          "operation": "webhook_delivery",
+          "blocks": "callback_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "1fd96a87f8fac0d1b973",
+        "fact_type": "obligation_state",
+        "subject": "webhook_delivery_cb",
+        "value": "pending",
+        "scope": "crb-holdout-async_callback-h02",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "9aa5d513-eee4-4793-a10e-19d774c9bb09"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "68a49d3a77266ec58c8762c5bad5299a278459e63c80f6d17fb43045eb860c86"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "callback_state|webhook_delivery_cb": [
+        "history",
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "callback",
+      "id": "webhook_delivery_cb",
+      "unit": "callback_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "webhook_delivery_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "webhook_delivery_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "webhook_delivery_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "webhook_delivery_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

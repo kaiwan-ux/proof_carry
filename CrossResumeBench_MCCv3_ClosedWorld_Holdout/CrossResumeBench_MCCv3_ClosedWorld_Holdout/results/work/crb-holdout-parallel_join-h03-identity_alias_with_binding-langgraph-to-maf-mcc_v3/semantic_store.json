@@ -1,0 +1,41 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "north"
+    },
+    {
+      "kind": "unit",
+      "unit": "south"
+    },
+    {
+      "kind": "unit",
+      "unit": "east"
+    },
+    {
+      "kind": "unit",
+      "unit": "west"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "east": 1,
+    "merge_join": 1,
+    "north": 1,
+    "south": 1,
+    "west": 1
+  }
+}

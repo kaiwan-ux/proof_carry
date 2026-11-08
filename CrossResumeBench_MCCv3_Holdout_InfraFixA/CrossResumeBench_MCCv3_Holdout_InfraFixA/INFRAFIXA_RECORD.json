@@ -1,0 +1,65 @@
+{
+  "changes_allowed": [
+    "native subprocess isolation",
+    "hard timeout/process-tree kill",
+    "incremental native gate persistence",
+    "UTF-8 environment",
+    "CrewAI worker stdout/stderr file redirection",
+    "diagnostic/result export wrappers",
+    "test import bootstrap"
+  ],
+  "changes_forbidden": [
+    "MCC v3 mechanism",
+    "holdout suite",
+    "evidence transformations",
+    "baselines",
+    "evaluator",
+    "semantics",
+    "frozen scientific runner",
+    "frozen MCC v2 baseline"
+  ],
+  "infra_combined_sha256": "48f04e2dd5f70d4cb3b3c8143c0662b5fd285936054fefa44b8972c235a6d45a",
+  "infra_file_hashes": {
+    "run_mccv3_holdout.bat": "92928a1ba3a5a0deacd1aa55bc9695727791115134d520860f07aecf1d3943dc",
+    "run_mccv3_holdout.ps1": "8b8121bf7e2cbeba17aebf2ac57a6e9bc0300ec67c756d914283f30a462e1b8b",
+    "run_mccv3_holdout.sh": "e09b1fe7debfa65df544aa60649d9156448fa374342f84a7501f9c2d43e84ed5",
+    "run_mccv3_holdout_infrafixA.bat": "aebd5e086f0d9e8caf6b642bc28196604e363d20405051240673396b0b50d383",
+    "run_mccv3_holdout_infrafixA.ps1": "47bbc5c5e5c2fa0247768e6a2a94ca6310da95f276634b05d4f5db3cef0fa80f",
+    "run_mccv3_holdout_infrafixA.sh": "749fdcf491813e31a0430975b3eeeaa9dfa87ca285856f2dc90771222fba074d",
+    "scripts/export_native_gate_diagnostics_infrafixA.py": "321d20033594c9ed9fcf25eb6157d43c7035fa66d8b9cb91f64d786be59d0b27",
+    "scripts/export_results_infrafixA.py": "c47a3a08f728d4920c1024be8e883e371b25e4e24ee2fccac81d5830e568ad9e",
+    "scripts/native_gate_infrafixA.py": "a92c6e9376229ced00c1f59d82165c43516d014681abf0718f6f1afecea43239",
+    "scripts/native_operation_worker.py": "29eced0281b9afd555890f09306b78c341712868d1be78a6a32aa9365f2fe907",
+    "scripts/run_holdout_infrafixA.py": "4168f7424c49ceae6e6aaceb7011ab42e0660f01218db3896abd92a608121a71",
+    "scripts/verify_results_infrafixA.py": "0b031568c7cfa729c2b921e251e964342ca1cecadfc0899ede0dc8a0476313ec",
+    "src/crossresumebench_mccv3/infra/__init__.py": "1a03f6b2e03798aa64da4e124f251080c1d8f25f31c2cd79514c69aeb81c2cb5",
+    "src/crossresumebench_mccv3/infra/isolated_runtime.py": "44a8635ec0e6f73ffba527ac41ba56f028853175cd6f6dc40c1b8448c8f4fa70",
+    "src/crossresumebench_mccv3/infra/process_guard.py": "71d5c1134513326eb7b3fbf52abf10e04993b7775575227cc384c77c34e67b44",
+    "src/crossresumebench_mccv3/native/crewai_runtime.py": "dd5b7ac8d85591cb6adb681a430e4500e8383a5f74a40ac36cc3ef90d658789d",
+    "tests/conftest.py": "f18ddcd6005a5b0326cdbee39215eaf48acda9d6c4bf2ad506baa82c4bc3f762",
+    "tests/test_infrafixA_process_guard.py": "1b0e6b16fa33bf8240a44ea9dda7b3d5e7a04d9599c79754011df5bb8edfbf4f"
+  },
+  "purpose": "native-runtime orchestration isolation only",
+  "revision": "InfraFixA",
+  "scientific_file_hashes": {
+    "benchmark/generated_holdout_suite.json": "76135c3f174d646ea1bfb5a30e1e3f31d6fa2ddfb522cfa1223902828abaf883",
+    "frozen_v2/schemas/mcc_v2.schema.json": "64f674bd4d2d4b8a57eddee30dea5a24c88d0ea293b7e588a6c725f9ad6f95d8",
+    "frozen_v2/src/crossresumebench_v2/certificates.py": "6e3928c60a8ebfc0e5110dee37dc1663c45b4684953b567d8c7ad1eef7a6f972",
+    "frozen_v2/src/crossresumebench_v2/mcc.py": "90efc7aa161e1f8d2b1177e701351920cef1cbffaeb91788d3e7848c10b7baa2",
+    "frozen_v2/src/crossresumebench_v2/models.py": "c53af7325ada0544372170355bd6f7fd2d0d8efc5f03172bc58c509b444bfc0e",
+    "mechanism/mcc_v3.py": "57eda36a01f94040ff730383957e8a86cdb37265ac528b4943b71d8f0876ff69",
+    "mechanism/proofs.py": "2ff99668579cd316c2392375b07370bd3c038b3d9dbc91064ed7e87648a6a82c",
+    "mechanism/schemas/mcc_v3.schema.json": "4e8cdceeab1f1794a29527b8a40a8dc03219a108af8ac48f50c254e53ef7945a",
+    "src/crossresumebench_mccv3/baselines.py": "e242d26a09b7e49156abc6705633d15468a28bc29c3bd12e3bfbfd006f20f74d",
+    "src/crossresumebench_mccv3/evaluator.py": "af0f51bf2a78822b04d6c59839578f892d9bc6d1b79a4d938a2a33476a3f10ee",
+    "src/crossresumebench_mccv3/evidence.py": "8ffc05764f685adedb9aa5076826328dcd49d2c34d440af4fb2974cb92dabea4",
+    "src/crossresumebench_mccv3/runner.py": "112d31e069b5d4309a744dc1842f5a77b77d42e1cd180116045d57eab3b5f355",
+    "src/crossresumebench_mccv3/semantics.py": "b46d125d72237450212f5f3d2d42e5c4eef42bf57b0a49843fe04a00d762beab"
+  },
+  "scientific_freeze": {
+    "evaluation_code_combined_sha256": "1c3372bbc1ab64d3f25e4d1e1ecd1aa3a870d82b285d90b38b3202618d6edac2",
+    "holdout_suite_sha256": "3cc06e8817f1b1861381ec348bbcf769be4b169833b9b24deccfc688a154f8e8",
+    "mechanism_sha256": "4e6fdd6d0fc949a7e337b02be9d71706a40f5fc87971f8030e0a5a02a32f6194"
+  },
+  "scientific_freeze_unchanged": true
+}

@@ -1,0 +1,69 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1,
+      "sync_try_1": 1,
+      "sync_try_2": 1,
+      "sync_try_3": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:sync_retry": 3
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_2"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "sync_try_3"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:sync_retry",
+      "value": 3
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "langgraph_target_graph",
+  "final": {
+    "store_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\crb-holdout-composite-h02-missing_critical_fact-crewai-to-langgraph-mcc_v2_frozen\\semantic_store.json",
+    "phase": "finished"
+  }
+}

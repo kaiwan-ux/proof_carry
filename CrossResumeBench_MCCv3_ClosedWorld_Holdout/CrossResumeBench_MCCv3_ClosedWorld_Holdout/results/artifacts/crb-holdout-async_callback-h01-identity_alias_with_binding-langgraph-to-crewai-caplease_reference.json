@@ -1,0 +1,108 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h01-identity_alias_with_binding-langgraph-to-crewai-caplease_reference",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-async_callback-h01",
+    "family": "async_callback",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "caplease_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "CALLBACKS_MISMATCH"
+    ],
+    "payload_bytes": 203,
+    "payload_sha256": "c1f7d74a42a539badb5164994f975aea876e640775b1773cc870acaae8320578",
+    "expected_plan": [
+      {
+        "id": "rpc_result_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "caplease_reference",
+    "history": [
+      {
+        "type": "callback_pending",
+        "semantic_unit": "callback_gate",
+        "data": {
+          "callback_id": "src_alias__rpc_result_cb",
+          "operation": "rpc_result",
+          "blocks": "callback_gate"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "rpc_result_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "rpc_result_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h02-identity_alias_with_binding-maf-to-crewai-aaif_reference",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-async_callback-h02",
+    "family": "async_callback",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "aaif_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "CALLBACKS_MISMATCH"
+    ],
+    "payload_bytes": 211,
+    "payload_sha256": "11ad2ae3f9f8c211c61f3a8d255a1c6cc7f21e61c97edb83f217ba6975e73c4b",
+    "expected_plan": [
+      {
+        "id": "webhook_delivery_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_reference",
+    "history": [
+      {
+        "type": "callback_pending",
+        "semantic_unit": "callback_gate",
+        "data": {
+          "callback_id": "src_alias__webhook_delivery_cb",
+          "operation": "webhook_delivery",
+          "blocks": "callback_gate"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "webhook_delivery_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "webhook_delivery_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

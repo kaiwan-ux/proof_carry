@@ -1,0 +1,131 @@
+{
+  "row": {
+    "run_id": "crb-holdout-loop_pause-h01-tampered_attestation-maf-to-crewai-mcc_v3",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-loop_pause-h01",
+    "family": "loop_pause",
+    "evidence_variant": "tampered_attestation",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1143,
+    "payload_sha256": "e2bef32d65092fed084bfd274c71c4a3c76779a0a779da8b6f6fc5ad822f53ac",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-loop_pause-h01",
+    "workflow": "mccv3_holdout_loop_pause",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "6cd86ec188500c6a6a561725dd7dc9d0822efb2fe852f4be52f72fdb9dc178ea",
+    "continuation_contract_hash": "ee02930941213f0a4bd3c0716a31bd86bce70c2dfcd3b45daba96f09e5302d51",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:holdout",
+          "value": 1
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "ca21b28f202e5a63b992",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "value": 4,
+        "scope": "crb-holdout-loop_pause-h01",
+        "evidence": {
+          "native_checkpoint_ref": "00cbb5b5-a811-4b0b-84b0-b9b369bb3d78"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "certificate_id": "94ff1cd7bdd9507bacd2",
+        "fact_type": "decision_state",
+        "subject": "loop_break",
+        "value": false,
+        "scope": "crb-holdout-loop_pause-h01",
+        "evidence": {
+          "native_checkpoint_ref": "00cbb5b5-a811-4b0b-84b0-b9b369bb3d78"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "db49fe4a151c64ff706cf6357249e19db59f0c5f4a0cc08e22d524e6be7960f8"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "INVALID_ATTESTATION",
+        "ids": [
+          "ca21b28f202e5a63b992"
+        ]
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "purpose": "know loop bound"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "counter_state|loop:holdout": [
+        "history"
+      ],
+      "decision_state|loop_break": [
+        "certificate"
+      ]
+    }
+  }
+}

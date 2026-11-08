@@ -1,0 +1,358 @@
+{
+  "case": {
+    "case_id": "crb2-parallel_branch_completion_gap-v02",
+    "family": "parallel_branch_completion_gap",
+    "variant": 2,
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-parallel_branch_completion_gap-v02",
+      "amount": 102
+    },
+    "source_actions": [
+      {
+        "action_id": "fanout",
+        "semantic_unit": "fanout",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "a_effect",
+        "semantic_unit": "branch_a",
+        "kind": "effect",
+        "operation": "reserve_a",
+        "depends_on": [],
+        "parent_unit": "branch_a",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": true,
+          "emit_completion": true,
+          "certify_completion": false
+        }
+      },
+      {
+        "action_id": "b_start",
+        "semantic_unit": "branch_b",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "emit_completion": false,
+          "unit_completed": false
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "fanout_t",
+        "semantic_unit": "fanout",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "a_t",
+        "semantic_unit": "branch_a",
+        "kind": "effect",
+        "operation": "reserve_a",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "b_t",
+        "semantic_unit": "branch_b",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "join",
+        "semantic_unit": "join",
+        "kind": "join",
+        "operation": null,
+        "depends_on": [
+          "branch_a",
+          "branch_b"
+        ],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {
+      "join": [
+        "branch_a",
+        "branch_b"
+      ]
+    },
+    "expected_semantic_units": [
+      "fanout",
+      "branch_a",
+      "branch_b",
+      "join",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "reserve_a": 1
+    },
+    "mismatch_tags": [
+      "parallel-partial",
+      "semantic-branch-certificate",
+      "source:tool_timeout",
+      "target:superstep_end"
+    ],
+    "source_boundary": "tool_timeout",
+    "target_boundary": "superstep_end",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-parallel_branch_completion_gap-v02",
+    "workflow": "parallel_branch_completion_gap",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-parallel_branch_completion_gap-v02",
+      "amount": 102
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "fanout",
+        "semantic_unit": "fanout",
+        "data": {
+          "source_label": "fanout"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "fanout",
+        "semantic_unit": "fanout",
+        "data": {
+          "unit": "fanout"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "a_effect",
+        "semantic_unit": "branch_a",
+        "data": {
+          "operation": "reserve_a",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "branch_a",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "seq": 4,
+        "type": "semantic_unit_completed",
+        "step": "a_effect",
+        "semantic_unit": "branch_a",
+        "data": {
+          "unit": "branch_a"
+        }
+      },
+      {
+        "seq": 5,
+        "type": "step_observed",
+        "step": "b_start",
+        "semantic_unit": "branch_b",
+        "data": {
+          "source_label": "b_start"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "2daafe59b742acdf763c",
+        "fact_type": "effect_commitment",
+        "subject": "reserve_a",
+        "value": "committed",
+        "scope": "branch_a",
+        "evidence": {
+          "operation_id": "crb2-parallel_branch_completion_gap-v02:reserve_a",
+          "idempotency_key": "idem:crb2-parallel_branch_completion_gap-v02:reserve_a",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "77fa2e9572db87cdd28ed923f51573a8c57c87a566d3f77bccc355c1f021326d"
+      }
+    ],
+    "source_ledger": {
+      "reserve_a": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [
+      "fanout",
+      "branch_a"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {
+      "join": [
+        "branch_a",
+        "branch_b"
+      ]
+    },
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "oracle": true,
+    "capture": {
+      "case_id": "crb2-parallel_branch_completion_gap-v02",
+      "workflow": "parallel_branch_completion_gap",
+      "app_state": {
+        "variant": 2,
+        "request_id": "crb2-parallel_branch_completion_gap-v02",
+        "amount": 102
+      },
+      "portable_history": [
+        {
+          "seq": 1,
+          "type": "step_observed",
+          "step": "fanout",
+          "semantic_unit": "fanout",
+          "data": {
+            "source_label": "fanout"
+          }
+        },
+        {
+          "seq": 2,
+          "type": "semantic_unit_completed",
+          "step": "fanout",
+          "semantic_unit": "fanout",
+          "data": {
+            "unit": "fanout"
+          }
+        },
+        {
+          "seq": 3,
+          "type": "tool_call_observed",
+          "step": "a_effect",
+          "semantic_unit": "branch_a",
+          "data": {
+            "operation": "reserve_a",
+            "commit_status": "unknown",
+            "result": "timeout",
+            "parent_unit": "branch_a",
+            "unit_completion_observable": true
+          }
+        },
+        {
+          "seq": 4,
+          "type": "semantic_unit_completed",
+          "step": "a_effect",
+          "semantic_unit": "branch_a",
+          "data": {
+            "unit": "branch_a"
+          }
+        },
+        {
+          "seq": 5,
+          "type": "step_observed",
+          "step": "b_start",
+          "semantic_unit": "branch_b",
+          "data": {
+            "source_label": "b_start"
+          }
+        }
+      ],
+      "certificates": [
+        {
+          "certificate_id": "2daafe59b742acdf763c",
+          "fact_type": "effect_commitment",
+          "subject": "reserve_a",
+          "value": "committed",
+          "scope": "branch_a",
+          "evidence": {
+            "operation_id": "crb2-parallel_branch_completion_gap-v02:reserve_a",
+            "idempotency_key": "idem:crb2-parallel_branch_completion_gap-v02:reserve_a",
+            "replay": "forbidden"
+          },
+          "issuer": "crossresumebench_witness",
+          "evidence_hash": "77fa2e9572db87cdd28ed923f51573a8c57c87a566d3f77bccc355c1f021326d"
+        }
+      ],
+      "source_ledger": {
+        "reserve_a": 1
+      },
+      "native_observation": {
+        "kind": "semantic_simulator",
+        "framework": "semantic"
+      },
+      "truth_completed_units": [
+        "fanout",
+        "branch_a"
+      ],
+      "truth_pending_obligations": [],
+      "truth_dependencies": {
+        "join": [
+          "branch_a",
+          "branch_b"
+        ]
+      },
+      "truth_decisions": {},
+      "truth_counters": {}
+    }
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "branch_a",
+      "branch_b",
+      "fanout",
+      "finish",
+      "join"
+    ],
+    "executed_units": [
+      "branch_b",
+      "join",
+      "finish"
+    ],
+    "final_ledger": {
+      "reserve_a": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

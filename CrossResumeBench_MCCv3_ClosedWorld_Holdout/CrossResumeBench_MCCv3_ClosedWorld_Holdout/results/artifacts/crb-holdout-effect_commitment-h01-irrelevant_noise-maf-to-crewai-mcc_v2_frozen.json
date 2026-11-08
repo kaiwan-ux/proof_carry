@@ -1,0 +1,156 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h01-irrelevant_noise-maf-to-crewai-mcc_v2_frozen",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-effect_commitment-h01",
+    "family": "effect_commitment",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 951,
+    "payload_sha256": "1520980861b16c021582e16995ab46b8c519ae55c1e288669936b36d89bc4f3e",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-effect_commitment-h01",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "91b7a74fcce95edc7af691f915d247765454aa70f4f0976087dcef61505d031c",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "invoice_capture",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "80644311cf7d2ec6263a",
+        "fact_type": "effect_commitment",
+        "subject": "invoice_capture",
+        "value": "committed",
+        "scope": "crb-holdout-effect_commitment-h01",
+        "evidence": {
+          "native_checkpoint_ref": "95dfaab7-cafa-447a-b5e1-b517b78e5fc3"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "225d6a5cf24ffc06a067265c34005a9b448509acbc852a84041a0f21c65674ae"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "effect_commitment:invoice_capture:committed"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "effect_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "invoice_capture": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice_capture",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "invoice_capture": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice_capture",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

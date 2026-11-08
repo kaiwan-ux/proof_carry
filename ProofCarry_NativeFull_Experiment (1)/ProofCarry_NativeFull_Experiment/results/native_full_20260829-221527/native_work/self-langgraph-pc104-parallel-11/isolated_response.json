@@ -1,0 +1,122 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-parallel-11",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-parallel-11-self-langgraph-pc104-parallel-11",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3d07-9020-68a8-8001-561ca6656b7f",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-parallel-11-self-langgraph-pc104-parallel-11"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "invoice_parallel_b2"
+          },
+          {
+            "kind": "unit",
+            "unit": "invoice_parallel_b3"
+          },
+          {
+            "kind": "unit",
+            "unit": "invoice_parallel_b4_failed"
+          }
+        ],
+        "units": {
+          "invoice_parallel_b2": 1,
+          "invoice_parallel_b3": 1,
+          "invoice_parallel_b4_failed": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "invoice_parallel_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_parallel_b3"
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_parallel_b4_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_parallel_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_parallel_b4_recover"
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_parallel_b4"
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_parallel_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "invoice_parallel_b1": 1,
+        "invoice_parallel_b2": 1,
+        "invoice_parallel_b3": 1,
+        "invoice_parallel_b4": 1,
+        "invoice_parallel_b4_failed": 1,
+        "invoice_parallel_b4_recover": 1,
+        "invoice_parallel_join": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 5.125
+}

@@ -1,0 +1,88 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h02-identity_alias_without_binding-maf-to-crewai-mcc_v3",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-approval_wait-h02",
+    "family": "approval_wait",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 962,
+    "payload_sha256": "a460dd4928069aae442744775fe93774b11cc328d1c33ffa6f397bee01a98b51",
+    "expected_plan": [
+      {
+        "id": "approve_model_rollout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-approval_wait-h02",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "0f23841bac00c54a59e3eedc42fd2f8e6bb3a761b66188eef60479ba2d2e556e",
+    "continuation_contract_hash": "a99d4f6e2aef317ca05f49d6c9ce0fa50ad175a0f9b6036a35c64639aca7b28b",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "approval_requested",
+        "semantic_unit": "approval_gate",
+        "data": {
+          "request_id": "src_alias__approve_model_rollout",
+          "blocks": "approval_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "27f29ab93c951d926713",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__approve_model_rollout",
+        "value": "pending",
+        "scope": "crb-holdout-approval_wait-h02",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "approval_gate",
+          "native_checkpoint_ref": "1453aadd-0fbb-4a64-88f4-cd59975daa11"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "d49c795bd48ec8ee932f03021fcb5ff64ecef6e81d29e4b8dc505dd6bd9fda4b"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "approval_state",
+        "subject": "approve_model_rollout",
+        "purpose": "must not bypass a pending human approval"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "approval_state|src_alias__approve_model_rollout": [
+        "history",
+        "certificate"
+      ]
+    }
+  }
+}

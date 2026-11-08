@@ -1,0 +1,19 @@
+{
+  "workflow_name": "proofcarry-104-pc104-effect_commitment-01-gate-maf-pc104-effect_commitment-01",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "9161f5e5-a8dc-4ddf-8f76-0faa5ab5cacd",
+  "previous_checkpoint_id": "17a7365f-b3aa-43f2-8254-880996b0915b",
+  "timestamp": "2026-08-30T19:07:52.926425+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

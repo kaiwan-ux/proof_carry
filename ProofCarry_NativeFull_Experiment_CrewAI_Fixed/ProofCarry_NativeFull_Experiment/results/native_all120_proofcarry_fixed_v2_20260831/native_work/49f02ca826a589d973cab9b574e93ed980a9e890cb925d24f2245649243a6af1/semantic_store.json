@@ -1,0 +1,38 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "email_retry_task_attempt": 3
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "email_retry_task_failed_2"
+    },
+    {
+      "key": "email_retry_task_attempt",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "email_retry_task_attempt_3"
+    },
+    {
+      "key": "email_retry_task_attempt",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "email_retry_task_attempt_3": 1,
+    "email_retry_task_failed_2": 1
+  }
+}

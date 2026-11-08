@@ -1,0 +1,103 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h03-irrelevant_noise-maf-to-langgraph-mcc_v2_frozen",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "family": "approval_wait",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 393,
+    "payload_sha256": "9793a8ee18b93f790621aa25df892ba1b9e98bfaa75dad2e2f8958d36b1a76a9",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "maf",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "53155ae12f497d85bee5cf85d9308536bf056bc79ee0dbd78ae4eb9fd4934797",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

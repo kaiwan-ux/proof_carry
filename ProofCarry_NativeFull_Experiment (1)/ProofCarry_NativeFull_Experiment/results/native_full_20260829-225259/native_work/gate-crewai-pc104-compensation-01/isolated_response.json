@@ -1,0 +1,42 @@
+{
+  "lifecycle_returned": false,
+  "operation": "self_resume",
+  "result": {
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {
+        "refund_comp_rollback": 1
+      },
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "refund_comp_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "refund_comp_op",
+          "unit": "refund_comp_effect"
+        },
+        {
+          "action": "refund_comp_rollback",
+          "kind": "compensation",
+          "unit": "refund_comp_compensate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "refund_comp_compensate": 1,
+        "refund_comp_effect": 1
+      }
+    }
+  },
+  "status": "semantic_complete_lifecycle_hang",
+  "worker_duration_sec": 66.34399999999914
+}

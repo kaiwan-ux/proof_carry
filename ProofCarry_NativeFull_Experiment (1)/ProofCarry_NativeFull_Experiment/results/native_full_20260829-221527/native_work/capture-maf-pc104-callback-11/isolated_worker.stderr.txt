@@ -1,0 +1,20 @@
+Failed to detach context
+Traceback (most recent call last):
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\opentelemetry\trace\__init__.py", line 608, in use_span
+    yield span
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\opentelemetry\trace\__init__.py", line 508, in start_as_current_span
+    yield span
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\opentelemetry\trace\__init__.py", line 443, in start_as_current_span
+    yield span
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\agent_framework\_workflows\_workflow.py", line 580, in _run_workflow_with_tracing
+    yield event
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\opentelemetry\context\__init__.py", line 143, in detach
+    _RUNTIME_CONTEXT.detach(token)
+  File "F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\.venv\Lib\site-packages\opentelemetry\context\contextvars_context.py", line 42, in detach
+    self._current_context.reset(token)
+ValueError: <Token var=<ContextVar name='current_context' default={} at 0x000001EDCA0BD8F0> at 0x000001EDCAE90A80> was created in a different Context

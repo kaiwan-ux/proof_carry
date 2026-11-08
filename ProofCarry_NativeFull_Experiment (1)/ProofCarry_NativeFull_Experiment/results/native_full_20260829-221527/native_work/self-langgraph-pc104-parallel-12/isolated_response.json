@@ -1,0 +1,117 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-parallel-12",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-parallel-12-self-langgraph-pc104-parallel-12",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3d08-1731-657b-8001-58a5965270a5",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-parallel-12-self-langgraph-pc104-parallel-12"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "content_parallel_b1"
+          },
+          {
+            "kind": "unit",
+            "unit": "content_parallel_b2"
+          },
+          {
+            "kind": "unit",
+            "unit": "content_parallel_b3_failed"
+          }
+        ],
+        "units": {
+          "content_parallel_b1": 1,
+          "content_parallel_b2": 1,
+          "content_parallel_b3_failed": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "content_parallel_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "content_parallel_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "content_parallel_b3_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "content_parallel_b3_recover"
+        },
+        {
+          "kind": "unit",
+          "unit": "content_parallel_b3"
+        },
+        {
+          "kind": "unit",
+          "unit": "content_parallel_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "content_parallel_b1": 1,
+        "content_parallel_b2": 1,
+        "content_parallel_b3": 1,
+        "content_parallel_b3_failed": 1,
+        "content_parallel_b3_recover": 1,
+        "content_parallel_join": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 6.905999999999949
+}

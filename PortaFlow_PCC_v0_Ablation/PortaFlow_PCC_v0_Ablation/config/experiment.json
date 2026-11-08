@@ -1,0 +1,40 @@
+{
+  "experiment_name": "portaflow_pcc_v0_ablation",
+  "schema_version": "0.3",
+  "seed": 20260822,
+  "frameworks": ["langgraph", "crewai", "maf"],
+  "workflows": ["retry", "approval", "side_effect", "branch", "loop", "parallel"],
+  "conditions": [
+    "state_only",
+    "state_history",
+    "plus_control_frontier",
+    "plus_pending_obligations",
+    "plus_effect_receipts",
+    "full_pcc_v0"
+  ],
+  "include_same_runtime_pairs": false,
+  "expected_native_source_captures": 18,
+  "expected_cross_runtime_rows": 216,
+  "evidence_policy": {
+    "native_cross_runtime_is_primary": true,
+    "full_pcc_is_proposed_mechanism": true,
+    "native_checkpoint_blob_must_not_enter_pcc": true,
+    "descriptive_counts_only_for_deterministic_cases": true,
+    "llm_disabled": true
+  },
+  "hypotheses": {
+    "H1": "Full PCC v0 yields a higher safe-continuation rate than state-only and state+history baselines.",
+    "H2": "Effect receipts specifically reduce duplicate external effects in side-effect workflows.",
+    "H3": "Control frontier, pending obligations, and dependency contracts contribute distinct gains on branch/loop, approval, and parallel workflows respectively."
+  },
+  "kill_rules": {
+    "mechanism_kill": "If full_pcc_v0 is not materially better than state_history, PCC v0 is not justified in its current form.",
+    "component_kill": "A component that never changes any hard-invariant outcome across its targeted workflows is not justified as mandatory PCC state.",
+    "technical_gate": "Do not interpret semantic results unless all three native source adapters work and technical-failure rows are zero or explicitly resolved."
+  },
+  "llm": {
+    "enabled": false,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b"
+  }
+}

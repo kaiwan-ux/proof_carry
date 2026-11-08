@@ -1,0 +1,126 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h01-identity_alias_with_binding-crewai-to-maf-oracle",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-parallel_join-h01",
+    "family": "parallel_join",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "oracle",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 37,
+    "payload_sha256": "fe969aba0f1ec6d31492bcae82d1aee5564e9e530c26e05c6f8e9c88e3b40bab",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "beta"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "beta"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "oracle",
+    "privileged": true
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "beta"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "alpha": 1,
+      "beta": 1,
+      "merge_join": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "alpha"
+      },
+      {
+        "kind": "unit",
+        "unit": "beta"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "alpha": 1,
+      "beta": 1,
+      "merge_join": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "alpha"
+      },
+      {
+        "kind": "unit",
+        "unit": "beta"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

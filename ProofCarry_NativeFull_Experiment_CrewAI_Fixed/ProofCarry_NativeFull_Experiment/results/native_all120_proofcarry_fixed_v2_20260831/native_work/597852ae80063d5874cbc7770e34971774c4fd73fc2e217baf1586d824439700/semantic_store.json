@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "ledger_post_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "ledger_post_op",
+      "unit": "ledger_post_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "ledger_post_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "ledger_post_ack": 1,
+    "ledger_post_attempt": 1
+  }
+}

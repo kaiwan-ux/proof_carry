@@ -1,0 +1,9 @@
+┌───────────────────────── Trace Batch Finalization ──────────────────────────┐
+│ ✅ Trace batch finalized with session ID:                                   │
+│ 49291f2f-38fc-4c20-ad09-b441726db929                                        │
+│                                                                             │
+│ 🔗 View here:                                                               │
+│ https://app.crewai.com/crewai_plus/ephemeral_trace_batches/49291f2f-38fc-4c │
+│ 20-ad09-b441726db929?access_code=TRACE-eff9d907ff                           │
+│ 🔑 Access Code: TRACE-eff9d907ff                                            │
+└─────────────────────────────────────────────────────────────────────────────┘

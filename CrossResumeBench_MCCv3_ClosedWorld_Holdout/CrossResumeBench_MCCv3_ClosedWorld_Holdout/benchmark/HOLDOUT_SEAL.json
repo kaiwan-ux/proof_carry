@@ -1,0 +1,11 @@
+{
+  "case_count": 32,
+  "case_variant_instances": 128,
+  "directed_pairs": 6,
+  "generation_seed_hex": "eaf7aa910c36f0e20aab4e6046edd5fe",
+  "holdout_hash": "3cc06e8817f1b1861381ec348bbcf769be4b169833b9b24deccfc688a154f8e8",
+  "mechanism_hash_before_holdout": "4e6fdd6d0fc949a7e337b02be9d71706a40f5fc87971f8030e0a5a02a32f6194",
+  "methods": 8,
+  "planned_migration_rows": 6144,
+  "separation_rule": "mechanism files were written and hashed before holdout seed generation and suite creation"
+}

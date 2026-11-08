@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "file_publish_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "file_publish_op",
+      "unit": "file_publish_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "file_publish_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "file_publish_ack": 1,
+    "file_publish_attempt": 1
+  }
+}

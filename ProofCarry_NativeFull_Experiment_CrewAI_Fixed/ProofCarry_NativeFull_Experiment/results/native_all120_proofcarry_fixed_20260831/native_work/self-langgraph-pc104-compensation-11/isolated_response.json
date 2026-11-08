@@ -1,0 +1,87 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-compensation-11",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-compensation-11-self-langgraph-pc104-compensation-11",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4acd-5e93-6545-8001-cc90593ae593",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-compensation-11-self-langgraph-pc104-compensation-11"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "deploy_comp_effect_failed"
+          }
+        ],
+        "units": {
+          "deploy_comp_effect_failed": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "deploy_comp_effect_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "deploy_comp_no_compensation_needed"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "deploy_comp_effect_failed": 1,
+        "deploy_comp_no_compensation_needed": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 3.3909999999996217
+}

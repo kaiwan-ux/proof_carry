@@ -1,0 +1,61 @@
+{
+  "lifecycle_returned": false,
+  "operation": "self_resume",
+  "result": {
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "fraud_parallel_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "fraud_parallel_b2_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "fraud_parallel_b4"
+        },
+        {
+          "kind": "unit",
+          "unit": "fraud_parallel_b2_recover"
+        },
+        {
+          "kind": "unit",
+          "unit": "fraud_parallel_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "fraud_parallel_b3"
+        },
+        {
+          "kind": "unit",
+          "unit": "fraud_parallel_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "fraud_parallel_b1": 1,
+        "fraud_parallel_b2": 1,
+        "fraud_parallel_b2_failed": 1,
+        "fraud_parallel_b2_recover": 1,
+        "fraud_parallel_b3": 1,
+        "fraud_parallel_b4": 1,
+        "fraud_parallel_join": 1
+      }
+    }
+  },
+  "status": "semantic_complete_lifecycle_hang",
+  "worker_duration_sec": 71.01499999999942
+}

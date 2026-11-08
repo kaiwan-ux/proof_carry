@@ -1,0 +1,23 @@
+{
+  "primary": {
+    "suite_sha_must_match": true,
+    "proofcarry_semantic_unsafe_max": 0,
+    "proofcarry_enough_evidence_completion_expected": "all non-technical",
+    "proofcarry_missing_fact_expected": "safe_rejection",
+    "proofcarry_missing_binding_expected": "safe_rejection",
+    "security_attacks_expected": "safe_rejection for all attacks; valid controls safe-complete",
+    "native_family_gate": "24/24 required before native claims",
+    "native_self_resume": "all 312 controls required for universal 3-runtime claim"
+  },
+  "statistics": {
+    "primary_independent_unit": "base_case",
+    "n_base_cases": 104,
+    "bootstrap": "case-block bootstrap",
+    "paired_test": "Wilcoxon signed-rank where appropriate",
+    "multiplicity": "Holm correction"
+  },
+  "performance": {
+    "descriptive_only": true,
+    "no_latency_superiority_claim_without_results": true
+  }
+}

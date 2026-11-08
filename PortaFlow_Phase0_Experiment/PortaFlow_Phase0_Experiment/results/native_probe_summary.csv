@@ -1,0 +1,34 @@
+framework,status,duration_seconds,error
+langgraph,ok,2.107,
+crewai,ok,10.593,
+maf,technical_failure,0.621,"exit=1: Traceback (most recent call last):
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\native_probes\maf\probe.py"", line 81, in <module>
+    main()
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\native_probes\maf\probe.py"", line 78, in main
+    asyncio.run(amain())
+  File ""C:\Program Files\Python312\Lib\asyncio\runners.py"", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\asyncio\runners.py"", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\asyncio\base_events.py"", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\native_probes\maf\probe.py"", line 11, in amain
+    class MidStep(Executor):
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\native_probes\maf\probe.py"", line 17, in MidStep
+    @handler
+     ^^^^^^^
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\.venv\Lib\site-packages\agent_framework\_workflows\_executor.py"", line 735, in handler
+    return decorator(func)
+           ^^^^^^^^^^^^^^^
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\.venv\Lib\site-packages\agent_framework\_workflows\_executor.py"", line 687, in decorator
+    _validate_handler_signature(func, skip_message_annotation=False)
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\.venv\Lib\site-packages\agent_framework\_workflows\_executor.py"", line 807, in _validate_handler_signature
+    output_types, workflow_output_types = validate_workflow_context_annotation(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\Tech Mehal\Desktop\agentic wala\PortaFlow_Phase0_Experiment\PortaFlow_Phase0_Experiment\.venv\Lib\site-packages\agent_framework\_workflows\_workflow_context.py"", line 151, in validate_workflow_context_annotation
+    raise ValueError(
+ValueError: Handler parameter 'ctx' must be annotated as WorkflowContext, WorkflowContext[T], or WorkflowContext[T, U], got WorkflowContext[str]
+"

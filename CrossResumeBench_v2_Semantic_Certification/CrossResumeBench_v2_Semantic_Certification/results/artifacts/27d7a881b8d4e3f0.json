@@ -1,0 +1,164 @@
+{
+  "source_capture": {
+    "case_id": "crb2-multi_effect_semantic_unit-v01",
+    "workflow": "multi_effect_semantic_unit",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-multi_effect_semantic_unit-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "e1",
+        "semantic_unit": "bundle",
+        "data": {
+          "operation": "e1",
+          "commit_status": "committed",
+          "result": "timeout",
+          "parent_unit": "bundle",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "tool_call_observed",
+        "step": "e2",
+        "semantic_unit": "bundle",
+        "data": {
+          "operation": "e2",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "bundle",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "ba8fe3ec386a72d56013",
+        "fact_type": "effect_commitment",
+        "subject": "e1",
+        "value": "committed",
+        "scope": "bundle",
+        "evidence": {
+          "operation_id": "crb2-multi_effect_semantic_unit-v01:e1",
+          "idempotency_key": "idem:crb2-multi_effect_semantic_unit-v01:e1",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5343e9cb1da5dd7920debe708221595b5ddf26c67e3128dc5cfe4b0ab9e780bb"
+      },
+      {
+        "certificate_id": "d5e65c659e0f839518f2",
+        "fact_type": "effect_commitment",
+        "subject": "e2",
+        "value": "committed",
+        "scope": "bundle",
+        "evidence": {
+          "operation_id": "crb2-multi_effect_semantic_unit-v01:e2",
+          "idempotency_key": "idem:crb2-multi_effect_semantic_unit-v01:e2",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "9e0a869059bed56f2f81d1a1d301bce8a072deb2b6c78f73cfc544897d715d40"
+      },
+      {
+        "certificate_id": "6d258d56546c9034ae68",
+        "fact_type": "semantic_completion",
+        "subject": "bundle",
+        "value": "completed",
+        "scope": "bundle",
+        "evidence": {
+          "operation": "e2",
+          "native_marker": "e2",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "402bd3c7fb97f9eee5e56e62ef3b8a59f71acc119814b10f2c0c1843248add5e"
+      }
+    ],
+    "source_ledger": {
+      "e1": 1,
+      "e2": 1
+    },
+    "native_observation": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "5a8168ab-12cd-425e-ab9f-f615c0023301",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 2
+    },
+    "truth_completed_units": [
+      "bundle"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-multi_effect_semantic_unit-v01",
+      "amount": 101
+    },
+    "completed_units": [
+      "bundle"
+    ],
+    "pending_obligations": [],
+    "effect_facts": {
+      "e1": {
+        "status": "committed",
+        "source": "oracle_source_ledger"
+      },
+      "e2": {
+        "status": "committed",
+        "source": "oracle_source_ledger"
+      }
+    },
+    "dependencies": {},
+    "decisions": {},
+    "counters": {}
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "bundle",
+      "finish"
+    ],
+    "executed_units": [
+      "finish"
+    ],
+    "final_ledger": {
+      "e1": 1,
+      "e2": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "maf_workflow_checkpoint",
+      "framework": "maf",
+      "real_native": true,
+      "workflow_name": "WorkflowBuilder-c7d4e4fd-723b-495d-973b-693fca26929b",
+      "checkpoint_count": 6,
+      "native_action_executors": 4
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

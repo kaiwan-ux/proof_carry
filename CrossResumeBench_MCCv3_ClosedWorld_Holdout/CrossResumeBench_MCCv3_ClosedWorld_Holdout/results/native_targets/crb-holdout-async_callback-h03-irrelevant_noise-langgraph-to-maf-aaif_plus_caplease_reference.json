@@ -1,0 +1,29 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "callback_closed": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_closed"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "maf_target_workflow_explicit_handlers"
+}

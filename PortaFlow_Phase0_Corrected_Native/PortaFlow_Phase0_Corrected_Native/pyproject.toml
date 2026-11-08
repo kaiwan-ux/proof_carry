@@ -1,0 +1,8 @@
+[project]
+name = "portaflow-phase0-corrected-native"
+version = "0.2.0"
+requires-python = ">=3.12,<3.14"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

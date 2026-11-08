@@ -1,0 +1,57 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-approval-03",
+    "checkpoint_ref": "thread:proofcarry-104-pc104-approval-03-capture-langgraph-pc104-approval-03",
+    "framework": "langgraph",
+    "native_kind": "langgraph_checkpoint",
+    "native_observation": {
+      "config": {
+        "configurable": {
+          "checkpoint_id": "1f1a3ce7-d1b0-6ba4-8001-d0913a1ab4de",
+          "checkpoint_ns": "",
+          "thread_id": "proofcarry-104-pc104-approval-03-capture-langgraph-pc104-approval-03"
+        }
+      },
+      "framework": "langgraph",
+      "identifier_label": "node_id",
+      "next": [
+        "resume"
+      ],
+      "pause_status": "waiting",
+      "semantic_namespace": "lg.node",
+      "values_keys": [
+        "case_id",
+        "phase",
+        "store_path"
+      ]
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 0,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "deploy_approval_requested"
+        }
+      ],
+      "units": {
+        "deploy_approval_requested": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.3599999999996726
+}

@@ -1,0 +1,105 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-loop-12",
+      "checkpoint_ref": "a0f475d3-4b41-4869-9418-6860f53785c9",
+      "framework": "maf",
+      "native_kind": "maf_superstep_file_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 2,
+        "checkpoint_id": "a0f475d3-4b41-4869-9418-6860f53785c9",
+        "event_trace": [
+          {
+            "class": "WorkflowEvent",
+            "type": "started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "status"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_invoked"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_completed"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_completed"
+          }
+        ],
+        "framework": "maf",
+        "handler_typing_mode": "explicit",
+        "identifier_label": "activity_id",
+        "pause_status": "suspended",
+        "semantic_namespace": "maf.activity",
+        "workflow_name": "proofcarry-104-pc104-loop-12-self-maf-pc104-loop-12"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "notify_loop_index": 4
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "notify_loop_index",
+            "kind": "counter",
+            "value": 4
+          }
+        ],
+        "units": {}
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "notify_loop_index": 4
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "notify_loop_index",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "notify_loop_exit"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "notify_loop_exit": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 0.75
+}

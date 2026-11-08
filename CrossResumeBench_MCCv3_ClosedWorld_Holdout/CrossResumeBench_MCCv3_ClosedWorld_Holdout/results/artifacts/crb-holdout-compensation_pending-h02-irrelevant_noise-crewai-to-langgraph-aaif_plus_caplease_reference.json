@@ -1,0 +1,155 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h02-irrelevant_noise-crewai-to-langgraph-aaif_plus_caplease_reference",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-compensation_pending-h02",
+    "family": "compensation_pending",
+    "evidence_variant": "irrelevant_noise",
+    "method": "aaif_plus_caplease_reference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 452,
+    "payload_sha256": "cbc8e115a63fe77de392b075a1821bf83d66da2cab02e8f473daf52795cc162f",
+    "expected_plan": [
+      {
+        "action": "release_seat",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "compensation",
+        "action": "release_seat",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_plus_caplease_reference",
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "seat_hold",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "compensation_required",
+        "semantic_unit": "compensation",
+        "data": {
+          "compensation_action": "release_seat",
+          "effect": "seat_hold"
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "compensation",
+      "action": "release_seat",
+      "unit": "compensation"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "seat_hold": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_seat": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "seat_hold",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "release_seat",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "seat_hold": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_seat": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "seat_hold",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "release_seat",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "source_capture": {
+    "case_id": "crb2-loop_effect_iteration_boundary-v01",
+    "workflow": "loop_effect_iteration_boundary",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-loop_effect_iteration_boundary-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "iter1",
+        "semantic_unit": "iteration_1",
+        "data": {
+          "source_label": "iter1"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "iter1",
+        "semantic_unit": "iteration_1",
+        "data": {
+          "unit": "iteration_1"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "counter_observed",
+        "step": "iter1",
+        "semantic_unit": "iteration_1",
+        "data": {
+          "key": "loop",
+          "value": 1
+        }
+      },
+      {
+        "seq": 4,
+        "type": "tool_call_observed",
+        "step": "iter2_effect",
+        "semantic_unit": "iteration_2",
+        "data": {
+          "operation": "loop_write",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "iteration_2",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 5,
+        "type": "counter_observed",
+        "step": "iter2_effect",
+        "semantic_unit": "iteration_2",
+        "data": {
+          "key": "loop",
+          "value": 2
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "08e2f19ad3537eafe5f2",
+        "fact_type": "effect_commitment",
+        "subject": "loop_write",
+        "value": "committed",
+        "scope": "iteration_2",
+        "evidence": {
+          "operation_id": "crb2-loop_effect_iteration_boundary-v01:loop_write",
+          "idempotency_key": "idem:crb2-loop_effect_iteration_boundary-v01:loop_write",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "bf7190760389f0f40ed49b7e4a69b3da14bc6521583b8016644880c6be3427d6"
+      },
+      {
+        "certificate_id": "cb634705ad35dc02dae0",
+        "fact_type": "semantic_completion",
+        "subject": "iteration_2",
+        "value": "completed",
+        "scope": "iteration_2",
+        "evidence": {
+          "operation": "loop_write",
+          "native_marker": "iter2_effect",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "f42bbffb7723b098bb6b327431a003201aca19515e194fa68a7ae0188fc23bac"
+      }
+    ],
+    "source_ledger": {
+      "loop_write": 1
+    },
+    "native_observation": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "54d39ced-c82b-4eff-b314-31de8a8e230d",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 2
+    },
+    "truth_completed_units": [
+      "iteration_1",
+      "iteration_2"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {
+      "loop": 2
+    }
+  },
+  "transfer": {
+    "version": "aaif-reference-v2",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-loop_effect_iteration_boundary-v01",
+      "amount": 101
+    },
+    "pipeline": {
+      "completed_semantics": [
+        "iteration_1"
+      ],
+      "current_semantic": "iteration_2"
+    },
+    "pending": [],
+    "conversation": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "iter1",
+        "semantic_unit": "iteration_1",
+        "data": {
+          "source_label": "iter1"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "iter1",
+        "semantic_unit": "iteration_1",
+        "data": {
+          "unit": "iteration_1"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "counter_observed",
+        "step": "iter1",
+        "semantic_unit": "iteration_1",
+        "data": {
+          "key": "loop",
+          "value": 1
+        }
+      },
+      {
+        "seq": 4,
+        "type": "tool_call_observed",
+        "step": "iter2_effect",
+        "semantic_unit": "iteration_2",
+        "data": {
+          "operation": "loop_write",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "iteration_2",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 5,
+        "type": "counter_observed",
+        "step": "iter2_effect",
+        "semantic_unit": "iteration_2",
+        "data": {
+          "key": "loop",
+          "value": 2
+        }
+      }
+    ]
+  },
+  "inference": {},
+  "target": null,
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

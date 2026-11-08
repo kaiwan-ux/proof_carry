@@ -1,0 +1,29 @@
+{
+  "completed_units": [
+    "a",
+    "b",
+    "finish",
+    "join"
+  ],
+  "executed_units": [
+    "a",
+    "reconcile:b",
+    "join",
+    "finish"
+  ],
+  "final_ledger": {
+    "bop": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "langgraph_target_checkpoint",
+    "framework": "langgraph",
+    "real_native": true,
+    "next": [],
+    "values_keys": [
+      "ctx"
+    ],
+    "native_action_nodes": 4
+  }
+}

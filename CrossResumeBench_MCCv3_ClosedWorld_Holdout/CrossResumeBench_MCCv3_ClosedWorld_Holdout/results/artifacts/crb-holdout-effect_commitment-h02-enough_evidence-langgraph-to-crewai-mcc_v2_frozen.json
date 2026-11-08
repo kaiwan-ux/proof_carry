@@ -1,0 +1,172 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h02-enough_evidence-langgraph-to-crewai-mcc_v2_frozen",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-effect_commitment-h02",
+    "family": "effect_commitment",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 941,
+    "payload_sha256": "c1cfbee8bcf9670611f6237dc248d42c5bd800494604f86fafdf2c5a19462ecc",
+    "expected_plan": [
+      {
+        "kind": "effect",
+        "operation": "blob_upload",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "effect",
+        "operation": "blob_upload",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-effect_commitment-h02",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "1b36c94bc14a08045ff5f8540fa073056f2fd9c3b39a6883117ff0612381f762",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "blob_upload",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "7180e8130edeb18020e5",
+        "fact_type": "effect_commitment",
+        "subject": "blob_upload",
+        "value": "not_committed",
+        "scope": "crb-holdout-effect_commitment-h02",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-effect_commitment-h02-source-langgraph-crb-holdout-effect_commitment-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "9bac051bc1b15bfc6ae4bc8383cb50e62052ce8251e118398c1e1a31151d1ad4"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "effect_commitment:blob_upload:not_committed"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "effect",
+      "operation": "blob_upload",
+      "unit": "effect_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "blob_upload": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 2
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "effect",
+        "operation": "blob_upload",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "blob_upload": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 2
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "effect",
+        "operation": "blob_upload",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+framework,family,case_id,pass,lifecycle_returned,status,duration_ms,error
+langgraph,approval,pc104-approval-01,1,1,ok,13115.802999999687,
+langgraph,callback,pc104-callback-01,1,1,ok,12513.464000000113,
+langgraph,compensation,pc104-compensation-01,1,1,ok,10311.51220000038,
+langgraph,composite,pc104-composite-01,1,1,ok,5681.970300000103,
+langgraph,effect_commitment,pc104-effect_commitment-01,1,1,ok,6043.958700000076,
+langgraph,loop,pc104-loop-01,1,1,ok,6395.602799999779,
+langgraph,parallel,pc104-parallel-01,1,1,ok,6826.471700000184,
+langgraph,retry,pc104-retry-01,1,1,ok,6801.109600000018,
+crewai,approval,pc104-approval-01,1,1,ok,63900.133000000096,
+crewai,callback,pc104-callback-01,1,1,ok,84056.21229999997,
+crewai,compensation,pc104-compensation-01,1,1,ok,90511.18739999992,
+crewai,composite,pc104-composite-01,0,0,technical_failure,77176.40220000022,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 146, in native_family_gate
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 34, in self_resume_case
+    raise IsolatedCallError(d.get('error') or f'self resume failed: {d}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallError: Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\scripts\native_operation_worker.py"", line 28, in target
+    try: box['result']=runtime.self_resume_case(case,run_dir)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native\crewai_runtime.py"", line 139, in self_resume_case
+    run_dir=Path(run_dir); p=self.capture_case_pause(case,run_dir); F=self._restore_class(case)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native\crewai_runtime.py"", line 109, in capture_case_pause
+    raise RuntimeError(""CrewAI checkpoint capture failed under both supported event profiles: "" + "" | "".join(errors))
+RuntimeError: CrewAI checkpoint capture failed under both supported event profiles: method_execution_finished: CrewAI produced no persisted checkpoint in mode=method_execution_finished, events=['method_execution_finished'] | all_events_fallback: [WinError 32] The process cannot access the file because it is being used by another process: 'F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_full_20260831-000936\\native_work\\gate-crewai-pc104-composite-01\\worker_stdout.txt'
+
+"
+crewai,effect_commitment,pc104-effect_commitment-01,0,0,technical_failure,90912.98819999975,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 146, in native_family_gate
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 32, in self_resume_case
+    d=self._call('self_resume',case,run_dir,self.self_timeout)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 25, in _call
+    return run_json_worker(root=ROOT,worker=WORKER,request=req,run_dir=Path(run_dir),timeout_seconds=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\process_guard.py"", line 65, in run_json_worker
+    raise IsolatedCallTimeout(f'isolated operation timed out after {timeout_seconds}s; see {outp.name} / {errp.name}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallTimeout: isolated operation timed out after 90.0s; see isolated_worker.stdout.txt / isolated_worker.stderr.txt
+"
+crewai,loop,pc104-loop-01,0,0,technical_failure,79293.53919999994,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 146, in native_family_gate
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 34, in self_resume_case
+    raise IsolatedCallError(d.get('error') or f'self resume failed: {d}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallError: Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\scripts\native_operation_worker.py"", line 28, in target
+    try: box['result']=runtime.self_resume_case(case,run_dir)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native\crewai_runtime.py"", line 139, in self_resume_case
+    run_dir=Path(run_dir); p=self.capture_case_pause(case,run_dir); F=self._restore_class(case)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native\crewai_runtime.py"", line 109, in capture_case_pause
+    raise RuntimeError(""CrewAI checkpoint capture failed under both supported event profiles: "" + "" | "".join(errors))
+RuntimeError: CrewAI checkpoint capture failed under both supported event profiles: method_execution_finished: CrewAI produced no persisted checkpoint in mode=method_execution_finished, events=['method_execution_finished'] | all_events_fallback: [WinError 32] The process cannot access the file because it is being used by another process: 'F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_full_20260831-000936\\native_work\\gate-crewai-pc104-loop-01\\worker_stdout.txt'
+
+"
+crewai,parallel,pc104-parallel-01,1,1,ok,83152.77630000038,
+crewai,retry,pc104-retry-01,1,1,ok,76888.86139999976,
+maf,approval,pc104-approval-01,1,1,ok,2786.4598000001024,
+maf,callback,pc104-callback-01,1,1,ok,2291.937799999687,
+maf,compensation,pc104-compensation-01,1,1,ok,2464.9506000000656,
+maf,composite,pc104-composite-01,1,1,ok,2832.061799999792,
+maf,effect_commitment,pc104-effect_commitment-01,1,1,ok,2292.265900000075,
+maf,loop,pc104-loop-01,1,1,ok,2628.6746000000676,
+maf,parallel,pc104-parallel-01,1,1,ok,2611.5905000001476,
+maf,retry,pc104-retry-01,1,1,ok,2603.31159999987,

@@ -1,0 +1,140 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-07",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-composite-07-self-langgraph-pc104-composite-07",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bd4-7e5c-61cf-8001-b338cd9e4328",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-composite-07-self-langgraph-pc104-composite-07"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "parallel_plus_callback_a_b2"
+          },
+          {
+            "kind": "unit",
+            "unit": "parallel_plus_callback_a_b3"
+          },
+          {
+            "kind": "unit",
+            "unit": "parallel_plus_callback_a_b4_failed"
+          },
+          {
+            "kind": "unit",
+            "unit": "parallel_plus_callback_b_request_sent"
+          }
+        ],
+        "units": {
+          "parallel_plus_callback_a_b2": 1,
+          "parallel_plus_callback_a_b3": 1,
+          "parallel_plus_callback_a_b4_failed": 1,
+          "parallel_plus_callback_b_request_sent": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {
+        "parallel_plus_callback_b_cb": 1
+      },
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_a_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_a_b3"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_a_b4_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_b_request_sent"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_a_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_a_b4_recover"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_a_b4"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_callback_a_join"
+        },
+        {
+          "id": "parallel_plus_callback_b_cb",
+          "kind": "callback",
+          "unit": "parallel_plus_callback_b_wait_callback"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "parallel_plus_callback_a_b1": 1,
+        "parallel_plus_callback_a_b2": 1,
+        "parallel_plus_callback_a_b3": 1,
+        "parallel_plus_callback_a_b4": 1,
+        "parallel_plus_callback_a_b4_failed": 1,
+        "parallel_plus_callback_a_b4_recover": 1,
+        "parallel_plus_callback_a_join": 1,
+        "parallel_plus_callback_b_request_sent": 1,
+        "parallel_plus_callback_b_wait_callback": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.811999999999898
+}

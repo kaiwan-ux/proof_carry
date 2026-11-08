@@ -1,0 +1,32 @@
+[
+  {
+    "runtime": "langgraph",
+    "available": false,
+    "version": "NOT_INSTALLED",
+    "self_resume_tested": false,
+    "source_capture_tested": false,
+    "expanded_native_tested": false,
+    "status": "NOT_RUN_DEPENDENCY_MISSING",
+    "detail": "ModuleNotFoundError: No module named 'langgraph'"
+  },
+  {
+    "runtime": "crewai",
+    "available": false,
+    "version": "NOT_INSTALLED",
+    "self_resume_tested": false,
+    "source_capture_tested": false,
+    "expanded_native_tested": false,
+    "status": "NOT_RUN_DEPENDENCY_MISSING",
+    "detail": "ModuleNotFoundError: No module named 'crewai'"
+  },
+  {
+    "runtime": "maf",
+    "available": false,
+    "version": "NOT_INSTALLED",
+    "self_resume_tested": false,
+    "source_capture_tested": false,
+    "expanded_native_tested": false,
+    "status": "NOT_RUN_DEPENDENCY_MISSING",
+    "detail": "ModuleNotFoundError: No module named 'agent_framework'"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "access_approval_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "access_approval_proceed"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "access_approval_proceed": 1,
+    "access_approval_requested": 1
+  }
+}

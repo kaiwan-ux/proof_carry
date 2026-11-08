@@ -1,0 +1,88 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h03-tampered_attestation-crewai-to-maf-mcc_v3",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-effect_commitment-h03",
+    "family": "effect_commitment",
+    "evidence_variant": "tampered_attestation",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1173,
+    "payload_sha256": "023cfe2c19252e7c75deca063971da4a867ff9c7d2ff2f6329d6e41951b3454a",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-effect_commitment-h03",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "9983bca743b768f2f2287c2263ee219e61e0d1b63d33cd5bf82f149dec48b19b",
+    "continuation_contract_hash": "81592baf10a9ca7899c547b7fef51a682eaab4b516f28806e233bb5e5eaab35d",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "audit_emit",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "06039783dd4bf3fe5ac3",
+        "fact_type": "effect_commitment",
+        "subject": "audit_emit",
+        "value": "committed",
+        "scope": "crb-holdout-effect_commitment-h03",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-effect_commitment-h03\\checkpoints\\main\\20260827T185601_2dbd2c93_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "INVALID_ATTESTATION",
+        "ids": [
+          "06039783dd4bf3fe5ac3"
+        ]
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "effect_status",
+        "subject": "audit_emit",
+        "purpose": "decide replay vs skip"
+      }
+    ],
+    "bindings": {},
+    "provenance": {}
+  }
+}

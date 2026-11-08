@@ -1,0 +1,13 @@
+{
+  "status": "PLANNED_NOT_ENABLED_UNTIL_PHASE1_GATE",
+  "families": [
+    "retry_pause_points",
+    "approval_wait_points",
+    "parallel_branch_points",
+    "effect_acknowledgment_points",
+    "loop_iteration_points",
+    "compensation_pending_points",
+    "async_callback_points"
+  ],
+  "rule": "Do not generate a Cartesian product. Use benchmark/evidence_applicability.json and validated pause capabilities."
+}

@@ -1,0 +1,22 @@
+{
+  "completed_units": [
+    "checkout",
+    "finish"
+  ],
+  "executed_units": [
+    "finish"
+  ],
+  "final_ledger": {
+    "payment": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-f5f74a0d-eef3-45c3-b5d2-178aedfb52b6",
+    "checkpoint_count": 6,
+    "native_action_executors": 4
+  }
+}

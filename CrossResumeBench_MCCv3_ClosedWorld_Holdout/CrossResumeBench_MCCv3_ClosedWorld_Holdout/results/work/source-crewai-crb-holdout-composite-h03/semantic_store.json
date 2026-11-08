@@ -1,0 +1,31 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "reservation_hold": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "prepare"
+    },
+    {
+      "kind": "effect",
+      "operation": "reservation_hold",
+      "unit": "hold_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "error_detected"
+    }
+  ],
+  "units": {
+    "error_detected": 1,
+    "hold_attempt": 1,
+    "prepare": 1
+  }
+}

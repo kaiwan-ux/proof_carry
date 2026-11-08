@@ -1,0 +1,203 @@
+{
+  "case": {
+    "case_id": "crb2-callback_closes_semantic_unit-v04",
+    "family": "callback_closes_semantic_unit",
+    "variant": 4,
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-callback_closes_semantic_unit-v04",
+      "amount": 104
+    },
+    "source_actions": [
+      {
+        "action_id": "submit",
+        "semantic_unit": "submission",
+        "kind": "effect",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": "submission",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "committed",
+          "unit_completed": false,
+          "emit_completion": false,
+          "certify_effect": false
+        }
+      },
+      {
+        "action_id": "callback_wait",
+        "semantic_unit": "submission",
+        "kind": "callback",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "callback_id": "cb"
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "submit_t",
+        "semantic_unit": "submission",
+        "kind": "effect",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "callback_t",
+        "semantic_unit": "submission",
+        "kind": "callback",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "callback_id": "cb",
+          "completes_unit": true
+        }
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "submission",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "submit": 1
+    },
+    "mismatch_tags": [
+      "callback-completion",
+      "effect-not-unit-complete",
+      "source:callback_wait",
+      "target:fanout_partial"
+    ],
+    "source_boundary": "callback_wait",
+    "target_boundary": "fanout_partial",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-callback_closes_semantic_unit-v04",
+    "workflow": "callback_closes_semantic_unit",
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-callback_closes_semantic_unit-v04",
+      "amount": 104
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "submit",
+        "semantic_unit": "submission",
+        "data": {
+          "operation": "submit",
+          "commit_status": "committed",
+          "result": "timeout",
+          "parent_unit": "submission",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback_wait",
+        "semantic_unit": "submission",
+        "data": {
+          "callback_id": "cb",
+          "operation": "submit"
+        }
+      }
+    ],
+    "certificates": [],
+    "source_ledger": {
+      "submit": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [],
+    "truth_pending_obligations": [
+      {
+        "type": "callback",
+        "id": "cb",
+        "operation": "submit"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "case_id": "crb2-callback_closes_semantic_unit-v04",
+    "workflow": "callback_closes_semantic_unit",
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-callback_closes_semantic_unit-v04",
+      "amount": 104
+    },
+    "history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "submit",
+        "semantic_unit": "submission",
+        "data": {
+          "operation": "submit",
+          "commit_status": "committed",
+          "result": "timeout",
+          "parent_unit": "submission",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback_wait",
+        "semantic_unit": "submission",
+        "data": {
+          "callback_id": "cb",
+          "operation": "submit"
+        }
+      }
+    ]
+  },
+  "inference": {
+    "ambiguities": [
+      {
+        "type": "AMBIGUOUS_SEMANTIC_COMPLETION",
+        "semantic_unit": "submission"
+      }
+    ],
+    "implementation": "independent_history_baseline"
+  },
+  "target": null,
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

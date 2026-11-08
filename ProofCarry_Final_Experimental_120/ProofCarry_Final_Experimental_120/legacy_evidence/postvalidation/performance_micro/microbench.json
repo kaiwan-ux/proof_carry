@@ -1,0 +1,60 @@
+{
+  "environment": {
+    "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "machine": "AMD64",
+    "cpu_count": 4
+  },
+  "instances_per_repeat": 768,
+  "repeats": 10,
+  "warmup": 2,
+  "timings": {
+    "mcc_v3_build": {
+      "n": 7680,
+      "mean_us": 988.5683854166666,
+      "median_us": 642.6,
+      "p95_us": 3078.4,
+      "p99_us": 5706.8,
+      "stdev_us": 1814.6700306289897
+    },
+    "mcc_v3_resolve": {
+      "n": 7680,
+      "mean_us": 1082.2743229166667,
+      "median_us": 661.85,
+      "p95_us": 3377.5,
+      "p99_us": 6443.7,
+      "stdev_us": 2598.966883827363
+    },
+    "mcc_v3_lower_total": {
+      "n": 7680,
+      "mean_us": 2077.8977473958334,
+      "median_us": 1347.3,
+      "p95_us": 5576.1,
+      "p99_us": 9143.4,
+      "stdev_us": 3371.8621355452583
+    },
+    "mcc_v2_total": {
+      "n": 7680,
+      "mean_us": 1720.6645442708332,
+      "median_us": 1066.7,
+      "p95_us": 4831.1,
+      "p99_us": 8210.6,
+      "stdev_us": 4019.7553229046457
+    }
+  },
+  "payload_bytes": {
+    "mcc_v3": {
+      "n": 768,
+      "mean": 1110.3203125,
+      "median": 1004.0,
+      "p95": 1943
+    },
+    "mcc_v2": {
+      "n": 768,
+      "mean": 672.265625,
+      "median": 483.0,
+      "p95": 1434
+    }
+  }
+}

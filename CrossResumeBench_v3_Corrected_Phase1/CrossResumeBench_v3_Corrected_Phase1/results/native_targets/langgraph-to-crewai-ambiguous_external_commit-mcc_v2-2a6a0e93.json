@@ -1,0 +1,10 @@
+{
+  "ledger": {
+    "ack_count": 1,
+    "effect_count": 1,
+    "finish_count": 1
+  },
+  "native_kind": "crewai_target_flow",
+  "flow_id": "74eff677-69b9-46aa-85cf-dcebbcd45efe",
+  "result": "finished"
+}

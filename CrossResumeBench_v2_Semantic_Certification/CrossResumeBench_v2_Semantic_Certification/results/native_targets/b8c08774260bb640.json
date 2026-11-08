@@ -1,0 +1,28 @@
+{
+  "completed_units": [
+    "after_child",
+    "child_work",
+    "finish",
+    "parent"
+  ],
+  "executed_units": [
+    "after_child",
+    "finish"
+  ],
+  "final_ledger": {
+    "ticket": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "76e0418e-29c5-4b18-b488-eca96203501b",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 5
+  }
+}

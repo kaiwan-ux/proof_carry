@@ -1,0 +1,28 @@
+{
+  "completed_units": [
+    "finish",
+    "reservation"
+  ],
+  "executed_units": [
+    "reconcile:reservation",
+    "reservation",
+    "reservation",
+    "finish"
+  ],
+  "final_ledger": {
+    "reserve": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "74f68e0b-4f0f-499d-936d-170fb1c64727",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 4
+  }
+}

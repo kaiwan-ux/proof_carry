@@ -1,0 +1,31 @@
+{
+  "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "langgraph": {
+      "importable": true,
+      "version": "1.2.11",
+      "error": null
+    },
+    "crewai": {
+      "importable": true,
+      "version": "1.15.17",
+      "error": null
+    },
+    "agent-framework": {
+      "importable": true,
+      "version": null,
+      "error": null
+    },
+    "pandas": {
+      "importable": true,
+      "version": "2.3.3",
+      "error": null
+    },
+    "matplotlib": {
+      "importable": true,
+      "version": "3.11.1",
+      "error": null
+    }
+  }
+}

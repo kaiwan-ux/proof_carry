@@ -1,0 +1,7 @@
+{
+  "error": "Traceback (most recent call last):\n  File \"F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\scripts\\native_operation_worker.py\", line 33, in main\n    store=SemanticStore(run_dir/'semantic_store.json').read()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\src\\crossresumebench_proofcarry\\store.py\", line 11, in read\n    d=json.loads(self.path.read_text(encoding=\"utf-8\"))\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\json\\__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\json\\decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\json\\decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n",
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "status": "error",
+  "worker_duration_sec": 4.640999999999622
+}

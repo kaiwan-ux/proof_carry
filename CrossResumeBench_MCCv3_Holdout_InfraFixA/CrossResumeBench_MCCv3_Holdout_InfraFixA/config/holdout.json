@@ -1,0 +1,24 @@
+{
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "methods": [
+    "mcc_v3",
+    "mcc_v2_frozen",
+    "history_inference",
+    "aaif_reference",
+    "caplease_reference",
+    "aaif_plus_caplease_reference",
+    "explicit_minimal",
+    "oracle"
+  ],
+  "base_cases": 32,
+  "variants_per_case": 4,
+  "case_variant_instances": 128,
+  "directed_pairs": 6,
+  "migration_rows": 6144,
+  "self_resume_rows": 96,
+  "source_capture_rows": 96
+}

@@ -1,0 +1,48 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "cleanup_loop_index": 7
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "cleanup_loop_index",
+      "kind": "counter",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "cleanup_loop_iter_6"
+    },
+    {
+      "key": "cleanup_loop_index",
+      "kind": "counter",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "cleanup_loop_iter_7"
+    },
+    {
+      "key": "cleanup_loop_index",
+      "kind": "counter",
+      "value": 7
+    },
+    {
+      "kind": "unit",
+      "unit": "cleanup_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "cleanup_loop_exit": 1,
+    "cleanup_loop_iter_6": 1,
+    "cleanup_loop_iter_7": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "invoice_loop_index": 2
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "key": "invoice_loop_index",
+      "kind": "counter",
+      "value": 2
+    }
+  ],
+  "units": {}
+}

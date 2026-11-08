@@ -1,0 +1,108 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h04-identity_alias_with_binding-crewai-to-langgraph-aaif_reference",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-async_callback-h04",
+    "family": "async_callback",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "aaif_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "CALLBACKS_MISMATCH"
+    ],
+    "payload_bytes": 203,
+    "payload_sha256": "dcfb5248922cde2b3c202a93d0e6d63b9728f77c7ec30e813faaf1577626eac5",
+    "expected_plan": [
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_reference",
+    "history": [
+      {
+        "type": "callback_pending",
+        "semantic_unit": "callback_gate",
+        "data": {
+          "callback_id": "src_alias__timeout_race_cb",
+          "operation": "timeout_race",
+          "blocks": "callback_gate"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "timeout_race_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

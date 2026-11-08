@@ -1,0 +1,12 @@
+{
+  "cases": 120,
+  "families": 8,
+  "frameworks": 3,
+  "pairs": 6,
+  "variants": 5,
+  "methods": 1,
+  "family_gate_rows": 24,
+  "self_resume_rows": 360,
+  "source_capture_rows": 360,
+  "migration_rows": 3600
+}

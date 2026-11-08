@@ -1,0 +1,91 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-retry-15",
+      "checkpoint_ref": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-retry-15\\checkpoints\\main\\20260830T232813_e93212a2_p-none.json",
+      "framework": "crewai",
+      "native_kind": "crewai_flow_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 1,
+        "checkpoint_event_mode": "method_execution_finished",
+        "checkpoint_file": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-retry-15\\checkpoints\\main\\20260830T232813_e93212a2_p-none.json",
+        "framework": "crewai",
+        "identifier_label": "task_id",
+        "pause_protocol": "subprocess_external_gate",
+        "pause_status": "pending",
+        "semantic_namespace": "crew.task"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "tax_gateway_retry_task_attempt": 6
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "tax_gateway_retry_task_failed_6"
+          },
+          {
+            "key": "tax_gateway_retry_task_attempt",
+            "kind": "counter",
+            "value": 6
+          }
+        ],
+        "units": {
+          "tax_gateway_retry_task_failed_6": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "resume_api": "Flow.from_checkpoint",
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "tax_gateway_retry_task_attempt": 6
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "tax_gateway_retry_task_failed_6"
+        },
+        {
+          "key": "tax_gateway_retry_task_attempt",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "tax_gateway_retry_task_exhausted"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "tax_gateway_retry_task_exhausted": 1,
+        "tax_gateway_retry_task_failed_6": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 19.92199999999866
+}

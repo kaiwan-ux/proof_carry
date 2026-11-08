@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+results/*.csv
+results/*.json
+results/*.md
+results/work/*
+results/artifacts/*.json
+results/native_sources/*.json
+results/native_targets/*.json
+CrossResumeBench_v3_Phase1_RevisionC_results.zip
+CrossResumeBench_v3_Phase1_RevisionC_MAF_probe_diagnostics.zip
+results/maf_probe_work/

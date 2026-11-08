@@ -1,0 +1,81 @@
+framework,framework_version,case_id,family,safe,technical_failure,lifecycle_returned,status,duration_ms,error
+langgraph,unknown,pc104-approval-01,approval,1,0,1,ok,2618.8241999998354,
+langgraph,unknown,pc104-callback-01,callback,1,0,1,ok,2933.472299999721,
+langgraph,unknown,pc104-compensation-01,compensation,1,0,1,ok,3025.7283000000825,
+langgraph,unknown,pc104-composite-01,composite,1,0,1,ok,2687.4345999999605,
+langgraph,unknown,pc104-effect_commitment-01,effect_commitment,1,0,1,ok,2607.633899999655,
+langgraph,unknown,pc104-loop-01,loop,1,0,1,ok,3818.5097999999016,
+langgraph,unknown,pc104-parallel-01,parallel,1,0,1,ok,3164.645500000006,
+langgraph,unknown,pc104-retry-01,retry,1,0,1,ok,3241.450099999838,
+crewai,1.15.17,pc104-approval-01,approval,0,1,0,technical_failure,53221.69380000014,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 259, in run_native_full
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 34, in self_resume_case
+    raise IsolatedCallError(d.get('error') or f'self resume failed: {d}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallError: Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\scripts\native_operation_worker.py"", line 28, in target
+    try: box['result']=runtime.self_resume_case(case,run_dir)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native\crewai_runtime.py"", line 139, in self_resume_case
+    run_dir=Path(run_dir); p=self.capture_case_pause(case,run_dir); F=self._restore_class(case)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native\crewai_runtime.py"", line 109, in capture_case_pause
+    raise RuntimeError(""CrewAI checkpoint capture failed under both supported event profiles: "" + "" | "".join(errors))
+RuntimeError: CrewAI checkpoint capture failed under both supported event profiles: method_execution_finished: CrewAI produced no persisted checkpoint in mode=method_execution_finished, events=['method_execution_finished'] | all_events_fallback: [WinError 32] The process cannot access the file because it is being used by another process: 'F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_full_20260831-000122\\native_work\\self-crewai-pc104-approval-01\\worker_stdout.txt'
+
+"
+crewai,1.15.17,pc104-callback-01,callback,0,1,0,technical_failure,90255.42180000003,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 259, in run_native_full
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 32, in self_resume_case
+    d=self._call('self_resume',case,run_dir,self.self_timeout)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 25, in _call
+    return run_json_worker(root=ROOT,worker=WORKER,request=req,run_dir=Path(run_dir),timeout_seconds=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\process_guard.py"", line 65, in run_json_worker
+    raise IsolatedCallTimeout(f'isolated operation timed out after {timeout_seconds}s; see {outp.name} / {errp.name}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallTimeout: isolated operation timed out after 90.0s; see isolated_worker.stdout.txt / isolated_worker.stderr.txt
+"
+crewai,1.15.17,pc104-compensation-01,compensation,1,0,1,ok,81700.3894999998,
+crewai,1.15.17,pc104-composite-01,composite,0,1,0,technical_failure,90960.92589999989,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 259, in run_native_full
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 32, in self_resume_case
+    d=self._call('self_resume',case,run_dir,self.self_timeout)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 25, in _call
+    return run_json_worker(root=ROOT,worker=WORKER,request=req,run_dir=Path(run_dir),timeout_seconds=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\process_guard.py"", line 65, in run_json_worker
+    raise IsolatedCallTimeout(f'isolated operation timed out after {timeout_seconds}s; see {outp.name} / {errp.name}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallTimeout: isolated operation timed out after 90.0s; see isolated_worker.stdout.txt / isolated_worker.stderr.txt
+"
+crewai,1.15.17,pc104-effect_commitment-01,effect_commitment,0,1,0,technical_failure,90836.45049999995,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 259, in run_native_full
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 32, in self_resume_case
+    d=self._call('self_resume',case,run_dir,self.self_timeout)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 25, in _call
+    return run_json_worker(root=ROOT,worker=WORKER,request=req,run_dir=Path(run_dir),timeout_seconds=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\process_guard.py"", line 65, in run_json_worker
+    raise IsolatedCallTimeout(f'isolated operation timed out after {timeout_seconds}s; see {outp.name} / {errp.name}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallTimeout: isolated operation timed out after 90.0s; see isolated_worker.stdout.txt / isolated_worker.stderr.txt
+"
+crewai,1.15.17,pc104-loop-01,loop,1,0,1,ok,85976.5282000003,
+crewai,1.15.17,pc104-parallel-01,parallel,1,0,1,ok,75934.28710000035,
+crewai,1.15.17,pc104-retry-01,retry,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+maf,1.15.0,pc104-approval-01,approval,1,0,1,ok,1974.5230000003176,
+maf,1.15.0,pc104-callback-01,callback,1,0,1,ok,1853.436800000054,
+maf,1.15.0,pc104-compensation-01,compensation,1,0,1,ok,2196.025600000212,
+maf,1.15.0,pc104-composite-01,composite,1,0,1,ok,1641.31290000023,
+maf,1.15.0,pc104-effect_commitment-01,effect_commitment,1,0,1,ok,1885.8031999998275,
+maf,1.15.0,pc104-loop-01,loop,1,0,1,ok,1852.42530000005,
+maf,1.15.0,pc104-parallel-01,parallel,1,0,1,ok,1783.003600000029,
+maf,1.15.0,pc104-retry-01,retry,1,0,1,ok,1592.3609999999826,

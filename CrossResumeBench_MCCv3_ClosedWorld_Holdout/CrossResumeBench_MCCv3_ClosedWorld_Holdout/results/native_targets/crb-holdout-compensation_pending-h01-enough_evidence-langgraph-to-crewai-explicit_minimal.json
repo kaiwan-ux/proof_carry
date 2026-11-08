@@ -1,0 +1,51 @@
+{
+  "store": {
+    "effects": {
+      "invoice": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "void_invoice": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "action": "void_invoice",
+      "kind": "compensation",
+      "unit": "compensation"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "crewai_target_flow",
+  "result": "finished"
+}

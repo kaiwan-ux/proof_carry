@@ -1,0 +1,38 @@
+framework,framework_version,case_id,family,capture_success,technical_failure,native_checkpoint_bytes,native_pause_metadata_bytes,checkpoint_measurement_kind,duration_ms,error
+langgraph,unknown,pc104-approval-01,approval,1,0,0,859,in_memory_or_framework_managed,11701.045599998906,
+langgraph,unknown,pc104-callback-01,callback,1,0,0,867,in_memory_or_framework_managed,11916.168100000505,
+langgraph,unknown,pc104-compensation-01,compensation,1,0,0,914,in_memory_or_framework_managed,12335.159599999315,
+langgraph,unknown,pc104-composite-01,composite,1,0,0,1046,in_memory_or_framework_managed,12802.615699998569,
+langgraph,unknown,pc104-effect_commitment-01,effect_commitment,1,0,0,957,in_memory_or_framework_managed,12904.489100001229,
+langgraph,unknown,pc104-loop-01,loop,0,1,0,0,not_run_gate_failed,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+langgraph,unknown,pc104-parallel-01,parallel,1,0,0,987,in_memory_or_framework_managed,12584.117700000206,
+langgraph,unknown,pc104-retry-01,retry,1,0,0,942,in_memory_or_framework_managed,12424.960100001044,
+crewai,1.15.17,pc104-approval-01,approval,0,1,0,0,technical_failure,75494.16480000036,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 282, in run_native_full
+    n = runtime_factory(fw).capture_case_pause(case, rd)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 27, in capture_case_pause
+    d=self._call('capture',case,run_dir,self.capture_timeout)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 25, in _call
+    return run_json_worker(root=ROOT,worker=WORKER,request=req,run_dir=Path(run_dir),timeout_seconds=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\process_guard.py"", line 65, in run_json_worker
+    raise IsolatedCallTimeout(f'isolated operation timed out after {timeout_seconds}s; see {outp.name} / {errp.name}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallTimeout: isolated operation timed out after 75.0s; see isolated_worker.stdout.txt / isolated_worker.stderr.txt
+"
+crewai,1.15.17,pc104-callback-01,callback,1,0,12028,1138,checkpoint_files,27116.17380000098,
+crewai,1.15.17,pc104-compensation-01,compensation,1,0,12136,1177,checkpoint_files,27451.19960000011,
+crewai,1.15.17,pc104-composite-01,composite,1,0,12055,1315,checkpoint_files,26687.767299999905,
+crewai,1.15.17,pc104-effect_commitment-01,effect_commitment,0,1,0,0,not_run_gate_failed,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-01,loop,1,0,11920,1122,checkpoint_files,28329.05800000117,
+crewai,1.15.17,pc104-parallel-01,parallel,1,0,12028,1258,checkpoint_files,27478.692599999704,
+crewai,1.15.17,pc104-retry-01,retry,1,0,11947,1219,checkpoint_files,25115.873899998405,
+maf,1.15.0,pc104-approval-01,approval,1,0,2923,1083,checkpoint_files,1475.5443999983981,
+maf,1.15.0,pc104-callback-01,callback,1,0,2923,1091,checkpoint_files,1501.6546000006201,
+maf,1.15.0,pc104-compensation-01,compensation,1,0,2967,1130,checkpoint_files,1974.0264000010939,
+maf,1.15.0,pc104-composite-01,composite,1,0,2939,1268,checkpoint_files,1566.333400000076,
+maf,1.15.0,pc104-effect_commitment-01,effect_commitment,1,0,3015,1163,checkpoint_files,1528.7755000008474,
+maf,1.15.0,pc104-loop-01,loop,1,0,2887,1075,checkpoint_files,1528.4518000007665,
+maf,1.15.0,pc104-parallel-01,parallel,1,0,2923,1211,checkpoint_files,1540.179999999964,
+maf,1.15.0,pc104-retry-01,retry,1,0,2895,1172,checkpoint_files,1485.0397000009252,

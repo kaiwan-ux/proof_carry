@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/portaflow/pcc-v0.schema.json",
+  "title": "PortaFlow Portable Continuation Capsule v0",
+  "type": "object",
+  "required": ["schema_version", "condition", "workflow", "request_id", "application_state"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "condition": {"type": "string"},
+    "workflow": {"type": "string"},
+    "request_id": {"type": "string"},
+    "application_state": {"type": "object"},
+    "semantic_history": {"type": ["array", "null"], "items": {"type": "object"}},
+    "completed": {"type": ["array", "null"], "items": {"type": "string"}},
+    "control_frontier": {"type": ["object", "null"]},
+    "pending_obligations": {"type": ["array", "null"], "items": {"type": "object"}},
+    "effect_receipts": {"type": ["object", "null"]},
+    "continuation_contract": {"type": ["object", "null"]},
+    "provenance": {"type": ["object", "null"]}
+  },
+  "additionalProperties": false
+}

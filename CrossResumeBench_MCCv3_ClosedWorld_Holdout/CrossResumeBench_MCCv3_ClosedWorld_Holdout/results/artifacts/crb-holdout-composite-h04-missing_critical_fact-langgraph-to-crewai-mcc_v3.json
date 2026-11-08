@@ -1,0 +1,133 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h04-missing_critical_fact-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-composite-h04",
+    "family": "composite",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1248,
+    "payload_sha256": "15d869b5e99694b0d7b1f49ba19e9d20189c2e4f8036b9aa4d8c7195af37217a",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-composite-h04",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "c637ca91c1292b651a82f075b0836856050b569d7923c9892fff243f82d497da",
+    "continuation_contract_hash": "4d23d7cd84039f9afb98814ae28f4ca47d0bcd99b6a20c9639203198e9bd6613",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:batch",
+          "value": 3
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "a223d7b759e63396897c",
+        "fact_type": "counter_bound",
+        "subject": "loop:batch",
+        "value": 6,
+        "scope": "crb-holdout-composite-h04",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h04-source-langgraph-crb-holdout-composite-h04"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "f4e38038ed42c98cb3c9fcd25d4bf577ba1277f8836a5df32310b990e3459fc3"
+      },
+      {
+        "certificate_id": "5298e3698af02aa22348",
+        "fact_type": "decision_state",
+        "subject": "batch_break",
+        "value": false,
+        "scope": "crb-holdout-composite-h04",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h04-source-langgraph-crb-holdout-composite-h04"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5f56565f2a6db4a2afa100938a11981224978e1e3b3f26ad1ea3e9b8eb88d375"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "approval_state",
+        "subject": "approve_batch_commit",
+        "purpose": "approval obligation"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "counter_state|loop:batch": [
+        "history"
+      ],
+      "counter_bound|loop:batch": [
+        "certificate"
+      ],
+      "decision_state|batch_break": [
+        "certificate"
+      ]
+    }
+  }
+}

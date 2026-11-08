@@ -1,0 +1,43 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "timeout_race_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "id": "timeout_race_cb",
+      "kind": "callback",
+      "unit": "callback_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "crewai_target_flow",
+  "result": "finished"
+}

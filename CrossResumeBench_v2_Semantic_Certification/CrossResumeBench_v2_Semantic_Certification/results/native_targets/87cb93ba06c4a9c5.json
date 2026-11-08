@@ -1,0 +1,27 @@
+{
+  "completed_units": [
+    "finish",
+    "submission"
+  ],
+  "executed_units": [
+    "reconcile:submission",
+    "callback_without_obligation:submission",
+    "finish"
+  ],
+  "final_ledger": {
+    "submit": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "8692ea24-3ae8-4a15-adf7-c694ddfd7d2d",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 3
+  }
+}

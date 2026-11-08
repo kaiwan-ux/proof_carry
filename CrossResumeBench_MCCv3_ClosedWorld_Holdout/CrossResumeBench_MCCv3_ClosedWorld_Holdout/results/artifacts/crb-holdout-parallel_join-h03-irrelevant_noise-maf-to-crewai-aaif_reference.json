@@ -1,0 +1,204 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h03-irrelevant_noise-maf-to-crewai-aaif_reference",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-parallel_join-h03",
+    "family": "parallel_join",
+    "evidence_variant": "irrelevant_noise",
+    "method": "aaif_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH"
+    ],
+    "payload_bytes": 226,
+    "payload_sha256": "3524a103608abe0702a2098e6f064654fa6f44dba8fe5a17915cc7957ebee634",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "east"
+      },
+      {
+        "kind": "unit",
+        "unit": "west"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "north"
+      },
+      {
+        "kind": "unit",
+        "unit": "east"
+      },
+      {
+        "kind": "unit",
+        "unit": "south"
+      },
+      {
+        "kind": "unit",
+        "unit": "west"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_reference",
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "north",
+            "east",
+            "south",
+            "west"
+          ]
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "north"
+    },
+    {
+      "kind": "unit",
+      "unit": "east"
+    },
+    {
+      "kind": "unit",
+      "unit": "south"
+    },
+    {
+      "kind": "unit",
+      "unit": "west"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "east": 1,
+      "merge_join": 1,
+      "north": 1,
+      "south": 1,
+      "west": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "north"
+      },
+      {
+        "kind": "unit",
+        "unit": "south"
+      },
+      {
+        "kind": "unit",
+        "unit": "east"
+      },
+      {
+        "kind": "unit",
+        "unit": "west"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "east": 1,
+      "merge_join": 1,
+      "north": 2,
+      "south": 2,
+      "west": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "north"
+      },
+      {
+        "kind": "unit",
+        "unit": "south"
+      },
+      {
+        "kind": "unit",
+        "unit": "north"
+      },
+      {
+        "kind": "unit",
+        "unit": "east"
+      },
+      {
+        "kind": "unit",
+        "unit": "south"
+      },
+      {
+        "kind": "unit",
+        "unit": "west"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

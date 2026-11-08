@@ -1,0 +1,25 @@
+{
+  "completed_units": [
+    "debit_scope",
+    "finish",
+    "refund"
+  ],
+  "executed_units": [
+    "refund",
+    "finish"
+  ],
+  "final_ledger": {
+    "debit": 1,
+    "compensate:debit": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-4aecfc95-f5fd-4296-a050-5f007d624228",
+    "checkpoint_count": 5,
+    "native_action_executors": 3
+  }
+}

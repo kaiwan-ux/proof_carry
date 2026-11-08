@@ -1,0 +1,90 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-approval-08",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-approval-08-self-langgraph-pc104-approval-08",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bcb-45c5-65f1-8001-8f73999b7321",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-approval-08-self-langgraph-pc104-approval-08"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "legal_approval_requested"
+          }
+        ],
+        "units": {
+          "legal_approval_requested": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {
+        "legal_approval_request": 1
+      },
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "legal_approval_requested"
+        },
+        {
+          "id": "legal_approval_request",
+          "kind": "approval",
+          "unit": "legal_approval_approval_wait"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "legal_approval_approval_wait": 1,
+        "legal_approval_requested": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.07799999999952
+}

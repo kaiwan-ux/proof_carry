@@ -1,0 +1,104 @@
+{
+  "row": {
+    "run_id": "crb-holdout-loop_pause-h03-tampered_attestation-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-loop_pause-h03",
+    "family": "loop_pause",
+    "evidence_variant": "tampered_attestation",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1568,
+    "payload_sha256": "73aad8952568cb8aca5b03449b1d31adecae93766fbc5f17a5c2c2b520f7b993",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-loop_pause-h03",
+    "workflow": "mccv3_holdout_loop_pause",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "6cd86ec188500c6a6a561725dd7dc9d0822efb2fe852f4be52f72fdb9dc178ea",
+    "continuation_contract_hash": "ee02930941213f0a4bd3c0716a31bd86bce70c2dfcd3b45daba96f09e5302d51",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:holdout",
+          "value": 5
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "8c40c69306a9aef02512",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "value": 9,
+        "scope": "crb-holdout-loop_pause-h03",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-loop_pause-h03\\checkpoints\\main\\20260827T190543_4f302046_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "certificate_id": "7bcbf27405648f991d0e",
+        "fact_type": "decision_state",
+        "subject": "loop_break",
+        "value": true,
+        "scope": "crb-holdout-loop_pause-h03",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-loop_pause-h03\\checkpoints\\main\\20260827T190543_4f302046_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "a3e9dc691abf512b0fe0690f4e24bdb18d4e71b26152c835169d12d117d4c9c9"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "INVALID_ATTESTATION;UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "INVALID_ATTESTATION",
+        "ids": [
+          "8c40c69306a9aef02512"
+        ]
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "purpose": "know loop bound"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "counter_state|loop:holdout": [
+        "history"
+      ],
+      "decision_state|loop_break": [
+        "certificate"
+      ]
+    }
+  }
+}

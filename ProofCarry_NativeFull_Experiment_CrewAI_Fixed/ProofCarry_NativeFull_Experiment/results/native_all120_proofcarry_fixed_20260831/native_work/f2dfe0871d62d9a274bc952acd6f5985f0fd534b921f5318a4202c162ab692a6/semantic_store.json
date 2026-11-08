@@ -1,0 +1,51 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "backup_parallel_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "backup_parallel_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "backup_parallel_b4_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "backup_parallel_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "backup_parallel_b4_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "backup_parallel_b4"
+    },
+    {
+      "kind": "unit",
+      "unit": "backup_parallel_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "backup_parallel_b1": 1,
+    "backup_parallel_b2": 1,
+    "backup_parallel_b3": 1,
+    "backup_parallel_b4": 1,
+    "backup_parallel_b4_failed": 1,
+    "backup_parallel_b4_recover": 1,
+    "backup_parallel_join": 1
+  }
+}

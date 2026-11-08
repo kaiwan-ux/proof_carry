@@ -1,0 +1,95 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-effect_commitment-04",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-effect_commitment-04-self-langgraph-pc104-effect_commitment-04",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bd6-f55a-65a4-8001-0c862411b9ba",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-effect_commitment-04-self-langgraph-pc104-effect_commitment-04"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "inventory_reserve_attempt_recorded"
+          }
+        ],
+        "units": {
+          "inventory_reserve_attempt_recorded": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "inventory_reserve_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "inventory_reserve_attempt_recorded"
+        },
+        {
+          "kind": "effect",
+          "operation": "inventory_reserve_op",
+          "unit": "inventory_reserve_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "inventory_reserve_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "inventory_reserve_ack": 1,
+        "inventory_reserve_attempt": 1,
+        "inventory_reserve_attempt_recorded": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.125
+}

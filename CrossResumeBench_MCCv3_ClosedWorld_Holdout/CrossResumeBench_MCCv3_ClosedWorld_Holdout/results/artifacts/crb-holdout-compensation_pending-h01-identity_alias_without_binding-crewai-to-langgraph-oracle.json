@@ -1,0 +1,129 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h01-identity_alias_without_binding-crewai-to-langgraph-oracle",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-compensation_pending-h01",
+    "family": "compensation_pending",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "oracle",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 37,
+    "payload_sha256": "fe969aba0f1ec6d31492bcae82d1aee5564e9e530c26e05c6f8e9c88e3b40bab",
+    "expected_plan": [
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "oracle",
+    "privileged": true
+  },
+  "report": {},
+  "plan": [
+    {
+      "action": "void_invoice",
+      "kind": "compensation",
+      "unit": "compensation"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "invoice": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "void_invoice": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "invoice": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "void_invoice": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

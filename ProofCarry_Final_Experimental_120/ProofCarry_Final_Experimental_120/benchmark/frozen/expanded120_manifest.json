@@ -1,0 +1,33 @@
+{
+  "benchmark": "ProofCarry Expanded120",
+  "version": "1.0.0",
+  "families": {
+    "effect_commitment": 15,
+    "retry": 15,
+    "approval": 15,
+    "parallel": 15,
+    "loop": 15,
+    "compensation": 15,
+    "callback": 15,
+    "composite": 15
+  },
+  "total_base_cases": 120,
+  "evidence_variants": [
+    "enough",
+    "irrelevant_noise",
+    "missing_critical",
+    "contradictory_fact",
+    "identity_missing",
+    "dependency_unresolved",
+    "incomplete_snapshot"
+  ],
+  "runtime_pairs": [
+    "langgraph->crewai",
+    "langgraph->maf",
+    "crewai->langgraph",
+    "crewai->maf",
+    "maf->langgraph",
+    "maf->crewai"
+  ],
+  "all_cases_sha256": "168f40d8cd5f7c04a9da1b72021f391d655e888b63b1c6cee285f44cf48cb230"
+}

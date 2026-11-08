@@ -1,0 +1,181 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h02-irrelevant_noise-langgraph-to-maf-caplease_reference",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-parallel_join-h02",
+    "family": "parallel_join",
+    "evidence_variant": "irrelevant_noise",
+    "method": "caplease_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH"
+    ],
+    "payload_bytes": 221,
+    "payload_sha256": "3b727e50cddd4df4f35b20ded2a25074763565a20f16654d6cf02d8000267485",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "caplease_reference",
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "red",
+            "green",
+            "blue"
+          ]
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "red"
+    },
+    {
+      "kind": "unit",
+      "unit": "green"
+    },
+    {
+      "kind": "unit",
+      "unit": "blue"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 1,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 2,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

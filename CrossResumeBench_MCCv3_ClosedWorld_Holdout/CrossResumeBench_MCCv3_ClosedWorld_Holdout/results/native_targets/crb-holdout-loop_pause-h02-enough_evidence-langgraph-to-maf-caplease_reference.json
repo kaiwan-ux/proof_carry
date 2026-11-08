@@ -1,0 +1,143 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "loop_done": 1,
+      "loop_step_1": 1,
+      "loop_step_2": 1,
+      "loop_step_3": 1,
+      "loop_step_4": 1,
+      "loop_step_5": 1,
+      "loop_step_6": 1,
+      "loop_step_7": 1,
+      "loop_step_8": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:holdout": 8
+    },
+    "decisions": {
+      "loop_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "key": "loop_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_5"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_6"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_7"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 7
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_8"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 8
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "loop_step_5"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:holdout",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_6"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:holdout",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_7"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:holdout",
+      "value": 7
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_8"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:holdout",
+      "value": 8
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "maf_target_workflow_explicit_handlers"
+}

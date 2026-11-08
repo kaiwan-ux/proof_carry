@@ -1,0 +1,31 @@
+# Local environments and dependencies
+**/.venv/
+**/venv/
+**/env/
+**/node_modules/
+# Caches
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+*.py[cod]
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa
+id_ed25519
+# Editor and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Oversized CSV originals: lossless .csv.gz copies are committed instead
+/ProofCarry_Final_Experimental_120/ProofCarry_Final_Experimental_120/results/raw/proofcarry-20260829T154350Z-ab44e104/expanded120.csv
+/ProofCarry_Final_Experimental_120/ProofCarry_Final_Experimental_120/results/raw/proofcarry-20260829T201030Z-93eb8fd9/expanded120.csv

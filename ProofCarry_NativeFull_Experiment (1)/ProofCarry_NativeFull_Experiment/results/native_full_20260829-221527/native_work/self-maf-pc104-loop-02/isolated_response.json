@@ -1,0 +1,125 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-loop-02",
+      "checkpoint_ref": "6114db8b-892f-4d13-912c-be40e0f09487",
+      "framework": "maf",
+      "native_kind": "maf_superstep_file_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 2,
+        "checkpoint_id": "6114db8b-892f-4d13-912c-be40e0f09487",
+        "event_trace": [
+          {
+            "class": "WorkflowEvent",
+            "type": "started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "status"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_invoked"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_completed"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_completed"
+          }
+        ],
+        "framework": "maf",
+        "handler_typing_mode": "explicit",
+        "identifier_label": "activity_id",
+        "pause_status": "suspended",
+        "semantic_namespace": "maf.activity",
+        "workflow_name": "proofcarry-104-pc104-loop-02-self-maf-pc104-loop-02"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "batch_loop_index": 2
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "batch_loop_index",
+            "kind": "counter",
+            "value": 2
+          }
+        ],
+        "units": {}
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "batch_loop_index": 4
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "batch_loop_index",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_loop_iter_3"
+        },
+        {
+          "key": "batch_loop_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_loop_iter_4"
+        },
+        {
+          "key": "batch_loop_index",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_loop_exit"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "batch_loop_exit": 1,
+        "batch_loop_iter_3": 1,
+        "batch_loop_iter_4": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.67200000000048
+}

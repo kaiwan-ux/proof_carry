@@ -1,0 +1,12 @@
+{
+  "run_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\crewai_fix_test",
+  "case_id": "pc104-approval-01",
+  "checkpoint_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\crewai_fix_test\\checkpoints",
+  "store_path": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\crewai_fix_test\\semantic_store.json",
+  "resume_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\crewai_fix_test\\resume.gate",
+  "stop_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\crewai_fix_test\\stop.gate",
+  "signal": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\crewai_fix_test\\source_ready.signal",
+  "on_events": [
+    "method_execution_finished"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-composite-08",
+    "checkpoint_ref": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\capture-crewai-pc104-composite-08\\checkpoints\\main\\20260830T225124_e8958051_p-none.json",
+    "framework": "crewai",
+    "native_kind": "crewai_flow_checkpoint",
+    "native_observation": {
+      "checkpoint_count": 1,
+      "checkpoint_event_mode": "method_execution_finished",
+      "checkpoint_file": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\capture-crewai-pc104-composite-08\\checkpoints\\main\\20260830T225124_e8958051_p-none.json",
+      "framework": "crewai",
+      "identifier_label": "task_id",
+      "pause_protocol": "subprocess_external_gate",
+      "pause_status": "pending",
+      "semantic_namespace": "crew.task"
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "loop_plus_comp_a_index": 5
+      },
+      "decisions": {},
+      "effects": {
+        "loop_plus_comp_b_op": 1
+      },
+      "finish_count": 0,
+      "trace": [
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "effect",
+          "operation": "loop_plus_comp_b_op",
+          "unit": "loop_plus_comp_b_effect"
+        }
+      ],
+      "units": {
+        "loop_plus_comp_b_effect": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 16.063000000000102
+}

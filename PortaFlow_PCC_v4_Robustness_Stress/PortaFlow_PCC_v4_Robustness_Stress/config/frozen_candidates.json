@@ -1,0 +1,21 @@
+{
+  "source_experiments": "PCC v2 minimality + PCC v3 true hold-out",
+  "frozen_before_v4": true,
+  "hybrid_minimal": {
+    "components": [
+      "history",
+      "receipts"
+    ],
+    "inference_mode": "hybrid"
+  },
+  "explicit_minimal": {
+    "components": [
+      "frontier",
+      "obligations",
+      "receipts",
+      "contract"
+    ],
+    "inference_mode": "explicit"
+  },
+  "rule": "Do not change these representations after observing v4 robustness results."
+}

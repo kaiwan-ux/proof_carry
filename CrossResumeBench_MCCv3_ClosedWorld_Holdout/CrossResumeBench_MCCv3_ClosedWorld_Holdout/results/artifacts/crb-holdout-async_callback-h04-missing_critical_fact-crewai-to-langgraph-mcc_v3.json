@@ -1,0 +1,59 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h04-missing_critical_fact-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-async_callback-h04",
+    "family": "async_callback",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 414,
+    "payload_sha256": "9b4fbfdd7f78e28003222cfe4359fa59466df83845d35354697121004eb7c27d",
+    "expected_plan": [
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-async_callback-h04",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "3708966165dae9a7a25a1c697b1cc437e3b95b9e0c10daf76f351f727a343036",
+    "continuation_contract_hash": "5f623e560b75e30771b69caea66806ebb6a6430bcbce601bf1baad03751ad609",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": []
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "callback_state",
+        "subject": "timeout_race_cb",
+        "purpose": "must not skip unresolved callback"
+      }
+    ],
+    "bindings": {},
+    "provenance": {}
+  }
+}

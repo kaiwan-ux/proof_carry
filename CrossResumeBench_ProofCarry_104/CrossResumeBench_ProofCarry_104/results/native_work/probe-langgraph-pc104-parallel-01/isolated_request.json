@@ -1,0 +1,6 @@
+{
+  "case_id": "pc104-parallel-01",
+  "framework": "langgraph",
+  "operation": "self_resume",
+  "run_dir": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-langgraph-pc104-parallel-01"
+}

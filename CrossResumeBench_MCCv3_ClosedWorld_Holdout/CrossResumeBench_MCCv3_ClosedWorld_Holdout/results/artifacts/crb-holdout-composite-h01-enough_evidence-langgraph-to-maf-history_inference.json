@@ -1,0 +1,172 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h01-enough_evidence-langgraph-to-maf-history_inference",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-composite-h01",
+    "family": "composite",
+    "evidence_variant": "enough_evidence",
+    "method": "history_inference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 372,
+    "payload_sha256": "171208df15453becb05f3b9f1401de06a69a9b12c98d06480fc80eda5ba6d7e6",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "kind": "approval",
+        "id": "approve_contract_close",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "charge_attempt",
+        "data": {
+          "operation": "contract_charge",
+          "commit_status": "unknown",
+          "parent_unit": "charge_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "approval_requested",
+        "semantic_unit": "close_gate",
+        "data": {
+          "request_id": "approve_contract_close",
+          "blocks": "close_gate"
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "charge_ack"
+    },
+    {
+      "kind": "approval",
+      "id": "approve_contract_close",
+      "unit": "close_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "contract_charge": 1
+    },
+    "units": {
+      "approval_requested": 1,
+      "charge_ack": 1,
+      "charge_attempt": 1,
+      "close_gate": 1
+    },
+    "approvals": {
+      "approve_contract_close": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "contract_charge",
+        "unit": "charge_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "contract_charge": 1
+    },
+    "units": {
+      "approval_requested": 1,
+      "charge_ack": 1,
+      "charge_attempt": 1,
+      "close_gate": 1
+    },
+    "approvals": {
+      "approve_contract_close": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "contract_charge",
+        "unit": "charge_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h02-identity_alias_without_binding-maf-to-langgraph-mcc_v2_frozen",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-approval_wait-h02",
+    "family": "approval_wait",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "APPROVALS_MISMATCH"
+    ],
+    "payload_bytes": 869,
+    "payload_sha256": "048a6f5bdd9de09dfadeb613dd477ddc0fec0891166b423fc942693ea8256538",
+    "expected_plan": [
+      {
+        "id": "approve_model_rollout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-approval_wait-h02",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "maf",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "0f23841bac00c54a59e3eedc42fd2f8e6bb3a761b66188eef60479ba2d2e556e",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "approval_requested",
+        "semantic_unit": "approval_gate",
+        "data": {
+          "request_id": "src_alias__approve_model_rollout",
+          "blocks": "approval_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "27f29ab93c951d926713",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__approve_model_rollout",
+        "value": "pending",
+        "scope": "crb-holdout-approval_wait-h02",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "approval_gate",
+          "native_checkpoint_ref": "1453aadd-0fbb-4a64-88f4-cd59975daa11"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "d49c795bd48ec8ee932f03021fcb5ff64ecef6e81d29e4b8dc505dd6bd9fda4b"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "obligation_state:src_alias__approve_model_rollout:pending"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_gate": 1,
+      "approval_requested": 1
+    },
+    "approvals": {
+      "approve_model_rollout": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "id": "approve_model_rollout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

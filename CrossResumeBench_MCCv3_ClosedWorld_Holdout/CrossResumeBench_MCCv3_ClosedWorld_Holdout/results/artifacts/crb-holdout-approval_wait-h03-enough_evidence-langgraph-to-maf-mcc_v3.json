@@ -1,0 +1,116 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h03-enough_evidence-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "family": "approval_wait",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 844,
+    "payload_sha256": "8541c633e488858cac978add7a03ade2be54643e8ae0d350b546ee4025446be7",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "53155ae12f497d85bee5cf85d9308536bf056bc79ee0dbd78ae4eb9fd4934797",
+    "continuation_contract_hash": "f1cf3133b2e2e7c1e6fce65ed8843061ada8e75d772596910797723184487a6c",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": [
+      {
+        "certificate_id": "63958959cef4a5440b3f",
+        "fact_type": "approval_state",
+        "subject": "approve_access_change",
+        "value": "absent",
+        "scope": "crb-holdout-approval_wait-h03",
+        "evidence": {
+          "kind": "approval",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-approval_wait-h03-source-langgraph-crb-holdout-approval_wait-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "21798973a854b95377069745d74f49b4b44cdaa0f0d3c10fa4b752d5b8ffb6c8"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "approval_state|approve_access_change": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

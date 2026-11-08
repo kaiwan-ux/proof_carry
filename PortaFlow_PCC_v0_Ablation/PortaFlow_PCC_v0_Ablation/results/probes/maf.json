@@ -1,0 +1,132 @@
+{
+  "framework": "maf",
+  "status": "ok",
+  "checkpoint_count": 3,
+  "selected_checkpoint": {
+    "workflow_name": "WorkflowBuilder-30d38a77-5b6c-471a-87bf-10535e6d1528",
+    "graph_signature_hash": "acf0d63b7aad2df44d2b1a00d7c1e58c6ea5e7e5e6e34730e2cfb5ace0c96e4f",
+    "checkpoint_id": "01ab4c8a-0ca9-4837-b6be-2bb4fd51ed70",
+    "previous_checkpoint_id": "b87e4298-5c7a-4849-902d-f113473696a4",
+    "timestamp": "2026-08-22T12:17:49.074896+00:00",
+    "messages": {
+      "worker": [
+        "WorkflowMessage(data={'remaining': [2, 3]}, source_id='worker', target_id=None, type=<MessageType.STANDARD: 'standard'>, trace_contexts=None, source_span_ids=None, original_request_info_event=None)"
+      ]
+    },
+    "state": {
+      "_workflow_run_kwargs": {},
+      "_executor_state": {
+        "start": {},
+        "worker": {
+          "seen": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "pending_request_info_events": {},
+    "iteration_count": 2,
+    "metadata": {},
+    "version": "1.0"
+  },
+  "events_before_interrupt": [
+    {
+      "type": "started",
+      "data": "None"
+    },
+    {
+      "type": "status",
+      "data": "None"
+    },
+    {
+      "type": "superstep_started",
+      "data": "None"
+    },
+    {
+      "type": "executor_invoked",
+      "data": "3"
+    },
+    {
+      "type": "executor_completed",
+      "data": "[{'remaining': [1, 2, 3]}]"
+    },
+    {
+      "type": "superstep_completed",
+      "data": "None"
+    },
+    {
+      "type": "superstep_started",
+      "data": "None"
+    },
+    {
+      "type": "executor_invoked",
+      "data": "{'remaining': [1, 2, 3]}"
+    },
+    {
+      "type": "executor_completed",
+      "data": "[{'remaining': [2, 3]}]"
+    },
+    {
+      "type": "superstep_completed",
+      "data": "None"
+    }
+  ],
+  "resume_events": [
+    {
+      "type": "started",
+      "data": "None"
+    },
+    {
+      "type": "status",
+      "data": "None"
+    },
+    {
+      "type": "superstep_started",
+      "data": "None"
+    },
+    {
+      "type": "executor_invoked",
+      "data": "{'remaining': [2, 3]}"
+    },
+    {
+      "type": "executor_completed",
+      "data": "[{'remaining': [3]}]"
+    },
+    {
+      "type": "superstep_completed",
+      "data": "None"
+    },
+    {
+      "type": "superstep_started",
+      "data": "None"
+    },
+    {
+      "type": "executor_invoked",
+      "data": "{'remaining': [3]}"
+    },
+    {
+      "type": "output",
+      "data": "done:1,2,3"
+    },
+    {
+      "type": "executor_completed",
+      "data": "['done:1,2,3']"
+    },
+    {
+      "type": "superstep_completed",
+      "data": "None"
+    },
+    {
+      "type": "status",
+      "data": "None"
+    }
+  ],
+  "resume_output": "done:1,2,3",
+  "restored_worker_seen": [
+    1,
+    2,
+    3
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h02-missing_critical_fact-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-effect_commitment-h02",
+    "family": "effect_commitment",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 605,
+    "payload_sha256": "f387a52a5c4c2c1371f8a2ffb85b4e32911f156e80d030090e5eb847dee70b90",
+    "expected_plan": [
+      {
+        "kind": "effect",
+        "operation": "blob_upload",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-effect_commitment-h02",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "1b36c94bc14a08045ff5f8540fa073056f2fd9c3b39a6883117ff0612381f762",
+    "continuation_contract_hash": "c95b46e45366497ce66ae87d2307c8938a490ea3d140e07b40d7f8a76accd9be",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "blob_upload",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "effect_status",
+        "subject": "blob_upload",
+        "purpose": "decide replay vs skip"
+      }
+    ],
+    "bindings": {},
+    "provenance": {}
+  }
+}

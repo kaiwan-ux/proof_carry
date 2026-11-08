@@ -1,0 +1,26 @@
+{
+  "workflow_name": "proofcarry-104-pc104-compensation-01-probe-maf-pc104-compensation-01",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "09ad1290-37b2-49d4-8211-e62e3bd6a67e",
+  "previous_checkpoint_id": "e7be8aa1-bcf5-4724-8ff2-a4dcddd720d5",
+  "timestamp": "2026-08-29T11:21:46.904869+00:00",
+  "messages": {
+    "source_boundary": [
+      {
+        "__pickled__": "gAWVzQEAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZSM4nsiY2FzZV9pZCI6InBjMTA0LWNvbXBlbnNhdGlvbi0wMSIsInBoYXNlIjoicGF1c2VkIiwic3RvcmVfcGF0aCI6IkY6XFxhZ2VudGljIHdhbGFcXENyb3NzUmVzdW1lQmVuY2hfUHJvb2ZDYXJyeV8xMDRcXENyb3NzUmVzdW1lQmVuY2hfUHJvb2ZDYXJyeV8xMDRcXHJlc3VsdHNcXG5hdGl2ZV93b3JrXFxwcm9iZS1tYWYtcGMxMDQtY29tcGVuc2F0aW9uLTAxXFxzZW1hbnRpY19zdG9yZS5qc29uIn2UjAlzb3VyY2VfaWSUjA9zb3VyY2VfYm91bmRhcnmUjAl0YXJnZXRfaWSUTowEdHlwZZRoAIwLTWVzc2FnZVR5cGWUk5SMCHN0YW5kYXJklIWUUpSMDnRyYWNlX2NvbnRleHRzlE6MD3NvdXJjZV9zcGFuX2lkc5ROjBtvcmlnaW5hbF9yZXF1ZXN0X2luZm9fZXZlbnSUTnViLg==",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 1,
+  "metadata": {},
+  "version": "1.0"
+}

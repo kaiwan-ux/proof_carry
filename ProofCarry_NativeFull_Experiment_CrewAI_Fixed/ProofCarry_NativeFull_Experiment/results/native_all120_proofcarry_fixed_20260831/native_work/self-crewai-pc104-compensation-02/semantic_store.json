@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "inventory_comp_effect_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "inventory_comp_no_compensation_needed"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "inventory_comp_effect_failed": 1,
+    "inventory_comp_no_compensation_needed": 1
+  }
+}

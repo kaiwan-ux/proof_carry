@@ -1,0 +1,31 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "email_callback_request_sent"
+    },
+    {
+      "kind": "unit",
+      "unit": "email_callback_discard_wrong_callback"
+    },
+    {
+      "kind": "unit",
+      "unit": "email_callback_request_new_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "email_callback_discard_wrong_callback": 1,
+    "email_callback_request_new_callback": 1,
+    "email_callback_request_sent": 1
+  }
+}

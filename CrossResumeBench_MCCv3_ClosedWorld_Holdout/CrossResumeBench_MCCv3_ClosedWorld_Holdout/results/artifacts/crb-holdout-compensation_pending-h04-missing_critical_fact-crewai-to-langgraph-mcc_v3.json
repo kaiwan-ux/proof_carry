@@ -1,0 +1,86 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h04-missing_critical_fact-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-compensation_pending-h04",
+    "family": "compensation_pending",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1199,
+    "payload_sha256": "c1adcb78ef133b7a4668913e419beff5e7afee86f0752ed9f6b1b4379293b5cd",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h04",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "113940af8166e1d24ed160cb18793d731231bd767d4b4643b816b6a29e6e46fe",
+    "continuation_contract_hash": "58cb271c79bdfa07f1f92792ee95cf2b89a7798e03adb4fe3d12e259264e626e",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "inventory_move",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "67734e4fb5c148181807",
+        "fact_type": "effect_commitment",
+        "subject": "inventory_move",
+        "value": "committed",
+        "scope": "crb-holdout-compensation_pending-h04",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-compensation_pending-h04\\checkpoints\\main\\20260827T190740_bc5a320d_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "2a1914292fec5116fdf1d229719859475bf8a2a57de2e441c9e7762c46be23f7"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "compensation_state",
+        "subject": "restore_stock",
+        "purpose": "know whether rollback remains required"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "effect_status|inventory_move": [
+        "certificate"
+      ]
+    }
+  }
+}

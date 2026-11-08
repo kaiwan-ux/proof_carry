@@ -1,0 +1,143 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h03-irrelevant_noise-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "family": "approval_wait",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1378,
+    "payload_sha256": "82164299018c906bfc094711dab059ce335fbd9a878fa10f9dbadfe260f75076",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "53155ae12f497d85bee5cf85d9308536bf056bc79ee0dbd78ae4eb9fd4934797",
+    "continuation_contract_hash": "f1cf3133b2e2e7c1e6fce65ed8843061ada8e75d772596910797723184487a6c",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "63958959cef4a5440b3f",
+        "fact_type": "approval_state",
+        "subject": "approve_access_change",
+        "value": "absent",
+        "scope": "crb-holdout-approval_wait-h03",
+        "evidence": {
+          "kind": "approval",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-approval_wait-h03-source-langgraph-crb-holdout-approval_wait-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "21798973a854b95377069745d74f49b4b44cdaa0f0d3c10fa4b752d5b8ffb6c8"
+      },
+      {
+        "certificate_id": "2e899e9ae421e5c28e1f",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-approval_wait-h03",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-approval_wait-h03-source-langgraph-crb-holdout-approval_wait-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "2f87c6c4ab456f291c042371e6e5d26ce7b3ae998f641777f786dfed2a0b886b"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "approval_state|approve_access_change": [
+        "certificate"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

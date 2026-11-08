@@ -1,0 +1,203 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h04-irrelevant_noise-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-effect_commitment-h04",
+    "family": "effect_commitment",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1584,
+    "payload_sha256": "393212bbb8c9a0703c217fe7127ab65b92cf57e04d8694b3a3c8b690142f6331",
+    "expected_plan": [
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-effect_commitment-h04",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "b9875819800278d9e0e5796832f51852ba61e0db43c7b78f8eaa9907f2b2fb69",
+    "continuation_contract_hash": "ac8db75cf8b8cf4323e1d75ef83facfa60380f84fa5a6581302bb60a19bfd135",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "device_command",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "2ee3ba922d0c51b1ad86",
+        "fact_type": "effect_commitment",
+        "subject": "device_command",
+        "value": "not_committed",
+        "scope": "crb-holdout-effect_commitment-h04",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-effect_commitment-h04-source-langgraph-crb-holdout-effect_commitment-h04"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "c083f65a2839eea9117c3d0b8250fb21ed64c666aca13f409df1af3d54c2474d"
+      },
+      {
+        "certificate_id": "350a4dbb2c399508c287",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-effect_commitment-h04",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-effect_commitment-h04-source-langgraph-crb-holdout-effect_commitment-h04"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "aff58090f8d23202de2dcf703811a3fb3ebe8928d3070b06a48c1d78dd135f89"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "effect_status|device_command": [
+        "certificate"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "effect",
+      "operation": "device_command",
+      "unit": "effect_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "device_command": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 2
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "device_command": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 2
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

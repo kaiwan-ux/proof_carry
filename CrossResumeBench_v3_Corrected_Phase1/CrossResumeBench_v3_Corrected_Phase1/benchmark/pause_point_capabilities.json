@@ -1,0 +1,32 @@
+{
+  "classifications": [
+    "native_checkpointable",
+    "externally_blocked_capturable",
+    "unsupported_at_this_boundary"
+  ],
+  "phase1_common_case": {
+    "langgraph": {
+      "classification": "native_checkpointable",
+      "boundary": "after commit_effect / interrupt_before ack",
+      "resume": "same thread_id from checkpoint"
+    },
+    "crewai": {
+      "classification": "native_checkpointable",
+      "boundary": "checkpoint after commit_effect method_execution_finished",
+      "resume": "Flow.from_checkpoint(...).kickoff()"
+    },
+    "maf": {
+      "classification": "native_checkpointable",
+      "boundary": "checkpoint after commit executor superstep, before ack executor",
+      "resume": "workflow.run(checkpoint_id=..., checkpoint_storage=...)"
+    }
+  },
+  "planned_cases": {
+    "retry_pause_points": "PROBE_REQUIRED",
+    "approval_wait_points": "PROBE_REQUIRED",
+    "parallel_branch_points": "PROBE_REQUIRED",
+    "loop_iteration_points": "PROBE_REQUIRED",
+    "compensation_pending_points": "PROBE_REQUIRED",
+    "async_callback_points": "PROBE_REQUIRED"
+  }
+}

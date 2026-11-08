@@ -1,0 +1,28 @@
+{
+  "completed_units": [
+    "finish",
+    "tool_scope"
+  ],
+  "executed_units": [
+    "reconcile:tool_scope",
+    "tool_scope",
+    "tool_scope",
+    "finish"
+  ],
+  "final_ledger": {
+    "toolop": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "3aa87b25-9660-49ff-9471-9d2e99b9e89c",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 4
+  }
+}

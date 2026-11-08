@@ -1,0 +1,23 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "travel_parallel_b1_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "travel_parallel_b3"
+    }
+  ],
+  "units": {
+    "travel_parallel_b1_failed": 1,
+    "travel_parallel_b3": 1
+  }
+}

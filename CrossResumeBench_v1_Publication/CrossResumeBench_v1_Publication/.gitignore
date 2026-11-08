@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+results/**/*.csv
+results/**/*.json
+results/**/*.jsonl
+results/**/*.png
+results/**/*.zip
+!results/**/.gitkeep
+benchmark/generated_suite.json
+benchmark/FROZEN_SUITE_SHA256.txt

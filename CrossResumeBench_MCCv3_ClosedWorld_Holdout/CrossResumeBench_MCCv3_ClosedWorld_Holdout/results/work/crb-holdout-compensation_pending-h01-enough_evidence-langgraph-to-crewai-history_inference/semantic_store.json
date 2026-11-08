@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "invoice": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "invoice",
+      "unit": "effect_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "error_detected"
+    },
+    {
+      "kind": "unit",
+      "unit": "compensation_none"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "compensation_none": 1,
+    "effect_attempt": 1,
+    "error_detected": 1
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "alpha": 2,
+      "beta": 1,
+      "merge_join": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "alpha"
+      },
+      {
+        "kind": "unit",
+        "unit": "alpha"
+      },
+      {
+        "kind": "unit",
+        "unit": "beta"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "alpha"
+    },
+    {
+      "kind": "unit",
+      "unit": "beta"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "langgraph_target_graph",
+  "final": {
+    "store_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\crb-holdout-parallel_join-h01-missing_critical_fact-crewai-to-langgraph-aaif_plus_caplease_reference\\semantic_store.json",
+    "phase": "finished"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "run_id": "langgraph-to-crewai-ambiguous_external_commit-mcc_v2-2a6a0e93",
+  "source": "langgraph",
+  "target": "crewai",
+  "case_id": "effect_committed_ack_pending",
+  "variant": "ambiguous_external_commit",
+  "method": "mcc_v2",
+  "safe_completion": 1,
+  "safe_rejection": 0,
+  "unsafe_violation": 0,
+  "technical_failure": 0,
+  "reject_reason": null,
+  "failure_types": [],
+  "payload_bytes": 512,
+  "artifact": {
+    "inference": {
+      "ambiguities": [],
+      "certificate_log": [],
+      "inference_log": []
+    },
+    "payload": {
+      "mcc_version": "2.0",
+      "case_id": "effect_committed_ack_pending",
+      "workflow": "phase1_effect_ack",
+      "source_runtime": "semantic",
+      "target_runtime": "crewai",
+      "workflow_spec_hash": "e97a9923010f100cb2b6b54d4f3c22060d9505e93a1b36694b7a91dc2087e129",
+      "app_state": {
+        "phase": "effect_committed"
+      },
+      "history": [
+        {
+          "type": "tool_call_observed",
+          "step": "commit_effect",
+          "semantic_unit": "commit_effect",
+          "data": {
+            "operation": "effect",
+            "commit_status": "unknown",
+            "parent_unit": "commit_effect",
+            "unit_completion_observable": false
+          }
+        }
+      ],
+      "certificates": []
+    },
+    "target": {
+      "ledger": {
+        "ack_count": 1,
+        "effect_count": 1,
+        "finish_count": 1
+      },
+      "native_kind": "crewai_target_flow",
+      "flow_id": "74eff677-69b9-46aa-85cf-dcebbcd45efe",
+      "result": "finished"
+    }
+  }
+}

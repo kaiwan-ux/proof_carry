@@ -1,0 +1,152 @@
+{
+  "row": {
+    "run_id": "crb-holdout-retry_pause-h01-enough_evidence-crewai-to-langgraph-caplease_reference",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-retry_pause-h01",
+    "family": "retry_pause",
+    "evidence_variant": "enough_evidence",
+    "method": "caplease_reference",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 133,
+    "payload_sha256": "e88cd920e40b7227494575ab3cb9cc4fe0a1d4b76d05c67f39052c1be93039a5",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "counter",
+        "key": "retry:retry_job",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "caplease_reference",
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "retry_job",
+        "data": {
+          "attempt": 1,
+          "max_attempts": 4
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "retry_try_2"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:retry_job",
+      "value": 2
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 2
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 1
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 2
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 1
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 2
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

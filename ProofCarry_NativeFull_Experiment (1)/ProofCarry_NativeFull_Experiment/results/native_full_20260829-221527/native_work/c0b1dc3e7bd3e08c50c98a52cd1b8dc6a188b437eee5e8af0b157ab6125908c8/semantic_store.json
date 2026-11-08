@@ -1,0 +1,84 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {
+    "effect_plus_parallel_a_partial_rollback": 1
+  },
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "effect_plus_parallel_a_op": 1,
+    "effect_plus_parallel_a_op::partial": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "effect_plus_parallel_a_op::partial",
+      "unit": "effect_plus_parallel_a_partial_started"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b2_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b4"
+    },
+    {
+      "action": "effect_plus_parallel_a_partial_rollback",
+      "kind": "compensation",
+      "unit": "effect_plus_parallel_a_partial_compensate"
+    },
+    {
+      "kind": "effect",
+      "operation": "effect_plus_parallel_a_op",
+      "unit": "effect_plus_parallel_a_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_a_ack"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b2_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b5"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "effect_plus_parallel_a_ack": 1,
+    "effect_plus_parallel_a_attempt": 1,
+    "effect_plus_parallel_a_partial_compensate": 1,
+    "effect_plus_parallel_a_partial_started": 1,
+    "effect_plus_parallel_b_b1": 1,
+    "effect_plus_parallel_b_b2": 1,
+    "effect_plus_parallel_b_b2_failed": 1,
+    "effect_plus_parallel_b_b2_recover": 1,
+    "effect_plus_parallel_b_b3": 1,
+    "effect_plus_parallel_b_b4": 1,
+    "effect_plus_parallel_b_b5": 1,
+    "effect_plus_parallel_b_join": 1
+  }
+}

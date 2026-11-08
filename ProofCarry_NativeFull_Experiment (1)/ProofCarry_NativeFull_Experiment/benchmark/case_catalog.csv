@@ -1,0 +1,121 @@
+case_id,family,scenario_name,description,required_fact_count
+pc104-effect_commitment-01,effect_commitment,payment_capture,payment processor charge acknowledgement,1
+pc104-effect_commitment-02,effect_commitment,email_dispatch,outbound email acknowledgement,1
+pc104-effect_commitment-03,effect_commitment,db_commit,database transaction acknowledgement,1
+pc104-effect_commitment-04,effect_commitment,inventory_reserve,inventory reservation acknowledgement,1
+pc104-effect_commitment-05,effect_commitment,cloud_job_start,cloud job launch acknowledgement with a partially completed external action,1
+pc104-effect_commitment-06,effect_commitment,webhook_dispatch,partner webhook acknowledgement,1
+pc104-effect_commitment-07,effect_commitment,ledger_post,ledger posting acknowledgement,1
+pc104-effect_commitment-08,effect_commitment,file_publish,document publication acknowledgement,1
+pc104-effect_commitment-09,effect_commitment,notification_send,notification acknowledgement,1
+pc104-effect_commitment-10,effect_commitment,account_debit,account debit acknowledgement,1
+pc104-effect_commitment-11,effect_commitment,shipment_book,carrier booking acknowledgement,1
+pc104-effect_commitment-12,effect_commitment,credential_rotate,credential rotation acknowledgement,1
+pc104-effect_commitment-13,effect_commitment,ticket_close,support ticket closure acknowledgement with a partially completed external action,1
+pc104-retry-01,retry,payment_retry,payment API retry,2
+pc104-retry-02,retry,email_retry,mail provider retry,2
+pc104-retry-03,retry,db_retry,database retry,2
+pc104-retry-04,retry,inventory_retry,inventory service retry,2
+pc104-retry-05,retry,cloud_retry,cloud control-plane retry,2
+pc104-retry-06,retry,webhook_retry,webhook retry,2
+pc104-retry-07,retry,ledger_retry,ledger service retry,2
+pc104-retry-08,retry,file_retry,object-store retry,2
+pc104-retry-09,retry,notification_retry,notification retry,2
+pc104-retry-10,retry,debit_retry,bank debit retry,2
+pc104-retry-11,retry,shipment_retry,carrier API retry,2
+pc104-retry-12,retry,credential_retry,secret-store retry,2
+pc104-retry-13,retry,ticket_retry,ticketing API retry,2
+pc104-approval-01,approval,refund_approval,refund approval,1
+pc104-approval-02,approval,access_approval,privileged access approval,1
+pc104-approval-03,approval,deploy_approval,production deployment approval,1
+pc104-approval-04,approval,purchase_approval,purchase approval,1
+pc104-approval-05,approval,credit_approval,credit adjustment approval,1
+pc104-approval-06,approval,privacy_approval,privacy exception approval,1
+pc104-approval-07,approval,security_approval,security change approval,1
+pc104-approval-08,approval,legal_approval,legal review approval,1
+pc104-approval-09,approval,finance_approval,finance approval,1
+pc104-approval-10,approval,data_export_approval,data export approval,1
+pc104-approval-11,approval,vendor_approval,vendor onboarding approval,1
+pc104-approval-12,approval,release_approval,release approval,1
+pc104-approval-13,approval,policy_approval,policy exception approval,1
+pc104-parallel-01,parallel,fraud_parallel,fraud checks,4
+pc104-parallel-02,parallel,travel_parallel,travel booking branches,3
+pc104-parallel-03,parallel,deploy_parallel,deployment validations,4
+pc104-parallel-04,parallel,order_parallel,order fulfillment branches,3
+pc104-parallel-05,parallel,document_parallel,document processing branches,4
+pc104-parallel-06,parallel,identity_parallel,identity verification branches,3
+pc104-parallel-07,parallel,backup_parallel,backup verification branches,4
+pc104-parallel-08,parallel,analytics_parallel,analytics jobs,3
+pc104-parallel-09,parallel,medical_parallel,record validation branches,4
+pc104-parallel-10,parallel,compliance_parallel,compliance checks,3
+pc104-parallel-11,parallel,invoice_parallel,invoice checks,4
+pc104-parallel-12,parallel,content_parallel,content moderation branches,3
+pc104-parallel-13,parallel,recovery_parallel,recovery actions,4
+pc104-loop-01,loop,pagination_loop,API pagination,3
+pc104-loop-02,loop,batch_loop,batch processing,3
+pc104-loop-03,loop,poll_loop,status polling,3
+pc104-loop-04,loop,reconcile_loop,reconciliation loop,3
+pc104-loop-05,loop,upload_loop,multipart upload loop,3
+pc104-loop-06,loop,scan_loop,security scan loop,3
+pc104-loop-07,loop,invoice_loop,invoice item loop,3
+pc104-loop-08,loop,retry_window_loop,retry window loop,3
+pc104-loop-09,loop,sync_loop,directory synchronization loop,3
+pc104-loop-10,loop,migration_loop,data migration loop,3
+pc104-loop-11,loop,cleanup_loop,cleanup loop,3
+pc104-loop-12,loop,notify_loop,recipient notification loop,3
+pc104-loop-13,loop,validation_loop,validation loop,3
+pc104-compensation-01,compensation,refund_comp,refund compensation,2
+pc104-compensation-02,compensation,inventory_comp,inventory release compensation,2
+pc104-compensation-03,compensation,booking_comp,booking cancellation compensation,2
+pc104-compensation-04,compensation,ledger_comp,ledger reversal compensation,2
+pc104-compensation-05,compensation,cloud_comp,cloud resource teardown compensation,2
+pc104-compensation-06,compensation,credential_comp,credential rollback compensation,2
+pc104-compensation-07,compensation,shipment_comp,shipment cancellation compensation,2
+pc104-compensation-08,compensation,file_comp,publication rollback compensation,2
+pc104-compensation-09,compensation,email_comp,email follow-up compensation,2
+pc104-compensation-10,compensation,access_comp,access revocation compensation,2
+pc104-compensation-11,compensation,deploy_comp,deployment rollback compensation,2
+pc104-compensation-12,compensation,vendor_comp,vendor provisioning rollback,2
+pc104-compensation-13,compensation,order_comp,order cancellation compensation,2
+pc104-callback-01,callback,payment_callback,payment callback,1
+pc104-callback-02,callback,identity_callback,identity verification callback,1
+pc104-callback-03,callback,shipment_callback,carrier callback,1
+pc104-callback-04,callback,scan_callback,security scan callback,1
+pc104-callback-05,callback,deploy_callback,deployment callback,1
+pc104-callback-06,callback,document_callback,document-signing callback,1
+pc104-callback-07,callback,bank_callback,bank transfer callback,1
+pc104-callback-08,callback,cloud_callback,cloud operation callback,1
+pc104-callback-09,callback,email_callback,delivery callback,1
+pc104-callback-10,callback,webhook_callback,partner callback,1
+pc104-callback-11,callback,approval_callback,approval service callback,1
+pc104-callback-12,callback,job_callback,batch job callback,1
+pc104-callback-13,callback,vendor_callback,vendor service callback,1
+pc104-composite-01,composite,payment_plus_approval,payment + approval,2
+pc104-composite-02,composite,retry_plus_callback,retry + callback,3
+pc104-composite-03,composite,parallel_plus_comp,parallel + compensation,6
+pc104-composite-04,composite,loop_plus_approval,loop + approval,4
+pc104-composite-05,composite,effect_plus_callback,effect + callback,2
+pc104-composite-06,composite,retry_plus_approval,retry + approval,3
+pc104-composite-07,composite,parallel_plus_callback,parallel + callback,5
+pc104-composite-08,composite,loop_plus_comp,loop + compensation,5
+pc104-composite-09,composite,approval_plus_callback,approval + callback,2
+pc104-composite-10,composite,effect_plus_retry,effect + retry,3
+pc104-composite-11,composite,parallel_plus_approval,parallel + approval,5
+pc104-composite-12,composite,retry_plus_comp,retry + compensation,4
+pc104-composite-13,composite,loop_plus_callback,loop + callback,4
+pc104-effect_commitment-14,effect_commitment,audit_event_publish,audit-event publication acknowledgement with a partially completed external action,1
+pc104-effect_commitment-15,effect_commitment,subscription_cancel,subscription cancellation acknowledgement,1
+pc104-retry-14,retry,search_index_retry,search-index update retry,2
+pc104-retry-15,retry,tax_gateway_retry,tax gateway retry at exhausted retry budget,2
+pc104-approval-14,approval,model_release_approval,model release approval,1
+pc104-approval-15,approval,retention_approval,data-retention exception approval,1
+pc104-parallel-14,parallel,security_scan_parallel,security scan branches,5
+pc104-parallel-15,parallel,localization_parallel,localization processing branches,5
+pc104-loop-14,loop,archive_loop,archive batch iteration,3
+pc104-loop-15,loop,replication_loop,replication convergence loop with termination decision,3
+pc104-compensation-14,compensation,subscription_comp,subscription rollback compensation,2
+pc104-compensation-15,compensation,quota_comp,quota allocation compensation after failed effect,2
+pc104-callback-14,callback,identity_provider_callback,identity-provider callback,1
+pc104-callback-15,callback,tax_filing_callback,tax filing callback,1
+pc104-composite-14,composite,effect_plus_parallel,partial external effect + parallel join,6
+pc104-composite-15,composite,approval_plus_comp,approval + compensation obligation,3

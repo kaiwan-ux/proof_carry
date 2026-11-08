@@ -1,0 +1,96 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-retry-01",
+      "checkpoint_ref": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\native_full_20260829-233240\\native_work\\gate-crewai-pc104-retry-01\\checkpoints\\main\\20260829T183937_b5391f37_p-none.json",
+      "framework": "crewai",
+      "native_kind": "crewai_flow_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 1,
+        "checkpoint_event_mode": "method_execution_finished",
+        "checkpoint_file": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment (1)\\ProofCarry_NativeFull_Experiment\\results\\native_full_20260829-233240\\native_work\\gate-crewai-pc104-retry-01\\checkpoints\\main\\20260829T183937_b5391f37_p-none.json",
+        "framework": "crewai",
+        "identifier_label": "task_id",
+        "pause_protocol": "subprocess_external_gate",
+        "pause_status": "pending",
+        "semantic_namespace": "crew.task"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "payment_retry_task_attempt": 1
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "payment_retry_task_failed_1"
+          },
+          {
+            "key": "payment_retry_task_attempt",
+            "kind": "counter",
+            "value": 1
+          }
+        ],
+        "units": {
+          "payment_retry_task_failed_1": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "resume_api": "Flow.from_checkpoint",
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "payment_retry_task_attempt": 2
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "payment_retry_task_failed_1"
+        },
+        {
+          "key": "payment_retry_task_attempt",
+          "kind": "counter",
+          "value": 1
+        },
+        {
+          "kind": "unit",
+          "unit": "payment_retry_task_attempt_2"
+        },
+        {
+          "key": "payment_retry_task_attempt",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "payment_retry_task_attempt_2": 1,
+        "payment_retry_task_failed_1": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 29.65600000000086
+}

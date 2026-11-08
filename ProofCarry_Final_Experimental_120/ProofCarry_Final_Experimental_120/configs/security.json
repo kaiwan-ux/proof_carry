@@ -1,0 +1,18 @@
+{
+  "attacks": [
+    "certificate_forgery",
+    "rehashed_forgery",
+    "replay",
+    "wrong_workflow",
+    "wrong_execution",
+    "runtime_substitution",
+    "unauthorized_identity_binding",
+    "expired_certificate",
+    "nonce_reuse"
+  ],
+  "controls": [
+    "authenticated_proofcarry",
+    "hash_only_control"
+  ],
+  "include_valid_control": true
+}

@@ -1,0 +1,123 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h03-complete_negative_snapshot-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-async_callback-h03",
+    "family": "async_callback",
+    "evidence_variant": "complete_negative_snapshot",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 912,
+    "payload_sha256": "bcb71399e6fcfcb6430259ee0bd43c0f9ac8fe3d0983906d6064e0ea280db500",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-async_callback-h03",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "018aa024d0ff1f086ff6e713be78eca0147a422b4054a020e8fd8d46b8ec6b0f",
+    "continuation_contract_hash": "98e8a527a2dd98198bbf0d625fc22b891ff284fc74b2c88e2628250757a884c9",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": [
+      {
+        "certificate_id": "5392ef731b41e01d00b9",
+        "fact_type": "obligation_snapshot",
+        "subject": "callback",
+        "value": {
+          "kind": "callback",
+          "members": [],
+          "universe": [
+            "async_job_cb"
+          ],
+          "complete": true
+        },
+        "scope": "crb-holdout-async_callback-h03",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-async_callback-h03-source-langgraph-crb-holdout-async_callback-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "fb4dd22c47f32384e7f8b3bd97dd40292581136d2a2959d7808766e965ce3da0"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "callback_state|async_job_cb": [
+        "certificate:complete_snapshot"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_closed": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_closed"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_closed": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_closed"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

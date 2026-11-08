@@ -1,0 +1,200 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h03-irrelevant_noise-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-compensation_pending-h03",
+    "family": "compensation_pending",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 2061,
+    "payload_sha256": "64a91d23eb26ede493ad4ff520fa896d3b26338ca450b0c7e79534e0b0e84b65",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h03",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "5654071bea525a773b6b341bf14ae43b08046ba8729151d68fcd3125b1034d83",
+    "continuation_contract_hash": "22c2749b7a4d0dcbfdb772614874cd070712fc78c252768215fc1153c7974095",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "email_notice",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "bbe16ee53619295bd8d3",
+        "fact_type": "effect_commitment",
+        "subject": "email_notice",
+        "value": "not_committed",
+        "scope": "crb-holdout-compensation_pending-h03",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h03-source-langgraph-crb-holdout-compensation_pending-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "4a0cb8f9b98740e881a32223c4f87006e4bcde7932f55a9d0eed3e28536e51af"
+      },
+      {
+        "certificate_id": "371f5e0a3a535899bed9",
+        "fact_type": "compensation_state",
+        "subject": "retract_email",
+        "value": "absent",
+        "scope": "crb-holdout-compensation_pending-h03",
+        "evidence": {
+          "kind": "compensation",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h03-source-langgraph-crb-holdout-compensation_pending-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "7ad00a053a1664a359b0c97566b8a3a50c4cf12260eb09b4c2cf5da34a69ca88"
+      },
+      {
+        "certificate_id": "3f5a046f72fdfdee256e",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-compensation_pending-h03",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h03-source-langgraph-crb-holdout-compensation_pending-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "97d3d2bbf33c3e427d9c7934924354c3b372a95ce8d596bbbf9ce0911ab47ec3"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "effect_status|email_notice": [
+        "certificate"
+      ],
+      "compensation_state|retract_email": [
+        "certificate"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "compensation_none"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

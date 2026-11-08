@@ -1,0 +1,59 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h01-missing_critical_fact-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-async_callback-h01",
+    "family": "async_callback",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 411,
+    "payload_sha256": "21d9b362fa7097bf91b79bc160561f5ed97165eec0b4b6975c99d99d346241a7",
+    "expected_plan": [
+      {
+        "id": "rpc_result_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-async_callback-h01",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "94c2c542ee2e0dbe069d4d3f2a51709b675d5b30f917da4106dad255456d8336",
+    "continuation_contract_hash": "5c04e4430622505e5177cd58ef748e9d3eb3ff0aa7f6cc3722980a6357babf5f",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": []
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "callback_state",
+        "subject": "rpc_result_cb",
+        "purpose": "must not skip unresolved callback"
+      }
+    ],
+    "bindings": {},
+    "provenance": {}
+  }
+}

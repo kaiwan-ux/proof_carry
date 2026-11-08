@@ -1,0 +1,61 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_a_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_a_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_a_b4_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_b_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_a_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_a_b4_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_a_b4"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_a_join"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_approval_b_proceed"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "parallel_plus_approval_a_b1": 1,
+    "parallel_plus_approval_a_b2": 1,
+    "parallel_plus_approval_a_b3": 1,
+    "parallel_plus_approval_a_b4": 1,
+    "parallel_plus_approval_a_b4_failed": 1,
+    "parallel_plus_approval_a_b4_recover": 1,
+    "parallel_plus_approval_a_join": 1,
+    "parallel_plus_approval_b_proceed": 1,
+    "parallel_plus_approval_b_requested": 1
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h01-enough_evidence-maf-to-crewai-mcc_v3",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-compensation_pending-h01",
+    "family": "compensation_pending",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1468,
+    "payload_sha256": "e2655a9b6fe1222de41d2f0f7210168354d8db49463a7fc69e2ca6b0d58621f7",
+    "expected_plan": [
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "compensation",
+        "action": "void_invoice",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h01",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "d6de139d24ef7155cd0dfefd5bc05a37b7de13ba84e211efff29976c4913325e",
+    "continuation_contract_hash": "91365d8a4e2ca0b66eaa71927ac89a4cf8bcb5048fc133466f53da7ceb6baf84",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "invoice",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "compensation_required",
+        "semantic_unit": "compensation",
+        "data": {
+          "compensation_action": "void_invoice",
+          "effect": "invoice"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "0afb78c6d46a656b9bde",
+        "fact_type": "effect_commitment",
+        "subject": "invoice",
+        "value": "committed",
+        "scope": "crb-holdout-compensation_pending-h01",
+        "evidence": {
+          "native_checkpoint_ref": "b78b86d5-4f73-4178-a839-8700975cbb27"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "9d496935a5efdefb7dc1005073309432e10396c726b322ff85712b77aa5e0fb8"
+      },
+      {
+        "certificate_id": "7229f79dd1375a26bacd",
+        "fact_type": "obligation_state",
+        "subject": "void_invoice",
+        "value": "pending",
+        "scope": "crb-holdout-compensation_pending-h01",
+        "evidence": {
+          "kind": "compensation",
+          "native_checkpoint_ref": "b78b86d5-4f73-4178-a839-8700975cbb27"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "c3c6e85ff335c21ec751cb4f655dacea6cb4003008e4ce4e16907fc743a269be"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "compensation_state|void_invoice": [
+        "history",
+        "certificate"
+      ],
+      "effect_status|invoice": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "compensation",
+      "action": "void_invoice",
+      "unit": "compensation"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "invoice": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "void_invoice": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "invoice": 1
+    },
+    "units": {
+      "compensation": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "void_invoice": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "action": "void_invoice",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

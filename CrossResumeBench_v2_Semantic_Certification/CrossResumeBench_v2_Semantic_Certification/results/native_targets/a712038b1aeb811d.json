@@ -1,0 +1,29 @@
+{
+  "completed_units": [
+    "bundle",
+    "finish"
+  ],
+  "executed_units": [
+    "reconcile:bundle",
+    "reconcile:bundle",
+    "bundle",
+    "finish"
+  ],
+  "final_ledger": {
+    "e1": 1,
+    "e2": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "2a2bd401-7194-4446-babf-a2b22c74e125",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 4
+  }
+}

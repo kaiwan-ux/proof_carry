@@ -1,0 +1,12 @@
+{
+  "run_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-compensation-07",
+  "case_id": "pc104-compensation-07",
+  "checkpoint_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-compensation-07\\checkpoints",
+  "store_path": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-compensation-07\\semantic_store.json",
+  "resume_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-compensation-07\\resume.gate",
+  "stop_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-compensation-07\\stop.gate",
+  "signal": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_v2_20260831\\native_work\\self-crewai-pc104-compensation-07\\source_ready.signal",
+  "on_events": [
+    "method_execution_finished"
+  ]
+}

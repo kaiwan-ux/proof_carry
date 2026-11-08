@@ -1,0 +1,81 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h03-tampered_attestation-langgraph-to-crewai-mcc_v2_frozen",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-effect_commitment-h03",
+    "family": "effect_commitment",
+    "evidence_variant": "tampered_attestation",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "AMBIGUOUS_EXTERNAL_COMMIT;INVALID_CERTIFICATE",
+    "failure_types": [],
+    "payload_bytes": 935,
+    "payload_sha256": "8ea6398d7cb65f0a2ba17f96d4c17a1547c902bb76dfdf7bc4570abb0e5bb0cd",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-effect_commitment-h03",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "9983bca743b768f2f2287c2263ee219e61e0d1b63d33cd5bf82f149dec48b19b",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "audit_emit",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "bcdf7f30dfcf6f006cb0",
+        "fact_type": "effect_commitment",
+        "subject": "audit_emit",
+        "value": "committed",
+        "scope": "crb-holdout-effect_commitment-h03",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-effect_commitment-h03-source-langgraph-crb-holdout-effect_commitment-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [
+      {
+        "type": "INVALID_CERTIFICATE",
+        "certificate_id": "bcdf7f30dfcf6f006cb0"
+      },
+      {
+        "type": "AMBIGUOUS_EXTERNAL_COMMIT",
+        "operation": "audit_emit"
+      }
+    ],
+    "certificate_log": [],
+    "inference_log": []
+  }
+}

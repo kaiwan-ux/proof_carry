@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+results/*.csv
+results/*.json
+results/*.md
+results/*.zip
+results/graphs/*.png
+results/native_sources/*.json
+results/native_targets/*.json
+results/capsules/*.json
+results/inference_reports/*.json
+results/probes/*.json

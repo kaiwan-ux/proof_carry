@@ -1,0 +1,32 @@
+{
+  "benchmark": "CrossResumeBench_v3_CrewAI_Repaired_Gate",
+  "framework": "crewai",
+  "worlds": [
+    "committed",
+    "not_committed"
+  ],
+  "evidence_variants": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "migration_methods": [
+    "mcc_v2",
+    "oracle",
+    "explicit_minimal"
+  ],
+  "expected_versions": {
+    "crewai": "1.15.17",
+    "pydantic": "2.12.5",
+    "jsonschema": "4.23.0",
+    "pandas": "2.3.3"
+  },
+  "expected_probe_checks": 6,
+  "expected_self_resume_rows": 1,
+  "expected_source_capture_rows": 2,
+  "expected_migration_rows": 12,
+  "expected_mcc_rows": 4,
+  "full_v3_enabled": false,
+  "llm_required": false,
+  "native_self_resume_safety_is_reported_not_required": true,
+  "notes": "CrewAI-only repaired gate. CrewAI adapter is copied from validated Phase-1 Revision C. Frozen MCC v2 and two-world semantics are unchanged."
+}

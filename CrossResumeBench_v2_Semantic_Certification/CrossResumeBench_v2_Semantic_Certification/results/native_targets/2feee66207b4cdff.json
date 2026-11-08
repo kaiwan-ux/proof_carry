@@ -1,0 +1,30 @@
+{
+  "completed_units": [
+    "finish",
+    "iteration_1",
+    "iteration_2",
+    "iteration_3"
+  ],
+  "executed_units": [
+    "iteration_1",
+    "reconcile:iteration_2",
+    "iteration_3",
+    "finish"
+  ],
+  "final_ledger": {
+    "loop_write": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "0b887385-7168-4d73-9152-8932ca4916de",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 4
+  }
+}

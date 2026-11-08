@@ -1,0 +1,100 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-loop-10",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-loop-10-self-langgraph-pc104-loop-10",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3d01-5c13-6acb-8001-2c5d8ca5511a",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-loop-10-self-langgraph-pc104-loop-10"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "migration_loop_index": 2
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "migration_loop_index",
+            "kind": "counter",
+            "value": 2
+          }
+        ],
+        "units": {}
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "migration_loop_index": 3
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "migration_loop_index",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "migration_loop_iter_3"
+        },
+        {
+          "key": "migration_loop_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "migration_loop_exit"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "migration_loop_exit": 1,
+        "migration_loop_iter_3": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 4.092999999999847
+}

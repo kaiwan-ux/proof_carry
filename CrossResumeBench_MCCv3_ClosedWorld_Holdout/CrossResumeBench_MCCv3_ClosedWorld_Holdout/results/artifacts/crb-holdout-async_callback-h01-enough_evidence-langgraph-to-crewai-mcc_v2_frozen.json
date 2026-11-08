@@ -1,0 +1,152 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h01-enough_evidence-langgraph-to-crewai-mcc_v2_frozen",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-async_callback-h01",
+    "family": "async_callback",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 899,
+    "payload_sha256": "2dd0187e1084254bc7fb6844d22bae935a851490ba90d0ca6d5834604fab4927",
+    "expected_plan": [
+      {
+        "id": "rpc_result_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "callback",
+        "id": "rpc_result_cb",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-async_callback-h01",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "94c2c542ee2e0dbe069d4d3f2a51709b675d5b30f917da4106dad255456d8336",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "callback_pending",
+        "semantic_unit": "callback_gate",
+        "data": {
+          "callback_id": "rpc_result_cb",
+          "operation": "rpc_result",
+          "blocks": "callback_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "fc7802feb4d69224d5f2",
+        "fact_type": "obligation_state",
+        "subject": "rpc_result_cb",
+        "value": "pending",
+        "scope": "crb-holdout-async_callback-h01",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-async_callback-h01-source-langgraph-crb-holdout-async_callback-h01"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "4445e4df9a7d4199eb04fc6de350702123f9ca4154a451aaf74272a1c0560579"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "obligation_state:rpc_result_cb:pending"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "callback",
+      "id": "rpc_result_cb",
+      "unit": "callback_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "rpc_result_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "rpc_result_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "rpc_result_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "rpc_result_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

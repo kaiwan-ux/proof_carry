@@ -1,0 +1,19 @@
+{
+  "workflow_name": "proofcarry-104-pc104-callback-14-self-maf-pc104-callback-14",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "33f39b61-d36f-4e98-8a00-c8c54ebed26a",
+  "previous_checkpoint_id": "3429f9ae-ddc6-4713-8fb2-9bcc60449fd7",
+  "timestamp": "2026-08-29T17:42:10.783230+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

@@ -1,0 +1,23 @@
+{
+  "completed_units": [
+    "finish",
+    "remote_call"
+  ],
+  "executed_units": [
+    "reconcile:remote_call",
+    "finish"
+  ],
+  "final_ledger": {
+    "charge": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-b594eb10-d524-4ad6-9055-64272073e82a",
+    "checkpoint_count": 4,
+    "native_action_executors": 2
+  }
+}

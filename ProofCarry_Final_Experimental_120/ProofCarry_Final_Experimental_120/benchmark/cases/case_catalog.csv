@@ -1,0 +1,121 @@
+case_id,workflow_family,scenario_kind,title,safe_plan,description
+PC-EFF-01,effect_commitment,lost_ack_after_commit,Lost acknowledgement after external commit,ack_committed_effect,Payment/effect may have committed although the response was lost.
+PC-EFF-02,effect_commitment,idempotency_receipt_gap,Idempotency key with missing receipt,recover_effect_receipt,An idempotency token exists but the authoritative commit receipt is absent.
+PC-EFF-03,effect_commitment,partial_multi_effect,Partial multi-effect commit,resume_second_effect_only,One member of a two-effect operation committed while the second remains pending.
+PC-EFF-04,effect_commitment,stale_read_after_write,Stale read after committed write,skip_duplicate_write,A write committed but a stale read makes the target observe the pre-write value.
+PC-EFF-05,effect_commitment,tool_timeout_unknown_commit,Tool timeout at commit boundary,resolve_then_ack,A tool timed out exactly at the point where a remote side effect could have committed.
+PC-EFF-06,effect_commitment,retryable_error_after_commit,Retryable error emitted after commit,do_not_retry_effect,The service returned a retryable error after persisting the effect.
+PC-EFF-07,effect_commitment,duplicate_delivery_uncertainty,Duplicate delivery uncertainty,dedupe_and_continue,The source cannot tell whether a duplicate-delivered command was already applied.
+PC-EFF-08,effect_commitment,partial_transaction_batch,Partially committed transaction batch,resume_uncommitted_members,A batch has mixed committed and uncommitted members.
+PC-EFF-09,effect_commitment,committed_effect_needs_compensation,Committed effect awaiting compensation,schedule_compensation,The effect committed but the workflow has transitioned to rollback.
+PC-EFF-10,effect_commitment,authorized_not_executed,Authorized but not executed,execute_authorized_effect,"Authorization was granted, but execution never began."
+PC-EFF-11,effect_commitment,cancel_after_dispatch,Cancellation after dispatch,resolve_cancel_commit,A cancellation raced with dispatch and commit state must be proven.
+PC-EFF-12,effect_commitment,aliased_effect_identity,Effect committed under runtime alias,map_and_ack_effect,The committed effect is recorded under a source-native identifier that differs at target.
+PC-EFF-13,effect_commitment,prior_execution_receipt,Receipt belongs to prior execution,ignore_prior_receipt,A valid-looking receipt is for a previous execution of the same workflow.
+PC-EFF-14,effect_commitment,versioned_payload_commit,Commit with versioned payload mismatch,preserve_committed_version,A committed effect used payload version N while the target proposes N+1.
+PC-EFF-15,effect_commitment,parallel_branch_effect,Effect inside completed parallel branch,preserve_branch_effect,One parallel branch committed an effect before the join migrated.
+PC-RET-01,retry,budget_available,Retry budget available,retry_once,A failed unit still has retry budget and may be attempted again.
+PC-RET-02,retry,budget_exhausted,Retry budget exhausted,stop_retrying,The maximum retry count has been reached and another attempt is unsafe.
+PC-RET-03,retry,retry_after_timeout,Retry after timeout,retry_if_uncommitted,A timeout occurred and retry eligibility depends on whether work committed.
+PC-RET-04,retry,duplicate_retry,Duplicate retry request,dedupe_retry,A retry command was emitted twice across a migration boundary.
+PC-RET-05,retry,partial_budget_consumption,Partial retry budget consumption,resume_with_remaining_budget,The source incremented the retry counter before failing to persist the rest of state.
+PC-RET-06,retry,changed_parameters,Retry with changed parameters,reject_parameter_drift,A retry request carries parameters that differ from the failed attempt.
+PC-RET-07,retry,retry_after_effect,Retry after external effect,resume_after_effect,A step failed after an external effect and naive retry could duplicate it.
+PC-RET-08,retry,missing_retry_evidence,Retry with missing evidence,resume_certified_retry,Retry state is not present in transferable history and requires certification.
+PC-RET-09,retry,contradictory_retry_evidence,Contradictory retry counters,resolve_retry_conflict,History and certified state disagree on the consumed retry count.
+PC-RET-10,retry,expired_authorization,Retry with expired authorization,do_not_retry_expired,The retry budget remains but the authorization window has expired.
+PC-RET-11,retry,runtime_identity_change,Retry across runtime identity change,map_retry_identity,The retrying semantic unit has different source and target task identifiers.
+PC-RET-12,retry,callback_dependency,Retry depends on callback,retry_after_callback,A retry is legal only after an asynchronous callback indicates failure.
+PC-RET-13,retry,post_compensation_retry,Retry after compensation,retry_after_rollback,The failed operation was compensated and retry legality depends on rollback completion.
+PC-RET-14,retry,parallel_branch_retry,Retry inside parallel branch,retry_failed_branch,Only one failed branch should retry while completed siblings must remain completed.
+PC-RET-15,retry,nested_composite_retry,Composite retry obligation,resume_composite_retry,A retry is nested under approval and effect-commit obligations.
+PC-APR-01,approval,single_pending,Single pending approval,wait_for_approval,A human approval is pending before the next action.
+PC-APR-02,approval,quorum,Multi-approver quorum,continue_after_quorum,Continuation requires a two-of-three approval quorum.
+PC-APR-03,approval,granted_not_propagated,Granted approval not propagated,apply_granted_approval,Approval was granted but the source checkpoint predates propagation.
+PC-APR-04,approval,revoked,Revoked approval,block_revoked_request,A previously granted approval was revoked before migration.
+PC-APR-05,approval,expired,Expired approval,request_new_approval,An approval token expired before the target continuation.
+PC-APR-06,approval,amount_threshold,Conditional amount approval,enforce_amount_approval,Approval authority depends on the transaction amount threshold.
+PC-APR-07,approval,delegated_approver,Delegated approver,honor_valid_delegation,Approval was delegated and delegation validity must be established.
+PC-APR-08,approval,request_changed,Request changed after approval,invalidate_stale_approval,The approved request was modified after the approval decision.
+PC-APR-09,approval,parallel_gates,Parallel approval gates,resume_approved_branches,Two independent approvals gate different branches before a join.
+PC-APR-10,approval,aliased_approval_identity,Approval identity alias,map_approval_identity,The approval request is represented by different IDs across runtimes.
+PC-APR-11,approval,callback_pending,Approval pending callback,wait_for_approval_callback,A third-party approval callback has not yet arrived.
+PC-APR-12,approval,after_retry_failure,Approval after retry exhaustion,wait_for_override,Human approval is required to override an exhausted retry budget.
+PC-APR-13,approval,approval_with_effect,Approval before committed effect,ack_approved_effect,An approved operation committed just before migration and must not be repeated.
+PC-APR-14,approval,separation_of_duties,Separation-of-duties approval,enforce_role_separation,The actor who executes cannot be the actor who approved.
+PC-APR-15,approval,escalated_approval,Escalated approval path,follow_escalated_decision,A timed-out approval was escalated to a higher authority.
+PC-PAR-01,parallel,one_done_one_pending,"One branch complete, one pending",resume_pending_branch,A two-way fork has one completed branch and one unfinished branch.
+PC-PAR-02,parallel,all_done_join_pending,"All branches complete, join pending",run_join_only,All branches finished but the join node has not executed.
+PC-PAR-03,parallel,branch_failed_compensation,Failed branch with compensation,compensate_failed_branch,A failed branch requires compensation while siblings must remain stable.
+PC-PAR-04,parallel,first_wins_race,First-wins race,preserve_race_winner,The workflow continues with the first successful branch and cancels others.
+PC-PAR-05,parallel,branch_external_effect,Parallel branch external effect,preserve_effect_branch,One branch committed an external effect before its completion marker.
+PC-PAR-06,parallel,branch_retry,Parallel branch retry,retry_one_branch,A failed branch is retrying while sibling results are already final.
+PC-PAR-07,parallel,dynamic_fanout,Dynamic fan-out count,resume_dynamic_fanout,The number of spawned branches was computed at runtime.
+PC-PAR-08,parallel,nested_parallel,Nested parallel regions,resume_inner_parallel,An inner parallel region is partially complete inside an outer branch.
+PC-PAR-09,parallel,branch_cancel,Branch cancellation,preserve_branch_cancel,One branch was explicitly cancelled before the migration checkpoint.
+PC-PAR-10,parallel,quorum_join,Quorum join,evaluate_quorum_join,The join may fire after a quorum rather than after every branch.
+PC-PAR-11,parallel,branch_identity_alias,Branch identity remapping,map_branch_identity,Source and target runtimes use different identifiers for the same branch.
+PC-PAR-12,parallel,partial_aggregate,Partial result aggregation,resume_unaggregated_only,Several branch outputs are already folded into an accumulator.
+PC-PAR-13,parallel,callback_branch,Callback-waiting branch,wait_callback_branch,One branch waits on an external callback while another is complete.
+PC-PAR-14,parallel,inconsistent_snapshot,Inconsistent branch snapshot,reject_inconsistent_parallel,Two snapshot fragments disagree about whether a branch completed.
+PC-PAR-15,parallel,approval_barrier,Approval barrier after fork,wait_or_join_after_approval,Completed branches cannot join until an approval barrier is satisfied.
+PC-LOP-01,loop,mid_iteration,Mid-iteration pause,resume_current_iteration,The workflow pauses after part of an iteration but before its semantic completion.
+PC-LOP-02,loop,accumulator,Loop accumulator state,resume_with_accumulator,Continuation requires preserving an accumulator produced by prior iterations.
+PC-LOP-03,loop,max_iterations,Maximum iteration boundary,stop_at_max,The loop is at its maximum bound and must not execute an extra iteration.
+PC-LOP-04,loop,break_condition,Break condition satisfied,exit_loop,A break predicate became true before migration.
+PC-LOP-05,loop,continue_condition,Continue condition triggered,advance_iteration,The current iteration should skip the remaining body and start the next iteration.
+PC-LOP-06,loop,effect_in_loop,External effect inside loop,preserve_iteration_effect,A loop iteration committed an effect before the iteration marker was persisted.
+PC-LOP-07,loop,retry_in_loop,Retry inside loop,resume_loop_retry,The current iteration contains a retrying operation with its own budget.
+PC-LOP-08,loop,nested_loop,Nested loop indices,resume_nested_indices,Two nested loop indices must be preserved without replaying outer work.
+PC-LOP-09,loop,loop_identity_alias,Loop unit identity alias,map_loop_identity,The target runtime names the loop body differently from the source.
+PC-LOP-10,loop,dynamic_bound,Dynamic loop bound,resume_dynamic_loop,The terminal bound is computed from prior workflow data.
+PC-LOP-11,loop,callback_termination,Callback-driven early termination,exit_on_callback,An external callback requests early loop termination.
+PC-LOP-12,loop,approval_each_iteration,Per-iteration approval,resume_approved_iteration,Each iteration requires an approval scoped to its index.
+PC-LOP-13,loop,partial_iteration_commit,Partial iteration commit,finish_partial_iteration,Some iteration-local state committed while the semantic iteration remains incomplete.
+PC-LOP-14,loop,after_compensation,Loop after compensation,advance_after_compensation,A failed iteration was compensated and loop continuation depends on rollback completion.
+PC-LOP-15,loop,parallel_body,Loop with parallel body,resume_parallel_loop_body,Each loop iteration fans out into parallel branches whose progress must be preserved.
+PC-COM-01,compensation,rollback_queued,Rollback queued after effect,execute_compensation,A committed effect has a queued but unexecuted compensating action.
+PC-COM-02,compensation,partial_rollback,Partial rollback,resume_remaining_compensation,A multi-step compensation has completed only its first reversal.
+PC-COM-03,compensation,failed_compensation,Failed compensation,retry_compensation,A compensation attempt failed and may itself require retry policy.
+PC-COM-04,compensation,nested_saga,Nested saga compensation,resume_inner_rollback,An inner saga is rolling back while an outer saga remains active.
+PC-COM-05,compensation,reverse_order,Compensation ordering,compensate_reverse_order,Rollback must occur in reverse order of committed effects.
+PC-COM-06,compensation,retry_rollback,Retrying compensation,resume_compensation_retry,The rollback action is in a retry loop with bounded attempts.
+PC-COM-07,compensation,uncertain_comp_effect,Uncertain compensating effect,resolve_compensation_commit,A compensation call timed out and may already have applied.
+PC-COM-08,compensation,comp_idempotency,Compensation idempotency,dedupe_compensation,A compensating action is idempotent only under a specific key.
+PC-COM-09,compensation,parallel_rollback,Parallel branch compensation,compensate_failed_branches,Only failed branches should compensate while successful siblings remain intact.
+PC-COM-10,compensation,loop_rollback,Loop compensation,rollback_loop_suffix,Several loop iterations committed effects and rollback must stop at a known boundary.
+PC-COM-11,compensation,approval_before_rollback,Approval before destructive rollback,wait_for_rollback_approval,A destructive compensation requires explicit human approval.
+PC-COM-12,compensation,rollback_timeout,Timeout during rollback,resolve_rollback_timeout,A rollback timed out near the external commit boundary.
+PC-COM-13,compensation,expired_window,Expired compensation window,escalate_uncompensated_effect,The rollback time window expired before migration.
+PC-COM-14,compensation,comp_identity_alias,Compensation identity alias,map_compensation_identity,The source and target use different identifiers for the compensating unit.
+PC-COM-15,compensation,mixed_reversibility,Mixed reversible and irreversible effects,compensate_reversible_subset,Only the reversible subset may be compensated; irreversible effects require escalation.
+PC-CBK-01,callback,webhook_pending,Webhook pending,wait_for_webhook,The workflow is waiting for a correlated external webhook.
+PC-CBK-02,callback,duplicate_callback,Duplicate callback delivery,dedupe_callback,The same callback may arrive more than once and must be deduplicated.
+PC-CBK-03,callback,received_unprocessed,Callback received but unprocessed,process_callback_once,The callback arrived but its semantic handler has not executed.
+PC-CBK-04,callback,correlation_alias,Callback correlation identity alias,map_callback_identity,Source and target runtimes encode the callback correlation differently.
+PC-CBK-05,callback,expired_callback,Expired callback,reject_expired_callback,The callback validity window expired before continuation.
+PC-CBK-06,callback,after_cancellation,Callback after cancellation,ignore_cancelled_callback,A late callback arrives for a workflow action that was cancelled.
+PC-CBK-07,callback,callback_retry,Callback triggers retry,retry_after_callback,A failure callback authorizes retry of a specific unit.
+PC-CBK-08,callback,callback_effect,Callback confirms external effect,ack_callback_effect,The callback is the authoritative evidence that an effect committed.
+PC-CBK-09,callback,callback_quorum,Multiple callback quorum,continue_after_callback_quorum,Continuation requires a quorum of callbacks from independent services.
+PC-CBK-10,callback,callback_order,Ordered callbacks,process_next_callback,Callbacks must be processed in monotonically increasing sequence order.
+PC-CBK-11,callback,stale_callback,Out-of-order stale callback,ignore_stale_callback,An older callback arrives after a newer state transition.
+PC-CBK-12,callback,invalid_callback_token,Invalid callback token,reject_invalid_callback,A callback carries a token that does not match the active execution.
+PC-CBK-13,callback,parallel_callback,Callback in parallel branch,resume_callback_branch,One branch waits for a callback while sibling branches progress.
+PC-CBK-14,callback,loop_callback,Callback inside loop,apply_callback_to_iteration,A callback belongs to one specific loop iteration.
+PC-CBK-15,callback,post_comp_callback,Callback after compensation,reconcile_late_callback,A late success callback arrives after the original action was compensated.
+PC-MIX-01,composite,effect_approval,Effect plus approval,reconcile_approval_effect,An approved operation may already have committed before the approval acknowledgement migrated.
+PC-MIX-02,composite,retry_callback,Retry plus callback,resume_retry_callback,Retry eligibility depends on a correlated asynchronous failure callback.
+PC-MIX-03,composite,parallel_compensation,Parallel plus compensation,compensate_one_branch,A failed parallel branch requires rollback while completed siblings must be preserved.
+PC-MIX-04,composite,loop_approval,Loop plus approval,resume_approved_loop,A loop iteration cannot advance until its scoped approval is proven.
+PC-MIX-05,composite,effect_retry_approval,"Effect, retry, and approval",resolve_composite_effect,A retried approved effect has an uncertain commit boundary.
+PC-MIX-06,composite,callback_parallel_join,Callback-driven parallel join,run_join_after_callback,A callback completes the last outstanding branch before a join.
+PC-MIX-07,composite,saga_retry_callback,Saga rollback with callback retry,resume_saga_retry,Compensation failure waits for a callback before retrying rollback.
+PC-MIX-08,composite,nested_loop_parallel,Nested loop and parallel,resume_nested_composite,A loop iteration contains a partially completed fan-out with an accumulator.
+PC-MIX-09,composite,approval_expiry_effect,Approval expiry around effect,resolve_authorization_commit,An approval may have expired after authorization but before effect commit.
+PC-MIX-10,composite,identity_chain,Cross-runtime identity chain,resolve_identity_chain,"Approval, task, and callback identifiers all change across runtimes."
+PC-MIX-11,composite,partial_batch_rollback,Partial batch with rollback,resume_batch_recovery,"Some batch members committed, one failed, and selected members require compensation."
+PC-MIX-12,composite,race_callback_cancel,"Race, callback, and cancellation",preserve_race_outcome,A winning callback races with cancellation of losing branches.
+PC-MIX-13,composite,retry_inside_approval,Retry nested under approval,resume_authorized_retry,A retry consumes budget only while the associated approval remains current.
+PC-MIX-14,composite,compensated_callback_effect,Compensation with late effect callback,reconcile_compensated_commit,A late commit callback arrives after a compensation decision was made.
+PC-MIX-15,composite,full_obligation_stack,Full obligation stack,resume_full_stack,"A workflow combines approval, retry, parallel progress, effect commitment, and callback state."

@@ -1,0 +1,21 @@
+{
+  "source_experiment": "PCC v2 minimal-subset search",
+  "frozen_before_holdout": true,
+  "hybrid_minimal": {
+    "components": [
+      "history",
+      "receipts"
+    ],
+    "inference_mode": "hybrid"
+  },
+  "explicit_minimal": {
+    "components": [
+      "frontier",
+      "obligations",
+      "receipts",
+      "contract"
+    ],
+    "inference_mode": "explicit"
+  },
+  "rule": "Do not change these candidates after observing v3 hold-out results."
+}

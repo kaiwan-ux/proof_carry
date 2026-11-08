@@ -1,0 +1,174 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h02-missing_critical_fact-crewai-to-langgraph-aaif_plus_caplease_reference",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-parallel_join-h02",
+    "family": "parallel_join",
+    "evidence_variant": "missing_critical_fact",
+    "method": "aaif_plus_caplease_reference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH"
+    ],
+    "payload_bytes": 150,
+    "payload_sha256": "161a68c64e267a683cbe4231df51c9d6ed3e329dc0e1f8da1db3bcc58a6bf6ec",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "method": "aaif_plus_caplease_reference",
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "red",
+            "green",
+            "blue"
+          ]
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "red"
+    },
+    {
+      "kind": "unit",
+      "unit": "green"
+    },
+    {
+      "kind": "unit",
+      "unit": "blue"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 1,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 2,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

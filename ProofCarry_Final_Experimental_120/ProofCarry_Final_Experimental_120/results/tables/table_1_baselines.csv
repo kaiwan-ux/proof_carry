@@ -1,0 +1,9 @@
+method,rows,safe_completion,safe_rejection,unsafe,technical,unsafe_rate,completion_rate,rejection_rate
+aaif_plus_caplease_reference,768,462,0,306,0,0.3984375,0.6015625,0.0
+aaif_reference,768,294,240,234,0,0.3046875,0.3828125,0.3125
+caplease_reference,768,462,0,306,0,0.3984375,0.6015625,0.0
+explicit_minimal,768,768,0,0,0,0.0,1.0,0.0
+history_inference,768,402,0,366,0,0.4765625,0.5234375,0.0
+mcc_v2_frozen,768,420,54,294,0,0.3828125,0.546875,0.0703125
+mcc_v3,768,486,282,0,0,0.0,0.6328125,0.3671875
+oracle,768,768,0,0,0,0.0,1.0,0.0

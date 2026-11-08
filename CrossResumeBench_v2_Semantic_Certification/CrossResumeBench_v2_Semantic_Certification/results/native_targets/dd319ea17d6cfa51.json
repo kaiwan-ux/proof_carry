@@ -1,0 +1,25 @@
+{
+  "completed_units": [
+    "finish",
+    "remote_call"
+  ],
+  "executed_units": [
+    "finish"
+  ],
+  "final_ledger": {
+    "charge": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "69c0ee39-0210-4fb9-b67a-249f9d56eb8e",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 2
+  }
+}

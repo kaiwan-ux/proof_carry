@@ -1,0 +1,15 @@
+{
+  "experiment_name": "portaflow_phase0",
+  "schema_version": "0.1",
+  "seed": 20260822,
+  "frameworks": ["langgraph", "crewai", "maf"],
+  "workflows": ["linear", "branch", "loop", "retry", "approval", "side_effect"],
+  "conditions": ["naive_state", "state_history", "restart", "oracle_full"],
+  "scenario_variants": [0, 1, 2, 3, 4],
+  "include_same_runtime_pairs": true,
+  "primary_metric": "safe_continuation",
+  "kill_threshold_scr": 0.95,
+  "llm_enabled": false,
+  "llm_model": "openai/gpt-oss-120b",
+  "technical_failure_timeout_seconds": 60
+}

@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "credential_rotate_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "credential_rotate_op",
+      "unit": "credential_rotate_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "credential_rotate_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "credential_rotate_ack": 1,
+    "credential_rotate_attempt": 1
+  }
+}

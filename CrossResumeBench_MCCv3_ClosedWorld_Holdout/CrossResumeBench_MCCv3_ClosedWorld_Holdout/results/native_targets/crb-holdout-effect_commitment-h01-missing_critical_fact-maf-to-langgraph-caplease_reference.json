@@ -1,0 +1,45 @@
+{
+  "store": {
+    "effects": {
+      "invoice_capture": 1
+    },
+    "units": {
+      "effect_ack": 1,
+      "effect_attempt": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "invoice_capture",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "effect_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "langgraph_target_graph",
+  "final": {
+    "store_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\crb-holdout-effect_commitment-h01-missing_critical_fact-maf-to-langgraph-caplease_reference\\semantic_store.json",
+    "phase": "finished"
+  }
+}

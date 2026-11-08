@@ -1,0 +1,8 @@
+PORTAFLOW PHASE-0 EXECUTION REPORT
+======================================
+runs=1080
+technical_failures=0
+naive_state: SCR=0.3333 (90/270)
+oracle_full: SCR=1.0000 (270/270)
+restart: SCR=0.0000 (0/270)
+state_history: SCR=0.8333 (225/270)

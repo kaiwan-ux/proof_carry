@@ -1,0 +1,27 @@
+{
+  "completed_units": [
+    "finish",
+    "tool_scope"
+  ],
+  "executed_units": [
+    "reconcile:tool_scope",
+    "callback_without_obligation:tool_scope",
+    "tool_scope",
+    "finish"
+  ],
+  "final_ledger": {
+    "toolop": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "langgraph_target_checkpoint",
+    "framework": "langgraph",
+    "real_native": true,
+    "next": [],
+    "values_keys": [
+      "ctx"
+    ],
+    "native_action_nodes": 4
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "case": {
+    "case_id": "crb2-approval_after_effect_boundary-v05",
+    "family": "approval_after_effect_boundary",
+    "variant": 5,
+    "app_state": {
+      "variant": 5,
+      "request_id": "crb2-approval_after_effect_boundary-v05",
+      "amount": 105
+    },
+    "source_actions": [
+      {
+        "action_id": "reserve",
+        "semantic_unit": "reservation",
+        "kind": "effect",
+        "operation": "reserve",
+        "depends_on": [],
+        "parent_unit": "reservation",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": false,
+          "emit_completion": false,
+          "certify_effect": false
+        }
+      },
+      {
+        "action_id": "approval_req",
+        "semantic_unit": "approval",
+        "kind": "approval",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "request_id": "approve",
+          "blocks": "reservation",
+          "certify_obligation": true
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "reserve_t",
+        "semantic_unit": "reservation",
+        "kind": "effect",
+        "operation": "reserve",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "approval_t",
+        "semantic_unit": "reservation",
+        "kind": "approval",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "request_id": "approve",
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "confirm",
+        "semantic_unit": "reservation",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": true
+        }
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "reservation",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "reserve": 1
+    },
+    "mismatch_tags": [
+      "effect-before-approval",
+      "pending-obligation",
+      "source:mid_node_interrupt",
+      "target:pending_request"
+    ],
+    "source_boundary": "mid_node_interrupt",
+    "target_boundary": "pending_request",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-approval_after_effect_boundary-v05",
+    "workflow": "approval_after_effect_boundary",
+    "app_state": {
+      "variant": 5,
+      "request_id": "crb2-approval_after_effect_boundary-v05",
+      "amount": 105
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "reserve",
+        "semantic_unit": "reservation",
+        "data": {
+          "operation": "reserve",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "reservation",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "approval_requested",
+        "step": "approval_req",
+        "semantic_unit": "approval",
+        "data": {
+          "request_id": "approve",
+          "blocks": "reservation"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "4948a448d30a82f41b9e",
+        "fact_type": "obligation_state",
+        "subject": "approve",
+        "value": "pending",
+        "scope": "approval",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "reservation"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "3282ee8b5b0076a577f96e0c6c679d7d68cf3b35d71c4b612dc8216043022161"
+      }
+    ],
+    "source_ledger": {
+      "reserve": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [],
+    "truth_pending_obligations": [
+      {
+        "type": "approval",
+        "id": "approve",
+        "blocks": "reservation"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "case_id": "crb2-approval_after_effect_boundary-v05",
+    "workflow": "approval_after_effect_boundary",
+    "app_state": {
+      "variant": 5,
+      "request_id": "crb2-approval_after_effect_boundary-v05",
+      "amount": 105
+    }
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "reservation"
+    ],
+    "executed_units": [
+      "reservation",
+      "approval_without_obligation:reservation",
+      "reservation",
+      "finish"
+    ],
+    "final_ledger": {
+      "reserve": 2
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "failure_types": [
+      "DUPLICATE_EXTERNAL_EFFECT",
+      "LEDGER_MISMATCH"
+    ],
+    "duplicate_effects": 1,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 1,
+    "wrong_outcome": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "base_case_count": 104,
+  "cases_per_family": 13,
+  "families": 8,
+  "frozen_before_results": true,
+  "mechanism_bundle_files": [
+    "mechanism/proofcarry.py",
+    "mechanism/crypto.py",
+    "mechanism/certificates.py",
+    "src/crossresumebench_proofcarry/evidence.py",
+    "src/crossresumebench_proofcarry/semantics.py",
+    "src/crossresumebench_proofcarry/baselines.py"
+  ],
+  "notes": "Final pre-result freeze includes 104 cases, runtime-specific identity semantics, partial-effect cases, and authenticated context-bound certificates. Do not edit after experimental results exist.",
+  "prior_mccv3_plain_source": "CrossResumeBench_MCCv3_Holdout_InfraFixA",
+  "proofcarry_mechanism_sha256": "5900e121047a1a9e293102f5edaa5cd0bd47107a4a312663d8b7d3163cda29cc",
+  "suite_sha256": "43129feb6b2f28f7904dee01e3dc92baa9089de34312cd3a9117ddee4c9529ac"
+}

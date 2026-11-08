@@ -1,0 +1,126 @@
+{
+  "row": {
+    "run_id": "crb-holdout-loop_pause-h02-missing_critical_fact-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-loop_pause-h02",
+    "family": "loop_pause",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1502,
+    "payload_sha256": "2a0181cb9e3e5f9bcbb919898ee82a51b95e3b0ea37a10b12589475f880680e3",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_5"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_6"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_7"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 7
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_8"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 8
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-loop_pause-h02",
+    "workflow": "mccv3_holdout_loop_pause",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "6cd86ec188500c6a6a561725dd7dc9d0822efb2fe852f4be52f72fdb9dc178ea",
+    "continuation_contract_hash": "ee02930941213f0a4bd3c0716a31bd86bce70c2dfcd3b45daba96f09e5302d51",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": [
+      {
+        "certificate_id": "e59ae3157c043fab9bab",
+        "fact_type": "counter_bound",
+        "subject": "loop:holdout",
+        "value": 8,
+        "scope": "crb-holdout-loop_pause-h02",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-loop_pause-h02\\checkpoints\\main\\20260827T190518_94535c7a_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "32fee5ee16a0f7ed2998b2a6edeb370aed025a28daa3db729b78a21897051d0b"
+      },
+      {
+        "certificate_id": "7ace9d6b8ea4d3a6db30",
+        "fact_type": "decision_state",
+        "subject": "loop_break",
+        "value": false,
+        "scope": "crb-holdout-loop_pause-h02",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-loop_pause-h02\\checkpoints\\main\\20260827T190518_94535c7a_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "db794a7c52bde4451061d1827b7a404a852bdda31f21f77333282cf297cd280a"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "counter_state",
+        "subject": "loop:holdout",
+        "purpose": "resume after completed iterations"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "counter_bound|loop:holdout": [
+        "certificate"
+      ],
+      "decision_state|loop_break": [
+        "certificate"
+      ]
+    }
+  }
+}

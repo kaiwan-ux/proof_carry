@@ -1,0 +1,25 @@
+{
+  "completed_units": [
+    "finish",
+    "tool_scope"
+  ],
+  "executed_units": [
+    "reconcile:tool_scope",
+    "tool_scope",
+    "tool_scope",
+    "finish"
+  ],
+  "final_ledger": {
+    "toolop": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-01ad6733-12e9-400f-80f3-95541f316674",
+    "checkpoint_count": 6,
+    "native_action_executors": 4
+  }
+}

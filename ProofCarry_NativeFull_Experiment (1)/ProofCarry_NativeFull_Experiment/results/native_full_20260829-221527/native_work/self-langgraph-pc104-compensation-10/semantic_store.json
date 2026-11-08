@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "access_comp_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "access_comp_op",
+      "unit": "access_comp_effect"
+    },
+    {
+      "kind": "unit",
+      "unit": "access_comp_compensation_already_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "access_comp_compensation_already_done": 1,
+    "access_comp_effect": 1
+  }
+}

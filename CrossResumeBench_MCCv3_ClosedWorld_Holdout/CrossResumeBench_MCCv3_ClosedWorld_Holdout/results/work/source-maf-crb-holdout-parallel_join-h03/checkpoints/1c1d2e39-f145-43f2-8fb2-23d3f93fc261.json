@@ -1,0 +1,26 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-parallel_join-h03-source-maf-crb-holdout-parallel_join-h03",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "1c1d2e39-f145-43f2-8fb2-23d3f93fc261",
+  "previous_checkpoint_id": "1d20362b-e8ed-4172-88f4-6406082a8c5b",
+  "timestamp": "2026-08-27T19:10:01.604627+00:00",
+  "messages": {
+    "source_boundary": [
+      {
+        "__pickled__": "gAWVDAIAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZRYHgEAAHsiY2FzZV9pZCI6ImNyYi1ob2xkb3V0LXBhcmFsbGVsX2pvaW4taDAzIiwicGhhc2UiOiJwYXVzZWQiLCJzdG9yZV9wYXRoIjoiQzpcXFVzZXJzXFxUZWNoIE1laGFsXFxEZXNrdG9wXFxhZ2VudGljIHdhbGFcXENyb3NzUmVzdW1lQmVuY2hfTUNDdjNfQ2xvc2VkV29ybGRfSG9sZG91dFxcQ3Jvc3NSZXN1bWVCZW5jaF9NQ0N2M19DbG9zZWRXb3JsZF9Ib2xkb3V0XFxyZXN1bHRzXFx3b3JrXFxzb3VyY2UtbWFmLWNyYi1ob2xkb3V0LXBhcmFsbGVsX2pvaW4taDAzXFxzZW1hbnRpY19zdG9yZS5qc29uIn2UjAlzb3VyY2VfaWSUjA9zb3VyY2VfYm91bmRhcnmUjAl0YXJnZXRfaWSUTowEdHlwZZRoAIwLTWVzc2FnZVR5cGWUk5SMCHN0YW5kYXJklIWUUpSMDnRyYWNlX2NvbnRleHRzlE6MD3NvdXJjZV9zcGFuX2lkc5ROjBtvcmlnaW5hbF9yZXF1ZXN0X2luZm9fZXZlbnSUTnViLg==",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 1,
+  "metadata": {},
+  "version": "1.0"
+}

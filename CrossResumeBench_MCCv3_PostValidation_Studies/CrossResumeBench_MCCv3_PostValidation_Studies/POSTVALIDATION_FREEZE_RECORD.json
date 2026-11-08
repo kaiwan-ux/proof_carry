@@ -1,0 +1,28 @@
+{
+  "created": "2026-08-28",
+  "frozen_science_files": {
+    "benchmark/HOLDOUT_SEAL.json": "3d4949681eba7fb4e7a96305cfc21776caf468885d76afaeefd04f1bb98e3208",
+    "benchmark/generated_holdout_suite.json": "76135c3f174d646ea1bfb5a30e1e3f31d6fa2ddfb522cfa1223902828abaf883",
+    "mechanism/mcc_v3.py": "57eda36a01f94040ff730383957e8a86cdb37265ac528b4943b71d8f0876ff69",
+    "mechanism/proofs.py": "2ff99668579cd316c2392375b07370bd3c038b3d9dbc91064ed7e87648a6a82c",
+    "mechanism/schemas/mcc_v3.schema.json": "4e8cdceeab1f1794a29527b8a40a8dc03219a108af8ac48f50c254e53ef7945a",
+    "src/crossresumebench_mccv3/evaluator.py": "af0f51bf2a78822b04d6c59839578f892d9bc6d1b79a4d938a2a33476a3f10ee",
+    "src/crossresumebench_mccv3/evidence.py": "8ffc05764f685adedb9aa5076826328dcd49d2c34d440af4fb2974cb92dabea4",
+    "src/crossresumebench_mccv3/semantics.py": "b46d125d72237450212f5f3d2d42e5c4eef42bf57b0a49843fe04a00d762beab"
+  },
+  "notes": [
+    "Statistics read the completed real holdout only.",
+    "Ablation is post-validation explanatory and cannot overwrite mechanism files.",
+    "Performance outputs are separate from safety verdict."
+  ],
+  "passed_holdout_inputs": {
+    "ANALYSIS_SUMMARY.md": "febb81d6396b15078f2bc938f34cb5d4ef45f0ef7f5643c7911096fbfe83c3e8",
+    "NATIVE_FAMILY_GATE.json": "36644e0bf4df33cb3862be5003d8751ef91b12a91c73f388d69febe6347a35e1",
+    "RESEARCH_VERDICT.json": "dfc12bb3947d0216b8a52ff95aa7deb0f9840d5a6493320efe72cbd56066cf22",
+    "migration_runs.csv": "39c8a35f21db0163aa0e7ea43fa021f2fdfcd500279855920456701202894d25",
+    "native_family_gate.csv": "22def66aa36f28e5c76fda896660088e14917510ff2590eb8f42b5a8331f0605",
+    "self_resume.csv": "ea849c791d9e6aa83542f5b44e82a18b1a37304dc6e278e12ded82bad54906ba",
+    "source_captures.csv": "f59945f95cc038f0c12c1ca714f93b5967cb4bbe54672e7701ec55f83013adc5"
+  },
+  "study": "CrossResumeBench_MCCv3_PostValidation_Studies"
+}

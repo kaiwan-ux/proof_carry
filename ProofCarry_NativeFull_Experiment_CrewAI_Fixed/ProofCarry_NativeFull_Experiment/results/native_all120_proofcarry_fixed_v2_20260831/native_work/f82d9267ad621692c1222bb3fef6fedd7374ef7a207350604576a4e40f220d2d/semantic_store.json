@@ -1,0 +1,44 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {
+    "cloud_job_start_partial_rollback": 1
+  },
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "cloud_job_start_op": 1,
+    "cloud_job_start_op::partial": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "cloud_job_start_op::partial",
+      "unit": "cloud_job_start_partial_started"
+    },
+    {
+      "action": "cloud_job_start_partial_rollback",
+      "kind": "compensation",
+      "unit": "cloud_job_start_partial_compensate"
+    },
+    {
+      "kind": "effect",
+      "operation": "cloud_job_start_op",
+      "unit": "cloud_job_start_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "cloud_job_start_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "cloud_job_start_ack": 1,
+    "cloud_job_start_attempt": 1,
+    "cloud_job_start_partial_compensate": 1,
+    "cloud_job_start_partial_started": 1
+  }
+}

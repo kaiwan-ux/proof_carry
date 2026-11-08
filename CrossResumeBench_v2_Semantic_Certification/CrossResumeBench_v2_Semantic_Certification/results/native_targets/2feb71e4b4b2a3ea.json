@@ -1,0 +1,26 @@
+{
+  "completed_units": [
+    "finish",
+    "submission"
+  ],
+  "executed_units": [
+    "reconcile:submission",
+    "callback_without_obligation:submission",
+    "finish"
+  ],
+  "final_ledger": {
+    "submit": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "langgraph_target_checkpoint",
+    "framework": "langgraph",
+    "real_native": true,
+    "next": [],
+    "values_keys": [
+      "ctx"
+    ],
+    "native_action_nodes": 3
+  }
+}

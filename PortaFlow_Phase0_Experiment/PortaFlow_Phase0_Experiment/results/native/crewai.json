@@ -1,0 +1,94 @@
+{
+  "framework": "crewai",
+  "status": "ok",
+  "duration_seconds": 10.593,
+  "payload": {
+    "framework": "crewai",
+    "status": "ok",
+    "probe": "flow_persistence",
+    "db_tables": [
+      "flow_states",
+      "pending_feedback",
+      "sqlite_sequence"
+    ],
+    "snapshot_rows": [
+      {
+        "id": 1,
+        "flow_uuid": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+        "method_name": "a",
+        "timestamp": "2026-08-22T10:25:07.529326+00:00",
+        "state_json": "{\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\"], \"counter\": 1}",
+        "state_json_parsed": {
+          "id": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+          "completed": [
+            "A"
+          ],
+          "counter": 1
+        }
+      },
+      {
+        "id": 2,
+        "flow_uuid": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+        "method_name": "b",
+        "timestamp": "2026-08-22T10:25:07.544325+00:00",
+        "state_json": "{\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\", \"B\"], \"counter\": 2}",
+        "state_json_parsed": {
+          "id": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+          "completed": [
+            "A",
+            "B"
+          ],
+          "counter": 2
+        }
+      },
+      {
+        "id": 3,
+        "flow_uuid": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+        "method_name": "c",
+        "timestamp": "2026-08-22T10:25:07.562325+00:00",
+        "state_json": "{\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\", \"B\", \"C\"], \"counter\": 3}",
+        "state_json_parsed": {
+          "id": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+          "completed": [
+            "A",
+            "B",
+            "C"
+          ],
+          "counter": 3
+        }
+      }
+    ],
+    "first": {
+      "id": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+      "output": "C",
+      "state": {
+        "id": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+        "completed": [
+          "A",
+          "B",
+          "C"
+        ],
+        "counter": 3
+      }
+    },
+    "resume_latest": {
+      "output": "C",
+      "state": {
+        "id": "cc58c9fc-b2a6-4ef1-8cf1-12042719cd58",
+        "completed": [
+          "A",
+          "B",
+          "C",
+          "A",
+          "B",
+          "C"
+        ],
+        "counter": 6
+      }
+    },
+    "note": "CrewAI @persist snapshots state after flow methods; this probe preserves every persisted row for inspection."
+  },
+  "stdout": "+-----------------------------[CrewAIEventsBus] Sync handler error in on_flow_started: 'charmap' codec can't \nencode character '\\U0001f30a' in position 1: character maps to <undefined>\n+--------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' \ncodec can't encode character '\\U0001f504' in position 1: character maps to \n<undefined>\n+--------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_finished: 'charmap'\ncodec can't encode character '\\U0001f504'+- in position ----------------------------1: character maps to \n<undefined>\n[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' \ncodec can't encode character '\\U0001f30a' in position 1: character maps to \n<undefined>\n+--------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_finished: 'charmap'\ncodec can't encode character '\\U0001f504' in position 1: character maps to \n<undefined>\n+-----------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' \ncodec can't encode character '\\U0001f30a' in position 1: character maps to \n<undefined>\n+--------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_finished: 'charmap'\ncodec can't encode character '\\U0001f504' in position 1: character maps to \n<undefined>\n+-----------------------------[CrewAIEventsBus] Sync handler error in on_flow_finished: 'charmap' codec can't\nencode character '\\U0001f30a' in position 1: character maps to <undefined>\n\n\n+----------------------------- Execution Traces ------------------------------+\n|                                                                             |\n|  \n\n+------------------------- Tracing Preference Saved --------------------------+\n|                                                                             |\n|  Info: Tracing has been disabled.                                           |\n|                                                                             |\n|  Your preference has been saved. Future Crew/Flow executions will not       |\n|  collect traces.                                                            |\n|                                                                             |\n|  To enable tracing later, do any one of these:                              |\n|  \u2022 Set tracing=True in your Crew/Flow code                                  |\n|  \u2022 Set CREWAI_TRACING_ENABLED=true in your project's .env file              |\n|  \u2022 Run: crewai traces enable                                                |\n|                                                                             |\n+-----------------------------------------------------------------------------+\n\nLoading flow state from memory for UUID: cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\n+-----------------------------[CrewAIEventsBus] Sync handler error in on_flow_started: 'charmap' codec can't \nencode character '\\U0001f30a' in position 1: character maps to <undefined>\n+-----------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' \ncodec can't encode character '\\U0001f30a' in position 1: character maps to \n<undefined>\n+-----------------------------+--------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_finished: 'charmap'\ncodec can't encode character '\\U0001f30a' in position 1: character maps to \n<undefined>\n[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' \ncodec can't encode character '\\U0001f504' in position 1: character maps to \n<undefined>\n+-----------------------------[+-CrewAIEventsBus]------------------------- Sync handler error in on_method_execution_finished: 'charmap'\ncodec can't encode character '\\U0001f30a' in position 1: character maps to \n<undefined>\n[CrewAIEventsBus] Sync handler error in on_method_execution_started: 'charmap' \ncodec can't encode character '\\U0001f504' in position 1: character maps to \n<undefined>\n+-----------------------------[CrewAIEventsBus] Sync handler error in on_method_execution_finished: 'charmap'\ncodec can't encode character '\\U0001f30a' in position 1: character maps to \n<undefined>\n+--------------------------[CrewAIEventsBus] Sync handler error in on_flow_finished: 'charmap' codec can't\nencode character '\\U0001f504' in position 1: character maps to <undefined>\n{\"framework\": \"crewai\", \"status\": \"ok\", \"probe\": \"flow_persistence\", \"db_tables\": [\"flow_states\", \"pending_feedback\", \"sqlite_sequence\"], \"snapshot_rows\": [{\"id\": 1, \"flow_uuid\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"method_name\": \"a\", \"timestamp\": \"2026-08-22T10:25:07.529326+00:00\", \"state_json\": \"{\\\"id\\\": \\\"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\\\", \\\"completed\\\": [\\\"A\\\"], \\\"counter\\\": 1}\", \"state_json_parsed\": {\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\"], \"counter\": 1}}, {\"id\": 2, \"flow_uuid\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"method_name\": \"b\", \"timestamp\": \"2026-08-22T10:25:07.544325+00:00\", \"state_json\": \"{\\\"id\\\": \\\"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\\\", \\\"completed\\\": [\\\"A\\\", \\\"B\\\"], \\\"counter\\\": 2}\", \"state_json_parsed\": {\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\", \"B\"], \"counter\": 2}}, {\"id\": 3, \"flow_uuid\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"method_name\": \"c\", \"timestamp\": \"2026-08-22T10:25:07.562325+00:00\", \"state_json\": \"{\\\"id\\\": \\\"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\\\", \\\"completed\\\": [\\\"A\\\", \\\"B\\\", \\\"C\\\"], \\\"counter\\\": 3}\", \"state_json_parsed\": {\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\", \"B\", \"C\"], \"counter\": 3}}], \"first\": {\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"output\": \"C\", \"state\": {\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\", \"B\", \"C\"], \"counter\": 3}}, \"resume_latest\": {\"output\": \"C\", \"state\": {\"id\": \"cc58c9fc-b2a6-4ef1-8cf1-12042719cd58\", \"completed\": [\"A\", \"B\", \"C\", \"A\", \"B\", \"C\"], \"counter\": 6}}, \"note\": \"CrewAI @persist snapshots state after flow methods; this probe preserves every persisted row for inspection.\"}\n",
+  "stderr": "",
+  "error": ""
+}

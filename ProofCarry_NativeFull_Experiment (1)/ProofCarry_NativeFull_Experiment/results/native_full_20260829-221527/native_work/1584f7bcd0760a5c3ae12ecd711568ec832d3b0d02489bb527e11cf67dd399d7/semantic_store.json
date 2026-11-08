@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "file_comp_effect_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "file_comp_no_compensation_needed"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "file_comp_effect_failed": 1,
+    "file_comp_no_compensation_needed": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "workflow_name": "proofcarry-104-pc104-compensation-01-gate-maf-pc104-compensation-01",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "2b3693ac-4fc8-498f-927a-3918cdc7b8dd",
+  "previous_checkpoint_id": "9e1aec81-03b7-4351-88fd-df1f3c1c2e1c",
+  "timestamp": "2026-08-30T19:51:43.200270+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

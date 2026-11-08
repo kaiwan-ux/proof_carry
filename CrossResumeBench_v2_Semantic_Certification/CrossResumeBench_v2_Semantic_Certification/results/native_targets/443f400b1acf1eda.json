@@ -1,0 +1,27 @@
+{
+  "completed_units": [
+    "finish",
+    "reservation"
+  ],
+  "executed_units": [
+    "reconcile:reservation",
+    "approval_without_obligation:reservation",
+    "reservation",
+    "finish"
+  ],
+  "final_ledger": {
+    "reserve": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "langgraph_target_checkpoint",
+    "framework": "langgraph",
+    "real_native": true,
+    "next": [],
+    "values_keys": [
+      "ctx"
+    ],
+    "native_action_nodes": 4
+  }
+}

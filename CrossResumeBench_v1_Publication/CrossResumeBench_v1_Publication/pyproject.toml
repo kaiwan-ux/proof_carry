@@ -1,0 +1,9 @@
+[project]
+name = "crossresumebench"
+version = "0.1.0"
+description = "Publication-oriented benchmark for certified cross-runtime continuation of agent workflows"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

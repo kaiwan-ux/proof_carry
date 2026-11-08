@@ -1,0 +1,160 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-08",
+      "checkpoint_ref": "1dbfb48f-e126-4c61-b587-c9bbcef52d73",
+      "framework": "maf",
+      "native_kind": "maf_superstep_file_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 2,
+        "checkpoint_id": "1dbfb48f-e126-4c61-b587-c9bbcef52d73",
+        "event_trace": [
+          {
+            "class": "WorkflowEvent",
+            "type": "started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "status"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_invoked"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_completed"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_completed"
+          }
+        ],
+        "framework": "maf",
+        "handler_typing_mode": "explicit",
+        "identifier_label": "activity_id",
+        "pause_status": "suspended",
+        "semantic_namespace": "maf.activity",
+        "workflow_name": "proofcarry-104-pc104-composite-08-self-maf-pc104-composite-08"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "loop_plus_comp_a_index": 5
+        },
+        "decisions": {},
+        "effects": {
+          "loop_plus_comp_b_op": 1
+        },
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "loop_plus_comp_a_index",
+            "kind": "counter",
+            "value": 5
+          },
+          {
+            "kind": "effect",
+            "operation": "loop_plus_comp_b_op",
+            "unit": "loop_plus_comp_b_effect"
+          }
+        ],
+        "units": {
+          "loop_plus_comp_b_effect": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {
+        "loop_plus_comp_b_rollback": 1
+      },
+      "counters": {
+        "loop_plus_comp_a_index": 8
+      },
+      "decisions": {},
+      "effects": {
+        "loop_plus_comp_b_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "effect",
+          "operation": "loop_plus_comp_b_op",
+          "unit": "loop_plus_comp_b_effect"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_iter_6"
+        },
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_iter_7"
+        },
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 7
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_iter_8"
+        },
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 8
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_exit"
+        },
+        {
+          "action": "loop_plus_comp_b_rollback",
+          "kind": "compensation",
+          "unit": "loop_plus_comp_b_compensate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "loop_plus_comp_a_exit": 1,
+        "loop_plus_comp_a_iter_6": 1,
+        "loop_plus_comp_a_iter_7": 1,
+        "loop_plus_comp_a_iter_8": 1,
+        "loop_plus_comp_b_compensate": 1,
+        "loop_plus_comp_b_effect": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.92200000000048
+}

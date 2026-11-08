@@ -1,0 +1,33 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "retry:retry_job": 1
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "retry_try_1"
+    },
+    {
+      "key": "retry:retry_job",
+      "kind": "counter",
+      "value": 1
+    },
+    {
+      "kind": "unit",
+      "unit": "retry_terminal"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "retry_terminal": 1,
+    "retry_try_1": 1
+  }
+}

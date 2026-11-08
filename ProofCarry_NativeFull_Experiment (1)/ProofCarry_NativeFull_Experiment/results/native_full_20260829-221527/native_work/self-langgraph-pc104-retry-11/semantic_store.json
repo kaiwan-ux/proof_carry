@@ -1,0 +1,38 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "shipment_retry_task_attempt": 4
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "shipment_retry_task_failed_3"
+    },
+    {
+      "key": "shipment_retry_task_attempt",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "shipment_retry_task_attempt_4"
+    },
+    {
+      "key": "shipment_retry_task_attempt",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "shipment_retry_task_attempt_4": 1,
+    "shipment_retry_task_failed_3": 1
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "identity_provider_callback_request_sent"
+    },
+    {
+      "kind": "unit",
+      "unit": "identity_provider_callback_discard_wrong_callback"
+    },
+    {
+      "kind": "unit",
+      "unit": "identity_provider_callback_request_new_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "identity_provider_callback_discard_wrong_callback": 1,
+    "identity_provider_callback_request_new_callback": 1,
+    "identity_provider_callback_request_sent": 1
+  }
+}

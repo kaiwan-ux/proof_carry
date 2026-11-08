@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"MCC v3 Closed-World Transfer",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["mcc_version","case_id","workflow","source_runtime","target_runtime","workflow_spec_hash","continuation_contract_hash","app_state","history","certificates"],
+  "properties":{
+    "mcc_version":{"const":"3.0"},
+    "case_id":{"type":"string"},
+    "workflow":{"type":"string"},
+    "source_runtime":{"type":"string"},
+    "target_runtime":{"type":"string"},
+    "workflow_spec_hash":{"type":"string","minLength":64,"maxLength":64},
+    "continuation_contract_hash":{"type":"string","minLength":64,"maxLength":64},
+    "app_state":{"type":"object"},
+    "history":{"type":"array","items":{"type":"object"}},
+    "certificates":{"type":"array","items":{"type":"object","required":["certificate_id","fact_type","subject","value","scope","evidence","issuer","evidence_hash"],"properties":{"certificate_id":{"type":"string"},"fact_type":{"type":"string"},"subject":{"type":"string"},"value":{},"scope":{"type":"string"},"evidence":{"type":"object"},"issuer":{"type":"string"},"evidence_hash":{"type":"string","minLength":64,"maxLength":64}},"additionalProperties":false}}
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "archive_loop_index": 9
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "archive_loop_index",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "archive_loop_iter_4"
+    },
+    {
+      "key": "archive_loop_index",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "archive_loop_iter_5"
+    },
+    {
+      "key": "archive_loop_index",
+      "kind": "counter",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "archive_loop_iter_6"
+    },
+    {
+      "key": "archive_loop_index",
+      "kind": "counter",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "archive_loop_iter_7"
+    },
+    {
+      "key": "archive_loop_index",
+      "kind": "counter",
+      "value": 7
+    },
+    {
+      "kind": "unit",
+      "unit": "archive_loop_iter_8"
+    },
+    {
+      "key": "archive_loop_index",
+      "kind": "counter",
+      "value": 8
+    },
+    {
+      "kind": "unit",
+      "unit": "archive_loop_iter_9"
+    },
+    {
+      "key": "archive_loop_index",
+      "kind": "counter",
+      "value": 9
+    },
+    {
+      "kind": "unit",
+      "unit": "archive_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "archive_loop_exit": 1,
+    "archive_loop_iter_4": 1,
+    "archive_loop_iter_5": 1,
+    "archive_loop_iter_6": 1,
+    "archive_loop_iter_7": 1,
+    "archive_loop_iter_8": 1,
+    "archive_loop_iter_9": 1
+  }
+}

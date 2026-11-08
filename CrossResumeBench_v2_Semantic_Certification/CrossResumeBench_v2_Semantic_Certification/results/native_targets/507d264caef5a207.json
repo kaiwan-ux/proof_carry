@@ -1,0 +1,25 @@
+{
+  "completed_units": [
+    "checkout",
+    "finish"
+  ],
+  "executed_units": [
+    "finish"
+  ],
+  "final_ledger": {
+    "payment": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "crewai_flow_state",
+    "framework": "crewai",
+    "real_native": true,
+    "flow_id": "054ac405-1776-44fd-8526-f717e2fd9faf",
+    "state_keys": [
+      "ctx",
+      "id"
+    ],
+    "native_action_count": 2
+  }
+}

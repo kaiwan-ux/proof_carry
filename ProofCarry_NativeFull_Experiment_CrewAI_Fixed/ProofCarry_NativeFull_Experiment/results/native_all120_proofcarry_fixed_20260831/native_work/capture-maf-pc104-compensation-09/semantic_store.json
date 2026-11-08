@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "email_comp_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "email_comp_op",
+      "unit": "email_comp_effect"
+    }
+  ],
+  "units": {
+    "email_comp_effect": 1
+  }
+}

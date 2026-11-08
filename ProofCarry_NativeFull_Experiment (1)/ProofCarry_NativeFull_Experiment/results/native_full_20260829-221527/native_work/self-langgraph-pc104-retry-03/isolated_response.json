@@ -1,0 +1,101 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-retry-03",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-retry-03-self-langgraph-pc104-retry-03",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3d09-f3cf-610a-8001-3f1bc853924d",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-retry-03-self-langgraph-pc104-retry-03"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "db_retry_task_attempt": 3
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "db_retry_task_failed_3"
+          },
+          {
+            "key": "db_retry_task_attempt",
+            "kind": "counter",
+            "value": 3
+          }
+        ],
+        "units": {
+          "db_retry_task_failed_3": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "db_retry_task_attempt": 3
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "db_retry_task_failed_3"
+        },
+        {
+          "key": "db_retry_task_attempt",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "db_retry_task_exhausted"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "db_retry_task_exhausted": 1,
+        "db_retry_task_failed_3": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.4840000000003783
+}

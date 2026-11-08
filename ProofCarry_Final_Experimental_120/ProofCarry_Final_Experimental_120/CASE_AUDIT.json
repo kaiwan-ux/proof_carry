@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "checks": {
+    "exact_total_120": true,
+    "eight_families": true,
+    "fifteen_each": true,
+    "unique_case_ids": true,
+    "unique_scenario_kinds": true,
+    "unique_titles": true,
+    "unique_descriptions": true,
+    "all_have_3plus_required_facts": true,
+    "all_have_dependencies": true,
+    "all_have_safe_plan": true
+  },
+  "family_counts": {
+    "approval": 15,
+    "callback": 15,
+    "compensation": 15,
+    "composite": 15,
+    "effect_commitment": 15,
+    "loop": 15,
+    "parallel": 15,
+    "retry": 15
+  },
+  "duplicate_fields": {
+    "case_id": 0,
+    "scenario_kind": 0,
+    "title": 0,
+    "description": 0
+  },
+  "note": "Uniqueness audit rejects exact duplicate scenario concepts/text. Scientific diversity remains a design property documented in CASE_DESIGN_NOTES.md."
+}

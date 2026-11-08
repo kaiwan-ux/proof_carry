@@ -1,0 +1,28 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "replication_loop_index": 6
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "replication_loop_index",
+      "kind": "counter",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "replication_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "replication_loop_exit": 1
+  }
+}

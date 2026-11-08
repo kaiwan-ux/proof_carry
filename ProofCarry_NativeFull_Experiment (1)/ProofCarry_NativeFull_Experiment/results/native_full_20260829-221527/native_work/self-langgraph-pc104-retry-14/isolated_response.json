@@ -1,0 +1,106 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-retry-14",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-retry-14-self-langgraph-pc104-retry-14",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3d0c-61cb-6a37-8001-b0d689076279",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-retry-14-self-langgraph-pc104-retry-14"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "search_index_retry_task_attempt": 2
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "search_index_retry_task_failed_2"
+          },
+          {
+            "key": "search_index_retry_task_attempt",
+            "kind": "counter",
+            "value": 2
+          }
+        ],
+        "units": {
+          "search_index_retry_task_failed_2": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "search_index_retry_task_attempt": 3
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "search_index_retry_task_failed_2"
+        },
+        {
+          "key": "search_index_retry_task_attempt",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "search_index_retry_task_attempt_3"
+        },
+        {
+          "key": "search_index_retry_task_attempt",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "search_index_retry_task_attempt_3": 1,
+        "search_index_retry_task_failed_2": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 3.0780000000004293
+}

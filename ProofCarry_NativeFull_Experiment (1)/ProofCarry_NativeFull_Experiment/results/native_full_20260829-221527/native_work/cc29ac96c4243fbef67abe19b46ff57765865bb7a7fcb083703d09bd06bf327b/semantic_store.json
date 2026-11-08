@@ -1,0 +1,29 @@
+{
+  "approvals": {
+    "deploy_approval_request_renewal": 1
+  },
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "deploy_approval_requested"
+    },
+    {
+      "id": "deploy_approval_request_renewal",
+      "kind": "approval",
+      "unit": "deploy_approval_renew"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "deploy_approval_renew": 1,
+    "deploy_approval_requested": 1
+  }
+}

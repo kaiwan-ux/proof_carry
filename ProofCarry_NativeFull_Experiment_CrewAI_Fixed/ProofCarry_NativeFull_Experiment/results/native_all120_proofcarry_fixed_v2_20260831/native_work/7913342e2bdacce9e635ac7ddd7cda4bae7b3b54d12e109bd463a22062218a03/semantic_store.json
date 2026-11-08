@@ -1,0 +1,44 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "effect_plus_callback_a_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "effect_plus_callback_a_op",
+      "unit": "effect_plus_callback_a_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_callback_b_request_sent"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_callback_a_ack"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_callback_b_discard_wrong_callback"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_callback_b_request_new_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "effect_plus_callback_a_ack": 1,
+    "effect_plus_callback_a_attempt": 1,
+    "effect_plus_callback_b_discard_wrong_callback": 1,
+    "effect_plus_callback_b_request_new_callback": 1,
+    "effect_plus_callback_b_request_sent": 1
+  }
+}

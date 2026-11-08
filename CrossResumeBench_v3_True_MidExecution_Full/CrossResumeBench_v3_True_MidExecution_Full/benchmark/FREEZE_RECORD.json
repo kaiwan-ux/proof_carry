@@ -1,0 +1,21 @@
+{
+  "benchmark": "CrossResumeBench_v3_True_MidExecution_Full",
+  "suite_semantic_hash": "546dfc8336a9ae4493e4f6889d767fd015cc294ee9c95e90ac377a9e59c7a8d4",
+  "generated_suite_file_sha256": "1dd6b79fc9739283d8a171fde8e57136e4bd60b5cb9acf4d55e6d1ec862d84bd",
+  "evidence_applicability_sha256": "b36e614553e4ecb18f77d1552421e40c60f22e22fd5a70538654027d68441004",
+  "evaluation_code_combined_sha256": "dc5c2edb08f1a8898708d90cace3691d6005e42745086e5b0a0d9fa88128735d",
+  "evaluation_files": [
+    "src/crossresumebench_v3_full/cases.py",
+    "src/crossresumebench_v3_full/evidence.py",
+    "src/crossresumebench_v3_full/semantics.py",
+    "src/crossresumebench_v3_full/evaluator.py",
+    "src/crossresumebench_v3_full/baselines.py",
+    "src/crossresumebench_v3_full/runner.py"
+  ],
+  "frozen_mcc_hashes": {
+    "schemas/mcc_v2.schema.json": "64f674bd4d2d4b8a57eddee30dea5a24c88d0ea293b7e588a6c725f9ad6f95d8",
+    "src/crossresumebench_v2/certificates.py": "6e3928c60a8ebfc0e5110dee37dc1663c45b4684953b567d8c7ad1eef7a6f972",
+    "src/crossresumebench_v2/mcc.py": "90efc7aa161e1f8d2b1177e701351920cef1cbffaeb91788d3e7848c10b7baa2",
+    "src/crossresumebench_v2/models.py": "c53af7325ada0544372170355bd6f7fd2d0d8efc5f03172bc58c509b444bfc0e"
+  }
+}

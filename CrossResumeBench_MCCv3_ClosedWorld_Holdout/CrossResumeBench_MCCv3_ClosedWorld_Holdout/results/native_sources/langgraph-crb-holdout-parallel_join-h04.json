@@ -1,0 +1,58 @@
+{
+  "framework": "langgraph",
+  "case_id": "crb-holdout-parallel_join-h04",
+  "checkpoint_ref": "thread:mccv3-holdout-crb-holdout-parallel_join-h04-source-langgraph-crb-holdout-parallel_join-h04",
+  "native_kind": "langgraph_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "langgraph",
+    "next": [
+      "resume"
+    ],
+    "values_keys": [
+      "case_id",
+      "phase",
+      "store_path"
+    ],
+    "config": {
+      "configurable": {
+        "thread_id": "mccv3-holdout-crb-holdout-parallel_join-h04-source-langgraph-crb-holdout-parallel_join-h04",
+        "checkpoint_ns": "",
+        "checkpoint_id": "1f1a248c-b990-60cd-8001-b066ba87ce67"
+      }
+    }
+  },
+  "source_store": {
+    "effects": {},
+    "units": {
+      "p": 1,
+      "q": 1,
+      "r": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      }
+    ]
+  }
+}

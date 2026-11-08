@@ -1,0 +1,64 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "parallel_plus_comp_b_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_a_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_a_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_a_b4_failed"
+    },
+    {
+      "kind": "effect",
+      "operation": "parallel_plus_comp_b_op",
+      "unit": "parallel_plus_comp_b_effect"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_a_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_a_b4_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_a_b4"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_a_join"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_comp_b_compensation_already_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "parallel_plus_comp_a_b1": 1,
+    "parallel_plus_comp_a_b2": 1,
+    "parallel_plus_comp_a_b3": 1,
+    "parallel_plus_comp_a_b4": 1,
+    "parallel_plus_comp_a_b4_failed": 1,
+    "parallel_plus_comp_a_b4_recover": 1,
+    "parallel_plus_comp_a_join": 1,
+    "parallel_plus_comp_b_compensation_already_done": 1,
+    "parallel_plus_comp_b_effect": 1
+  }
+}

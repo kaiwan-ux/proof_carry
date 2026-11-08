@@ -1,0 +1,42 @@
+{
+  "base_cases": 120,
+  "families": 8,
+  "cases_per_family": 15,
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "directed_pairs": 6,
+  "semantic_variants": 5,
+  "main_methods": [
+    "proofcarry",
+    "proofcarry_no_auth",
+    "legacy_permissive",
+    "history_only",
+    "always_reject",
+    "aaif_reference",
+    "caplease_reference",
+    "aaif_plus_caplease_reference",
+    "explicit_minimal",
+    "oracle"
+  ],
+  "security_conditions": [
+    "valid_control",
+    "replay_execution",
+    "forgery_value",
+    "hash_recompute_forgery",
+    "contract_substitution",
+    "runtime_substitution",
+    "expired_certificate",
+    "nonce_reuse",
+    "unauthorized_identity_binding"
+  ],
+  "performance_cases": 24,
+  "performance_repeats_default": 5,
+  "verification_time": 1800000000,
+  "security_methods": [
+    "proofcarry",
+    "unkeyed_hash_control"
+  ]
+}

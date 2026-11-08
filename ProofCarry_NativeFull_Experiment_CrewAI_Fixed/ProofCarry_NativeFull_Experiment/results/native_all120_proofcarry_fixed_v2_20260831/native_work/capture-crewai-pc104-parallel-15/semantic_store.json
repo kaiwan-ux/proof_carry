@@ -1,0 +1,33 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "localization_parallel_b1_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "localization_parallel_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "localization_parallel_b4_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "localization_parallel_b5"
+    }
+  ],
+  "units": {
+    "localization_parallel_b1_failed": 1,
+    "localization_parallel_b2": 1,
+    "localization_parallel_b4_failed": 1,
+    "localization_parallel_b5": 1
+  }
+}

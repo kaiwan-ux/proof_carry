@@ -1,0 +1,59 @@
+{
+  "store": {
+    "effects": {
+      "contract_charge": 1
+    },
+    "units": {
+      "approval_requested": 1,
+      "charge_ack": 1,
+      "charge_attempt": 1,
+      "close_gate": 1
+    },
+    "approvals": {
+      "approve_contract_close": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "contract_charge",
+        "unit": "charge_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "charge_ack"
+    },
+    {
+      "kind": "approval",
+      "id": "approve_contract_close",
+      "unit": "close_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "maf_target_workflow_explicit_handlers"
+}

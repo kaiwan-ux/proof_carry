@@ -1,0 +1,95 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h02-tampered_attestation-crewai-to-maf-mcc_v2_frozen",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-composite-h02",
+    "family": "composite",
+    "evidence_variant": "tampered_attestation",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "INVALID_CERTIFICATE",
+    "failure_types": [],
+    "payload_bytes": 1111,
+    "payload_sha256": "7bfafa9b3b7118548f06a996afcf1beaeb84b4946bb48d70280bcc03b44e5690",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-composite-h02",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "0ea7bcef21fb1f387f65287847167981b9284c9da5d7cdfb725fe96b111ba392",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "sync_retry",
+        "data": {
+          "attempt": 2,
+          "max_attempts": 5
+        }
+      },
+      {
+        "type": "callback_pending",
+        "semantic_unit": "sync_callback",
+        "data": {
+          "callback_id": "sync_done_cb",
+          "operation": "sync_job",
+          "blocks": "sync_callback"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "0d9378649ec9ec7c3ca5",
+        "fact_type": "obligation_state",
+        "subject": "sync_done_cb",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h02",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h02\\checkpoints\\main\\20260827T190917_e4d9864a_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [
+      {
+        "type": "INVALID_CERTIFICATE",
+        "certificate_id": "0d9378649ec9ec7c3ca5"
+      }
+    ],
+    "certificate_log": [],
+    "inference_log": []
+  }
+}

@@ -1,0 +1,1 @@
+Package-development smoke/debug runs were implementation checks rather than scientific experiment runs and are not included in the release archive. The final deterministic release run is preserved under `results/raw/<LATEST_RUN>` with its processed outputs. No rows from the final release run are deleted or overwritten.

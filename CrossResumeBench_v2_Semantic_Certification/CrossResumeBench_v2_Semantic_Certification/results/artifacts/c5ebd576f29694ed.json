@@ -1,0 +1,211 @@
+{
+  "source_capture": {
+    "case_id": "crb2-expanded_to_atomic_posteffect-v01",
+    "workflow": "expanded_to_atomic_posteffect",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-expanded_to_atomic_posteffect-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "auth_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "source_label": "auth_s"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "tool_call_observed",
+        "step": "pay_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "operation": "payment",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "checkout",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 3,
+        "type": "step_observed",
+        "step": "receipt_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "source_label": "receipt_s"
+        }
+      },
+      {
+        "seq": 4,
+        "type": "semantic_unit_completed",
+        "step": "receipt_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "unit": "checkout"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "6ec7ff127ec3e16a43a3",
+        "fact_type": "effect_commitment",
+        "subject": "payment",
+        "value": "committed",
+        "scope": "checkout",
+        "evidence": {
+          "operation_id": "crb2-expanded_to_atomic_posteffect-v01:payment",
+          "idempotency_key": "idem:crb2-expanded_to_atomic_posteffect-v01:payment",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "a5dd9b9ea91e6f9f09ca34c83b57370c34ec65626a0a5409e7fbd068313ec740"
+      },
+      {
+        "certificate_id": "97e4d6a58aa923863cb5",
+        "fact_type": "semantic_completion",
+        "subject": "checkout",
+        "value": "completed",
+        "scope": "checkout",
+        "evidence": {
+          "native_marker": "receipt_s",
+          "reason": "native_step_boundary"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0ff4f4b2f3088e41d90ba0ceaa8cc5aa53e2b9fe89e8265732accf94d45cd741"
+      }
+    ],
+    "source_ledger": {
+      "payment": 1
+    },
+    "native_observation": {
+      "kind": "langgraph_checkpoint",
+      "framework": "langgraph",
+      "real_native": true,
+      "next": [],
+      "values_keys": [
+        "ctx"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb2-src-crb2-expanded_to_atomic_posteffect-v01",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a17a2-89a4-673e-8003-59c4756fa02c"
+        }
+      },
+      "native_action_nodes": 3
+    },
+    "truth_completed_units": [
+      "checkout"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "version": "aaif-reference-v2",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-expanded_to_atomic_posteffect-v01",
+      "amount": 101
+    },
+    "pipeline": {
+      "completed_semantics": [
+        "checkout"
+      ],
+      "current_semantic": "finish"
+    },
+    "pending": [],
+    "conversation": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "auth_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "source_label": "auth_s"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "tool_call_observed",
+        "step": "pay_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "operation": "payment",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "checkout",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 3,
+        "type": "step_observed",
+        "step": "receipt_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "source_label": "receipt_s"
+        }
+      },
+      {
+        "seq": 4,
+        "type": "semantic_unit_completed",
+        "step": "receipt_s",
+        "semantic_unit": "checkout",
+        "data": {
+          "unit": "checkout"
+        }
+      }
+    ],
+    "effect_ledger": {
+      "payment": {
+        "status": "committed",
+        "source": "caplease_reference",
+        "evidence": {
+          "operation_id": "crb2-expanded_to_atomic_posteffect-v01:payment",
+          "idempotency_key": "idem:crb2-expanded_to_atomic_posteffect-v01:payment",
+          "replay": "forbidden"
+        }
+      }
+    }
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "checkout",
+      "finish"
+    ],
+    "executed_units": [
+      "finish"
+    ],
+    "final_ledger": {
+      "payment": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "maf_workflow_checkpoint",
+      "framework": "maf",
+      "real_native": true,
+      "workflow_name": "WorkflowBuilder-6328b2ad-ca3d-4425-85db-e985edbc2492",
+      "checkpoint_count": 4,
+      "native_action_executors": 2
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "framework": "langgraph",
+  "case_id": "crb-holdout-approval_wait-h02",
+  "checkpoint_ref": "thread:mccv3-holdout-crb-holdout-approval_wait-h02-source-langgraph-crb-holdout-approval_wait-h02",
+  "native_kind": "langgraph_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "langgraph",
+    "next": [
+      "resume"
+    ],
+    "values_keys": [
+      "case_id",
+      "phase",
+      "store_path"
+    ],
+    "config": {
+      "configurable": {
+        "thread_id": "mccv3-holdout-crb-holdout-approval_wait-h02-source-langgraph-crb-holdout-approval_wait-h02",
+        "checkpoint_ns": "",
+        "checkpoint_id": "1f1a248c-b2c1-6ded-8001-0a5a72caede1"
+      }
+    }
+  },
+  "source_store": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      }
+    ]
+  }
+}

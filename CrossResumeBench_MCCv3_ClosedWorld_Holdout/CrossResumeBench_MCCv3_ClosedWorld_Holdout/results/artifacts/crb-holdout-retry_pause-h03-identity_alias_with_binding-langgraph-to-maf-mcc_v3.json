@@ -1,0 +1,230 @@
+{
+  "row": {
+    "run_id": "crb-holdout-retry_pause-h03-identity_alias_with_binding-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-retry_pause-h03",
+    "family": "retry_pause",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 920,
+    "payload_sha256": "2eeff896ce6562be8002563de83e8350f347352bb6a3cece0f17300d3dd9fd08",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_6"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_6"
+      },
+      {
+        "kind": "counter",
+        "key": "retry:retry_job",
+        "value": 6
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-retry_pause-h03",
+    "workflow": "mccv3_holdout_retry_pause",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "54196713d754fcd4c49383213da912a1989f5c682be48f390346753509165271",
+    "continuation_contract_hash": "59a7dec5ccb646b57b90cab1fe1dd829c870fd03ff9018c7280ae4577ec87171",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "src_alias__retry_job",
+        "data": {
+          "attempt": 5,
+          "max_attempts": 7
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "6cf12889a4c9e0d6010a",
+        "fact_type": "identity_binding",
+        "subject": "src_alias__retry_job",
+        "value": "retry_job",
+        "scope": "crb-holdout-retry_pause-h03",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-retry_pause-h03-source-langgraph-crb-holdout-retry_pause-h03"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "af15d12366835b607b6b81ec3260ccd778eeeaf6e50c96f318c3eae6a1ff53f2"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {
+      "src_alias__retry_job": "retry_job"
+    },
+    "provenance": {
+      "retry_current|retry_job": [
+        "history"
+      ],
+      "retry_bound|retry_job": [
+        "history"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "retry_try_6"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:retry_job",
+      "value": 6
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1,
+      "retry_try_4": 1,
+      "retry_try_5": 1,
+      "retry_try_6": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 6
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_5"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_6"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1,
+      "retry_try_4": 1,
+      "retry_try_5": 1,
+      "retry_try_6": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 6
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_5"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_6"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

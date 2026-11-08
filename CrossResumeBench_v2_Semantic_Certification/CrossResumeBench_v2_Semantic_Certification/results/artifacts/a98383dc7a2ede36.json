@@ -1,0 +1,223 @@
+{
+  "source_capture": {
+    "case_id": "crb2-join_requires_certified_branch-v01",
+    "workflow": "join_requires_certified_branch",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-join_requires_certified_branch-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "source_label": "a_done"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "unit": "a"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "b_effect",
+        "semantic_unit": "b",
+        "data": {
+          "operation": "bop",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "b",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "c0683d3574b528c246d6",
+        "fact_type": "effect_commitment",
+        "subject": "bop",
+        "value": "committed",
+        "scope": "b",
+        "evidence": {
+          "operation_id": "crb2-join_requires_certified_branch-v01:bop",
+          "idempotency_key": "idem:crb2-join_requires_certified_branch-v01:bop",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "913b950550f67b8471fe193df703d35528cda593b0ceee3a047085132162b0d0"
+      },
+      {
+        "certificate_id": "d923a0a260e0603e8df5",
+        "fact_type": "semantic_completion",
+        "subject": "b",
+        "value": "completed",
+        "scope": "b",
+        "evidence": {
+          "operation": "bop",
+          "native_marker": "b_effect",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "99e2ce3f78b98b967abaabf27fea92d3a77db083ac09e7600fbfb4868827d6ac"
+      }
+    ],
+    "source_ledger": {
+      "bop": 1
+    },
+    "native_observation": {
+      "kind": "maf_workflow_checkpoint",
+      "framework": "maf",
+      "real_native": true,
+      "workflow_name": "WorkflowBuilder-a490d9a1-bb1c-478c-b65c-596be158ff4a",
+      "checkpoint_count": 4,
+      "native_action_executors": 2
+    },
+    "truth_completed_units": [
+      "a",
+      "b"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {
+      "join": [
+        "a",
+        "b"
+      ]
+    },
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "mcc_version": "2.0",
+    "case_id": "crb2-join_requires_certified_branch-v01",
+    "workflow": "join_requires_certified_branch",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "f6f0002891b95ec5fc47dd24735a6036aca7ac7bc07d2df4c4de11728e81e48f",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-join_requires_certified_branch-v01",
+      "amount": 101
+    },
+    "history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "source_label": "a_done"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "unit": "a"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "b_effect",
+        "semantic_unit": "b",
+        "data": {
+          "operation": "bop",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "b",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "c0683d3574b528c246d6",
+        "fact_type": "effect_commitment",
+        "subject": "bop",
+        "value": "committed",
+        "scope": "b",
+        "evidence": {
+          "operation_id": "crb2-join_requires_certified_branch-v01:bop",
+          "idempotency_key": "idem:crb2-join_requires_certified_branch-v01:bop",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "913b950550f67b8471fe193df703d35528cda593b0ceee3a047085132162b0d0"
+      },
+      {
+        "certificate_id": "d923a0a260e0603e8df5",
+        "fact_type": "semantic_completion",
+        "subject": "b",
+        "value": "completed",
+        "scope": "b",
+        "evidence": {
+          "operation": "bop",
+          "native_marker": "b_effect",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "99e2ce3f78b98b967abaabf27fea92d3a77db083ac09e7600fbfb4868827d6ac"
+      }
+    ]
+  },
+  "inference": {
+    "ambiguities": [],
+    "certificate_log": [
+      "effect_commitment:bop:committed",
+      "semantic_completion:b:completed"
+    ],
+    "inference_log": [
+      "history:completed:a"
+    ]
+  },
+  "target": {
+    "completed_units": [
+      "a",
+      "b",
+      "finish",
+      "join"
+    ],
+    "executed_units": [
+      "join",
+      "finish"
+    ],
+    "final_ledger": {
+      "bop": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "c0aca3d7-a648-46ee-bf13-5ce869b2e348",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 4
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

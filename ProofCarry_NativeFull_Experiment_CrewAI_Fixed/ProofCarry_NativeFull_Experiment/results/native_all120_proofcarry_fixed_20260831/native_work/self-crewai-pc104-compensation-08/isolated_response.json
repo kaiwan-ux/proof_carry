@@ -1,0 +1,77 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-compensation-08",
+      "checkpoint_ref": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\self-crewai-pc104-compensation-08\\checkpoints\\main\\20260830T203411_30c551dd_p-none.json",
+      "framework": "crewai",
+      "native_kind": "crewai_flow_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 1,
+        "checkpoint_event_mode": "method_execution_finished",
+        "checkpoint_file": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\self-crewai-pc104-compensation-08\\checkpoints\\main\\20260830T203411_30c551dd_p-none.json",
+        "framework": "crewai",
+        "identifier_label": "task_id",
+        "pause_protocol": "subprocess_external_gate",
+        "pause_status": "pending",
+        "semantic_namespace": "crew.task"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "file_comp_effect_failed"
+          }
+        ],
+        "units": {
+          "file_comp_effect_failed": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "resume_api": "Flow.from_checkpoint",
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "file_comp_effect_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "file_comp_no_compensation_needed"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "file_comp_effect_failed": 1,
+        "file_comp_no_compensation_needed": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 30.95300000000043
+}

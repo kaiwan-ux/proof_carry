@@ -1,0 +1,28 @@
+{
+  "actual": {
+    "family_gate_rows": 24,
+    "migration_rows": 48,
+    "self_resume_rows": 24,
+    "source_capture_rows": 24
+  },
+  "case_preset": "smoke8",
+  "expected": {
+    "cases": 8,
+    "families": 8,
+    "family_gate_rows": 24,
+    "frameworks": 3,
+    "methods": 1,
+    "migration_rows": 48,
+    "pairs": 6,
+    "self_resume_rows": 24,
+    "source_capture_rows": 24,
+    "variants": 1
+  },
+  "methods": [
+    "proofcarry"
+  ],
+  "profile": "proofcarry",
+  "variants": [
+    "enough_evidence"
+  ]
+}

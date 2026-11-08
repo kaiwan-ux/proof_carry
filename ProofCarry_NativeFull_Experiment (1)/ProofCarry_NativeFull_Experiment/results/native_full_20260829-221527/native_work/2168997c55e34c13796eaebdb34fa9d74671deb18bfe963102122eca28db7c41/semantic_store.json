@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {
+    "tax_filing_callback_cb": 1
+  },
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "tax_filing_callback_request_sent"
+    },
+    {
+      "id": "tax_filing_callback_cb",
+      "kind": "callback",
+      "unit": "tax_filing_callback_wait_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "tax_filing_callback_request_sent": 1,
+    "tax_filing_callback_wait_callback": 1
+  }
+}

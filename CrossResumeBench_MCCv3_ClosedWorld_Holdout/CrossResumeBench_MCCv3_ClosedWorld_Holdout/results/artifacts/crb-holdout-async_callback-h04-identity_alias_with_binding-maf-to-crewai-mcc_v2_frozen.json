@@ -1,0 +1,137 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h04-identity_alias_with_binding-maf-to-crewai-mcc_v2_frozen",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-async_callback-h04",
+    "family": "async_callback",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "CALLBACKS_MISMATCH"
+    ],
+    "payload_bytes": 858,
+    "payload_sha256": "4e5705b676c2552a60090b1f43ca18eb35a09b8262f6c0a225928bab8a042708",
+    "expected_plan": [
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-async_callback-h04",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "3708966165dae9a7a25a1c697b1cc437e3b95b9e0c10daf76f351f727a343036",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "callback_pending",
+        "semantic_unit": "callback_gate",
+        "data": {
+          "callback_id": "src_alias__timeout_race_cb",
+          "operation": "timeout_race",
+          "blocks": "callback_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "0f2f4aa8118d998ce30f",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__timeout_race_cb",
+        "value": "pending",
+        "scope": "crb-holdout-async_callback-h04",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "865505b1-4d83-4b3c-b5ae-8d61139c6d8a"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "ec0de1ab1560eccd6fc239924765dba56699a95f3da55a25a616653b5b1b8b97"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "obligation_state:src_alias__timeout_race_cb:pending"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "timeout_race_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

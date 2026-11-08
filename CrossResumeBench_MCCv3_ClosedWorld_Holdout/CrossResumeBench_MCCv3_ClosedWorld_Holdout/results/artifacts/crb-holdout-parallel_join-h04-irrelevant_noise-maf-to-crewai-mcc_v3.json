@@ -1,0 +1,216 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h04-irrelevant_noise-maf-to-crewai-mcc_v3",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-parallel_join-h04",
+    "family": "parallel_join",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1372,
+    "payload_sha256": "41c8477bb0493232da0324ae3651c923ca286535c6eed7e5b9616a1c82580b77",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-parallel_join-h04",
+    "workflow": "mccv3_holdout_parallel_join",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "226560b59b0ecd89aa38f7e7e1e6070094ee9c2117db7a7424e522d9ec50d87a",
+    "continuation_contract_hash": "1cd4161a1368ded9b705d1ba9f5e0ca1ba0c283e22c1de104748408a9caad3f7",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "p",
+            "q",
+            "r"
+          ]
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "4c863bd9b8dddae76a13",
+        "fact_type": "completion_snapshot",
+        "subject": "merge_join",
+        "value": {
+          "members": [
+            "p",
+            "q",
+            "r"
+          ],
+          "universe": [
+            "p",
+            "q",
+            "r"
+          ],
+          "complete": true
+        },
+        "scope": "crb-holdout-parallel_join-h04",
+        "evidence": {
+          "native_checkpoint_ref": "6d7ef58a-3f2b-42b4-a57a-d5e7efaed049"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "fbbf0a74a6c49f508328249003fb0c8aeaaffd19919339d18eab94eb83bdd261"
+      },
+      {
+        "certificate_id": "561c03def46222e9a661",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-parallel_join-h04",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "6d7ef58a-3f2b-42b4-a57a-d5e7efaed049"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "192f1b4ddd70e152cf9b099fcc772e894ba828e9d939e7f91625e95bbaf4e608"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "dependency_state|merge_join": [
+        "history"
+      ],
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ],
+      "semantic_completion|p": [
+        "certificate:complete_snapshot"
+      ],
+      "semantic_completion|q": [
+        "certificate:complete_snapshot"
+      ],
+      "semantic_completion|r": [
+        "certificate:complete_snapshot"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "merge_join": 1,
+      "p": 1,
+      "q": 1,
+      "r": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "merge_join": 1,
+      "p": 1,
+      "q": 1,
+      "r": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "p"
+      },
+      {
+        "kind": "unit",
+        "unit": "q"
+      },
+      {
+        "kind": "unit",
+        "unit": "r"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

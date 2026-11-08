@@ -1,0 +1,12 @@
+{
+  "run_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\regression_crewai_retry_fixed",
+  "case_id": "pc104-retry-01",
+  "checkpoint_dir": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\regression_crewai_retry_fixed\\checkpoints",
+  "store_path": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\regression_crewai_retry_fixed\\semantic_store.json",
+  "resume_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\regression_crewai_retry_fixed\\resume.gate",
+  "stop_gate": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\regression_crewai_retry_fixed\\stop.gate",
+  "signal": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\regression_crewai_retry_fixed\\source_ready.signal",
+  "on_events": [
+    "method_execution_finished"
+  ]
+}

@@ -1,0 +1,9 @@
+family,safe_completion,safe_rejection,unsafe_violation,technical_failure,total,completion_pct,rejection_pct,unsafe_pct
+approval_wait,60,36,0,0,96,62.5,37.5,0.0
+async_callback,72,24,0,0,96,75.0,25.0,0.0
+compensation_pending,60,36,0,0,96,62.5,37.5,0.0
+composite,54,42,0,0,96,56.25,43.75,0.0
+effect_commitment,48,48,0,0,96,50.0,50.0,0.0
+loop_pause,48,48,0,0,96,50.0,50.0,0.0
+parallel_join,72,24,0,0,96,75.0,25.0,0.0
+retry_pause,72,24,0,0,96,75.0,25.0,0.0

@@ -1,0 +1,11 @@
+langgraph==1.2.11
+crewai==1.15.17
+agent-framework-core==1.15.0
+pandas==2.3.3
+numpy>=2.0,<3
+scipy>=1.13,<2
+matplotlib>=3.8,<4
+jsonschema==4.23.0
+pydantic==2.12.5
+pytest>=8.0,<10
+tabulate>=0.9,<1

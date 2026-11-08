@@ -1,0 +1,46 @@
+{
+  "benchmark": "CrossResumeBench v3 corrected Phase 1",
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "pairs": [
+    [
+      "langgraph",
+      "crewai"
+    ],
+    [
+      "langgraph",
+      "maf"
+    ],
+    [
+      "crewai",
+      "langgraph"
+    ],
+    [
+      "crewai",
+      "maf"
+    ],
+    [
+      "maf",
+      "langgraph"
+    ],
+    [
+      "maf",
+      "crewai"
+    ]
+  ],
+  "case_id": "effect_committed_ack_pending",
+  "variants": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "migration_methods": [
+    "mcc_v2",
+    "oracle",
+    "explicit_minimal"
+  ],
+  "self_resume_control": true,
+  "strict_fail_fast": true
+}

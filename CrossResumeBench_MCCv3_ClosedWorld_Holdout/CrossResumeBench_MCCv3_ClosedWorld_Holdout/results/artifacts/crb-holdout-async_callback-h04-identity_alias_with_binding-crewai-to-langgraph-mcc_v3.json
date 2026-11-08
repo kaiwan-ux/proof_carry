@@ -1,0 +1,172 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h04-identity_alias_with_binding-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-async_callback-h04",
+    "family": "async_callback",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1762,
+    "payload_sha256": "3c958007886c5f3da36a1d2beb00a95024529d4a9932732b46161f40ac6e45a8",
+    "expected_plan": [
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "callback",
+        "id": "timeout_race_cb",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-async_callback-h04",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "3708966165dae9a7a25a1c697b1cc437e3b95b9e0c10daf76f351f727a343036",
+    "continuation_contract_hash": "5f623e560b75e30771b69caea66806ebb6a6430bcbce601bf1baad03751ad609",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "callback_pending",
+        "semantic_unit": "callback_gate",
+        "data": {
+          "callback_id": "src_alias__timeout_race_cb",
+          "operation": "timeout_race",
+          "blocks": "callback_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "c89efa2830eceff9a40c",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__timeout_race_cb",
+        "value": "pending",
+        "scope": "crb-holdout-async_callback-h04",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-async_callback-h04\\checkpoints\\main\\20260827T190845_b98bbc07_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "eab1773c54d3ba083cba9c490dad55799891812eee2766e54abb59a312138294"
+      },
+      {
+        "certificate_id": "e8ec156ba0bc539cdcf6",
+        "fact_type": "identity_binding",
+        "subject": "src_alias__timeout_race_cb",
+        "value": "timeout_race_cb",
+        "scope": "crb-holdout-async_callback-h04",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-async_callback-h04\\checkpoints\\main\\20260827T190845_b98bbc07_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "ebcaec559f285d8ba78acdb5d4ee7f54cf359ceb58f582c088b1ad665887974c"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {
+      "src_alias__timeout_race_cb": "timeout_race_cb"
+    },
+    "provenance": {
+      "callback_state|timeout_race_cb": [
+        "history",
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "callback",
+      "id": "timeout_race_cb",
+      "unit": "callback_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "timeout_race_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_gate": 1,
+      "callback_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {
+      "timeout_race_cb": 1
+    },
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_requested"
+      },
+      {
+        "id": "timeout_race_cb",
+        "kind": "callback",
+        "unit": "callback_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

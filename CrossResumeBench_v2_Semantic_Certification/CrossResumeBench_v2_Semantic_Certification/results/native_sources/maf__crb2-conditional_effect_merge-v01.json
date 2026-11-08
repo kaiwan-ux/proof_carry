@@ -1,0 +1,103 @@
+{
+  "case_id": "crb2-conditional_effect_merge-v01",
+  "workflow": "conditional_effect_merge",
+  "app_state": {
+    "variant": 1,
+    "request_id": "crb2-conditional_effect_merge-v01",
+    "amount": 101
+  },
+  "portable_history": [
+    {
+      "seq": 1,
+      "type": "step_observed",
+      "step": "route",
+      "semantic_unit": "route",
+      "data": {
+        "source_label": "route"
+      }
+    },
+    {
+      "seq": 2,
+      "type": "semantic_unit_completed",
+      "step": "route",
+      "semantic_unit": "route",
+      "data": {
+        "unit": "route"
+      }
+    },
+    {
+      "seq": 3,
+      "type": "decision_made",
+      "step": "route",
+      "semantic_unit": "route",
+      "data": {
+        "key": "route",
+        "choice": "left"
+      }
+    },
+    {
+      "seq": 4,
+      "type": "tool_call_observed",
+      "step": "left_effect",
+      "semantic_unit": "left_branch",
+      "data": {
+        "operation": "left_write",
+        "commit_status": "unknown",
+        "result": "timeout",
+        "parent_unit": "left_branch",
+        "unit_completion_observable": false
+      }
+    }
+  ],
+  "certificates": [
+    {
+      "certificate_id": "3cf5900b8ecfdf960dbc",
+      "fact_type": "effect_commitment",
+      "subject": "left_write",
+      "value": "committed",
+      "scope": "left_branch",
+      "evidence": {
+        "operation_id": "crb2-conditional_effect_merge-v01:left_write",
+        "idempotency_key": "idem:crb2-conditional_effect_merge-v01:left_write",
+        "replay": "forbidden"
+      },
+      "issuer": "crossresumebench_witness",
+      "evidence_hash": "230fe1628a0ce8678af040a97113bfe6db7afb8c4c28d8ea20d2fda6f95ad9ad"
+    },
+    {
+      "certificate_id": "106d3f7f3fa0c44c16a4",
+      "fact_type": "semantic_completion",
+      "subject": "left_branch",
+      "value": "completed",
+      "scope": "left_branch",
+      "evidence": {
+        "operation": "left_write",
+        "native_marker": "left_effect",
+        "reason": "effect_and_postconditions_completed"
+      },
+      "issuer": "crossresumebench_witness",
+      "evidence_hash": "532f8bf3a2a898f5c52cbb6f1e5f7efcd0335f073e09af7e4be26fa4a1f879bc"
+    }
+  ],
+  "source_ledger": {
+    "left_write": 1
+  },
+  "native_observation": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-85eb2ccb-61b8-4cbf-9636-3c8e4a329406",
+    "checkpoint_count": 4,
+    "native_action_executors": 2
+  },
+  "truth_completed_units": [
+    "route",
+    "left_branch"
+  ],
+  "truth_pending_obligations": [],
+  "truth_dependencies": {},
+  "truth_decisions": {
+    "route": "left"
+  },
+  "truth_counters": {}
+}

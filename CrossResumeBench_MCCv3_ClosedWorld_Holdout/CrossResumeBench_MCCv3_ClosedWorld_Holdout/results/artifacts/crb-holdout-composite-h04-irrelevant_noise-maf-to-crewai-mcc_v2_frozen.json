@@ -1,0 +1,387 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h04-irrelevant_noise-maf-to-crewai-mcc_v2_frozen",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-composite-h04",
+    "family": "composite",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 980,
+    "payload_sha256": "7201a5deb173b7e8cc85f7cf6625e3094b7919003aa4af260326ee89b00d88b5",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "kind": "approval",
+        "id": "approve_batch_commit",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-composite-h04",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "c637ca91c1292b651a82f075b0836856050b569d7923c9892fff243f82d497da",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:batch",
+          "value": 3
+        }
+      },
+      {
+        "type": "approval_requested",
+        "semantic_unit": "batch_approval",
+        "data": {
+          "request_id": "approve_batch_commit",
+          "blocks": "batch_approval"
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "7f49b5e4ec9ac3b324bb",
+        "fact_type": "obligation_state",
+        "subject": "approve_batch_commit",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h04",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "batch_approval",
+          "native_checkpoint_ref": "7d01597a-1d31-4489-9581-eef4c3de900f"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "c9af56d4ad59f053bb365574c476dc449f1b27bcdba37f66f62bcc9921c16000"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "obligation_state:approve_batch_commit:pending"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "batch_iter_4"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_5"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_6"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_done"
+    },
+    {
+      "kind": "approval",
+      "id": "approve_batch_commit",
+      "unit": "batch_approval"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_approval": 1,
+      "batch_done": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1,
+      "batch_iter_4": 1,
+      "batch_iter_5": 1,
+      "batch_iter_6": 1
+    },
+    "approvals": {
+      "approve_batch_commit": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 6
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_approval": 1,
+      "batch_done": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1,
+      "batch_iter_4": 1,
+      "batch_iter_5": 1,
+      "batch_iter_6": 1
+    },
+    "approvals": {
+      "approve_batch_commit": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 6
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "webhook_dispatch_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "webhook_dispatch_attempt_recorded"
+    },
+    {
+      "kind": "effect",
+      "operation": "webhook_dispatch_op",
+      "unit": "webhook_dispatch_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "webhook_dispatch_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "webhook_dispatch_ack": 1,
+    "webhook_dispatch_attempt": 1,
+    "webhook_dispatch_attempt_recorded": 1
+  }
+}

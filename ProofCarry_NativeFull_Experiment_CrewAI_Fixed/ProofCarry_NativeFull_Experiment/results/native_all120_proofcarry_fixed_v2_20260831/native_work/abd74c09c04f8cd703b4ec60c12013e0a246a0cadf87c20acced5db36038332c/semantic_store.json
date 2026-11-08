@@ -1,0 +1,29 @@
+{
+  "approvals": {
+    "vendor_approval_request": 1
+  },
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "vendor_approval_requested"
+    },
+    {
+      "id": "vendor_approval_request",
+      "kind": "approval",
+      "unit": "vendor_approval_approval_wait"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "vendor_approval_approval_wait": 1,
+    "vendor_approval_requested": 1
+  }
+}

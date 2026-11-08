@@ -1,0 +1,42 @@
+{
+  "approvals": {
+    "approve_contract_close": 1
+  },
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "contract_charge": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "contract_charge",
+      "unit": "charge_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "approval_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "charge_ack"
+    },
+    {
+      "id": "approve_contract_close",
+      "kind": "approval",
+      "unit": "close_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "approval_requested": 1,
+    "charge_ack": 1,
+    "charge_attempt": 1,
+    "close_gate": 1
+  }
+}

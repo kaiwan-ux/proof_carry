@@ -1,0 +1,19 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-async_callback-h01-probe-maf-crb-holdout-async_callback-h01",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "1ce7a91c-9da0-4df5-af3a-51c0ef15e708",
+  "previous_checkpoint_id": "18753217-9548-4634-87b0-7742a71028ed",
+  "timestamp": "2026-08-27T18:54:52.142853+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

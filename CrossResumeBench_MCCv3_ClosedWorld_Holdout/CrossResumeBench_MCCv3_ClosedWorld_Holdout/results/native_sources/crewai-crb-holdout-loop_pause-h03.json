@@ -1,0 +1,70 @@
+{
+  "framework": "crewai",
+  "case_id": "crb-holdout-loop_pause-h03",
+  "checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-loop_pause-h03\\checkpoints\\main\\20260827T190543_4f302046_p-none.json",
+  "native_kind": "crewai_flow_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "crewai",
+    "checkpoint_file": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-loop_pause-h03\\checkpoints\\main\\20260827T190543_4f302046_p-none.json",
+    "checkpoint_count": 1,
+    "pause_protocol": "subprocess_external_gate"
+  },
+  "source_store": {
+    "effects": {},
+    "units": {
+      "loop_step_1": 1,
+      "loop_step_2": 1,
+      "loop_step_3": 1,
+      "loop_step_4": 1,
+      "loop_step_5": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:holdout": 5
+    },
+    "decisions": {
+      "loop_break": true
+    },
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "loop_step_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_3"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_4"
+      },
+      {
+        "kind": "unit",
+        "unit": "loop_step_5"
+      },
+      {
+        "key": "loop:holdout",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "key": "loop_break",
+        "kind": "decision",
+        "value": true
+      }
+    ]
+  }
+}

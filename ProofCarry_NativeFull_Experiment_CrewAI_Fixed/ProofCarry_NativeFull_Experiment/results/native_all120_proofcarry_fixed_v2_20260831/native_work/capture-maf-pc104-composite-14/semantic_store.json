@@ -1,0 +1,36 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "effect_plus_parallel_a_op::partial": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "effect_plus_parallel_a_op::partial",
+      "unit": "effect_plus_parallel_a_partial_started"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b2_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_parallel_b_b4"
+    }
+  ],
+  "units": {
+    "effect_plus_parallel_a_partial_started": 1,
+    "effect_plus_parallel_b_b1": 1,
+    "effect_plus_parallel_b_b2_failed": 1,
+    "effect_plus_parallel_b_b4": 1
+  }
+}

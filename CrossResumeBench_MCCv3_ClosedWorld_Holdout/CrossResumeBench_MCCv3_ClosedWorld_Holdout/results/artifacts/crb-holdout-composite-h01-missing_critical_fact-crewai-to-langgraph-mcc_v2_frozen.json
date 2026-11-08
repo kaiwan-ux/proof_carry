@@ -1,0 +1,175 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h01-missing_critical_fact-crewai-to-langgraph-mcc_v2_frozen",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-composite-h01",
+    "family": "composite",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "APPROVALS_MISMATCH"
+    ],
+    "payload_bytes": 1061,
+    "payload_sha256": "ee8fdd4b43d366af9b3023914025e11b3b6da6a6dd29b6614b2c2bd64787b385",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-composite-h01",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "db60e1e372b813315a0f4ac4b231e39288214a0a5dd98567ba51cbf8e01a5c03",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "charge_attempt",
+        "data": {
+          "operation": "contract_charge",
+          "commit_status": "unknown",
+          "parent_unit": "charge_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "c957ef6235d01b236788",
+        "fact_type": "effect_commitment",
+        "subject": "contract_charge",
+        "value": "committed",
+        "scope": "crb-holdout-composite-h01",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h01\\checkpoints\\main\\20260827T190901_d6344952_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "7e93b9ec7ddd4ee82298633b708b461961f11acadc53b8491e1c8063e766ac75"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "effect_commitment:contract_charge:committed"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "charge_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "contract_charge": 1
+    },
+    "units": {
+      "approval_requested": 1,
+      "charge_ack": 1,
+      "charge_attempt": 1,
+      "close_gate": 1
+    },
+    "approvals": {
+      "approve_contract_close": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "contract_charge",
+        "unit": "charge_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "contract_charge": 1
+    },
+    "units": {
+      "approval_requested": 1,
+      "charge_ack": 1,
+      "charge_attempt": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "contract_charge",
+        "unit": "charge_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

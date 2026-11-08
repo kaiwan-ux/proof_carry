@@ -1,0 +1,112 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-parallel-06",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-parallel-06-self-langgraph-pc104-parallel-06",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4adc-d583-6ea6-8001-27ec69af25d5",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-parallel-06-self-langgraph-pc104-parallel-06"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "identity_parallel_b1_failed"
+          },
+          {
+            "kind": "unit",
+            "unit": "identity_parallel_b3"
+          }
+        ],
+        "units": {
+          "identity_parallel_b1_failed": 1,
+          "identity_parallel_b3": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "identity_parallel_b1_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "identity_parallel_b3"
+        },
+        {
+          "kind": "unit",
+          "unit": "identity_parallel_b1_recover"
+        },
+        {
+          "kind": "unit",
+          "unit": "identity_parallel_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "identity_parallel_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "identity_parallel_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "identity_parallel_b1": 1,
+        "identity_parallel_b1_failed": 1,
+        "identity_parallel_b1_recover": 1,
+        "identity_parallel_b2": 1,
+        "identity_parallel_b3": 1,
+        "identity_parallel_join": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 3.014999999999418
+}

@@ -1,0 +1,86 @@
+{
+  "store": {
+    "effects": {
+      "reservation_hold": 1
+    },
+    "units": {
+      "error_detected": 1,
+      "hold_attempt": 1,
+      "prepare": 1,
+      "publish": 1,
+      "release_comp": 1,
+      "release_join": 1,
+      "validate": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {
+      "release_hold": 1
+    },
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "prepare"
+      },
+      {
+        "kind": "effect",
+        "operation": "reservation_hold",
+        "unit": "hold_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "validate"
+      },
+      {
+        "kind": "unit",
+        "unit": "publish"
+      },
+      {
+        "kind": "unit",
+        "unit": "release_join"
+      },
+      {
+        "action": "release_hold",
+        "kind": "compensation",
+        "unit": "release_comp"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "validate"
+    },
+    {
+      "kind": "unit",
+      "unit": "publish"
+    },
+    {
+      "kind": "unit",
+      "unit": "release_join"
+    },
+    {
+      "kind": "compensation",
+      "action": "release_hold",
+      "unit": "release_comp"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "langgraph_target_graph",
+  "final": {
+    "store_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\crb-holdout-composite-h03-enough_evidence-maf-to-langgraph-mcc_v3\\semantic_store.json",
+    "phase": "finished"
+  }
+}

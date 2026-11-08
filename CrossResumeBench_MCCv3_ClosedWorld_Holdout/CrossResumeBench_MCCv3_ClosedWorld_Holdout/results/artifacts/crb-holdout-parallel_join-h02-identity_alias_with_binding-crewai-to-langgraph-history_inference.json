@@ -1,0 +1,176 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h02-identity_alias_with_binding-crewai-to-langgraph-history_inference",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-parallel_join-h02",
+    "family": "parallel_join",
+    "evidence_variant": "identity_alias_with_binding",
+    "method": "history_inference",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH"
+    ],
+    "payload_bytes": 159,
+    "payload_sha256": "78c24a0aaa78c9db75d0817a49571038527df8238a84c992c648f8e566cd67be",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "red",
+            "src_alias__green",
+            "blue"
+          ]
+        }
+      }
+    ]
+  },
+  "report": {},
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "red"
+    },
+    {
+      "kind": "unit",
+      "unit": "green"
+    },
+    {
+      "kind": "unit",
+      "unit": "blue"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 1,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 2,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

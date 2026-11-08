@@ -1,0 +1,52 @@
+{
+  "framework": "langgraph",
+  "status": "ok",
+  "duration_seconds": 2.107,
+  "payload": {
+    "framework": "langgraph",
+    "status": "ok",
+    "probe": "checkpoint_and_interrupt",
+    "linear": {
+      "full": {
+        "completed": [
+          "A",
+          "B",
+          "C"
+        ],
+        "value": 3
+      },
+      "checkpoint_count": 5,
+      "selected_before_c": true,
+      "selected_next": [
+        "C"
+      ],
+      "selected_values": {
+        "completed": [
+          "A",
+          "B"
+        ],
+        "value": 2
+      },
+      "resume_result": {
+        "completed": [
+          "A",
+          "B",
+          "C"
+        ],
+        "value": 3
+      }
+    },
+    "interrupt": {
+      "effect_count_after_pause": 1,
+      "effect_count_after_resume": 2,
+      "reentered_node": true,
+      "first_result": "{'__interrupt__': [Interrupt(value={'question': 'approve?'}, id='69412534ef730cd5592edc9fa6161d1c')]}",
+      "resume_result": {
+        "approved": true
+      }
+    }
+  },
+  "stdout": "{\"framework\": \"langgraph\", \"status\": \"ok\", \"probe\": \"checkpoint_and_interrupt\", \"linear\": {\"full\": {\"completed\": [\"A\", \"B\", \"C\"], \"value\": 3}, \"checkpoint_count\": 5, \"selected_before_c\": true, \"selected_next\": [\"C\"], \"selected_values\": {\"completed\": [\"A\", \"B\"], \"value\": 2}, \"resume_result\": {\"completed\": [\"A\", \"B\", \"C\"], \"value\": 3}}, \"interrupt\": {\"effect_count_after_pause\": 1, \"effect_count_after_resume\": 2, \"reentered_node\": true, \"first_result\": \"{'__interrupt__': [Interrupt(value={'question': 'approve?'}, id='69412534ef730cd5592edc9fa6161d1c')]}\", \"resume_result\": {\"approved\": true}}}\n",
+  "stderr": "",
+  "error": ""
+}

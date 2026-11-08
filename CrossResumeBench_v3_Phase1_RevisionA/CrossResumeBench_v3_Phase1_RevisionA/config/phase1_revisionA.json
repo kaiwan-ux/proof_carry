@@ -1,0 +1,27 @@
+{
+  "benchmark": "CrossResumeBench_v3_Phase1_RevisionA",
+  "evidence_variants": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "expected_mcc_rows": 24,
+  "expected_migration_rows": 72,
+  "expected_self_resume_rows": 3,
+  "expected_source_capture_rows": 6,
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "full_v3_enabled": false,
+  "llm_required": false,
+  "migration_methods": [
+    "mcc_v2",
+    "oracle",
+    "explicit_minimal"
+  ],
+  "worlds": [
+    "committed",
+    "not_committed"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "framework": "langgraph",
+  "case_id": "crb-holdout-composite-h03",
+  "checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h03-source-langgraph-crb-holdout-composite-h03",
+  "native_kind": "langgraph_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "langgraph",
+    "next": [
+      "resume"
+    ],
+    "values_keys": [
+      "case_id",
+      "phase",
+      "store_path"
+    ],
+    "config": {
+      "configurable": {
+        "thread_id": "mccv3-holdout-crb-holdout-composite-h03-source-langgraph-crb-holdout-composite-h03",
+        "checkpoint_ns": "",
+        "checkpoint_id": "1f1a248c-cb9e-6d88-8001-0af8f2301568"
+      }
+    }
+  },
+  "source_store": {
+    "effects": {
+      "reservation_hold": 1
+    },
+    "units": {
+      "error_detected": 1,
+      "hold_attempt": 1,
+      "prepare": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "prepare"
+      },
+      {
+        "kind": "effect",
+        "operation": "reservation_hold",
+        "unit": "hold_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      }
+    ]
+  }
+}

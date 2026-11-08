@@ -1,0 +1,5 @@
+# Install only in the pinned native-validation environment.
+# Freeze exact versions after the final successful run.
+langgraph
+crewai
+agent-framework-core

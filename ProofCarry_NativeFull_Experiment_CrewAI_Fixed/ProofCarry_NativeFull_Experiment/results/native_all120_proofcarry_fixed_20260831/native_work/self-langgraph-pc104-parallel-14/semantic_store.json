@@ -1,0 +1,56 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_b3_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_b4"
+    },
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_b3_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_b5"
+    },
+    {
+      "kind": "unit",
+      "unit": "security_scan_parallel_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "security_scan_parallel_b1": 1,
+    "security_scan_parallel_b2": 1,
+    "security_scan_parallel_b3": 1,
+    "security_scan_parallel_b3_failed": 1,
+    "security_scan_parallel_b3_recover": 1,
+    "security_scan_parallel_b4": 1,
+    "security_scan_parallel_b5": 1,
+    "security_scan_parallel_join": 1
+  }
+}

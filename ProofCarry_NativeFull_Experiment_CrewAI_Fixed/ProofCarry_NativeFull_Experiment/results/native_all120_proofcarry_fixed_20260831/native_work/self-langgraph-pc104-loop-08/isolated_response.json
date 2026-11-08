@@ -1,0 +1,120 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-loop-08",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-loop-08-self-langgraph-pc104-loop-08",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4ad9-31b1-6036-8001-a31c37d86c3a",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-loop-08-self-langgraph-pc104-loop-08"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "retry_window_loop_index": 5
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "retry_window_loop_index",
+            "kind": "counter",
+            "value": 5
+          }
+        ],
+        "units": {}
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "retry_window_loop_index": 8
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "retry_window_loop_index",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_window_loop_iter_6"
+        },
+        {
+          "key": "retry_window_loop_index",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_window_loop_iter_7"
+        },
+        {
+          "key": "retry_window_loop_index",
+          "kind": "counter",
+          "value": 7
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_window_loop_iter_8"
+        },
+        {
+          "key": "retry_window_loop_index",
+          "kind": "counter",
+          "value": 8
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_window_loop_exit"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "retry_window_loop_exit": 1,
+        "retry_window_loop_iter_6": 1,
+        "retry_window_loop_iter_7": 1,
+        "retry_window_loop_iter_8": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 3.4840000000003783
+}

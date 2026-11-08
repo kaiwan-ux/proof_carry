@@ -1,0 +1,217 @@
+{
+  "case": {
+    "case_id": "crb2-callback_closes_semantic_unit-v01",
+    "family": "callback_closes_semantic_unit",
+    "variant": 1,
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-callback_closes_semantic_unit-v01",
+      "amount": 101
+    },
+    "source_actions": [
+      {
+        "action_id": "submit",
+        "semantic_unit": "submission",
+        "kind": "effect",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": "submission",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": false,
+          "emit_completion": false
+        }
+      },
+      {
+        "action_id": "callback_wait",
+        "semantic_unit": "submission",
+        "kind": "callback",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "callback_id": "cb"
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "submit_t",
+        "semantic_unit": "submission",
+        "kind": "effect",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "callback_t",
+        "semantic_unit": "submission",
+        "kind": "callback",
+        "operation": "submit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "callback_id": "cb",
+          "completes_unit": true
+        }
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "submission",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "submit": 1
+    },
+    "mismatch_tags": [
+      "callback-completion",
+      "effect-not-unit-complete",
+      "source:method_boundary",
+      "target:tool_timeout"
+    ],
+    "source_boundary": "method_boundary",
+    "target_boundary": "tool_timeout",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-callback_closes_semantic_unit-v01",
+    "workflow": "callback_closes_semantic_unit",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-callback_closes_semantic_unit-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "submit",
+        "semantic_unit": "submission",
+        "data": {
+          "operation": "submit",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "submission",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback_wait",
+        "semantic_unit": "submission",
+        "data": {
+          "callback_id": "cb",
+          "operation": "submit"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "f31a8f0b34a9c96aa9e0",
+        "fact_type": "effect_commitment",
+        "subject": "submit",
+        "value": "committed",
+        "scope": "submission",
+        "evidence": {
+          "operation_id": "crb2-callback_closes_semantic_unit-v01:submit",
+          "idempotency_key": "idem:crb2-callback_closes_semantic_unit-v01:submit",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "51333bf04cbdd0e861499049cc38bc92098908a909001c939b6446eeba82b667"
+      }
+    ],
+    "source_ledger": {
+      "submit": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [],
+    "truth_pending_obligations": [
+      {
+        "type": "callback",
+        "id": "cb",
+        "operation": "submit"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-callback_closes_semantic_unit-v01",
+      "amount": 101
+    },
+    "completed_units": [],
+    "pending_obligations": [
+      {
+        "type": "callback",
+        "id": "cb",
+        "operation": "submit"
+      }
+    ],
+    "effect_facts": {
+      "submit": {
+        "status": "committed",
+        "source": "oracle_source_ledger"
+      }
+    },
+    "dependencies": {},
+    "decisions": {},
+    "counters": {}
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "submission"
+    ],
+    "executed_units": [
+      "reconcile:submission",
+      "submission",
+      "finish"
+    ],
+    "final_ledger": {
+      "submit": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

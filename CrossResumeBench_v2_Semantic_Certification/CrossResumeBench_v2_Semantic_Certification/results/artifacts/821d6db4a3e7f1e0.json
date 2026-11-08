@@ -1,0 +1,175 @@
+{
+  "source_capture": {
+    "case_id": "crb2-parallel_branch_completion_gap-v01",
+    "workflow": "parallel_branch_completion_gap",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-parallel_branch_completion_gap-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "fanout",
+        "semantic_unit": "fanout",
+        "data": {
+          "source_label": "fanout"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "fanout",
+        "semantic_unit": "fanout",
+        "data": {
+          "unit": "fanout"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "a_effect",
+        "semantic_unit": "branch_a",
+        "data": {
+          "operation": "reserve_a",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "branch_a",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 4,
+        "type": "step_observed",
+        "step": "b_start",
+        "semantic_unit": "branch_b",
+        "data": {
+          "source_label": "b_start"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "18e1ff8943c08aafa221",
+        "fact_type": "effect_commitment",
+        "subject": "reserve_a",
+        "value": "committed",
+        "scope": "branch_a",
+        "evidence": {
+          "operation_id": "crb2-parallel_branch_completion_gap-v01:reserve_a",
+          "idempotency_key": "idem:crb2-parallel_branch_completion_gap-v01:reserve_a",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "ab9313b97e51772f43316a150132bfd62e84fa91b91bdd2adf5d0a0bb0521db9"
+      },
+      {
+        "certificate_id": "0936341d7da62ace9aa8",
+        "fact_type": "semantic_completion",
+        "subject": "branch_a",
+        "value": "completed",
+        "scope": "branch_a",
+        "evidence": {
+          "operation": "reserve_a",
+          "native_marker": "a_effect",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "1c2ec7d6f2bda0534d10e7bd1d618120bcb0f61b447b99d6348773209ce55fc4"
+      }
+    ],
+    "source_ledger": {
+      "reserve_a": 1
+    },
+    "native_observation": {
+      "kind": "maf_workflow_checkpoint",
+      "framework": "maf",
+      "real_native": true,
+      "workflow_name": "WorkflowBuilder-f0bf8866-9453-414c-9f8d-63d4e41e096d",
+      "checkpoint_count": 5,
+      "native_action_executors": 3
+    },
+    "truth_completed_units": [
+      "fanout",
+      "branch_a"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {
+      "join": [
+        "branch_a",
+        "branch_b"
+      ]
+    },
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-parallel_branch_completion_gap-v01",
+      "amount": 101
+    },
+    "completed_units": [
+      "fanout",
+      "branch_a"
+    ],
+    "pending_obligations": [],
+    "effect_facts": {
+      "reserve_a": {
+        "status": "committed",
+        "source": "oracle_source_ledger"
+      }
+    },
+    "dependencies": {
+      "join": [
+        "branch_a",
+        "branch_b"
+      ]
+    },
+    "decisions": {},
+    "counters": {}
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "branch_a",
+      "branch_b",
+      "fanout",
+      "finish",
+      "join"
+    ],
+    "executed_units": [
+      "branch_b",
+      "join",
+      "finish"
+    ],
+    "final_ledger": {
+      "reserve_a": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "7e261eb6-e46b-41e2-abfb-e7997bfd81f6",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 5
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

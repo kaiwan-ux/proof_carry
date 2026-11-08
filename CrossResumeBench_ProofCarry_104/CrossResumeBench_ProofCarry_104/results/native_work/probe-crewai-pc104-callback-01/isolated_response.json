@@ -1,0 +1,39 @@
+{
+  "lifecycle_returned": false,
+  "operation": "self_resume",
+  "result": {
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {
+        "payment_callback_cb": 1
+      },
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "payment_callback_request_sent"
+        },
+        {
+          "id": "payment_callback_cb",
+          "kind": "callback",
+          "unit": "payment_callback_wait_callback"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "payment_callback_request_sent": 1,
+        "payment_callback_wait_callback": 1
+      }
+    }
+  },
+  "status": "semantic_complete_lifecycle_hang",
+  "worker_duration_sec": 32.79699999999866
+}

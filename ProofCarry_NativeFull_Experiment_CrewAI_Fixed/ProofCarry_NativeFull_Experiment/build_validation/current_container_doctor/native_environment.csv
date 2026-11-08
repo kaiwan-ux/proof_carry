@@ -1,0 +1,31 @@
+framework,installed,ready,version,pause_kind,semantic_namespace,duration_ms,error,details
+langgraph,0,0,unavailable,,,0.08154199997534306,"Traceback (most recent call last):
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/native_full_study.py"", line 101, in capability_doctor
+    d = runtime_factory(fw).capability_probe()
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/infra/isolated_runtime.py"", line 22, in capability_probe
+    return get_runtime(self.name).capability_probe()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/native/langgraph_runtime.py"", line 14, in capability_probe
+    import langgraph
+ModuleNotFoundError: No module named 'langgraph'
+",{}
+crewai,0,0,unavailable,,,0.07459199991899368,"Traceback (most recent call last):
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/native_full_study.py"", line 101, in capability_doctor
+    d = runtime_factory(fw).capability_probe()
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/infra/isolated_runtime.py"", line 22, in capability_probe
+    return get_runtime(self.name).capability_probe()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/native/crewai_runtime.py"", line 11, in capability_probe
+    import crewai
+ModuleNotFoundError: No module named 'crewai'
+",{}
+maf,0,0,unavailable,,,0.06845299992619402,"Traceback (most recent call last):
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/native_full_study.py"", line 101, in capability_doctor
+    d = runtime_factory(fw).capability_probe()
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/infra/isolated_runtime.py"", line 22, in capability_probe
+    return get_runtime(self.name).capability_probe()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File ""/mnt/data/ProofCarry_NativeFull_Experiment/src/crossresumebench_proofcarry/native/maf_runtime.py"", line 11, in capability_probe
+    import agent_framework
+ModuleNotFoundError: No module named 'agent_framework'
+",{}

@@ -1,0 +1,7 @@
+{
+  "benchmark": "CrossResumeBench v2",
+  "mechanism_hash": "529c28d6a7f445eb99506c79fc3f63441f1cf594d9dc76fe5decb82cecc69e22",
+  "evaluation_hash": "eccee17831a92983373b294fae3087d1611d3673b9d746d4bde56e78cac82707",
+  "mechanism_frozen_at": "2026-08-26T14:35:49.014685+00:00",
+  "policy": "Generate/freeze hold-out suite only after this record exists. Never overwrite v2 hashes after observing results."
+}

@@ -1,0 +1,52 @@
+{
+  "lifecycle_returned": false,
+  "operation": "self_resume",
+  "result": {
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {
+        "payment_plus_approval_b_request": 1
+      },
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "payment_plus_approval_a_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "payment_plus_approval_a_op",
+          "unit": "payment_plus_approval_a_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "payment_plus_approval_b_requested"
+        },
+        {
+          "kind": "unit",
+          "unit": "payment_plus_approval_a_ack"
+        },
+        {
+          "id": "payment_plus_approval_b_request",
+          "kind": "approval",
+          "unit": "payment_plus_approval_b_approval_wait"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "payment_plus_approval_a_ack": 1,
+        "payment_plus_approval_a_attempt": 1,
+        "payment_plus_approval_b_approval_wait": 1,
+        "payment_plus_approval_b_requested": 1
+      }
+    }
+  },
+  "status": "semantic_complete_lifecycle_hang",
+  "worker_duration_sec": 38.88999999999942
+}

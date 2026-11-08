@@ -1,0 +1,184 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h02-irrelevant_noise-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-approval_wait-h02",
+    "family": "approval_wait",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1539,
+    "payload_sha256": "08683e2b414a1d31586beff88f1117c0513d6cf1950c88b155f3406e8a1f0f1c",
+    "expected_plan": [
+      {
+        "id": "approve_model_rollout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "approval",
+        "id": "approve_model_rollout",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-approval_wait-h02",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "0f23841bac00c54a59e3eedc42fd2f8e6bb3a761b66188eef60479ba2d2e556e",
+    "continuation_contract_hash": "a99d4f6e2aef317ca05f49d6c9ce0fa50ad175a0f9b6036a35c64639aca7b28b",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "approval_requested",
+        "semantic_unit": "approval_gate",
+        "data": {
+          "request_id": "approve_model_rollout",
+          "blocks": "approval_gate"
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "16effb1fe89017c6752e",
+        "fact_type": "obligation_state",
+        "subject": "approve_model_rollout",
+        "value": "pending",
+        "scope": "crb-holdout-approval_wait-h02",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "approval_gate",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-approval_wait-h02-source-langgraph-crb-holdout-approval_wait-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "f9a5a22651bd8275abd2d2592d111296b683c7527aa2ae28b9ef33e4d3780278"
+      },
+      {
+        "certificate_id": "9fcbabc2c6f81ade59b5",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-approval_wait-h02",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-approval_wait-h02-source-langgraph-crb-holdout-approval_wait-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "ab06d912d2ec63757a67c1187c51671fe37f77c8ad89c2a33cd8a0d299c4ee66"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "approval_state|approve_model_rollout": [
+        "history",
+        "certificate"
+      ],
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "approval",
+      "id": "approve_model_rollout",
+      "unit": "approval_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_gate": 1,
+      "approval_requested": 1
+    },
+    "approvals": {
+      "approve_model_rollout": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "id": "approve_model_rollout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_gate": 1,
+      "approval_requested": 1
+    },
+    "approvals": {
+      "approve_model_rollout": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "id": "approve_model_rollout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "run_dir": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-crewai-pc104-retry-01",
+  "case_id": "pc104-retry-01",
+  "checkpoint_dir": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-crewai-pc104-retry-01\\checkpoints",
+  "store_path": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-crewai-pc104-retry-01\\semantic_store.json",
+  "resume_gate": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-crewai-pc104-retry-01\\resume.gate",
+  "stop_gate": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-crewai-pc104-retry-01\\stop.gate",
+  "signal": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-crewai-pc104-retry-01\\source_ready.signal"
+}

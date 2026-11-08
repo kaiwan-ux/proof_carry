@@ -1,0 +1,110 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-loop-01",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-loop-01-self-langgraph-pc104-loop-01",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4ad7-3cbd-658c-8001-e019adc3d5d8",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-loop-01-self-langgraph-pc104-loop-01"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "pagination_loop_index": 1
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "pagination_loop_index",
+            "kind": "counter",
+            "value": 1
+          }
+        ],
+        "units": {}
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "pagination_loop_index": 3
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "pagination_loop_index",
+          "kind": "counter",
+          "value": 1
+        },
+        {
+          "kind": "unit",
+          "unit": "pagination_loop_iter_2"
+        },
+        {
+          "key": "pagination_loop_index",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "pagination_loop_iter_3"
+        },
+        {
+          "key": "pagination_loop_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "pagination_loop_exit"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "pagination_loop_exit": 1,
+        "pagination_loop_iter_2": 1,
+        "pagination_loop_iter_3": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.8909999999996217
+}

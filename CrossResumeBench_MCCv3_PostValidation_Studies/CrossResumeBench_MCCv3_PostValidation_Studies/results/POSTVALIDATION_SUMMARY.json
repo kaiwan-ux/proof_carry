@@ -1,0 +1,16 @@
+{
+  "statistics": {
+    "rows": 6144,
+    "cases": 32,
+    "comparisons": 5
+  },
+  "ablation": {
+    "rows": 5376,
+    "ablations": 7,
+    "base_mcc_rows": 768
+  },
+  "performance_micro": {
+    "instances": 768,
+    "repeats": 10
+  }
+}

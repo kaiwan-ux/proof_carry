@@ -1,0 +1,174 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h03-enough_evidence-crewai-to-maf-mcc_v3",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-compensation_pending-h03",
+    "family": "compensation_pending",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1795,
+    "payload_sha256": "999cf2bf7c2b17c7a4c67c5802a97b7e30a5f2889c07725fbd645bb6aa2f714a",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h03",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "5654071bea525a773b6b341bf14ae43b08046ba8729151d68fcd3125b1034d83",
+    "continuation_contract_hash": "22c2749b7a4d0dcbfdb772614874cd070712fc78c252768215fc1153c7974095",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "email_notice",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "4fc488cb78af728f2385",
+        "fact_type": "effect_commitment",
+        "subject": "email_notice",
+        "value": "not_committed",
+        "scope": "crb-holdout-compensation_pending-h03",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-compensation_pending-h03\\checkpoints\\main\\20260827T190723_c7154af8_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5565f7bfa13d1e872f389b38d4e7dbd1d18b3696d4be936d82b7ccd1f6644c42"
+      },
+      {
+        "certificate_id": "bfaa6b78fa963e760d29",
+        "fact_type": "compensation_state",
+        "subject": "retract_email",
+        "value": "absent",
+        "scope": "crb-holdout-compensation_pending-h03",
+        "evidence": {
+          "kind": "compensation",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-compensation_pending-h03\\checkpoints\\main\\20260827T190723_c7154af8_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "a86c26dc3954955467aa063f9eb229d19328fd33185def3e059484a66f114781"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "effect_status|email_notice": [
+        "certificate"
+      ],
+      "compensation_state|retract_email": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "compensation_none"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

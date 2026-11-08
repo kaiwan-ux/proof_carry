@@ -1,0 +1,92 @@
+{
+  "framework": "maf",
+  "case_id": "crb-holdout-composite-h04",
+  "checkpoint_ref": "7d01597a-1d31-4489-9581-eef4c3de900f",
+  "native_kind": "maf_superstep_file_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "maf",
+    "workflow_name": "mccv3-holdout-crb-holdout-composite-h04-source-maf-crb-holdout-composite-h04",
+    "checkpoint_id": "7d01597a-1d31-4489-9581-eef4c3de900f",
+    "checkpoint_count": 2,
+    "event_trace": [
+      {
+        "type": "started",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "status",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "superstep_started",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "executor_invoked",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "executor_completed",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "superstep_completed",
+        "class": "WorkflowEvent"
+      }
+    ],
+    "handler_typing_mode": "explicit"
+  },
+  "source_store": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 3
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      }
+    ]
+  }
+}

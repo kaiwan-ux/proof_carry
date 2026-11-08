@@ -1,0 +1,46 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "content_parallel_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "content_parallel_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "content_parallel_b3_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "content_parallel_b3_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "content_parallel_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "content_parallel_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "content_parallel_b1": 1,
+    "content_parallel_b2": 1,
+    "content_parallel_b3": 1,
+    "content_parallel_b3_failed": 1,
+    "content_parallel_b3_recover": 1,
+    "content_parallel_join": 1
+  }
+}

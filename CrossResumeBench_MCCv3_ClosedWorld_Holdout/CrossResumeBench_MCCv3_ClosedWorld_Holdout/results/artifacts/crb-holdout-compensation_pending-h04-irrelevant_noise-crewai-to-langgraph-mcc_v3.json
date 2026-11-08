@@ -1,0 +1,206 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h04-irrelevant_noise-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-compensation_pending-h04",
+    "family": "compensation_pending",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 2499,
+    "payload_sha256": "fdf28bf34a8dabb76a8fe8bb723b5233e9b6e4fc74dce67ffaffcf2bf30a6dbb",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h04",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "113940af8166e1d24ed160cb18793d731231bd767d4b4643b816b6a29e6e46fe",
+    "continuation_contract_hash": "58cb271c79bdfa07f1f92792ee95cf2b89a7798e03adb4fe3d12e259264e626e",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "inventory_move",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "67734e4fb5c148181807",
+        "fact_type": "effect_commitment",
+        "subject": "inventory_move",
+        "value": "committed",
+        "scope": "crb-holdout-compensation_pending-h04",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-compensation_pending-h04\\checkpoints\\main\\20260827T190740_bc5a320d_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "2a1914292fec5116fdf1d229719859475bf8a2a57de2e441c9e7762c46be23f7"
+      },
+      {
+        "certificate_id": "2a3e981f4833f22fb799",
+        "fact_type": "compensation_state",
+        "subject": "restore_stock",
+        "value": "absent",
+        "scope": "crb-holdout-compensation_pending-h04",
+        "evidence": {
+          "kind": "compensation",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-compensation_pending-h04\\checkpoints\\main\\20260827T190740_bc5a320d_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "c7f5865aea53cb0f524bfc7ba5bcc7b4f224bd9a7a10e62301b10fd82483037f"
+      },
+      {
+        "certificate_id": "a26841cf5755d84ce08d",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-compensation_pending-h04",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-compensation_pending-h04\\checkpoints\\main\\20260827T190740_bc5a320d_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "58ca67fa9cd85f92787108955098a794c0b067f2865974bc60719417f05c96fd"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "effect_status|inventory_move": [
+        "certificate"
+      ],
+      "compensation_state|restore_stock": [
+        "certificate"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "compensation_none"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "inventory_move": 1
+    },
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "inventory_move",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "inventory_move": 1
+    },
+    "units": {
+      "compensation_none": 1,
+      "effect_attempt": 1,
+      "error_detected": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "inventory_move",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "error_detected"
+      },
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

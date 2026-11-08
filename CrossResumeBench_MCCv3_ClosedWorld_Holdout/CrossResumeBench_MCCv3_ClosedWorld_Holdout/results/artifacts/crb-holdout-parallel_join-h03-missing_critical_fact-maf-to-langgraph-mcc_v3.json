@@ -1,0 +1,101 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h03-missing_critical_fact-maf-to-langgraph-mcc_v3",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-parallel_join-h03",
+    "family": "parallel_join",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 514,
+    "payload_sha256": "e1f2078564bc7de157fdc7895bc7cf0892c56c64b44ca5f127f66f42b2544564",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "east"
+      },
+      {
+        "kind": "unit",
+        "unit": "west"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-parallel_join-h03",
+    "workflow": "mccv3_holdout_parallel_join",
+    "source_runtime": "maf",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "84de5b14679e06e5193c13169ddfb69f9a625e77bc54e883da6295f60644e0ec",
+    "continuation_contract_hash": "1410035890a68db8239a4a4183417661341bd73deb0a6a5d4b6c3efea8285ef5",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "north",
+            "east",
+            "south",
+            "west"
+          ]
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "north",
+        "purpose": "avoid replay and premature join"
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "east",
+        "purpose": "avoid replay and premature join"
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "south",
+        "purpose": "avoid replay and premature join"
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "west",
+        "purpose": "avoid replay and premature join"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "dependency_state|merge_join": [
+        "history"
+      ]
+    }
+  }
+}

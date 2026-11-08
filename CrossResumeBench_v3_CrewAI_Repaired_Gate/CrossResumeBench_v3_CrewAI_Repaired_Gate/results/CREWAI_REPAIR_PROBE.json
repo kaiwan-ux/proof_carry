@@ -1,0 +1,64 @@
+{
+  "checks": {
+    "capability_ready": true,
+    "self_resume_restorable": false,
+    "capture_committed_before_ack": false,
+    "capture_not_committed_before_ack": false,
+    "target_committed_correct": true,
+    "target_not_committed_correct": true
+  },
+  "details": {
+    "capability": {
+      "framework": "crewai",
+      "installed": true,
+      "version": "1.15.17",
+      "flow_from_checkpoint": true,
+      "checkpoint_config": true,
+      "json_provider": true,
+      "ready": true,
+      "pause_kind": "method_execution_finished_checkpoint + external_gate"
+    },
+    "self_resume": {
+      "error": "Traceback (most recent call last):\n  File \"F:\\agentic wala\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\src\\crossresumebench_crewai_gate\\probe.py\", line 28, in run_probe\n    d=work/\"self\"; _clean(d); out=runtime_factory(\"crewai\").self_resume_committed(d); details[\"self_resume\"]=out\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\agentic wala\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\src\\crossresumebench_crewai_gate\\native\\crewai_runtime.py\", line 197, in self_resume_committed\n    pause = self.capture_effect_pause(run_dir, \"committed\")\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\agentic wala\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\src\\crossresumebench_crewai_gate\\native\\crewai_runtime.py\", line 107, in capture_effect_pause\n    raise RuntimeError(\nRuntimeError: CrewAI produced no persisted checkpoint after method_execution_finished. Revision C leaves Flow events enabled and waits in a downstream gate, so this indicates an actual checkpoint capability/runtime issue rather than the Revision A pause race.\n"
+    },
+    "capture_committed": {
+      "error": "Traceback (most recent call last):\n  File \"F:\\agentic wala\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\src\\crossresumebench_crewai_gate\\probe.py\", line 36, in run_probe\n    d=work/f\"capture_{world}\"; _clean(d); n=runtime_factory(\"crewai\").capture_effect_pause(d,world); details[f\"capture_{world}\"]=n.to_dict()\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\agentic wala\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\src\\crossresumebench_crewai_gate\\native\\crewai_runtime.py\", line 107, in capture_effect_pause\n    raise RuntimeError(\nRuntimeError: CrewAI produced no persisted checkpoint after method_execution_finished. Revision C leaves Flow events enabled and waits in a downstream gate, so this indicates an actual checkpoint capability/runtime issue rather than the Revision A pause race.\n"
+    },
+    "capture_not_committed": {
+      "error": "Traceback (most recent call last):\n  File \"F:\\agentic wala\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\src\\crossresumebench_crewai_gate\\probe.py\", line 36, in run_probe\n    d=work/f\"capture_{world}\"; _clean(d); n=runtime_factory(\"crewai\").capture_effect_pause(d,world); details[f\"capture_{world}\"]=n.to_dict()\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\agentic wala\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\CrossResumeBench_v3_CrewAI_Repaired_Gate\\src\\crossresumebench_crewai_gate\\native\\crewai_runtime.py\", line 107, in capture_effect_pause\n    raise RuntimeError(\nRuntimeError: CrewAI produced no persisted checkpoint after method_execution_finished. Revision C leaves Flow events enabled and waits in a downstream gate, so this indicates an actual checkpoint capability/runtime issue rather than the Revision A pause race.\n"
+    },
+    "target_committed": {
+      "ledger": {
+        "effect_count": 1,
+        "ack_count": 1,
+        "finish_count": 1
+      },
+      "effect_decision": "skip_effect",
+      "trace": [
+        "skip_effect",
+        "ack",
+        "finish"
+      ],
+      "native_kind": "crewai_target_flow",
+      "flow_id": "94b00100-972e-4dea-9c99-f5f2629b076a",
+      "result": "finished"
+    },
+    "target_not_committed": {
+      "ledger": {
+        "effect_count": 1,
+        "ack_count": 1,
+        "finish_count": 1
+      },
+      "effect_decision": "execute_effect",
+      "trace": [
+        "execute_effect",
+        "ack",
+        "finish"
+      ],
+      "native_kind": "crewai_target_flow",
+      "flow_id": "9d1c17fa-08a6-46a7-89a4-910137f2de24",
+      "result": "finished"
+    }
+  },
+  "probe_pass": false
+}

@@ -1,0 +1,65 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-composite-05",
+    "checkpoint_ref": "thread:proofcarry-104-pc104-composite-05-capture-langgraph-pc104-composite-05",
+    "framework": "langgraph",
+    "native_kind": "langgraph_checkpoint",
+    "native_observation": {
+      "config": {
+        "configurable": {
+          "checkpoint_id": "1f1a3cf3-ad96-671c-8001-cc9519c5d0a3",
+          "checkpoint_ns": "",
+          "thread_id": "proofcarry-104-pc104-composite-05-capture-langgraph-pc104-composite-05"
+        }
+      },
+      "framework": "langgraph",
+      "identifier_label": "node_id",
+      "next": [
+        "resume"
+      ],
+      "pause_status": "waiting",
+      "semantic_namespace": "lg.node",
+      "values_keys": [
+        "case_id",
+        "phase",
+        "store_path"
+      ]
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "effect_plus_callback_a_op": 1
+      },
+      "finish_count": 0,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "effect_plus_callback_a_op",
+          "unit": "effect_plus_callback_a_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_callback_b_request_sent"
+        }
+      ],
+      "units": {
+        "effect_plus_callback_a_attempt": 1,
+        "effect_plus_callback_b_request_sent": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 4.844000000000051
+}

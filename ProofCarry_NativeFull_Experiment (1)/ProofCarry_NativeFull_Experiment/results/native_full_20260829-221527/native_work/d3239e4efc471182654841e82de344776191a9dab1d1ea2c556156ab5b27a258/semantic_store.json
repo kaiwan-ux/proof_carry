@@ -1,0 +1,58 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "invoice_loop_index": 5
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "invoice_loop_index",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_loop_iter_3"
+    },
+    {
+      "key": "invoice_loop_index",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_loop_iter_4"
+    },
+    {
+      "key": "invoice_loop_index",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_loop_iter_5"
+    },
+    {
+      "key": "invoice_loop_index",
+      "kind": "counter",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "invoice_loop_exit": 1,
+    "invoice_loop_iter_3": 1,
+    "invoice_loop_iter_4": 1,
+    "invoice_loop_iter_5": 1
+  }
+}

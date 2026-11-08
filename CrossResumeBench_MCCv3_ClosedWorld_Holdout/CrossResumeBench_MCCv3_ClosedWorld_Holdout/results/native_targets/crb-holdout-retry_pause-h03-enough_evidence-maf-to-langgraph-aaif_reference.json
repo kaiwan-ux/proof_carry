@@ -1,0 +1,79 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1,
+      "retry_try_4": 1,
+      "retry_try_5": 1,
+      "retry_try_6": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 6
+    },
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_4"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_5"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_6"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "retry_try_6"
+    },
+    {
+      "kind": "counter",
+      "key": "retry:retry_job",
+      "value": 6
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "langgraph_target_graph",
+  "final": {
+    "store_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\crb-holdout-retry_pause-h03-enough_evidence-maf-to-langgraph-aaif_reference\\semantic_store.json",
+    "phase": "finished"
+  }
+}

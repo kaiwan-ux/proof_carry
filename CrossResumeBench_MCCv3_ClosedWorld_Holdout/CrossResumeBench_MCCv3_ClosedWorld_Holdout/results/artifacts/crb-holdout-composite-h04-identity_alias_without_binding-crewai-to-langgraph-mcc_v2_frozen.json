@@ -1,0 +1,365 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h04-identity_alias_without_binding-crewai-to-langgraph-mcc_v2_frozen",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-composite-h04",
+    "family": "composite",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "APPROVALS_MISMATCH"
+    ],
+    "payload_bytes": 1136,
+    "payload_sha256": "551d7f5e3b388c4dfa15b1f9fbd5d2365d1ea5421889d0a337d200e6c27dc39b",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "kind": "counter",
+        "key": "loop:batch",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-composite-h04",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "c637ca91c1292b651a82f075b0836856050b569d7923c9892fff243f82d497da",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "counter_observed",
+        "data": {
+          "key": "loop:batch",
+          "value": 3
+        }
+      },
+      {
+        "type": "approval_requested",
+        "semantic_unit": "batch_approval",
+        "data": {
+          "request_id": "src_alias__approve_batch_commit",
+          "blocks": "batch_approval"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "275d8af05742975440b4",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__approve_batch_commit",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h04",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "batch_approval",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h04\\checkpoints\\main\\20260827T190955_6b78a97a_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "3da2fa7a23962bdf0143e022c39d8e9820b7708f09d281bb026e2d1290543351"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "obligation_state:src_alias__approve_batch_commit:pending"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "batch_iter_4"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_5"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_6"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_approval": 1,
+      "batch_done": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1,
+      "batch_iter_4": 1,
+      "batch_iter_5": 1,
+      "batch_iter_6": 1
+    },
+    "approvals": {
+      "approve_batch_commit": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 6
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "id": "approve_batch_commit",
+        "kind": "approval",
+        "unit": "batch_approval"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_done": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1,
+      "batch_iter_4": 1,
+      "batch_iter_5": 1,
+      "batch_iter_6": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 6
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

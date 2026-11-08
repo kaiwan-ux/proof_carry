@@ -1,0 +1,11 @@
+{
+  "combined_sha256": "4e6fdd6d0fc949a7e337b02be9d71706a40f5fc87971f8030e0a5a02a32f6194",
+  "files": {
+    "mechanism/mcc_v3.py": "57eda36a01f94040ff730383957e8a86cdb37265ac528b4943b71d8f0876ff69",
+    "mechanism/proofs.py": "2ff99668579cd316c2392375b07370bd3c038b3d9dbc91064ed7e87648a6a82c",
+    "mechanism/schemas/mcc_v3.schema.json": "4e8cdceeab1f1794a29527b8a40a8dc03219a108af8ac48f50c254e53ef7945a"
+  },
+  "frozen_before_holdout": true,
+  "mechanism": "MCC v3 Closed-World Proof Obligations",
+  "version": "3.0.0"
+}

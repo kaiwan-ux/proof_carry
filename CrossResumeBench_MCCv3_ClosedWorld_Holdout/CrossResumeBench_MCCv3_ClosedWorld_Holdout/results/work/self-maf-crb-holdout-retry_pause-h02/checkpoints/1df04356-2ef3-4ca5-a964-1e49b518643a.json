@@ -1,0 +1,19 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-retry_pause-h02-self-maf-crb-holdout-retry_pause-h02",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "1df04356-2ef3-4ca5-a964-1e49b518643a",
+  "previous_checkpoint_id": "cdea4e91-19ab-4253-a7ec-747722a770ab",
+  "timestamp": "2026-08-27T19:09:58.076343+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

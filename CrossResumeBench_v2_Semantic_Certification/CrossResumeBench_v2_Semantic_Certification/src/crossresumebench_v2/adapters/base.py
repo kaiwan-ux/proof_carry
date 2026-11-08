@@ -1,0 +1,6 @@
+from __future__ import annotations
+from typing import Protocol
+class NativeAdapter(Protocol):
+    name:str
+    def capture_source(self,case): ...
+    def run_target(self,case,continuation,ledger): ...

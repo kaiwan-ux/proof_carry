@@ -1,0 +1,247 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h01-irrelevant_noise-crewai-to-langgraph-mcc_v3",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-composite-h01",
+    "family": "composite",
+    "evidence_variant": "irrelevant_noise",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 2567,
+    "payload_sha256": "0bd20c654353e0e28108a700d27e2c8db64a91075c085c4196e6d891b3d1679d",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "kind": "approval",
+        "id": "approve_contract_close",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-composite-h01",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "db60e1e372b813315a0f4ac4b231e39288214a0a5dd98567ba51cbf8e01a5c03",
+    "continuation_contract_hash": "10f661f0f7d85f12e6f3bb894242dd3647b4422b0c265a027b66e12098151ba5",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "charge_attempt",
+        "data": {
+          "operation": "contract_charge",
+          "commit_status": "unknown",
+          "parent_unit": "charge_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "approval_requested",
+        "semantic_unit": "close_gate",
+        "data": {
+          "request_id": "approve_contract_close",
+          "blocks": "close_gate"
+        }
+      },
+      {
+        "type": "decision_made",
+        "data": {
+          "key": "irrelevant_debug_flag",
+          "choice": "noise"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "c957ef6235d01b236788",
+        "fact_type": "effect_commitment",
+        "subject": "contract_charge",
+        "value": "committed",
+        "scope": "crb-holdout-composite-h01",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h01\\checkpoints\\main\\20260827T190901_d6344952_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "7e93b9ec7ddd4ee82298633b708b461961f11acadc53b8491e1c8063e766ac75"
+      },
+      {
+        "certificate_id": "ac2bdc1cb2da92b8188a",
+        "fact_type": "obligation_state",
+        "subject": "approve_contract_close",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h01",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "close_gate",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h01\\checkpoints\\main\\20260827T190901_d6344952_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "fe8a729e4505874b627a2c704d6a4eab961031d6a2233d3df7ff69020cf30bfc"
+      },
+      {
+        "certificate_id": "1443aca913e7fb180ca5",
+        "fact_type": "fact_value",
+        "subject": "irrelevant_subject",
+        "value": "irrelevant_value",
+        "scope": "crb-holdout-composite-h01",
+        "evidence": {
+          "fact_type": "irrelevant_fact",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h01\\checkpoints\\main\\20260827T190901_d6344952_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "4d50e8302b11224c2ea9cb496e0db5c821f06418fa2cfc671fbeb9a154a253ba"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "approval_state|approve_contract_close": [
+        "history",
+        "certificate"
+      ],
+      "decision_state|irrelevant_debug_flag": [
+        "history"
+      ],
+      "effect_status|contract_charge": [
+        "certificate"
+      ],
+      "irrelevant_fact|irrelevant_subject": [
+        "certificate"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "charge_ack"
+    },
+    {
+      "kind": "approval",
+      "id": "approve_contract_close",
+      "unit": "close_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {
+      "contract_charge": 1
+    },
+    "units": {
+      "approval_requested": 1,
+      "charge_ack": 1,
+      "charge_attempt": 1,
+      "close_gate": 1
+    },
+    "approvals": {
+      "approve_contract_close": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "contract_charge",
+        "unit": "charge_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {
+      "contract_charge": 1
+    },
+    "units": {
+      "approval_requested": 1,
+      "charge_ack": 1,
+      "charge_attempt": 1,
+      "close_gate": 1
+    },
+    "approvals": {
+      "approve_contract_close": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "effect",
+        "operation": "contract_charge",
+        "unit": "charge_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

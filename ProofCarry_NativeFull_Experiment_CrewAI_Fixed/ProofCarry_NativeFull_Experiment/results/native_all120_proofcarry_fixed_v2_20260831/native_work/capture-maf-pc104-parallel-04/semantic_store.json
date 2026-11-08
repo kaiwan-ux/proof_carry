@@ -1,0 +1,28 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "order_parallel_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "order_parallel_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "order_parallel_b3_failed"
+    }
+  ],
+  "units": {
+    "order_parallel_b1": 1,
+    "order_parallel_b2": 1,
+    "order_parallel_b3_failed": 1
+  }
+}

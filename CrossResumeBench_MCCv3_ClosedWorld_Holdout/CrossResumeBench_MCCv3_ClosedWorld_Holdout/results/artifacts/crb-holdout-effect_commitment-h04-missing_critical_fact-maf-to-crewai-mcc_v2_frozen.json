@@ -1,0 +1,69 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h04-missing_critical_fact-maf-to-crewai-mcc_v2_frozen",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-effect_commitment-h04",
+    "family": "effect_commitment",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "AMBIGUOUS_EXTERNAL_COMMIT",
+    "failure_types": [],
+    "payload_bytes": 509,
+    "payload_sha256": "7b7d5ac203329782326431ae91a8857eba929aab3c0aa0195464f7ad765ed395",
+    "expected_plan": [
+      {
+        "kind": "effect",
+        "operation": "device_command",
+        "unit": "effect_attempt"
+      },
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-effect_commitment-h04",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "b9875819800278d9e0e5796832f51852ba61e0db43c7b78f8eaa9907f2b2fb69",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "device_command",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "ambiguities": [
+      {
+        "type": "AMBIGUOUS_EXTERNAL_COMMIT",
+        "operation": "device_command"
+      }
+    ],
+    "certificate_log": [],
+    "inference_log": []
+  }
+}

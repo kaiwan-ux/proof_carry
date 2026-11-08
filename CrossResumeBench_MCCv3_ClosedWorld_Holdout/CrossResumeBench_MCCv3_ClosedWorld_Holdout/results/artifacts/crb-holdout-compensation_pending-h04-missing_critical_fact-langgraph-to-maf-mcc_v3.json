@@ -1,0 +1,86 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h04-missing_critical_fact-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-compensation_pending-h04",
+    "family": "compensation_pending",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1051,
+    "payload_sha256": "aa78cf5db8d55c00f5e4a3a6835d786d9c9a44e3979bdee568d96d8a4f7c6df4",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "compensation_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h04",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "113940af8166e1d24ed160cb18793d731231bd767d4b4643b816b6a29e6e46fe",
+    "continuation_contract_hash": "58cb271c79bdfa07f1f92792ee95cf2b89a7798e03adb4fe3d12e259264e626e",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "inventory_move",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "fb839b42a89cda0a9f9b",
+        "fact_type": "effect_commitment",
+        "subject": "inventory_move",
+        "value": "committed",
+        "scope": "crb-holdout-compensation_pending-h04",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h04-source-langgraph-crb-holdout-compensation_pending-h04"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "2ce1516c1933089c28b469e9064ce6e233473b0df9067ec05b006e7e20983e2c"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "compensation_state",
+        "subject": "restore_stock",
+        "purpose": "know whether rollback remains required"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "effect_status|inventory_move": [
+        "certificate"
+      ]
+    }
+  }
+}

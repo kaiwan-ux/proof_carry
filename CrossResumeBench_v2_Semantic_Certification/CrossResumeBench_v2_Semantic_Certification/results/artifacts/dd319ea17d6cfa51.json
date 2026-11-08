@@ -1,0 +1,238 @@
+{
+  "source_capture": {
+    "case_id": "crb2-retry_effect_attempt_boundary-v01",
+    "workflow": "retry_effect_attempt_boundary",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-retry_effect_attempt_boundary-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "attempt1",
+        "semantic_unit": "remote_call",
+        "data": {
+          "source_label": "attempt1"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "retry_failed",
+        "step": "attempt1",
+        "semantic_unit": "remote_call",
+        "data": {
+          "attempt": 1,
+          "max_attempts": 3
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "attempt2_effect",
+        "semantic_unit": "remote_call",
+        "data": {
+          "operation": "charge",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "remote_call",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "231b6f08c0bc9f903a03",
+        "fact_type": "effect_commitment",
+        "subject": "charge",
+        "value": "committed",
+        "scope": "remote_call",
+        "evidence": {
+          "operation_id": "crb2-retry_effect_attempt_boundary-v01:charge",
+          "idempotency_key": "idem:crb2-retry_effect_attempt_boundary-v01:charge",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "61908225b45728763963074f0d18c683a9e178cc502cfc4dd8f71eb4786ebb18"
+      },
+      {
+        "certificate_id": "db394343cb57da4e876f",
+        "fact_type": "semantic_completion",
+        "subject": "remote_call",
+        "value": "completed",
+        "scope": "remote_call",
+        "evidence": {
+          "operation": "charge",
+          "native_marker": "attempt2_effect",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "62dd622a825f301720593b14091ff9487398e4b48049900ccb5667984a7b36d0"
+      }
+    ],
+    "source_ledger": {
+      "charge": 1
+    },
+    "native_observation": {
+      "kind": "maf_workflow_checkpoint",
+      "framework": "maf",
+      "real_native": true,
+      "workflow_name": "WorkflowBuilder-020f8de5-4914-4c02-ba11-ea87231bc87b",
+      "checkpoint_count": 4,
+      "native_action_executors": 2
+    },
+    "truth_completed_units": [
+      "remote_call"
+    ],
+    "truth_pending_obligations": [
+      {
+        "type": "retry",
+        "step": "remote_call",
+        "next_attempt": 2,
+        "max_attempts": 3
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "oracle": true,
+    "capture": {
+      "case_id": "crb2-retry_effect_attempt_boundary-v01",
+      "workflow": "retry_effect_attempt_boundary",
+      "app_state": {
+        "variant": 1,
+        "request_id": "crb2-retry_effect_attempt_boundary-v01",
+        "amount": 101
+      },
+      "portable_history": [
+        {
+          "seq": 1,
+          "type": "step_observed",
+          "step": "attempt1",
+          "semantic_unit": "remote_call",
+          "data": {
+            "source_label": "attempt1"
+          }
+        },
+        {
+          "seq": 2,
+          "type": "retry_failed",
+          "step": "attempt1",
+          "semantic_unit": "remote_call",
+          "data": {
+            "attempt": 1,
+            "max_attempts": 3
+          }
+        },
+        {
+          "seq": 3,
+          "type": "tool_call_observed",
+          "step": "attempt2_effect",
+          "semantic_unit": "remote_call",
+          "data": {
+            "operation": "charge",
+            "commit_status": "unknown",
+            "result": "timeout",
+            "parent_unit": "remote_call",
+            "unit_completion_observable": false
+          }
+        }
+      ],
+      "certificates": [
+        {
+          "certificate_id": "231b6f08c0bc9f903a03",
+          "fact_type": "effect_commitment",
+          "subject": "charge",
+          "value": "committed",
+          "scope": "remote_call",
+          "evidence": {
+            "operation_id": "crb2-retry_effect_attempt_boundary-v01:charge",
+            "idempotency_key": "idem:crb2-retry_effect_attempt_boundary-v01:charge",
+            "replay": "forbidden"
+          },
+          "issuer": "crossresumebench_witness",
+          "evidence_hash": "61908225b45728763963074f0d18c683a9e178cc502cfc4dd8f71eb4786ebb18"
+        },
+        {
+          "certificate_id": "db394343cb57da4e876f",
+          "fact_type": "semantic_completion",
+          "subject": "remote_call",
+          "value": "completed",
+          "scope": "remote_call",
+          "evidence": {
+            "operation": "charge",
+            "native_marker": "attempt2_effect",
+            "reason": "effect_and_postconditions_completed"
+          },
+          "issuer": "crossresumebench_witness",
+          "evidence_hash": "62dd622a825f301720593b14091ff9487398e4b48049900ccb5667984a7b36d0"
+        }
+      ],
+      "source_ledger": {
+        "charge": 1
+      },
+      "native_observation": {
+        "kind": "maf_workflow_checkpoint",
+        "framework": "maf",
+        "real_native": true,
+        "workflow_name": "WorkflowBuilder-020f8de5-4914-4c02-ba11-ea87231bc87b",
+        "checkpoint_count": 4,
+        "native_action_executors": 2
+      },
+      "truth_completed_units": [
+        "remote_call"
+      ],
+      "truth_pending_obligations": [
+        {
+          "type": "retry",
+          "step": "remote_call",
+          "next_attempt": 2,
+          "max_attempts": 3
+        }
+      ],
+      "truth_dependencies": {},
+      "truth_decisions": {},
+      "truth_counters": {}
+    }
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "remote_call"
+    ],
+    "executed_units": [
+      "finish"
+    ],
+    "final_ledger": {
+      "charge": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "69c0ee39-0210-4fb9-b67a-249f9d56eb8e",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 2
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h04-missing_critical_fact-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-parallel_join-h04",
+    "family": "parallel_join",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 496,
+    "payload_sha256": "2476db41e324703ca75ac8d2478bc6e977d69d7ed2c763d7199ed694aa17285a",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-parallel_join-h04",
+    "workflow": "mccv3_holdout_parallel_join",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "226560b59b0ecd89aa38f7e7e1e6070094ee9c2117db7a7424e522d9ec50d87a",
+    "continuation_contract_hash": "1cd4161a1368ded9b705d1ba9f5e0ca1ba0c283e22c1de104748408a9caad3f7",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "p",
+            "q",
+            "r"
+          ]
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "p",
+        "purpose": "avoid replay and premature join"
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "q",
+        "purpose": "avoid replay and premature join"
+      },
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "semantic_completion",
+        "subject": "r",
+        "purpose": "avoid replay and premature join"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "dependency_state|merge_join": [
+        "history"
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-loop-07",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-loop-07-self-langgraph-pc104-loop-07",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3d00-399c-6209-8001-4d6684e31865",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-loop-07-self-langgraph-pc104-loop-07"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "invoice_loop_index": 2
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "invoice_loop_index",
+            "kind": "counter",
+            "value": 2
+          }
+        ],
+        "units": {}
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "invoice_loop_index": 5
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "invoice_loop_index",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_loop_iter_3"
+        },
+        {
+          "key": "invoice_loop_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_loop_iter_4"
+        },
+        {
+          "key": "invoice_loop_index",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_loop_iter_5"
+        },
+        {
+          "key": "invoice_loop_index",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "unit",
+          "unit": "invoice_loop_exit"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "invoice_loop_exit": 1,
+        "invoice_loop_iter_3": 1,
+        "invoice_loop_iter_4": 1,
+        "invoice_loop_iter_5": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 4.265000000000327
+}

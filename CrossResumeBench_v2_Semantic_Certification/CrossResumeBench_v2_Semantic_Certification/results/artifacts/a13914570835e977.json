@@ -1,0 +1,238 @@
+{
+  "case": {
+    "case_id": "crb2-effect_parent_completion_gap-v02",
+    "family": "effect_parent_completion_gap",
+    "variant": 2,
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-effect_parent_completion_gap-v02",
+      "amount": 102
+    },
+    "source_actions": [
+      {
+        "action_id": "prepare",
+        "semantic_unit": "prepare",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "charge_native",
+        "semantic_unit": "purchase",
+        "kind": "effect",
+        "operation": "charge",
+        "depends_on": [],
+        "parent_unit": "purchase",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": true,
+          "emit_completion": true,
+          "certify_effect": true,
+          "certify_completion": false
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "prepare_t",
+        "semantic_unit": "prepare",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "authorize",
+        "semantic_unit": "purchase",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "charge_t",
+        "semantic_unit": "purchase",
+        "kind": "effect",
+        "operation": "charge",
+        "depends_on": [],
+        "parent_unit": "purchase",
+        "metadata": {
+          "completes_unit": true
+        }
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "prepare",
+      "purchase",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "charge": 1
+    },
+    "mismatch_tags": [
+      "effect-vs-parent-completion",
+      "one-to-many",
+      "source:method_boundary",
+      "target:fanout_partial"
+    ],
+    "source_boundary": "method_boundary",
+    "target_boundary": "fanout_partial",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-effect_parent_completion_gap-v02",
+    "workflow": "effect_parent_completion_gap",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-effect_parent_completion_gap-v02",
+      "amount": 102
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "source_label": "prepare"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "unit": "prepare"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "charge_native",
+        "semantic_unit": "purchase",
+        "data": {
+          "operation": "charge",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "purchase",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "seq": 4,
+        "type": "semantic_unit_completed",
+        "step": "charge_native",
+        "semantic_unit": "purchase",
+        "data": {
+          "unit": "purchase"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "ce2be0a1b711cf367be3",
+        "fact_type": "effect_commitment",
+        "subject": "charge",
+        "value": "committed",
+        "scope": "purchase",
+        "evidence": {
+          "operation_id": "crb2-effect_parent_completion_gap-v02:charge",
+          "idempotency_key": "idem:crb2-effect_parent_completion_gap-v02:charge",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "f48e43042c9419be183c18f7fd64773902bce14d1a408b41d5c4b099fce3ae7a"
+      }
+    ],
+    "source_ledger": {
+      "charge": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [
+      "prepare",
+      "purchase"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-effect_parent_completion_gap-v02",
+      "amount": 102
+    },
+    "effect_ledger": {
+      "charge": {
+        "status": "committed",
+        "source": "caplease_reference",
+        "evidence": {
+          "operation_id": "crb2-effect_parent_completion_gap-v02:charge",
+          "idempotency_key": "idem:crb2-effect_parent_completion_gap-v02:charge",
+          "replay": "forbidden"
+        }
+      }
+    }
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "prepare",
+      "purchase"
+    ],
+    "executed_units": [
+      "prepare",
+      "purchase",
+      "reconcile:purchase",
+      "finish"
+    ],
+    "final_ledger": {
+      "charge": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "failure_types": [
+      "COMPLETED_SEMANTIC_UNIT_REPLAYED"
+    ],
+    "duplicate_effects": 0,
+    "replayed_units": 2,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

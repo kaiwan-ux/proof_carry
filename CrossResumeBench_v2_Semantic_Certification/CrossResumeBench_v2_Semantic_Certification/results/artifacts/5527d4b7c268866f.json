@@ -1,0 +1,168 @@
+{
+  "source_capture": {
+    "case_id": "crb2-join_requires_certified_branch-v01",
+    "workflow": "join_requires_certified_branch",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-join_requires_certified_branch-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "source_label": "a_done"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "unit": "a"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "b_effect",
+        "semantic_unit": "b",
+        "data": {
+          "operation": "bop",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "b",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "c0683d3574b528c246d6",
+        "fact_type": "effect_commitment",
+        "subject": "bop",
+        "value": "committed",
+        "scope": "b",
+        "evidence": {
+          "operation_id": "crb2-join_requires_certified_branch-v01:bop",
+          "idempotency_key": "idem:crb2-join_requires_certified_branch-v01:bop",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "913b950550f67b8471fe193df703d35528cda593b0ceee3a047085132162b0d0"
+      },
+      {
+        "certificate_id": "d923a0a260e0603e8df5",
+        "fact_type": "semantic_completion",
+        "subject": "b",
+        "value": "completed",
+        "scope": "b",
+        "evidence": {
+          "operation": "bop",
+          "native_marker": "b_effect",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "99e2ce3f78b98b967abaabf27fea92d3a77db083ac09e7600fbfb4868827d6ac"
+      }
+    ],
+    "source_ledger": {
+      "bop": 1
+    },
+    "native_observation": {
+      "kind": "langgraph_checkpoint",
+      "framework": "langgraph",
+      "real_native": true,
+      "next": [],
+      "values_keys": [
+        "ctx"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb2-src-crb2-join_requires_certified_branch-v01",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a17a2-89e7-6f0f-8002-94bcfbdb09e5"
+        }
+      },
+      "native_action_nodes": 2
+    },
+    "truth_completed_units": [
+      "a",
+      "b"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {
+      "join": [
+        "a",
+        "b"
+      ]
+    },
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "version": "aaif-reference-v2",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-join_requires_certified_branch-v01",
+      "amount": 101
+    },
+    "pipeline": {
+      "completed_semantics": [
+        "a"
+      ],
+      "current_semantic": "b"
+    },
+    "pending": [],
+    "conversation": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "source_label": "a_done"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "a_done",
+        "semantic_unit": "a",
+        "data": {
+          "unit": "a"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "b_effect",
+        "semantic_unit": "b",
+        "data": {
+          "operation": "bop",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "b",
+          "unit_completion_observable": false
+        }
+      }
+    ]
+  },
+  "inference": {},
+  "target": null,
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

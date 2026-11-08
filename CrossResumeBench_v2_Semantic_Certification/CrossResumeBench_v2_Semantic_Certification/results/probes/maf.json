@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"status\": \"ok\", \"capability\": \"workflow_checkpoint\", \"package\": \"agent-framework-core\"}\n",
+  "stderr": ""
+}

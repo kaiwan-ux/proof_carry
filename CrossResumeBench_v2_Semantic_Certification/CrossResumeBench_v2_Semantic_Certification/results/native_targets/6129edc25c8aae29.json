@@ -1,0 +1,28 @@
+{
+  "completed_units": [
+    "after_child",
+    "child_work",
+    "finish",
+    "parent"
+  ],
+  "executed_units": [
+    "parent",
+    "child_work",
+    "reconcile:child_work",
+    "after_child",
+    "finish"
+  ],
+  "final_ledger": {
+    "ticket": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-5c51dfa7-eb8f-498d-81ba-4468de094b23",
+    "checkpoint_count": 7,
+    "native_action_executors": 5
+  }
+}

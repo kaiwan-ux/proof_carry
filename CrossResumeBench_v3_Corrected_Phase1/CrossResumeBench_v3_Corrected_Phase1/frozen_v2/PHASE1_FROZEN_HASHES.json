@@ -1,0 +1,6 @@
+{
+  "frozen_v2/src/crossresumebench_v2/mcc.py": "90efc7aa161e1f8d2b1177e701351920cef1cbffaeb91788d3e7848c10b7baa2",
+  "frozen_v2/src/crossresumebench_v2/certificates.py": "6e3928c60a8ebfc0e5110dee37dc1663c45b4684953b567d8c7ad1eef7a6f972",
+  "frozen_v2/src/crossresumebench_v2/models.py": "c53af7325ada0544372170355bd6f7fd2d0d8efc5f03172bc58c509b444bfc0e",
+  "frozen_v2/schemas/mcc_v2.schema.json": "64f674bd4d2d4b8a57eddee30dea5a24c88d0ea293b7e588a6c725f9ad6f95d8"
+}

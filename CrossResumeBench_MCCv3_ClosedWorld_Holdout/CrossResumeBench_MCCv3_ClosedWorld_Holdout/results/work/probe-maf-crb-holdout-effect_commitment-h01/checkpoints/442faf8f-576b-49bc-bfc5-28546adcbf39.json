@@ -1,0 +1,19 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-effect_commitment-h01-probe-maf-crb-holdout-effect_commitment-h01",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "442faf8f-576b-49bc-bfc5-28546adcbf39",
+  "previous_checkpoint_id": "58f46944-6e9e-40ca-820b-cb2da025256e",
+  "timestamp": "2026-08-27T18:54:52.785375+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

@@ -1,0 +1,29 @@
+{
+  "approvals": {
+    "approve_model_rollout": 1
+  },
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "approval_requested"
+    },
+    {
+      "id": "approve_model_rollout",
+      "kind": "approval",
+      "unit": "approval_gate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "approval_gate": 1,
+    "approval_requested": 1
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-13",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-composite-13-self-langgraph-pc104-composite-13",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3cf6-ed75-6a05-8001-2ebe0c70b9a5",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-composite-13-self-langgraph-pc104-composite-13"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "loop_plus_callback_a_index": 1
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "loop_plus_callback_a_index",
+            "kind": "counter",
+            "value": 1
+          },
+          {
+            "kind": "unit",
+            "unit": "loop_plus_callback_b_request_sent"
+          }
+        ],
+        "units": {
+          "loop_plus_callback_b_request_sent": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "loop_plus_callback_a_index": 4
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "loop_plus_callback_a_index",
+          "kind": "counter",
+          "value": 1
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_callback_b_request_sent"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_callback_a_iter_2"
+        },
+        {
+          "key": "loop_plus_callback_a_index",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_callback_a_iter_3"
+        },
+        {
+          "key": "loop_plus_callback_a_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_callback_a_iter_4"
+        },
+        {
+          "key": "loop_plus_callback_a_index",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_callback_a_exit"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_callback_b_discard_wrong_callback"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_callback_b_request_new_callback"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "loop_plus_callback_a_exit": 1,
+        "loop_plus_callback_a_iter_2": 1,
+        "loop_plus_callback_a_iter_3": 1,
+        "loop_plus_callback_a_iter_4": 1,
+        "loop_plus_callback_b_discard_wrong_callback": 1,
+        "loop_plus_callback_b_request_new_callback": 1,
+        "loop_plus_callback_b_request_sent": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 4.703000000000429
+}

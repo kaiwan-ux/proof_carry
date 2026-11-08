@@ -1,0 +1,43 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "retry_plus_approval_a_task_attempt": 4
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "retry_plus_approval_a_task_failed_4"
+    },
+    {
+      "key": "retry_plus_approval_a_task_attempt",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "retry_plus_approval_b_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "retry_plus_approval_a_task_exhausted"
+    },
+    {
+      "kind": "unit",
+      "unit": "retry_plus_approval_b_proceed"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "retry_plus_approval_a_task_exhausted": 1,
+    "retry_plus_approval_a_task_failed_4": 1,
+    "retry_plus_approval_b_proceed": 1,
+    "retry_plus_approval_b_requested": 1
+  }
+}

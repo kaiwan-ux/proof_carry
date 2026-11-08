@@ -1,0 +1,123 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h03-complete_negative_snapshot-maf-to-langgraph-mcc_v3",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "family": "approval_wait",
+    "evidence_variant": "complete_negative_snapshot",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 852,
+    "payload_sha256": "93656a72bb9a907f6900ac742dc16175ed17b1a0da13fffdba3f184a5caf6bc4",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-approval_wait-h03",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "maf",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "53155ae12f497d85bee5cf85d9308536bf056bc79ee0dbd78ae4eb9fd4934797",
+    "continuation_contract_hash": "f1cf3133b2e2e7c1e6fce65ed8843061ada8e75d772596910797723184487a6c",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": [
+      {
+        "certificate_id": "95457e29e5928d457809",
+        "fact_type": "obligation_snapshot",
+        "subject": "approval",
+        "value": {
+          "kind": "approval",
+          "members": [],
+          "universe": [
+            "approve_access_change"
+          ],
+          "complete": true
+        },
+        "scope": "crb-holdout-approval_wait-h03",
+        "evidence": {
+          "kind": "approval",
+          "native_checkpoint_ref": "d171a552-b904-45b2-a6f0-95a5ecb9f368"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5c879665075ea490ea5b5aaf00ad844413daa4951c82d11d9c976cffdec58536"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "approval_state|approve_access_change": [
+        "certificate:complete_snapshot"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_checked_none": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_checked_none"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

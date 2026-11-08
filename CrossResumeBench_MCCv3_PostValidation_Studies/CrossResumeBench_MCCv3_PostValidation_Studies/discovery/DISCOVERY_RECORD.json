@@ -1,0 +1,21 @@
+{
+  "derived_principle": "absence of evidence must not be interpreted as evidence of absence for continuation-critical facts",
+  "enough_evidence_safe": "168/168",
+  "failure_classes": [
+    "missing approval obligation",
+    "missing callback obligation",
+    "missing retry bound/progress",
+    "missing loop position",
+    "missing branch completion",
+    "missing compensation obligation",
+    "semantic identity/granularity mismatch"
+  ],
+  "mcc_v2_rows": 480,
+  "mcc_v2_safe_completion": 192,
+  "mcc_v2_safe_rejection": 96,
+  "mcc_v2_technical": 0,
+  "mcc_v2_unsafe": 192,
+  "role": "DISCOVERY_ONLY_DO_NOT_COUNT_AS_HOLDOUT_VALIDATION",
+  "sha256": "163aa4414b05cbde2c46e46076b8ece4c01e31f695e032924128d00e20af9f18",
+  "source_zip": "CrossResumeBench_v3_Full_results.zip"
+}

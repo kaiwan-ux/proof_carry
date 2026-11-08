@@ -1,0 +1,187 @@
+{
+  "row": {
+    "run_id": "crb-holdout-parallel_join-h02-enough_evidence-maf-to-crewai-mcc_v2_frozen",
+    "source": "maf",
+    "target": "crewai",
+    "case_id": "crb-holdout-parallel_join-h02",
+    "family": "parallel_join",
+    "evidence_variant": "enough_evidence",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH"
+    ],
+    "payload_bytes": 406,
+    "payload_sha256": "b0aa8bdd753542b3bfe8bb9c23579ac202048420addfc4fc0045ac74d12bdd0f",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-parallel_join-h02",
+    "workflow": "mccv3_holdout_parallel_join",
+    "source_runtime": "maf",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "11ea938634796d0572c9240ff9f706bd891071b4459f5fd5a070cf82ce04f2a6",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "join_observed",
+        "semantic_unit": "merge_join",
+        "data": {
+          "requires": [
+            "red",
+            "green",
+            "blue"
+          ]
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "unit",
+      "unit": "red"
+    },
+    {
+      "kind": "unit",
+      "unit": "green"
+    },
+    {
+      "kind": "unit",
+      "unit": "blue"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 1,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "blue": 1,
+      "green": 2,
+      "merge_join": 1,
+      "red": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "red"
+      },
+      {
+        "kind": "unit",
+        "unit": "green"
+      },
+      {
+        "kind": "unit",
+        "unit": "blue"
+      },
+      {
+        "kind": "unit",
+        "unit": "merge_join"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

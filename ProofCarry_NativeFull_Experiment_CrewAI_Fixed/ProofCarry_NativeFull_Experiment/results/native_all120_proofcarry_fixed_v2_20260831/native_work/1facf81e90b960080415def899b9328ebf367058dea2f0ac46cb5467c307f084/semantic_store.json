@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "subscription_cancel_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "subscription_cancel_attempt_recorded"
+    },
+    {
+      "kind": "effect",
+      "operation": "subscription_cancel_op",
+      "unit": "subscription_cancel_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "subscription_cancel_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "subscription_cancel_ack": 1,
+    "subscription_cancel_attempt": 1,
+    "subscription_cancel_attempt_recorded": 1
+  }
+}

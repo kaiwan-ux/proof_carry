@@ -1,0 +1,1 @@
+After a successful run, send **CrossResumeBench_v2_results.zip** without editing it. Keep `results/technical_failures.json`, `VERIFY_RESULTS.json`, `PREFLIGHT.json`, freeze records, native source captures, and all per-run artifacts.

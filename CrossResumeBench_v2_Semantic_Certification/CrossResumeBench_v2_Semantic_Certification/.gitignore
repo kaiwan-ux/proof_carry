@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.venv/
+results/*.csv
+results/*.json
+CrossResumeBench_v2_results.zip

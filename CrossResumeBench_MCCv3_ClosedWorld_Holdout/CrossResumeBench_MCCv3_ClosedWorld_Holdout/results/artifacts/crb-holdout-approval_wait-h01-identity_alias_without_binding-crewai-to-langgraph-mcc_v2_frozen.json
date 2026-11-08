@@ -1,0 +1,137 @@
+{
+  "row": {
+    "run_id": "crb-holdout-approval_wait-h01-identity_alias_without_binding-crewai-to-langgraph-mcc_v2_frozen",
+    "source": "crewai",
+    "target": "langgraph",
+    "case_id": "crb-holdout-approval_wait-h01",
+    "family": "approval_wait",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [
+      "UNITS_MISMATCH",
+      "APPROVALS_MISMATCH"
+    ],
+    "payload_bytes": 1085,
+    "payload_sha256": "bd71e23b40cd0281e8a2992a7b00c0e4e135127b8e4e8321ecb8fe96d137c75e",
+    "expected_plan": [
+      {
+        "id": "approve_vendor_payout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-approval_wait-h01",
+    "workflow": "mccv3_holdout_approval_wait",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "c1ccb7d5c068be73db9cb8985fb73aa1b8d20e15e59acc14ed2be7acbf3c0c87",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "approval_requested",
+        "semantic_unit": "approval_gate",
+        "data": {
+          "request_id": "src_alias__approve_vendor_payout",
+          "blocks": "approval_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "11c8d5d4727375b49bfa",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__approve_vendor_payout",
+        "value": "pending",
+        "scope": "crb-holdout-approval_wait-h01",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "approval_gate",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-approval_wait-h01\\checkpoints\\main\\20260827T185934_21e06e6a_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "fe5e3888324d7fd81a5daeafea6775cf35721b296d8d19e5210b96f0fd238f42"
+      }
+    ]
+  },
+  "report": {
+    "ambiguities": [],
+    "certificate_log": [
+      "obligation_state:src_alias__approve_vendor_payout:pending"
+    ],
+    "inference_log": []
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "approval_gate": 1,
+      "approval_requested": 1
+    },
+    "approvals": {
+      "approve_vendor_payout": 1
+    },
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "id": "approve_vendor_payout",
+        "kind": "approval",
+        "unit": "approval_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

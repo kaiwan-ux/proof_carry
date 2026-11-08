@@ -1,0 +1,32 @@
+{
+  "actual": {
+    "family_gate_rows": 24,
+    "migration_rows": 3600,
+    "self_resume_rows": 360,
+    "source_capture_rows": 360
+  },
+  "case_preset": "all120",
+  "expected": {
+    "cases": 120,
+    "families": 8,
+    "family_gate_rows": 24,
+    "frameworks": 3,
+    "methods": 1,
+    "migration_rows": 3600,
+    "pairs": 6,
+    "self_resume_rows": 360,
+    "source_capture_rows": 360,
+    "variants": 5
+  },
+  "methods": [
+    "proofcarry"
+  ],
+  "profile": "proofcarry",
+  "variants": [
+    "enough_evidence",
+    "missing_critical_fact",
+    "runtime_binding_complete",
+    "runtime_binding_missing",
+    "irrelevant_noise"
+  ]
+}

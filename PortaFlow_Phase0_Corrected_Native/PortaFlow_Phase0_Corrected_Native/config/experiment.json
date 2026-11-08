@@ -1,0 +1,23 @@
+{
+  "experiment_name": "portaflow_phase0_corrected_native",
+  "schema_version": "0.2",
+  "seed": 20260822,
+  "frameworks": ["langgraph", "crewai", "maf"],
+  "workflows": ["retry", "approval", "side_effect"],
+  "conditions": ["naive_state", "state_history", "native_semantic"],
+  "include_same_runtime_pairs": false,
+  "evidence_policy": {
+    "native_cross_runtime_is_primary": true,
+    "controlled_model_is_secondary_only": true,
+    "native_semantic_is_diagnostic_upper_bound": true,
+    "no_confidence_intervals_for_deterministic_cases": true
+  },
+  "kill_rule": {
+    "description": "If naive_state preserves all hard invariants in at least 17 of the 18 directed native migration cases, do not claim a strong continuation-information gap.",
+    "naive_safe_cases_kill_threshold": 17,
+    "total_core_cases": 18
+  },
+  "llm_enabled": false,
+  "llm_model": "openai/gpt-oss-120b",
+  "technical_failure_timeout_seconds": 90
+}

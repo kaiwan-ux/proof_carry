@@ -1,0 +1,90 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-composite-14",
+    "checkpoint_ref": "5584d449-2361-45b2-a430-205cc61fcd90",
+    "framework": "maf",
+    "native_kind": "maf_superstep_file_checkpoint",
+    "native_observation": {
+      "checkpoint_count": 2,
+      "checkpoint_id": "5584d449-2361-45b2-a430-205cc61fcd90",
+      "event_trace": [
+        {
+          "class": "WorkflowEvent",
+          "type": "started"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "status"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "superstep_started"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "executor_invoked"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "executor_completed"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "superstep_completed"
+        }
+      ],
+      "framework": "maf",
+      "handler_typing_mode": "explicit",
+      "identifier_label": "activity_id",
+      "pause_status": "suspended",
+      "semantic_namespace": "maf.activity",
+      "workflow_name": "proofcarry-104-pc104-composite-14-capture-maf-pc104-composite-14"
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "effect_plus_parallel_a_op::partial": 1
+      },
+      "finish_count": 0,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "effect_plus_parallel_a_op::partial",
+          "unit": "effect_plus_parallel_a_partial_started"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b2_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b4"
+        }
+      ],
+      "units": {
+        "effect_plus_parallel_a_partial_started": 1,
+        "effect_plus_parallel_b_b1": 1,
+        "effect_plus_parallel_b_b2_failed": 1,
+        "effect_plus_parallel_b_b4": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 0.5929999999971187
+}

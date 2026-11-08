@@ -1,0 +1,29 @@
+{
+  "approvals": {
+    "credit_approval_request": 1
+  },
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "credit_approval_requested"
+    },
+    {
+      "id": "credit_approval_request",
+      "kind": "approval",
+      "unit": "credit_approval_approval_wait"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "credit_approval_approval_wait": 1,
+    "credit_approval_requested": 1
+  }
+}

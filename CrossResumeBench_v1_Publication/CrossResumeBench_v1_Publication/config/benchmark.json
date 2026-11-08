@@ -1,0 +1,56 @@
+{
+  "benchmark_name": "CrossResumeBench_v1",
+  "seed": 260826,
+  "generated_cases": 60,
+  "variants_per_family": 5,
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "baselines": [
+    "state_only",
+    "raw_history",
+    "history_inference",
+    "native_restart",
+    "aaif_state_strict",
+    "caplease_inspired",
+    "aaif_plus_caplease",
+    "explicit_minimal",
+    "full_pcc",
+    "mcc",
+    "oracle"
+  ],
+  "semantic_suite": {
+    "families": [
+      "approval_then_effect_timeout",
+      "effect_then_reject_branch",
+      "two_effects_one_ambiguous",
+      "parallel_two_effects_partial",
+      "nested_loop_retry_effect",
+      "callback_after_commit",
+      "compensation_after_partial_parallel",
+      "one_to_many_mapping",
+      "many_to_one_mapping",
+      "approval_inside_parallel",
+      "retry_budget_split",
+      "branch_join_pending_tool"
+    ]
+  },
+  "native_confirmation": {
+    "cases_per_family": 1,
+    "baselines": [
+      "history_inference",
+      "aaif_state_strict",
+      "caplease_inspired",
+      "aaif_plus_caplease",
+      "explicit_minimal",
+      "mcc",
+      "oracle"
+    ]
+  },
+  "claim_policy": {
+    "aaif": "reference schema projection only; not official AAIF implementation",
+    "caplease": "mechanism-inspired reference baseline only; not authors' artifact"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "completed_units": [
+    "finish",
+    "left_branch",
+    "merge",
+    "route"
+  ],
+  "executed_units": [
+    "route",
+    "reconcile:left_branch",
+    "merge",
+    "finish"
+  ],
+  "final_ledger": {
+    "left_write": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-2d88034a-8fd8-454b-80ed-a89fe5309dd1",
+    "checkpoint_count": 6,
+    "native_action_executors": 4
+  }
+}

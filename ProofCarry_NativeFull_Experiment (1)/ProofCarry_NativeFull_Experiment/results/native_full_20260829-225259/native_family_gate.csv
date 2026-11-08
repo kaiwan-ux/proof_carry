@@ -1,0 +1,48 @@
+framework,family,case_id,pass,lifecycle_returned,status,duration_ms,error
+langgraph,approval,pc104-approval-01,1,1,ok,7487.73059999985,
+langgraph,callback,pc104-callback-01,1,1,ok,8697.830199998862,
+langgraph,compensation,pc104-compensation-01,1,1,ok,8393.922999999631,
+langgraph,composite,pc104-composite-01,1,1,ok,8367.868899998939,
+langgraph,effect_commitment,pc104-effect_commitment-01,1,1,ok,8511.109200000647,
+langgraph,loop,pc104-loop-01,1,1,ok,8305.917699999554,
+langgraph,parallel,pc104-parallel-01,1,1,ok,8396.151899998586,
+langgraph,retry,pc104-retry-01,1,1,ok,8489.409600000727,
+crewai,approval,pc104-approval-01,0,0,semantic_complete_lifecycle_hang,82607.23390000021,
+crewai,callback,pc104-callback-01,0,0,semantic_complete_lifecycle_hang,71544.523999999,
+crewai,compensation,pc104-compensation-01,0,0,semantic_complete_lifecycle_hang,66875.73919999886,
+crewai,composite,pc104-composite-01,0,0,semantic_complete_lifecycle_hang,48279.59479999845,
+crewai,effect_commitment,pc104-effect_commitment-01,0,0,semantic_complete_lifecycle_hang,67671.85249999966,
+crewai,loop,pc104-loop-01,0,0,semantic_complete_lifecycle_hang,72545.27229999985,
+crewai,parallel,pc104-parallel-01,0,0,semantic_complete_lifecycle_hang,71347.77159999976,
+crewai,retry,pc104-retry-01,0,0,semantic_complete_lifecycle_hang,70454.43120000164,
+maf,approval,pc104-approval-01,1,1,ok,2406.998399999793,
+maf,callback,pc104-callback-01,1,1,ok,2412.637100000211,
+maf,compensation,pc104-compensation-01,1,1,ok,2196.9091999999364,
+maf,composite,pc104-composite-01,1,1,ok,2139.5614000011847,
+maf,effect_commitment,pc104-effect_commitment-01,1,1,ok,2098.5237000004417,
+maf,loop,pc104-loop-01,1,1,ok,2010.4953000009118,
+maf,parallel,pc104-parallel-01,0,0,technical_failure,2351.477199999863,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 146, in native_family_gate
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 34, in self_resume_case
+    raise IsolatedCallError(d.get('error') or f'self resume failed: {d}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallError: Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\scripts\native_operation_worker.py"", line 33, in main
+    store=SemanticStore(run_dir/'semantic_store.json').read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\store.py"", line 11, in read
+    d=json.loads(self.path.read_text(encoding=""utf-8""))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\__init__.py"", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Program Files\Python312\Lib\json\decoder.py"", line 355, in raw_decode
+    raise JSONDecodeError(""Expecting value"", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+"
+maf,retry,pc104-retry-01,1,1,ok,2443.4406999989733,

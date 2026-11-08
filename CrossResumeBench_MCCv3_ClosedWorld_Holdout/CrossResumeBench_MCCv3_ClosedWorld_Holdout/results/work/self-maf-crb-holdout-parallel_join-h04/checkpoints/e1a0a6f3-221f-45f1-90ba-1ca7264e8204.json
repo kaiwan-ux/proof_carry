@@ -1,0 +1,19 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-parallel_join-h04-self-maf-crb-holdout-parallel_join-h04",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "e1a0a6f3-221f-45f1-90ba-1ca7264e8204",
+  "previous_checkpoint_id": "5c3d46bd-4c5b-424b-adad-7bfcc9bffe3d",
+  "timestamp": "2026-08-27T19:10:01.857071+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

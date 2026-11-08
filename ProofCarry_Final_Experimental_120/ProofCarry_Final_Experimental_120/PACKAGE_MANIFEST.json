@@ -1,0 +1,9 @@
+{
+  "package": "ProofCarry_Final_Experimental_120",
+  "created_for": "final experimental evaluation",
+  "base_cases": 120,
+  "families": 8,
+  "cases_per_family": 15,
+  "legacy_sealed_rows": 6144,
+  "scientific_policy": "No fabricated/native-implied results. Raw runs are append-only by run_id."
+}

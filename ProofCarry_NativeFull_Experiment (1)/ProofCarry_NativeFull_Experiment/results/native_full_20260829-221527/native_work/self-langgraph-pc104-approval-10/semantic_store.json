@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "data_export_approval_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "data_export_approval_proceed"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "data_export_approval_proceed": 1,
+    "data_export_approval_requested": 1
+  }
+}

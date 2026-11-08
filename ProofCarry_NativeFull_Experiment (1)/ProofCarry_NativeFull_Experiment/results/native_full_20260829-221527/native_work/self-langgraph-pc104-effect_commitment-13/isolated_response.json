@@ -1,0 +1,108 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-effect_commitment-13",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-effect_commitment-13-self-langgraph-pc104-effect_commitment-13",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3cfc-af53-6262-8001-97a0d30be637",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-effect_commitment-13-self-langgraph-pc104-effect_commitment-13"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {
+          "ticket_close_op::partial": 1
+        },
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "effect",
+            "operation": "ticket_close_op::partial",
+            "unit": "ticket_close_partial_started"
+          }
+        ],
+        "units": {
+          "ticket_close_partial_started": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {
+        "ticket_close_partial_rollback": 1
+      },
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "ticket_close_op": 1,
+        "ticket_close_op::partial": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "ticket_close_op::partial",
+          "unit": "ticket_close_partial_started"
+        },
+        {
+          "action": "ticket_close_partial_rollback",
+          "kind": "compensation",
+          "unit": "ticket_close_partial_compensate"
+        },
+        {
+          "kind": "effect",
+          "operation": "ticket_close_op",
+          "unit": "ticket_close_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "ticket_close_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "ticket_close_ack": 1,
+        "ticket_close_attempt": 1,
+        "ticket_close_partial_compensate": 1,
+        "ticket_close_partial_started": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 4.188000000000102
+}

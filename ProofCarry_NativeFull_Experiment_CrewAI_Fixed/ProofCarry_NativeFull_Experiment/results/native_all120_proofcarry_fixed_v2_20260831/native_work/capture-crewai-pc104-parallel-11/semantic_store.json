@@ -1,0 +1,28 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b4_failed"
+    }
+  ],
+  "units": {
+    "invoice_parallel_b2": 1,
+    "invoice_parallel_b3": 1,
+    "invoice_parallel_b4_failed": 1
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "approvals": {},
+  "callbacks": {
+    "parallel_plus_callback_b_cb": 1
+  },
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_a_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_a_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_a_b4_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_b_request_sent"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_a_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_a_b4_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_a_b4"
+    },
+    {
+      "kind": "unit",
+      "unit": "parallel_plus_callback_a_join"
+    },
+    {
+      "id": "parallel_plus_callback_b_cb",
+      "kind": "callback",
+      "unit": "parallel_plus_callback_b_wait_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "parallel_plus_callback_a_b1": 1,
+    "parallel_plus_callback_a_b2": 1,
+    "parallel_plus_callback_a_b3": 1,
+    "parallel_plus_callback_a_b4": 1,
+    "parallel_plus_callback_a_b4_failed": 1,
+    "parallel_plus_callback_a_b4_recover": 1,
+    "parallel_plus_callback_a_join": 1,
+    "parallel_plus_callback_b_request_sent": 1,
+    "parallel_plus_callback_b_wait_callback": 1
+  }
+}

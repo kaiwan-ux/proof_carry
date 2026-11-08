@@ -1,0 +1,48 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "retry:sync_retry": 3
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "sync_try_1"
+    },
+    {
+      "kind": "unit",
+      "unit": "sync_try_2"
+    },
+    {
+      "key": "retry:sync_retry",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "callback_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "sync_try_3"
+    },
+    {
+      "key": "retry:sync_retry",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "callback_requested": 1,
+    "sync_try_1": 1,
+    "sync_try_2": 1,
+    "sync_try_3": 1
+  }
+}

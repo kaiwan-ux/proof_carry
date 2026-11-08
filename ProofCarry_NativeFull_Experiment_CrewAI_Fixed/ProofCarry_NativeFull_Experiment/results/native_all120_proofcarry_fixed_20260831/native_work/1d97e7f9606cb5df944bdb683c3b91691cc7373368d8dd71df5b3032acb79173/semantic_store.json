@@ -1,0 +1,58 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "validation_loop_index": 4
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "validation_loop_index",
+      "kind": "counter",
+      "value": 1
+    },
+    {
+      "kind": "unit",
+      "unit": "validation_loop_iter_2"
+    },
+    {
+      "key": "validation_loop_index",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "validation_loop_iter_3"
+    },
+    {
+      "key": "validation_loop_index",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "validation_loop_iter_4"
+    },
+    {
+      "key": "validation_loop_index",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "validation_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "validation_loop_exit": 1,
+    "validation_loop_iter_2": 1,
+    "validation_loop_iter_3": 1,
+    "validation_loop_iter_4": 1
+  }
+}

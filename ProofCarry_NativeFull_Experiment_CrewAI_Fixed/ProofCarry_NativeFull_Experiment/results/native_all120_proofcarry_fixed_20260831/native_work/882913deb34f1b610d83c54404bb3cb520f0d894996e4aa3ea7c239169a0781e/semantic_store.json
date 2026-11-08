@@ -1,0 +1,44 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {
+    "ticket_close_partial_rollback": 1
+  },
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "ticket_close_op": 1,
+    "ticket_close_op::partial": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "ticket_close_op::partial",
+      "unit": "ticket_close_partial_started"
+    },
+    {
+      "action": "ticket_close_partial_rollback",
+      "kind": "compensation",
+      "unit": "ticket_close_partial_compensate"
+    },
+    {
+      "kind": "effect",
+      "operation": "ticket_close_op",
+      "unit": "ticket_close_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "ticket_close_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "ticket_close_ack": 1,
+    "ticket_close_attempt": 1,
+    "ticket_close_partial_compensate": 1,
+    "ticket_close_partial_started": 1
+  }
+}

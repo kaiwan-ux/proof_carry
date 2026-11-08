@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+results/*.csv
+results/*.json
+results/*.jsonl
+results/*.txt
+results/*.md
+results/graphs/*.png
+results/native_sources/*.json
+results/native_targets/*.json
+results/probes/*.json
+!results/README.md

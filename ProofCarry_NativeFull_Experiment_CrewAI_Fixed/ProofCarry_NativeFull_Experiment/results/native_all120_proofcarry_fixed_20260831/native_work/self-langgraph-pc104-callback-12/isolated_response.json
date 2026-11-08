@@ -1,0 +1,87 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-callback-12",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-callback-12-self-langgraph-pc104-callback-12",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4ac9-63f4-64dd-8001-83ad44be1e6d",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-callback-12-self-langgraph-pc104-callback-12"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "job_callback_request_sent"
+          }
+        ],
+        "units": {
+          "job_callback_request_sent": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "job_callback_request_sent"
+        },
+        {
+          "kind": "unit",
+          "unit": "job_callback_request_new_callback"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "job_callback_request_new_callback": 1,
+        "job_callback_request_sent": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 3.280999999999949
+}

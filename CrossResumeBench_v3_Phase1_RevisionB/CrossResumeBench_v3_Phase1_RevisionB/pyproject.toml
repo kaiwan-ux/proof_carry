@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crossresumebench-v3-phase1-revision-b"
+version = "3.3.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "frozen_v2/src"]
+testpaths = ["tests"]

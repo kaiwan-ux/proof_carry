@@ -1,0 +1,52 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "loop:holdout": 5
+  },
+  "decisions": {
+    "loop_break": true
+  },
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "loop_step_1"
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_2"
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_3"
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_4"
+    },
+    {
+      "kind": "unit",
+      "unit": "loop_step_5"
+    },
+    {
+      "key": "loop:holdout",
+      "kind": "counter",
+      "value": 5
+    },
+    {
+      "key": "loop_break",
+      "kind": "decision",
+      "value": true
+    }
+  ],
+  "units": {
+    "loop_step_1": 1,
+    "loop_step_2": 1,
+    "loop_step_3": 1,
+    "loop_step_4": 1,
+    "loop_step_5": 1
+  }
+}

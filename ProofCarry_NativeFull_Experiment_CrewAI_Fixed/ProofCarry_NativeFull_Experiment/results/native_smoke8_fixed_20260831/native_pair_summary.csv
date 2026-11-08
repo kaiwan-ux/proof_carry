@@ -1,0 +1,7 @@
+source,target,method,rows,safe_completion,safe_rejection,unsafe,technical,unsafe_rate_nontechnical,safe_completion_rate_nontechnical
+crewai,langgraph,proofcarry,8,8,0,0,0,0.0,1.0
+crewai,maf,proofcarry,8,8,0,0,0,0.0,1.0
+langgraph,crewai,proofcarry,8,8,0,0,0,0.0,1.0
+langgraph,maf,proofcarry,8,8,0,0,0,0.0,1.0
+maf,crewai,proofcarry,8,8,0,0,0,0.0,1.0
+maf,langgraph,proofcarry,8,8,0,0,0,0.0,1.0

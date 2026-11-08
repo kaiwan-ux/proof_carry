@@ -1,0 +1,25 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "credential_retry_task_attempt": 4
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "credential_retry_task_failed_4"
+    },
+    {
+      "key": "credential_retry_task_attempt",
+      "kind": "counter",
+      "value": 4
+    }
+  ],
+  "units": {
+    "credential_retry_task_failed_4": 1
+  }
+}

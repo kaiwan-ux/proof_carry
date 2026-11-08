@@ -1,0 +1,296 @@
+{
+  "case": {
+    "case_id": "crb2-retry_effect_attempt_boundary-v02",
+    "family": "retry_effect_attempt_boundary",
+    "variant": 2,
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-retry_effect_attempt_boundary-v02",
+      "amount": 102
+    },
+    "source_actions": [
+      {
+        "action_id": "attempt1",
+        "semantic_unit": "remote_call",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "retry": [
+            1,
+            3
+          ],
+          "emit_completion": false,
+          "unit_completed": false
+        }
+      },
+      {
+        "action_id": "attempt2_effect",
+        "semantic_unit": "remote_call",
+        "kind": "effect",
+        "operation": "charge",
+        "depends_on": [],
+        "parent_unit": "remote_call",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": true,
+          "emit_completion": true,
+          "certify_completion": false
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "attempt_t",
+        "semantic_unit": "remote_call",
+        "kind": "effect",
+        "operation": "charge",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "remote_call",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "charge": 1
+    },
+    "mismatch_tags": [
+      "retry-vs-effect",
+      "attempt-ownership",
+      "source:pending_request",
+      "target:mid_node_interrupt"
+    ],
+    "source_boundary": "pending_request",
+    "target_boundary": "mid_node_interrupt",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-retry_effect_attempt_boundary-v02",
+    "workflow": "retry_effect_attempt_boundary",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-retry_effect_attempt_boundary-v02",
+      "amount": 102
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "attempt1",
+        "semantic_unit": "remote_call",
+        "data": {
+          "source_label": "attempt1"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "retry_failed",
+        "step": "attempt1",
+        "semantic_unit": "remote_call",
+        "data": {
+          "attempt": 1,
+          "max_attempts": 3
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "attempt2_effect",
+        "semantic_unit": "remote_call",
+        "data": {
+          "operation": "charge",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "remote_call",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "seq": 4,
+        "type": "semantic_unit_completed",
+        "step": "attempt2_effect",
+        "semantic_unit": "remote_call",
+        "data": {
+          "unit": "remote_call"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "ff9bed0ea9998f157471",
+        "fact_type": "effect_commitment",
+        "subject": "charge",
+        "value": "committed",
+        "scope": "remote_call",
+        "evidence": {
+          "operation_id": "crb2-retry_effect_attempt_boundary-v02:charge",
+          "idempotency_key": "idem:crb2-retry_effect_attempt_boundary-v02:charge",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5bb40c3058d46b51fb52ccbb788cf00ed2548f6e3cfb3f2806e546c08d84c9b2"
+      }
+    ],
+    "source_ledger": {
+      "charge": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [
+      "remote_call"
+    ],
+    "truth_pending_obligations": [
+      {
+        "type": "retry",
+        "step": "remote_call",
+        "next_attempt": 2,
+        "max_attempts": 3
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "oracle": true,
+    "capture": {
+      "case_id": "crb2-retry_effect_attempt_boundary-v02",
+      "workflow": "retry_effect_attempt_boundary",
+      "app_state": {
+        "variant": 2,
+        "request_id": "crb2-retry_effect_attempt_boundary-v02",
+        "amount": 102
+      },
+      "portable_history": [
+        {
+          "seq": 1,
+          "type": "step_observed",
+          "step": "attempt1",
+          "semantic_unit": "remote_call",
+          "data": {
+            "source_label": "attempt1"
+          }
+        },
+        {
+          "seq": 2,
+          "type": "retry_failed",
+          "step": "attempt1",
+          "semantic_unit": "remote_call",
+          "data": {
+            "attempt": 1,
+            "max_attempts": 3
+          }
+        },
+        {
+          "seq": 3,
+          "type": "tool_call_observed",
+          "step": "attempt2_effect",
+          "semantic_unit": "remote_call",
+          "data": {
+            "operation": "charge",
+            "commit_status": "unknown",
+            "result": "timeout",
+            "parent_unit": "remote_call",
+            "unit_completion_observable": true
+          }
+        },
+        {
+          "seq": 4,
+          "type": "semantic_unit_completed",
+          "step": "attempt2_effect",
+          "semantic_unit": "remote_call",
+          "data": {
+            "unit": "remote_call"
+          }
+        }
+      ],
+      "certificates": [
+        {
+          "certificate_id": "ff9bed0ea9998f157471",
+          "fact_type": "effect_commitment",
+          "subject": "charge",
+          "value": "committed",
+          "scope": "remote_call",
+          "evidence": {
+            "operation_id": "crb2-retry_effect_attempt_boundary-v02:charge",
+            "idempotency_key": "idem:crb2-retry_effect_attempt_boundary-v02:charge",
+            "replay": "forbidden"
+          },
+          "issuer": "crossresumebench_witness",
+          "evidence_hash": "5bb40c3058d46b51fb52ccbb788cf00ed2548f6e3cfb3f2806e546c08d84c9b2"
+        }
+      ],
+      "source_ledger": {
+        "charge": 1
+      },
+      "native_observation": {
+        "kind": "semantic_simulator",
+        "framework": "semantic"
+      },
+      "truth_completed_units": [
+        "remote_call"
+      ],
+      "truth_pending_obligations": [
+        {
+          "type": "retry",
+          "step": "remote_call",
+          "next_attempt": 2,
+          "max_attempts": 3
+        }
+      ],
+      "truth_dependencies": {},
+      "truth_decisions": {},
+      "truth_counters": {}
+    }
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "remote_call"
+    ],
+    "executed_units": [
+      "finish"
+    ],
+    "final_ledger": {
+      "charge": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

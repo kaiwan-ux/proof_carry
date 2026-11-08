@@ -1,0 +1,18 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "callback_closed"
+    }
+  ],
+  "units": {
+    "callback_closed": 1
+  }
+}

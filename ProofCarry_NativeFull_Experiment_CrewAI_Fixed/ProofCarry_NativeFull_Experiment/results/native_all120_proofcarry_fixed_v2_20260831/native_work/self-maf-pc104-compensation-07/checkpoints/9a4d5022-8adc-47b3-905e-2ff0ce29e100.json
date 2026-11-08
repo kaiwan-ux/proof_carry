@@ -1,0 +1,19 @@
+{
+  "workflow_name": "proofcarry-104-pc104-compensation-07-self-maf-pc104-compensation-07",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "9a4d5022-8adc-47b3-905e-2ff0ce29e100",
+  "previous_checkpoint_id": "1858bb7d-fa12-4d7c-99a4-6cee8a3ad94d",
+  "timestamp": "2026-08-30T23:29:40.238047+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

@@ -1,0 +1,123 @@
+{
+  "row": {
+    "run_id": "crb-holdout-async_callback-h03-complete_negative_snapshot-crewai-to-maf-mcc_v3",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-async_callback-h03",
+    "family": "async_callback",
+    "evidence_variant": "complete_negative_snapshot",
+    "method": "mcc_v3",
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "",
+    "failure_types": [],
+    "payload_bytes": 1057,
+    "payload_sha256": "293d530cbfcae9c64c6058770c813be20c096381db5686ead935df6d9a0e22f6",
+    "expected_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [
+      {
+        "kind": "finish"
+      }
+    ],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-async_callback-h03",
+    "workflow": "mccv3_holdout_async_callback",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "018aa024d0ff1f086ff6e713be78eca0147a422b4054a020e8fd8d46b8ec6b0f",
+    "continuation_contract_hash": "98e8a527a2dd98198bbf0d625fc22b891ff284fc74b2c88e2628250757a884c9",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [],
+    "certificates": [
+      {
+        "certificate_id": "9d4450135a0a17b99830",
+        "fact_type": "obligation_snapshot",
+        "subject": "callback",
+        "value": {
+          "kind": "callback",
+          "members": [],
+          "universe": [
+            "async_job_cb"
+          ],
+          "complete": true
+        },
+        "scope": "crb-holdout-async_callback-h03",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-async_callback-h03\\checkpoints\\main\\20260827T190828_784a7d66_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "e5a97e6ffd96a1ec6b72ebdb1d6e5e0145fd23a6208aa70a1fefca37b075eed9"
+      }
+    ]
+  },
+  "report": {
+    "admissible": true,
+    "reason": "",
+    "unresolved": [],
+    "bindings": {},
+    "provenance": {
+      "callback_state|async_job_cb": [
+        "certificate:complete_snapshot"
+      ]
+    }
+  },
+  "plan": [
+    {
+      "kind": "finish"
+    }
+  ],
+  "expected": {
+    "effects": {},
+    "units": {
+      "callback_closed": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_closed"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "actual": {
+    "effects": {},
+    "units": {
+      "callback_closed": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {},
+    "decisions": {},
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "callback_closed"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  }
+}

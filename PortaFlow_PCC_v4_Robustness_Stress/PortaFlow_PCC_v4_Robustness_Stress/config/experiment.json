@@ -1,0 +1,86 @@
+{
+  "experiment_name": "PortaFlow_PCC_v4_Robustness_Stress",
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "workflows": [
+    "escrow_callback_release::baseline",
+    "escrow_callback_release::noise_duplicate",
+    "escrow_callback_release::out_of_order",
+    "escrow_callback_release::partial_history_loss",
+    "escrow_callback_release::receipt_conflict",
+    "two_phase_reservation_commit::baseline",
+    "two_phase_reservation_commit::noise_duplicate",
+    "two_phase_reservation_commit::out_of_order",
+    "two_phase_reservation_commit::partial_history_loss",
+    "two_phase_reservation_commit::receipt_conflict",
+    "quorum_write_cancel::baseline",
+    "quorum_write_cancel::noise_duplicate",
+    "quorum_write_cancel::out_of_order",
+    "quorum_write_cancel::partial_history_loss",
+    "quorum_write_cancel::receipt_conflict",
+    "race_cleanup_notify::baseline",
+    "race_cleanup_notify::noise_duplicate",
+    "race_cleanup_notify::out_of_order",
+    "race_cleanup_notify::partial_history_loss",
+    "race_cleanup_notify::receipt_conflict",
+    "nested_review_retry_publish::baseline",
+    "nested_review_retry_publish::noise_duplicate",
+    "nested_review_retry_publish::out_of_order",
+    "nested_review_retry_publish::partial_history_loss",
+    "nested_review_retry_publish::receipt_conflict",
+    "dual_approval_release::baseline",
+    "dual_approval_release::noise_duplicate",
+    "dual_approval_release::out_of_order",
+    "dual_approval_release::partial_history_loss",
+    "dual_approval_release::receipt_conflict",
+    "saga_shipping_refund::baseline",
+    "saga_shipping_refund::noise_duplicate",
+    "saga_shipping_refund::out_of_order",
+    "saga_shipping_refund::partial_history_loss",
+    "saga_shipping_refund::receipt_conflict",
+    "batch_reduce_invoice::baseline",
+    "batch_reduce_invoice::noise_duplicate",
+    "batch_reduce_invoice::out_of_order",
+    "batch_reduce_invoice::partial_history_loss",
+    "batch_reduce_invoice::receipt_conflict"
+  ],
+  "frozen_candidates": {
+    "hybrid_minimal": {
+      "components": [
+        "history",
+        "receipts"
+      ],
+      "inference_mode": "hybrid"
+    },
+    "explicit_minimal": {
+      "components": [
+        "frontier",
+        "obligations",
+        "receipts",
+        "contract"
+      ],
+      "inference_mode": "explicit"
+    }
+  },
+  "robustness_profiles": [
+    "baseline",
+    "noise_duplicate",
+    "out_of_order",
+    "partial_history_loss",
+    "receipt_conflict"
+  ],
+  "llm": {
+    "enabled_by_default": false,
+    "model": "openai/gpt-oss-120b",
+    "base_url": "https://api.groq.com/openai/v1",
+    "repeats": 5,
+    "profiles": [
+      "baseline",
+      "noise_duplicate",
+      "out_of_order"
+    ]
+  }
+}

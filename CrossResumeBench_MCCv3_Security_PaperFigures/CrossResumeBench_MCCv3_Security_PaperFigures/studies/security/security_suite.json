@@ -1,0 +1,230 @@
+{
+  "suite_version": "1.0",
+  "purpose": "Attestation integrity and trust-boundary stress test for frozen MCC v3",
+  "threat_model": {
+    "in_model": [
+      "accidental or unauthenticated mutation without ability to recompute trusted evidence hash",
+      "contract-hash corruption",
+      "conflicting evidence"
+    ],
+    "out_of_model": [
+      "attacker can recompute evidence hash after forging content",
+      "attacker can inject a valid certificate from a different case/context"
+    ],
+    "note": "MCC v3 uses trusted-witness integrity hashes, not authenticated digital signatures or replay-resistant context binding."
+  },
+  "runtime_pairs": [
+    [
+      "langgraph",
+      "crewai"
+    ],
+    [
+      "langgraph",
+      "maf"
+    ],
+    [
+      "crewai",
+      "langgraph"
+    ],
+    [
+      "crewai",
+      "maf"
+    ],
+    [
+      "maf",
+      "langgraph"
+    ],
+    [
+      "maf",
+      "crewai"
+    ]
+  ],
+  "attack_variants": [
+    "valid_control",
+    "value_tamper_no_rehash",
+    "subject_tamper_no_rehash",
+    "evidence_tamper_no_rehash",
+    "contract_hash_tamper",
+    "conflicting_valid_certificates",
+    "cross_context_replay",
+    "forged_rehash_wrong_value"
+  ],
+  "cases": [
+    {
+      "case_id": "sec-effect_commitment-a",
+      "family": "effect_commitment",
+      "workflow": "security_effect_commitment",
+      "certificate_fact_type": "effect_commitment",
+      "required_fact_type": "effect_status",
+      "subject": "payment",
+      "truth_value": "committed",
+      "unsafe_value": "not_committed",
+      "pair_case_id": "sec-effect_commitment-b"
+    },
+    {
+      "case_id": "sec-effect_commitment-b",
+      "family": "effect_commitment",
+      "workflow": "security_effect_commitment",
+      "certificate_fact_type": "effect_commitment",
+      "required_fact_type": "effect_status",
+      "subject": "payment",
+      "truth_value": "not_committed",
+      "unsafe_value": "committed",
+      "pair_case_id": "sec-effect_commitment-a"
+    },
+    {
+      "case_id": "sec-approval_wait-a",
+      "family": "approval_wait",
+      "workflow": "security_approval_wait",
+      "certificate_fact_type": "approval_state",
+      "required_fact_type": "approval_state",
+      "subject": "approval_req",
+      "truth_value": "pending",
+      "unsafe_value": "absent",
+      "pair_case_id": "sec-approval_wait-b"
+    },
+    {
+      "case_id": "sec-approval_wait-b",
+      "family": "approval_wait",
+      "workflow": "security_approval_wait",
+      "certificate_fact_type": "approval_state",
+      "required_fact_type": "approval_state",
+      "subject": "approval_req",
+      "truth_value": "absent",
+      "unsafe_value": "pending",
+      "pair_case_id": "sec-approval_wait-a"
+    },
+    {
+      "case_id": "sec-async_callback-a",
+      "family": "async_callback",
+      "workflow": "security_async_callback",
+      "certificate_fact_type": "callback_state",
+      "required_fact_type": "callback_state",
+      "subject": "callback_job",
+      "truth_value": "pending",
+      "unsafe_value": "absent",
+      "pair_case_id": "sec-async_callback-b"
+    },
+    {
+      "case_id": "sec-async_callback-b",
+      "family": "async_callback",
+      "workflow": "security_async_callback",
+      "certificate_fact_type": "callback_state",
+      "required_fact_type": "callback_state",
+      "subject": "callback_job",
+      "truth_value": "absent",
+      "unsafe_value": "pending",
+      "pair_case_id": "sec-async_callback-a"
+    },
+    {
+      "case_id": "sec-compensation_pending-a",
+      "family": "compensation_pending",
+      "workflow": "security_compensation_pending",
+      "certificate_fact_type": "compensation_state",
+      "required_fact_type": "compensation_state",
+      "subject": "refund_action",
+      "truth_value": "pending",
+      "unsafe_value": "absent",
+      "pair_case_id": "sec-compensation_pending-b"
+    },
+    {
+      "case_id": "sec-compensation_pending-b",
+      "family": "compensation_pending",
+      "workflow": "security_compensation_pending",
+      "certificate_fact_type": "compensation_state",
+      "required_fact_type": "compensation_state",
+      "subject": "refund_action",
+      "truth_value": "absent",
+      "unsafe_value": "pending",
+      "pair_case_id": "sec-compensation_pending-a"
+    },
+    {
+      "case_id": "sec-parallel_join-a",
+      "family": "parallel_join",
+      "workflow": "security_parallel_join",
+      "certificate_fact_type": "semantic_completion",
+      "required_fact_type": "semantic_completion",
+      "subject": "branch_alpha",
+      "truth_value": "completed",
+      "unsafe_value": "not_completed",
+      "pair_case_id": "sec-parallel_join-b"
+    },
+    {
+      "case_id": "sec-parallel_join-b",
+      "family": "parallel_join",
+      "workflow": "security_parallel_join",
+      "certificate_fact_type": "semantic_completion",
+      "required_fact_type": "semantic_completion",
+      "subject": "branch_alpha",
+      "truth_value": "not_completed",
+      "unsafe_value": "completed",
+      "pair_case_id": "sec-parallel_join-a"
+    },
+    {
+      "case_id": "sec-loop_pause-a",
+      "family": "loop_pause",
+      "workflow": "security_loop_pause",
+      "certificate_fact_type": "counter_state",
+      "required_fact_type": "counter_state",
+      "subject": "loop_index",
+      "truth_value": 2,
+      "unsafe_value": 5,
+      "pair_case_id": "sec-loop_pause-b"
+    },
+    {
+      "case_id": "sec-loop_pause-b",
+      "family": "loop_pause",
+      "workflow": "security_loop_pause",
+      "certificate_fact_type": "counter_state",
+      "required_fact_type": "counter_state",
+      "subject": "loop_index",
+      "truth_value": 5,
+      "unsafe_value": 2,
+      "pair_case_id": "sec-loop_pause-a"
+    },
+    {
+      "case_id": "sec-retry_pause-a",
+      "family": "retry_pause",
+      "workflow": "security_retry_pause",
+      "certificate_fact_type": "retry_current",
+      "required_fact_type": "retry_current",
+      "subject": "retry_job",
+      "truth_value": 1,
+      "unsafe_value": 3,
+      "pair_case_id": "sec-retry_pause-b"
+    },
+    {
+      "case_id": "sec-retry_pause-b",
+      "family": "retry_pause",
+      "workflow": "security_retry_pause",
+      "certificate_fact_type": "retry_current",
+      "required_fact_type": "retry_current",
+      "subject": "retry_job",
+      "truth_value": 3,
+      "unsafe_value": 1,
+      "pair_case_id": "sec-retry_pause-a"
+    },
+    {
+      "case_id": "sec-composite-a",
+      "family": "composite",
+      "workflow": "security_composite",
+      "certificate_fact_type": "decision_state",
+      "required_fact_type": "decision_state",
+      "subject": "route_key",
+      "truth_value": "route_a",
+      "unsafe_value": "route_b",
+      "pair_case_id": "sec-composite-b"
+    },
+    {
+      "case_id": "sec-composite-b",
+      "family": "composite",
+      "workflow": "security_composite",
+      "certificate_fact_type": "decision_state",
+      "required_fact_type": "decision_state",
+      "subject": "route_key",
+      "truth_value": "route_b",
+      "unsafe_value": "route_a",
+      "pair_case_id": "sec-composite-a"
+    }
+  ]
+}

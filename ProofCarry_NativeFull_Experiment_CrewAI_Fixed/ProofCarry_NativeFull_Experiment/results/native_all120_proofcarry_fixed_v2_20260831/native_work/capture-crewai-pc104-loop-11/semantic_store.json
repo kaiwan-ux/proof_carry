@@ -1,0 +1,19 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "cleanup_loop_index": 5
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "key": "cleanup_loop_index",
+      "kind": "counter",
+      "value": 5
+    }
+  ],
+  "units": {}
+}

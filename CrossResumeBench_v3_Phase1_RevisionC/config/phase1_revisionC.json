@@ -1,0 +1,34 @@
+{
+  "benchmark": "CrossResumeBench_v3_Phase1_RevisionC",
+  "evidence_variants": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "expected_mcc_rows": 24,
+  "expected_migration_rows": 72,
+  "expected_self_resume_rows": 3,
+  "expected_source_capture_rows": 6,
+  "expected_versions": {
+    "agent-framework-core": "1.15.0",
+    "crewai": "1.15.17",
+    "langgraph": "1.2.11"
+  },
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "full_v3_enabled": false,
+  "llm_required": false,
+  "migration_methods": [
+    "mcc_v2",
+    "oracle",
+    "explicit_minimal"
+  ],
+  "native_self_resume_is_control_not_gate_on_safety": true,
+  "notes": "Revision C changes only the MAF adapter plus a MAF-only pre-gate. Frozen MCC v2, LangGraph, CrewAI, two-world semantics, controls and the 72-row matrix are unchanged from Revision B.",
+  "worlds": [
+    "committed",
+    "not_committed"
+  ]
+}

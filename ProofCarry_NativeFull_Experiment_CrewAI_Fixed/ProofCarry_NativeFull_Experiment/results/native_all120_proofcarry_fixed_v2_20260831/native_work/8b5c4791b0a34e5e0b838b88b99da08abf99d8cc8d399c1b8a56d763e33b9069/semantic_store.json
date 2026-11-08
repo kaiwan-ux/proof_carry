@@ -1,0 +1,42 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {
+    "approval_plus_comp_b_rollback": 1
+  },
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "approval_plus_comp_b_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "approval_plus_comp_a_requested"
+    },
+    {
+      "kind": "effect",
+      "operation": "approval_plus_comp_b_op",
+      "unit": "approval_plus_comp_b_effect"
+    },
+    {
+      "kind": "unit",
+      "unit": "approval_plus_comp_a_abort_revoked"
+    },
+    {
+      "action": "approval_plus_comp_b_rollback",
+      "kind": "compensation",
+      "unit": "approval_plus_comp_b_compensate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "approval_plus_comp_a_abort_revoked": 1,
+    "approval_plus_comp_a_requested": 1,
+    "approval_plus_comp_b_compensate": 1,
+    "approval_plus_comp_b_effect": 1
+  }
+}

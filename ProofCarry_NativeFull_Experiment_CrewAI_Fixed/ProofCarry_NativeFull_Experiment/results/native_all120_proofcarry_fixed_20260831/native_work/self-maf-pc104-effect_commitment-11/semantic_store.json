@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "shipment_book_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "shipment_book_attempt_recorded"
+    },
+    {
+      "kind": "effect",
+      "operation": "shipment_book_op",
+      "unit": "shipment_book_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "shipment_book_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "shipment_book_ack": 1,
+    "shipment_book_attempt": 1,
+    "shipment_book_attempt_recorded": 1
+  }
+}

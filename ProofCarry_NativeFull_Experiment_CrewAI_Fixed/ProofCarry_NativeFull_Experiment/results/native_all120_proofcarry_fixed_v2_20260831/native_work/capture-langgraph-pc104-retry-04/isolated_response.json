@@ -1,0 +1,64 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-retry-04",
+    "checkpoint_ref": "thread:proofcarry-104-pc104-retry-04-capture-langgraph-pc104-retry-04",
+    "framework": "langgraph",
+    "native_kind": "langgraph_checkpoint",
+    "native_observation": {
+      "config": {
+        "configurable": {
+          "checkpoint_id": "1f1a4be1-07de-6e9d-8001-f748b2a3d582",
+          "checkpoint_ns": "",
+          "thread_id": "proofcarry-104-pc104-retry-04-capture-langgraph-pc104-retry-04"
+        }
+      },
+      "framework": "langgraph",
+      "identifier_label": "node_id",
+      "next": [
+        "resume"
+      ],
+      "pause_status": "waiting",
+      "semantic_namespace": "lg.node",
+      "values_keys": [
+        "case_id",
+        "phase",
+        "store_path"
+      ]
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "inventory_retry_task_attempt": 1
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 0,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "inventory_retry_task_failed_1"
+        },
+        {
+          "key": "inventory_retry_task_attempt",
+          "kind": "counter",
+          "value": 1
+        }
+      ],
+      "units": {
+        "inventory_retry_task_failed_1": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.0
+}

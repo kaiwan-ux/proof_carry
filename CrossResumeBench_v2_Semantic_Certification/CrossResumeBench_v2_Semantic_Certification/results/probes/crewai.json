@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"status\": \"ok\", \"capability\": \"flow_state\", \"package\": \"crewai\"}\n",
+  "stderr": ""
+}

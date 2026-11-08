@@ -1,0 +1,68 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "reconcile_loop_index": 6
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "key": "reconcile_loop_index",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "reconcile_loop_iter_3"
+    },
+    {
+      "key": "reconcile_loop_index",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "unit",
+      "unit": "reconcile_loop_iter_4"
+    },
+    {
+      "key": "reconcile_loop_index",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "reconcile_loop_iter_5"
+    },
+    {
+      "key": "reconcile_loop_index",
+      "kind": "counter",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "reconcile_loop_iter_6"
+    },
+    {
+      "key": "reconcile_loop_index",
+      "kind": "counter",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "reconcile_loop_exit"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "reconcile_loop_exit": 1,
+    "reconcile_loop_iter_3": 1,
+    "reconcile_loop_iter_4": 1,
+    "reconcile_loop_iter_5": 1,
+    "reconcile_loop_iter_6": 1
+  }
+}

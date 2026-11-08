@@ -1,0 +1,51 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b2"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b3"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b4_failed"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b1"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b4_recover"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_b4"
+    },
+    {
+      "kind": "unit",
+      "unit": "invoice_parallel_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "invoice_parallel_b1": 1,
+    "invoice_parallel_b2": 1,
+    "invoice_parallel_b3": 1,
+    "invoice_parallel_b4": 1,
+    "invoice_parallel_b4_failed": 1,
+    "invoice_parallel_b4_recover": 1,
+    "invoice_parallel_join": 1
+  }
+}

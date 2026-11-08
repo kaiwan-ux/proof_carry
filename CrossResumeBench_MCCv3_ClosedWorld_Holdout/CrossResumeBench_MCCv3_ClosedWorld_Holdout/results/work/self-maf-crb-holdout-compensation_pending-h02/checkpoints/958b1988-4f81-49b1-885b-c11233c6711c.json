@@ -1,0 +1,19 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-compensation_pending-h02-self-maf-crb-holdout-compensation_pending-h02",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "958b1988-4f81-49b1-885b-c11233c6711c",
+  "previous_checkpoint_id": "167a3648-421a-48a2-b63a-40435ffa640c",
+  "timestamp": "2026-08-27T19:10:04.399242+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

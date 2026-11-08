@@ -1,0 +1,108 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-effect_commitment-01",
+      "checkpoint_ref": "af07a2e4-c88c-49e7-9092-ee599cf831a1",
+      "framework": "maf",
+      "native_kind": "maf_superstep_file_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 2,
+        "checkpoint_id": "af07a2e4-c88c-49e7-9092-ee599cf831a1",
+        "event_trace": [
+          {
+            "class": "WorkflowEvent",
+            "type": "started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "status"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_started"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_invoked"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "executor_completed"
+          },
+          {
+            "class": "WorkflowEvent",
+            "type": "superstep_completed"
+          }
+        ],
+        "framework": "maf",
+        "handler_typing_mode": "explicit",
+        "identifier_label": "activity_id",
+        "pause_status": "suspended",
+        "semantic_namespace": "maf.activity",
+        "workflow_name": "proofcarry-104-pc104-effect_commitment-01-gate-maf-pc104-effect_commitment-01"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {
+          "payment_capture_op": 1
+        },
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "effect",
+            "operation": "payment_capture_op",
+            "unit": "payment_capture_attempt"
+          }
+        ],
+        "units": {
+          "payment_capture_attempt": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "payment_capture_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "payment_capture_op",
+          "unit": "payment_capture_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "payment_capture_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "payment_capture_ack": 1,
+        "payment_capture_attempt": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 0.8280000000004293
+}

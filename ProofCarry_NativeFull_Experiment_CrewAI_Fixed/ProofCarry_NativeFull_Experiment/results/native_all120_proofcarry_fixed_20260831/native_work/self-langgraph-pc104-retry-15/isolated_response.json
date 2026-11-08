@@ -1,0 +1,101 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-retry-15",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-retry-15-self-langgraph-pc104-retry-15",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4ae3-be64-6588-8001-eb0269438b53",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-retry-15-self-langgraph-pc104-retry-15"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "tax_gateway_retry_task_attempt": 6
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "tax_gateway_retry_task_failed_6"
+          },
+          {
+            "key": "tax_gateway_retry_task_attempt",
+            "kind": "counter",
+            "value": 6
+          }
+        ],
+        "units": {
+          "tax_gateway_retry_task_failed_6": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "tax_gateway_retry_task_attempt": 6
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "tax_gateway_retry_task_failed_6"
+        },
+        {
+          "key": "tax_gateway_retry_task_attempt",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "tax_gateway_retry_task_exhausted"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "tax_gateway_retry_task_exhausted": 1,
+        "tax_gateway_retry_task_failed_6": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.8909999999996217
+}

@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "ticket_close_op::partial": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "ticket_close_op::partial",
+      "unit": "ticket_close_partial_started"
+    }
+  ],
+  "units": {
+    "ticket_close_partial_started": 1
+  }
+}

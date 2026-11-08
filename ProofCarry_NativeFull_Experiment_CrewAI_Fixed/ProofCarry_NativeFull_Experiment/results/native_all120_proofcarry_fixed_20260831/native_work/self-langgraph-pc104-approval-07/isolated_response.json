@@ -1,0 +1,90 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-approval-07",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-approval-07-self-langgraph-pc104-approval-07",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4ac5-5d7b-6ad3-8001-fdfae320d2ff",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-approval-07-self-langgraph-pc104-approval-07"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "security_approval_requested"
+          }
+        ],
+        "units": {
+          "security_approval_requested": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {
+        "security_approval_request_renewal": 1
+      },
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "security_approval_requested"
+        },
+        {
+          "id": "security_approval_request_renewal",
+          "kind": "approval",
+          "unit": "security_approval_renew"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "security_approval_renew": 1,
+        "security_approval_requested": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 1.9219999999995707
+}

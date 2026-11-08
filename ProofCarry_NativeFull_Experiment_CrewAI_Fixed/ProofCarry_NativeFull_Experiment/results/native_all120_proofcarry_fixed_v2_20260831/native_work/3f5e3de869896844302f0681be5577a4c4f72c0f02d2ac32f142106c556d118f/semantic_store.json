@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "inventory_reserve_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "inventory_reserve_attempt_recorded"
+    },
+    {
+      "kind": "effect",
+      "operation": "inventory_reserve_op",
+      "unit": "inventory_reserve_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "inventory_reserve_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "inventory_reserve_ack": 1,
+    "inventory_reserve_attempt": 1,
+    "inventory_reserve_attempt_recorded": 1
+  }
+}

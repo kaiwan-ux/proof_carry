@@ -1,0 +1,53 @@
+{
+  "case_id": "effect_commit_two_worlds",
+  "description": "Two source worlds expose identical portable uncertain evidence but require opposite effect decisions.",
+  "expected_final_ledger": {
+    "ack_count": 1,
+    "effect_count": 1,
+    "finish_count": 1
+  },
+  "family": "effect_acknowledgment_points",
+  "portable_app_state": {
+    "phase": "effect_attempted"
+  },
+  "portable_history": [
+    {
+      "data": {
+        "commit_status": "unknown",
+        "operation": "effect",
+        "parent_unit": "effect_attempt",
+        "unit_completion_observable": true
+      },
+      "semantic_unit": "effect_attempt",
+      "step": "effect_attempt",
+      "type": "tool_call_observed"
+    },
+    {
+      "data": {
+        "unit": "effect_attempt"
+      },
+      "semantic_unit": "effect_attempt",
+      "type": "semantic_unit_completed"
+    }
+  ],
+  "source_pause": "after effect attempt, before acknowledgment",
+  "target_actions": [
+    "effect_guard",
+    "ack",
+    "finish"
+  ],
+  "variants": {
+    "ambiguous_external_commit": "no effect commitment certificate; payloads must be identical across the two worlds",
+    "enough_evidence": "effect_commitment certificate disambiguates the world"
+  },
+  "worlds": {
+    "committed": {
+      "correct_target_decision": "skip_effect",
+      "external_effect_count_at_pause": 1
+    },
+    "not_committed": {
+      "correct_target_decision": "execute_effect",
+      "external_effect_count_at_pause": 0
+    }
+  }
+}

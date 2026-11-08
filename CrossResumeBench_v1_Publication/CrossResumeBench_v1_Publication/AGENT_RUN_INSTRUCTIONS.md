@@ -1,0 +1,2 @@
+# Instructions for a coding agent
+Run the benchmark exactly as frozen. Do not change `src/crossresumebench/inference.py`, `src/crossresumebench/baselines/core.py`, or `docs/FROZEN_MCC_SPEC.md` after `FROZEN_MCC_SHA256.txt` has been created. If a framework API fails, fix only the affected adapter/probe and document the patch in `results/TECHNICAL_PATCH_LOG.md`; never modify semantic expectations to make MCC pass.

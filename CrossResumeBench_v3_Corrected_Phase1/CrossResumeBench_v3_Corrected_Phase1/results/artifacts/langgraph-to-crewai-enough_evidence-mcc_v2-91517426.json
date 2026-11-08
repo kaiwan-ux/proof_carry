@@ -1,0 +1,86 @@
+{
+  "run_id": "langgraph-to-crewai-enough_evidence-mcc_v2-91517426",
+  "source": "langgraph",
+  "target": "crewai",
+  "case_id": "effect_committed_ack_pending",
+  "variant": "enough_evidence",
+  "method": "mcc_v2",
+  "safe_completion": 1,
+  "safe_rejection": 0,
+  "unsafe_violation": 0,
+  "technical_failure": 0,
+  "reject_reason": null,
+  "failure_types": [],
+  "payload_bytes": 1275,
+  "artifact": {
+    "inference": {
+      "ambiguities": [],
+      "certificate_log": [
+        "effect_commitment:effect:committed",
+        "semantic_completion:commit_effect:completed"
+      ],
+      "inference_log": []
+    },
+    "payload": {
+      "mcc_version": "2.0",
+      "case_id": "effect_committed_ack_pending",
+      "workflow": "phase1_effect_ack",
+      "source_runtime": "semantic",
+      "target_runtime": "crewai",
+      "workflow_spec_hash": "e97a9923010f100cb2b6b54d4f3c22060d9505e93a1b36694b7a91dc2087e129",
+      "app_state": {
+        "phase": "effect_committed"
+      },
+      "history": [
+        {
+          "type": "tool_call_observed",
+          "step": "commit_effect",
+          "semantic_unit": "commit_effect",
+          "data": {
+            "operation": "effect",
+            "commit_status": "unknown",
+            "parent_unit": "commit_effect",
+            "unit_completion_observable": false
+          }
+        }
+      ],
+      "certificates": [
+        {
+          "certificate_id": "74ce30e2f4b83e928be6",
+          "fact_type": "effect_commitment",
+          "subject": "effect",
+          "value": "committed",
+          "scope": "effect_committed_ack_pending",
+          "evidence": {
+            "idempotency_key": "phase1-effect",
+            "native_checkpoint_ref": "thread:crb3-lg-src-langgraph-enough_evidence-63016ff9"
+          },
+          "issuer": "crossresumebench_witness",
+          "evidence_hash": "69fcb2ca6607c8cdd5b751010187dc65fc15a692e8c43ea34cfc1b9ae5cd65e4"
+        },
+        {
+          "certificate_id": "fbbf4edf6309fea9799d",
+          "fact_type": "semantic_completion",
+          "subject": "commit_effect",
+          "value": "completed",
+          "scope": "effect_committed_ack_pending",
+          "evidence": {
+            "checkpoint_ref": "thread:crb3-lg-src-langgraph-enough_evidence-63016ff9"
+          },
+          "issuer": "crossresumebench_witness",
+          "evidence_hash": "36534694e3062180ddaf92a4a2dbe690904a23d11341b4f0f64ae8845da71fd9"
+        }
+      ]
+    },
+    "target": {
+      "ledger": {
+        "ack_count": 1,
+        "effect_count": 1,
+        "finish_count": 1
+      },
+      "native_kind": "crewai_target_flow",
+      "flow_id": "54d3ac31-02e4-430b-a364-e52f31d15026",
+      "result": "finished"
+    }
+  }
+}

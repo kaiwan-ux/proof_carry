@@ -1,0 +1,29 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "account_debit_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "account_debit_op",
+      "unit": "account_debit_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "account_debit_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "account_debit_ack": 1,
+    "account_debit_attempt": 1
+  }
+}

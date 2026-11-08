@@ -1,0 +1,178 @@
+{
+  "source_capture": {
+    "case_id": "crb2-atomic_to_expanded_posteffect-v01",
+    "workflow": "atomic_to_expanded_posteffect",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-atomic_to_expanded_posteffect-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "source_atomic",
+        "semantic_unit": "checkout",
+        "data": {
+          "operation": "payment",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "checkout",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "291c892f35e08cb2c9f5",
+        "fact_type": "effect_commitment",
+        "subject": "payment",
+        "value": "committed",
+        "scope": "checkout",
+        "evidence": {
+          "operation_id": "crb2-atomic_to_expanded_posteffect-v01:payment",
+          "idempotency_key": "idem:crb2-atomic_to_expanded_posteffect-v01:payment",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5694fc9f9a8cad7112e2a8fd264a1f1b21b82787927663d3afe14ffdd90e6a0c"
+      },
+      {
+        "certificate_id": "0d1e6378db4b375fb067",
+        "fact_type": "semantic_completion",
+        "subject": "checkout",
+        "value": "completed",
+        "scope": "checkout",
+        "evidence": {
+          "operation": "payment",
+          "native_marker": "source_atomic",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "edf0ca9dd9d8ac92c0c4b8e25e12f5c79b8b0cd27c59956c8c673fb76b888732"
+      }
+    ],
+    "source_ledger": {
+      "payment": 1
+    },
+    "native_observation": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "962a90fe-3e6b-4af9-9958-309476987575",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 1
+    },
+    "truth_completed_units": [
+      "checkout"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "mcc_version": "2.0",
+    "case_id": "crb2-atomic_to_expanded_posteffect-v01",
+    "workflow": "atomic_to_expanded_posteffect",
+    "source_runtime": "crewai",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "cf75f73d5b542ad2496095ad53896424bf2ec33c8ee5469cfa50a9607eb29468",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-atomic_to_expanded_posteffect-v01",
+      "amount": 101
+    },
+    "history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "source_atomic",
+        "semantic_unit": "checkout",
+        "data": {
+          "operation": "payment",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "checkout",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "291c892f35e08cb2c9f5",
+        "fact_type": "effect_commitment",
+        "subject": "payment",
+        "value": "committed",
+        "scope": "checkout",
+        "evidence": {
+          "operation_id": "crb2-atomic_to_expanded_posteffect-v01:payment",
+          "idempotency_key": "idem:crb2-atomic_to_expanded_posteffect-v01:payment",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "5694fc9f9a8cad7112e2a8fd264a1f1b21b82787927663d3afe14ffdd90e6a0c"
+      },
+      {
+        "certificate_id": "0d1e6378db4b375fb067",
+        "fact_type": "semantic_completion",
+        "subject": "checkout",
+        "value": "completed",
+        "scope": "checkout",
+        "evidence": {
+          "operation": "payment",
+          "native_marker": "source_atomic",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "edf0ca9dd9d8ac92c0c4b8e25e12f5c79b8b0cd27c59956c8c673fb76b888732"
+      }
+    ]
+  },
+  "inference": {
+    "ambiguities": [],
+    "certificate_log": [
+      "effect_commitment:payment:committed",
+      "semantic_completion:checkout:completed"
+    ],
+    "inference_log": []
+  },
+  "target": {
+    "completed_units": [
+      "checkout",
+      "finish"
+    ],
+    "executed_units": [
+      "finish"
+    ],
+    "final_ledger": {
+      "payment": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "langgraph_target_checkpoint",
+      "framework": "langgraph",
+      "real_native": true,
+      "next": [],
+      "values_keys": [
+        "ctx"
+      ],
+      "native_action_nodes": 4
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

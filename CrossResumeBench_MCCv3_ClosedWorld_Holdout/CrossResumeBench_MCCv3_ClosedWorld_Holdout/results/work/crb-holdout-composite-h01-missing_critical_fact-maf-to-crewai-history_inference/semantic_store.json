@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "contract_charge": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "contract_charge",
+      "unit": "charge_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "approval_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "charge_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "approval_requested": 1,
+    "charge_ack": 1,
+    "charge_attempt": 1
+  }
+}

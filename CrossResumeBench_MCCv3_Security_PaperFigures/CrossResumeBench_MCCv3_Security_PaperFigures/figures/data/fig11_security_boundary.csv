@@ -1,0 +1,9 @@
+variant,attack_class,safe_completion,safe_rejection,unsafe
+conflicting_valid_certificates,in_threat_model,0,96,0
+contract_hash_tamper,in_threat_model,0,96,0
+cross_context_replay,out_of_threat_model,0,0,96
+evidence_tamper_no_rehash,in_threat_model,0,96,0
+forged_rehash_wrong_value,out_of_threat_model,0,0,96
+subject_tamper_no_rehash,in_threat_model,0,96,0
+valid_control,in_threat_model,96,0,0
+value_tamper_no_rehash,in_threat_model,0,96,0

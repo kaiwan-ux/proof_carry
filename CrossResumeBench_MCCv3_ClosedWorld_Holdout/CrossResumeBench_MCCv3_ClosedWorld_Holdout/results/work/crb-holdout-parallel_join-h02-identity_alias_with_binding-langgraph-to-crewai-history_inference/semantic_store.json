@@ -1,0 +1,40 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "green"
+    },
+    {
+      "kind": "unit",
+      "unit": "red"
+    },
+    {
+      "kind": "unit",
+      "unit": "green"
+    },
+    {
+      "kind": "unit",
+      "unit": "blue"
+    },
+    {
+      "kind": "unit",
+      "unit": "merge_join"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "blue": 1,
+    "green": 2,
+    "merge_join": 1,
+    "red": 1
+  }
+}

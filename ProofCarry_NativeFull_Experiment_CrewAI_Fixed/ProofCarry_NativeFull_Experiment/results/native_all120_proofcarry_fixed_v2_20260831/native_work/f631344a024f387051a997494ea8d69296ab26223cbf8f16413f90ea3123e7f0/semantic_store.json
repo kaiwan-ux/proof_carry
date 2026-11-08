@@ -1,0 +1,38 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "search_index_retry_task_attempt": 3
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "search_index_retry_task_failed_2"
+    },
+    {
+      "key": "search_index_retry_task_attempt",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "search_index_retry_task_attempt_3"
+    },
+    {
+      "key": "search_index_retry_task_attempt",
+      "kind": "counter",
+      "value": 3
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "search_index_retry_task_attempt_3": 1,
+    "search_index_retry_task_failed_2": 1
+  }
+}

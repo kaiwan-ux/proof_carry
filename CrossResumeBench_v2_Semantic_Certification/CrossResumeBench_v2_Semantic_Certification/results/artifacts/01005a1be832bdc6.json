@@ -1,0 +1,173 @@
+{
+  "source_capture": {
+    "case_id": "crb2-callback_closes_semantic_unit-v01",
+    "workflow": "callback_closes_semantic_unit",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-callback_closes_semantic_unit-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "submit",
+        "semantic_unit": "submission",
+        "data": {
+          "operation": "submit",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "submission",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback_wait",
+        "semantic_unit": "submission",
+        "data": {
+          "callback_id": "cb",
+          "operation": "submit"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "f31a8f0b34a9c96aa9e0",
+        "fact_type": "effect_commitment",
+        "subject": "submit",
+        "value": "committed",
+        "scope": "submission",
+        "evidence": {
+          "operation_id": "crb2-callback_closes_semantic_unit-v01:submit",
+          "idempotency_key": "idem:crb2-callback_closes_semantic_unit-v01:submit",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "51333bf04cbdd0e861499049cc38bc92098908a909001c939b6446eeba82b667"
+      }
+    ],
+    "source_ledger": {
+      "submit": 1
+    },
+    "native_observation": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "433204b5-05f9-42ad-b78c-59b252cde282",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 2
+    },
+    "truth_completed_units": [],
+    "truth_pending_obligations": [
+      {
+        "type": "callback",
+        "id": "cb",
+        "operation": "submit"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "mcc_version": "2.0",
+    "case_id": "crb2-callback_closes_semantic_unit-v01",
+    "workflow": "callback_closes_semantic_unit",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "8a8ee3cf3ad6f7b2c92297979b838b9de8b8e478bf8fd369249e7fde52c36e1b",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-callback_closes_semantic_unit-v01",
+      "amount": 101
+    },
+    "history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "submit",
+        "semantic_unit": "submission",
+        "data": {
+          "operation": "submit",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "submission",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback_wait",
+        "semantic_unit": "submission",
+        "data": {
+          "callback_id": "cb",
+          "operation": "submit"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "f31a8f0b34a9c96aa9e0",
+        "fact_type": "effect_commitment",
+        "subject": "submit",
+        "value": "committed",
+        "scope": "submission",
+        "evidence": {
+          "operation_id": "crb2-callback_closes_semantic_unit-v01:submit",
+          "idempotency_key": "idem:crb2-callback_closes_semantic_unit-v01:submit",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "51333bf04cbdd0e861499049cc38bc92098908a909001c939b6446eeba82b667"
+      }
+    ]
+  },
+  "inference": {
+    "ambiguities": [],
+    "certificate_log": [
+      "effect_commitment:submit:committed"
+    ],
+    "inference_log": []
+  },
+  "target": {
+    "completed_units": [
+      "finish",
+      "submission"
+    ],
+    "executed_units": [
+      "reconcile:submission",
+      "submission",
+      "finish"
+    ],
+    "final_ledger": {
+      "submit": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "maf_workflow_checkpoint",
+      "framework": "maf",
+      "real_native": true,
+      "workflow_name": "WorkflowBuilder-17d79e7c-08d8-4436-84f5-0476cecd1c36",
+      "checkpoint_count": 5,
+      "native_action_executors": 3
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

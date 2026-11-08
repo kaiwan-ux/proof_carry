@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "payment_plus_approval_a_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "payment_plus_approval_a_op",
+      "unit": "payment_plus_approval_a_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "payment_plus_approval_b_requested"
+    }
+  ],
+  "units": {
+    "payment_plus_approval_a_attempt": 1,
+    "payment_plus_approval_b_requested": 1
+  }
+}

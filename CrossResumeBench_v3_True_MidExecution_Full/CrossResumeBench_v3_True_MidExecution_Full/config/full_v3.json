@@ -1,0 +1,27 @@
+{
+  "benchmark": "CrossResumeBench_v3_True_MidExecution_Full",
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "migration_methods": [
+    "mcc_v2",
+    "history_inference",
+    "aaif_reference",
+    "caplease_reference",
+    "aaif_plus_caplease_reference",
+    "explicit_minimal",
+    "oracle"
+  ],
+  "base_cases": 28,
+  "applicable_case_variant_instances": 80,
+  "expected_migration_rows": 3360,
+  "expected_mcc_rows": 480,
+  "expected_self_resume_rows": 84,
+  "expected_source_capture_rows": 84,
+  "native_family_probe_rows": 21,
+  "llm_required": false,
+  "frozen_mcc": "v2.0 from Revision C PASS",
+  "notes": "Full v3 uses a case\u00d7evidence applicability matrix. Native self-resume and source capture are separate controls. Only MCC v2 is the mechanism under test; explicit/oracle are privileged controls and AAIF/CapLease are concept-level references."
+}

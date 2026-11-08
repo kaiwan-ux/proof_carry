@@ -1,0 +1,226 @@
+{
+  "case": {
+    "case_id": "crb2-compensation_scope_closure-v02",
+    "family": "compensation_scope_closure",
+    "variant": 2,
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-compensation_scope_closure-v02",
+      "amount": 102
+    },
+    "source_actions": [
+      {
+        "action_id": "debit",
+        "semantic_unit": "debit_scope",
+        "kind": "effect",
+        "operation": "debit",
+        "depends_on": [],
+        "parent_unit": "debit_scope",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": true,
+          "emit_completion": true,
+          "certify_completion": false
+        }
+      },
+      {
+        "action_id": "need_refund",
+        "semantic_unit": "refund",
+        "kind": "compensation",
+        "operation": "debit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "debit_t",
+        "semantic_unit": "debit_scope",
+        "kind": "effect",
+        "operation": "debit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "refund_t",
+        "semantic_unit": "refund",
+        "kind": "compensation",
+        "operation": "debit",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "debit_scope",
+      "refund",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "debit": 1
+    },
+    "mismatch_tags": [
+      "compensation",
+      "scope-closure",
+      "source:mid_node_interrupt",
+      "target:tool_timeout"
+    ],
+    "source_boundary": "mid_node_interrupt",
+    "target_boundary": "tool_timeout",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-compensation_scope_closure-v02",
+    "workflow": "compensation_scope_closure",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-compensation_scope_closure-v02",
+      "amount": 102
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "debit",
+        "semantic_unit": "debit_scope",
+        "data": {
+          "operation": "debit",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "debit_scope",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "debit",
+        "semantic_unit": "debit_scope",
+        "data": {
+          "unit": "debit_scope"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "compensation_required",
+        "step": "need_refund",
+        "semantic_unit": "refund",
+        "data": {
+          "effect": "debit",
+          "compensation_action": "refund"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "79dc6c4b58abe7999507",
+        "fact_type": "effect_commitment",
+        "subject": "debit",
+        "value": "committed",
+        "scope": "debit_scope",
+        "evidence": {
+          "operation_id": "crb2-compensation_scope_closure-v02:debit",
+          "idempotency_key": "idem:crb2-compensation_scope_closure-v02:debit",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "ce3796fca26a517a0ec291cbfeaf0714a4060e3e1c7c1c813e9cfc5fc3aed213"
+      }
+    ],
+    "source_ledger": {
+      "debit": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [
+      "debit_scope"
+    ],
+    "truth_pending_obligations": [
+      {
+        "type": "compensation",
+        "action": "refund",
+        "effect": "debit"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-compensation_scope_closure-v02",
+      "amount": 102
+    },
+    "completed_units": [
+      "debit_scope"
+    ],
+    "pending_obligations": [
+      {
+        "type": "compensation",
+        "action": "refund",
+        "effect": "debit"
+      }
+    ],
+    "effect_facts": {
+      "debit": {
+        "status": "committed",
+        "source": "oracle_source_ledger"
+      }
+    },
+    "dependencies": {},
+    "decisions": {},
+    "counters": {}
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "debit_scope",
+      "finish",
+      "refund"
+    ],
+    "executed_units": [
+      "refund",
+      "finish"
+    ],
+    "final_ledger": {
+      "debit": 1,
+      "compensate:debit": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

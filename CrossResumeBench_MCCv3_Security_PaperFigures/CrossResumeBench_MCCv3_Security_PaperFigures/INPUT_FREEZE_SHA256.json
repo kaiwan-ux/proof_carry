@@ -1,0 +1,20 @@
+{
+  "description": "Immutable real post-validation evidence and frozen MCC v3 mechanism inputs",
+  "files": {
+    "inputs/postvalidation/NATIVE_FAMILY_GATE.json": "36644e0bf4df33cb3862be5003d8751ef91b12a91c73f388d69febe6347a35e1",
+    "inputs/postvalidation/RESEARCH_VERDICT.json": "dfc12bb3947d0216b8a52ff95aa7deb0f9840d5a6493320efe72cbd56066cf22",
+    "inputs/postvalidation/ablation_by_evidence.csv": "25d47ed70ec9e31bedf5647d7419209d8bb917cfcbc9641aa6b4bdaf639eca09",
+    "inputs/postvalidation/ablation_by_family.csv": "23c455952b362eecd6fb73d573f6a80a98d76d7047c802f64ea25b0d6bbf664e",
+    "inputs/postvalidation/ablation_summary.csv": "a7f894df1109291793adeb4f0b018bf20284799a501d6c0f7fa14e1869ddea5b",
+    "inputs/postvalidation/holdout_migration_runs.csv": "39c8a35f21db0163aa0e7ea43fa021f2fdfcd500279855920456701202894d25",
+    "inputs/postvalidation/mccv3_by_evidence.csv": "83a1848b263ea4fbbfb8c2b05613ff677d4a03951acc284ff134869513823aad",
+    "inputs/postvalidation/mccv3_by_family.csv": "dcf5294195e602ac79c54911198d09b883657232e229e21b98970fa84b37fa80",
+    "inputs/postvalidation/method_summary.csv": "6966ff11051f50e3ee080c3c9b740d7bcf394ecddcdca432af339cf9a50923db",
+    "inputs/postvalidation/microbench.json": "1a470519776ae26f154dcf4012d5932506e436939e540f79036a027f4edbb00a",
+    "inputs/postvalidation/paired_comparisons.json": "817678a2ed05b67e8b1e3d71bf55e1b133c7e35091c723dab5c3d72c542b5cdb",
+    "mechanism/MCCV3_MECHANISM_SHA256.txt": "0540dc8f8f2fb014c5d5032aa1c0cdf1e2fe7a4b920c08f01e5a5a0c6eef0d6a",
+    "mechanism/mcc_v3.py": "57eda36a01f94040ff730383957e8a86cdb37265ac528b4943b71d8f0876ff69",
+    "mechanism/proofs.py": "2ff99668579cd316c2392375b07370bd3c038b3d9dbc91064ed7e87648a6a82c",
+    "mechanism/schemas/mcc_v3.schema.json": "4e8cdceeab1f1794a29527b8a40a8dc03219a108af8ac48f50c254e53ef7945a"
+  }
+}

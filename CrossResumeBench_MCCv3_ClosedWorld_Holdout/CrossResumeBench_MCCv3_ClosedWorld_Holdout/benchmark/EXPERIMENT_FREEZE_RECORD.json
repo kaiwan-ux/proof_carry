@@ -1,0 +1,12 @@
+{
+  "evaluation_code_combined_sha256": "1c3372bbc1ab64d3f25e4d1e1ecd1aa3a870d82b285d90b38b3202618d6edac2",
+  "files": {
+    "src/crossresumebench_mccv3/baselines.py": "e242d26a09b7e49156abc6705633d15468a28bc29c3bd12e3bfbfd006f20f74d",
+    "src/crossresumebench_mccv3/evaluator.py": "af0f51bf2a78822b04d6c59839578f892d9bc6d1b79a4d938a2a33476a3f10ee",
+    "src/crossresumebench_mccv3/evidence.py": "8ffc05764f685adedb9aa5076826328dcd49d2c34d440af4fb2974cb92dabea4",
+    "src/crossresumebench_mccv3/runner.py": "112d31e069b5d4309a744dc1842f5a77b77d42e1cd180116045d57eab3b5f355",
+    "src/crossresumebench_mccv3/semantics.py": "b46d125d72237450212f5f3d2d42e5c4eef42bf57b0a49843fe04a00d762beab"
+  },
+  "holdout_suite_sha256": "3cc06e8817f1b1861381ec348bbcf769be4b169833b9b24deccfc688a154f8e8",
+  "mechanism_sha256": "4e6fdd6d0fc949a7e337b02be9d71706a40f5fc87971f8030e0a5a02a32f6194"
+}

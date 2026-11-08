@@ -1,0 +1,7 @@
+source,target,safe_completion,safe_rejection,unsafe_violation,pair
+crewai,langgraph,81,47,0,Crewai → LangGraph
+crewai,maf,81,47,0,Crewai → MAF
+langgraph,crewai,81,47,0,Langgraph → CrewAI
+langgraph,maf,81,47,0,Langgraph → MAF
+maf,crewai,81,47,0,Maf → CrewAI
+maf,langgraph,81,47,0,Maf → LangGraph

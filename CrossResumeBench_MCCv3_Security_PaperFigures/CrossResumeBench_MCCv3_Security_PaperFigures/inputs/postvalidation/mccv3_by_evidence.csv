@@ -1,0 +1,8 @@
+evidence_variant,safe_completion,safe_rejection,unsafe_violation,technical_failure
+complete_negative_snapshot,30,0,0,0
+enough_evidence,192,0,0,0
+identity_alias_with_binding,72,0,0,0
+identity_alias_without_binding,0,36,0,0
+irrelevant_noise,192,0,0,0
+missing_critical_fact,0,192,0,0
+tampered_attestation,0,54,0,0

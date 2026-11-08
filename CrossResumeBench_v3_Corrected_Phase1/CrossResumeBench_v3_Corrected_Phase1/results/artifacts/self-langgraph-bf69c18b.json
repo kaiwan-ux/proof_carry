@@ -1,0 +1,39 @@
+{
+  "safe": true,
+  "ledger": {
+    "ack_count": 1,
+    "effect_count": 1,
+    "finish_count": 1
+  },
+  "pause": {
+    "framework": "langgraph",
+    "case_id": "effect_committed_ack_pending",
+    "checkpoint_ref": "thread:crb3-lg-self-langgraph-bf69c18b",
+    "native_kind": "langgraph_state_snapshot",
+    "pending_work": [
+      "ack"
+    ],
+    "app_state": {
+      "phase": "effect_committed"
+    },
+    "history": [],
+    "certificates": [],
+    "native_observation": {
+      "next": [
+        "ack"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb3-lg-self-langgraph-bf69c18b",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a1800-25ac-6239-8001-e44309469c47"
+        }
+      },
+      "values": {
+        "ledger_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_v3_Corrected_Phase1\\CrossResumeBench_v3_Corrected_Phase1\\results\\work\\self-langgraph-bf69c18b\\ledger.json",
+        "phase": "effect_committed"
+      }
+    },
+    "effect_count": 1
+  }
+}

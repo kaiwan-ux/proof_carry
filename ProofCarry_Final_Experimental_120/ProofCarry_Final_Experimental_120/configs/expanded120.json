@@ -1,0 +1,22 @@
+{
+  "base_cases": 120,
+  "families": 8,
+  "cases_per_family": 15,
+  "variants": [
+    "enough",
+    "irrelevant_noise",
+    "missing_critical",
+    "contradictory_fact",
+    "identity_missing",
+    "dependency_unresolved",
+    "incomplete_snapshot"
+  ],
+  "runtime_pairs": [
+    "langgraph->crewai",
+    "langgraph->maf",
+    "crewai->langgraph",
+    "crewai->maf",
+    "maf->langgraph",
+    "maf->crewai"
+  ]
+}

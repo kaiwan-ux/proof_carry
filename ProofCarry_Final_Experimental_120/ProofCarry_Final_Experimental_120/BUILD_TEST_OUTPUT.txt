@@ -1,0 +1,11 @@
+test_case_count (test_core.TestCore.test_case_count) ... ok
+test_full_continue_enough (test_core.TestCore.test_full_continue_enough) ... ok
+test_missing_rejects (test_core.TestCore.test_missing_rejects) ... ok
+test_rehashed_forgery_can_bypass_hash_only (test_core.TestCore.test_rehashed_forgery_can_bypass_hash_only) ... ok
+test_rehashed_forgery_rejected_authenticated (test_core.TestCore.test_rehashed_forgery_rejected_authenticated) ... ok
+test_wrong_mapping_rejects (test_core.TestCore.test_wrong_mapping_rejects) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

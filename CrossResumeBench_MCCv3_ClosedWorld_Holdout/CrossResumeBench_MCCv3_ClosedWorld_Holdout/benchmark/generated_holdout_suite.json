@@ -1,0 +1,2449 @@
+{
+  "benchmark": "CrossResumeBench_MCCv3_ClosedWorld_Holdout",
+  "cases": [
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-effect_commitment-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "decide replay vs skip",
+            "subject": "invoice_capture"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh effect boundary for invoice_capture",
+      "drop_fact": {
+        "fact_type": "effect_status",
+        "subject": "invoice_capture"
+      },
+      "family": "effect_commitment",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "effect_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "ack_unit": "effect_ack",
+        "effect_status": "committed",
+        "effect_unit": "effect_attempt",
+        "operation": "invoice_capture"
+      },
+      "source_plan": [
+        {
+          "kind": "effect",
+          "operation": "invoice_capture",
+          "unit": "effect_attempt"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-effect_commitment-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "decide replay vs skip",
+            "subject": "blob_upload"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh effect boundary for blob_upload",
+      "drop_fact": {
+        "fact_type": "effect_status",
+        "subject": "blob_upload"
+      },
+      "family": "effect_commitment",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "kind": "effect",
+          "operation": "blob_upload",
+          "unit": "effect_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "ack_unit": "effect_ack",
+        "effect_status": "not_committed",
+        "effect_unit": "effect_attempt",
+        "operation": "blob_upload"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "effect_attempt"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-effect_commitment-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "decide replay vs skip",
+            "subject": "audit_emit"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh effect boundary for audit_emit",
+      "drop_fact": {
+        "fact_type": "effect_status",
+        "subject": "audit_emit"
+      },
+      "family": "effect_commitment",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "effect_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "ack_unit": "effect_ack",
+        "effect_status": "committed",
+        "effect_unit": "effect_attempt",
+        "operation": "audit_emit"
+      },
+      "source_plan": [
+        {
+          "kind": "effect",
+          "operation": "audit_emit",
+          "unit": "effect_attempt"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-effect_commitment-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "decide replay vs skip",
+            "subject": "device_command"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh effect boundary for device_command",
+      "drop_fact": {
+        "fact_type": "effect_status",
+        "subject": "device_command"
+      },
+      "family": "effect_commitment",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "kind": "effect",
+          "operation": "device_command",
+          "unit": "effect_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "ack_unit": "effect_ack",
+        "effect_status": "not_committed",
+        "effect_unit": "effect_attempt",
+        "operation": "device_command"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "effect_attempt"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": "retry_job",
+      "case_id": "crb-holdout-retry_pause-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "retry_current",
+            "purpose": "next retry index",
+            "subject": "retry_job"
+          },
+          {
+            "fact_type": "retry_bound",
+            "purpose": "retry exhaustion boundary",
+            "subject": "retry_job"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh retry state 1/4",
+      "drop_fact": {
+        "fact_type": "retry_bound",
+        "subject": "retry_job"
+      },
+      "family": "retry_pause",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_try_2"
+        },
+        {
+          "key": "retry:retry_job",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "attempt_prefix": "retry_try_",
+        "counter_key": "retry:retry_job",
+        "current_attempt": 1,
+        "exhausted_unit": "retry_terminal",
+        "max_attempts": 4,
+        "retry_unit": "retry_job"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_try_1"
+        },
+        {
+          "key": "retry:retry_job",
+          "kind": "counter",
+          "value": 1
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "retry_job",
+      "case_id": "crb-holdout-retry_pause-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "retry_current",
+            "purpose": "next retry index",
+            "subject": "retry_job"
+          },
+          {
+            "fact_type": "retry_bound",
+            "purpose": "retry exhaustion boundary",
+            "subject": "retry_job"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh retry state 3/6",
+      "drop_fact": {
+        "fact_type": "retry_bound",
+        "subject": "retry_job"
+      },
+      "family": "retry_pause",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_try_4"
+        },
+        {
+          "key": "retry:retry_job",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "attempt_prefix": "retry_try_",
+        "counter_key": "retry:retry_job",
+        "current_attempt": 3,
+        "exhausted_unit": "retry_terminal",
+        "max_attempts": 6,
+        "retry_unit": "retry_job"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_try_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_2"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_3"
+        },
+        {
+          "key": "retry:retry_job",
+          "kind": "counter",
+          "value": 3
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "retry_job",
+      "case_id": "crb-holdout-retry_pause-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "retry_current",
+            "purpose": "next retry index",
+            "subject": "retry_job"
+          },
+          {
+            "fact_type": "retry_bound",
+            "purpose": "retry exhaustion boundary",
+            "subject": "retry_job"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh retry state 5/7",
+      "drop_fact": {
+        "fact_type": "retry_bound",
+        "subject": "retry_job"
+      },
+      "family": "retry_pause",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_try_6"
+        },
+        {
+          "key": "retry:retry_job",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "attempt_prefix": "retry_try_",
+        "counter_key": "retry:retry_job",
+        "current_attempt": 5,
+        "exhausted_unit": "retry_terminal",
+        "max_attempts": 7,
+        "retry_unit": "retry_job"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_try_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_2"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_3"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_4"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_5"
+        },
+        {
+          "key": "retry:retry_job",
+          "kind": "counter",
+          "value": 5
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "retry_job",
+      "case_id": "crb-holdout-retry_pause-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "retry_current",
+            "purpose": "next retry index",
+            "subject": "retry_job"
+          },
+          {
+            "fact_type": "retry_bound",
+            "purpose": "retry exhaustion boundary",
+            "subject": "retry_job"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh retry state 4/4",
+      "drop_fact": {
+        "fact_type": "retry_bound",
+        "subject": "retry_job"
+      },
+      "family": "retry_pause",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_terminal"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "attempt_prefix": "retry_try_",
+        "counter_key": "retry:retry_job",
+        "current_attempt": 4,
+        "exhausted_unit": "retry_terminal",
+        "max_attempts": 4,
+        "retry_unit": "retry_job"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "retry_try_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_2"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_3"
+        },
+        {
+          "kind": "unit",
+          "unit": "retry_try_4"
+        },
+        {
+          "key": "retry:retry_job",
+          "kind": "counter",
+          "value": 4
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "approve_vendor_payout",
+      "case_id": "crb-holdout-approval_wait-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "approval_state",
+            "purpose": "must not bypass a pending human approval",
+            "subject": "approve_vendor_payout"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "approval state pending for approve_vendor_payout",
+      "drop_fact": {
+        "fact_type": "approval_state",
+        "subject": "approve_vendor_payout"
+      },
+      "family": "approval_wait",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "id": "approve_vendor_payout",
+          "kind": "approval",
+          "unit": "approval_gate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "approval_state": "pending",
+        "approval_unit": "approval_gate",
+        "request_id": "approve_vendor_payout"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "approval_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_without_binding": "safe_rejection",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_without_binding"
+      ]
+    },
+    {
+      "alias_subject": "approve_model_rollout",
+      "case_id": "crb-holdout-approval_wait-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "approval_state",
+            "purpose": "must not bypass a pending human approval",
+            "subject": "approve_model_rollout"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "approval state pending for approve_model_rollout",
+      "drop_fact": {
+        "fact_type": "approval_state",
+        "subject": "approve_model_rollout"
+      },
+      "family": "approval_wait",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "id": "approve_model_rollout",
+          "kind": "approval",
+          "unit": "approval_gate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "approval_state": "pending",
+        "approval_unit": "approval_gate",
+        "request_id": "approve_model_rollout"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "approval_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_without_binding": "safe_rejection",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_without_binding"
+      ]
+    },
+    {
+      "alias_subject": "approve_access_change",
+      "case_id": "crb-holdout-approval_wait-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "approval_state",
+            "purpose": "must not bypass a pending human approval",
+            "subject": "approve_access_change"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "approval state absent for approve_access_change",
+      "drop_fact": {
+        "fact_type": "approval_state",
+        "subject": "approve_access_change"
+      },
+      "family": "approval_wait",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "approval_state": "absent",
+        "approval_unit": "approval_gate",
+        "request_id": "approve_access_change"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "approval_checked_none"
+        }
+      ],
+      "variant_expectations": {
+        "complete_negative_snapshot": "safe_completion",
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "complete_negative_snapshot"
+      ]
+    },
+    {
+      "alias_subject": "approve_record_purge",
+      "case_id": "crb-holdout-approval_wait-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "approval_state",
+            "purpose": "must not bypass a pending human approval",
+            "subject": "approve_record_purge"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "approval state absent for approve_record_purge",
+      "drop_fact": {
+        "fact_type": "approval_state",
+        "subject": "approve_record_purge"
+      },
+      "family": "approval_wait",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "approval_state": "absent",
+        "approval_unit": "approval_gate",
+        "request_id": "approve_record_purge"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "approval_checked_none"
+        }
+      ],
+      "variant_expectations": {
+        "complete_negative_snapshot": "safe_completion",
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "complete_negative_snapshot"
+      ]
+    },
+    {
+      "alias_subject": "alpha",
+      "case_id": "crb-holdout-parallel_join-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "alpha"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "beta"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh parallel completion set ['alpha']/['alpha', 'beta']",
+      "drop_fact": {
+        "fact_type": "semantic_completion",
+        "subject": "beta"
+      },
+      "family": "parallel_join",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "beta"
+        },
+        {
+          "kind": "unit",
+          "unit": "merge_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "branches": [
+          "alpha",
+          "beta"
+        ],
+        "completed": [
+          "alpha"
+        ],
+        "join": "merge_join"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "alpha"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "green",
+      "case_id": "crb-holdout-parallel_join-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "red"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "green"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "blue"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh parallel completion set ['green']/['red', 'green', 'blue']",
+      "drop_fact": {
+        "fact_type": "semantic_completion",
+        "subject": "blue"
+      },
+      "family": "parallel_join",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "red"
+        },
+        {
+          "kind": "unit",
+          "unit": "blue"
+        },
+        {
+          "kind": "unit",
+          "unit": "merge_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "branches": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "completed": [
+          "green"
+        ],
+        "join": "merge_join"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "green"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "north",
+      "case_id": "crb-holdout-parallel_join-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "north"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "east"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "south"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "west"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh parallel completion set ['north', 'south']/['north', 'east', 'south', 'west']",
+      "drop_fact": {
+        "fact_type": "semantic_completion",
+        "subject": "west"
+      },
+      "family": "parallel_join",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "east"
+        },
+        {
+          "kind": "unit",
+          "unit": "west"
+        },
+        {
+          "kind": "unit",
+          "unit": "merge_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "branches": [
+          "north",
+          "east",
+          "south",
+          "west"
+        ],
+        "completed": [
+          "north",
+          "south"
+        ],
+        "join": "merge_join"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "north"
+        },
+        {
+          "kind": "unit",
+          "unit": "south"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "p",
+      "case_id": "crb-holdout-parallel_join-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "p"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "q"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "avoid replay and premature join",
+            "subject": "r"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh parallel completion set ['p', 'q', 'r']/['p', 'q', 'r']",
+      "drop_fact": {
+        "fact_type": "semantic_completion",
+        "subject": "r"
+      },
+      "family": "parallel_join",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "merge_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "branches": [
+          "p",
+          "q",
+          "r"
+        ],
+        "completed": [
+          "p",
+          "q",
+          "r"
+        ],
+        "join": "merge_join"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "p"
+        },
+        {
+          "kind": "unit",
+          "unit": "q"
+        },
+        {
+          "kind": "unit",
+          "unit": "r"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-loop_pause-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "counter_state",
+            "purpose": "resume after completed iterations",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "counter_bound",
+            "purpose": "know loop bound",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "decision_state",
+            "purpose": "honor exit decision",
+            "subject": "loop_break"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh loop state current=1,total=4,break=False",
+      "drop_fact": {
+        "fact_type": "counter_state",
+        "subject": "loop:holdout"
+      },
+      "family": "loop_pause",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_step_2"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_3"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_4"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_done"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "break": false,
+        "break_key": "loop_break",
+        "counter_key": "loop:holdout",
+        "current": 1,
+        "exit_unit": "loop_done",
+        "iter_prefix": "loop_step_",
+        "total": 4
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_step_1"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 1
+        },
+        {
+          "key": "loop_break",
+          "kind": "decision",
+          "value": false
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-loop_pause-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "counter_state",
+            "purpose": "resume after completed iterations",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "counter_bound",
+            "purpose": "know loop bound",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "decision_state",
+            "purpose": "honor exit decision",
+            "subject": "loop_break"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh loop state current=4,total=8,break=False",
+      "drop_fact": {
+        "fact_type": "counter_state",
+        "subject": "loop:holdout"
+      },
+      "family": "loop_pause",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_step_5"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_6"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_7"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 7
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_8"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 8
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_done"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "break": false,
+        "break_key": "loop_break",
+        "counter_key": "loop:holdout",
+        "current": 4,
+        "exit_unit": "loop_done",
+        "iter_prefix": "loop_step_",
+        "total": 8
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_step_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_2"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_3"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_4"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "key": "loop_break",
+          "kind": "decision",
+          "value": false
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-loop_pause-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "counter_state",
+            "purpose": "resume after completed iterations",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "counter_bound",
+            "purpose": "know loop bound",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "decision_state",
+            "purpose": "honor exit decision",
+            "subject": "loop_break"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh loop state current=5,total=9,break=True",
+      "drop_fact": {
+        "fact_type": "counter_state",
+        "subject": "loop:holdout"
+      },
+      "family": "loop_pause",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_done"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "break": true,
+        "break_key": "loop_break",
+        "counter_key": "loop:holdout",
+        "current": 5,
+        "exit_unit": "loop_done",
+        "iter_prefix": "loop_step_",
+        "total": 9
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_step_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_2"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_3"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_4"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_5"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "key": "loop_break",
+          "kind": "decision",
+          "value": true
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-loop_pause-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "counter_state",
+            "purpose": "resume after completed iterations",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "counter_bound",
+            "purpose": "know loop bound",
+            "subject": "loop:holdout"
+          },
+          {
+            "fact_type": "decision_state",
+            "purpose": "honor exit decision",
+            "subject": "loop_break"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh loop state current=2,total=7,break=False",
+      "drop_fact": {
+        "fact_type": "counter_state",
+        "subject": "loop:holdout"
+      },
+      "family": "loop_pause",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_step_3"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_4"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_5"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_6"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_7"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 7
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_done"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "break": false,
+        "break_key": "loop_break",
+        "counter_key": "loop:holdout",
+        "current": 2,
+        "exit_unit": "loop_done",
+        "iter_prefix": "loop_step_",
+        "total": 7
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "loop_step_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_step_2"
+        },
+        {
+          "key": "loop:holdout",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "key": "loop_break",
+          "kind": "decision",
+          "value": false
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": "void_invoice",
+      "case_id": "crb-holdout-compensation_pending-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "know whether side effect exists",
+            "subject": "invoice"
+          },
+          {
+            "fact_type": "compensation_state",
+            "purpose": "know whether rollback remains required",
+            "subject": "void_invoice"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh compensation invoice/committed/pending",
+      "drop_fact": {
+        "fact_type": "compensation_state",
+        "subject": "void_invoice"
+      },
+      "family": "compensation_pending",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "action": "void_invoice",
+          "kind": "compensation",
+          "unit": "compensation"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "comp_unit": "compensation",
+        "compensation": "void_invoice",
+        "compensation_state": "pending",
+        "effect_status": "committed",
+        "effect_unit": "effect_attempt",
+        "operation": "invoice",
+        "skip_unit": "compensation_none"
+      },
+      "source_plan": [
+        {
+          "kind": "effect",
+          "operation": "invoice",
+          "unit": "effect_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "error_detected"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_without_binding": "safe_rejection",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_without_binding"
+      ]
+    },
+    {
+      "alias_subject": "release_seat",
+      "case_id": "crb-holdout-compensation_pending-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "know whether side effect exists",
+            "subject": "seat_hold"
+          },
+          {
+            "fact_type": "compensation_state",
+            "purpose": "know whether rollback remains required",
+            "subject": "release_seat"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh compensation seat_hold/committed/pending",
+      "drop_fact": {
+        "fact_type": "compensation_state",
+        "subject": "release_seat"
+      },
+      "family": "compensation_pending",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "action": "release_seat",
+          "kind": "compensation",
+          "unit": "compensation"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "comp_unit": "compensation",
+        "compensation": "release_seat",
+        "compensation_state": "pending",
+        "effect_status": "committed",
+        "effect_unit": "effect_attempt",
+        "operation": "seat_hold",
+        "skip_unit": "compensation_none"
+      },
+      "source_plan": [
+        {
+          "kind": "effect",
+          "operation": "seat_hold",
+          "unit": "effect_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "error_detected"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_without_binding": "safe_rejection",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_without_binding"
+      ]
+    },
+    {
+      "alias_subject": "retract_email",
+      "case_id": "crb-holdout-compensation_pending-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "know whether side effect exists",
+            "subject": "email_notice"
+          },
+          {
+            "fact_type": "compensation_state",
+            "purpose": "know whether rollback remains required",
+            "subject": "retract_email"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh compensation email_notice/not_committed/absent",
+      "drop_fact": {
+        "fact_type": "compensation_state",
+        "subject": "retract_email"
+      },
+      "family": "compensation_pending",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "compensation_none"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "comp_unit": "compensation",
+        "compensation": "retract_email",
+        "compensation_state": "absent",
+        "effect_status": "not_committed",
+        "effect_unit": "effect_attempt",
+        "operation": "email_notice",
+        "skip_unit": "compensation_none"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "effect_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "error_detected"
+        }
+      ],
+      "variant_expectations": {
+        "complete_negative_snapshot": "safe_completion",
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "complete_negative_snapshot"
+      ]
+    },
+    {
+      "alias_subject": "restore_stock",
+      "case_id": "crb-holdout-compensation_pending-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "know whether side effect exists",
+            "subject": "inventory_move"
+          },
+          {
+            "fact_type": "compensation_state",
+            "purpose": "know whether rollback remains required",
+            "subject": "restore_stock"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh compensation inventory_move/committed/absent",
+      "drop_fact": {
+        "fact_type": "compensation_state",
+        "subject": "restore_stock"
+      },
+      "family": "compensation_pending",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "compensation_none"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "comp_unit": "compensation",
+        "compensation": "restore_stock",
+        "compensation_state": "absent",
+        "effect_status": "committed",
+        "effect_unit": "effect_attempt",
+        "operation": "inventory_move",
+        "skip_unit": "compensation_none"
+      },
+      "source_plan": [
+        {
+          "kind": "effect",
+          "operation": "inventory_move",
+          "unit": "effect_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "error_detected"
+        }
+      ],
+      "variant_expectations": {
+        "complete_negative_snapshot": "safe_completion",
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "complete_negative_snapshot"
+      ]
+    },
+    {
+      "alias_subject": "rpc_result_cb",
+      "case_id": "crb-holdout-async_callback-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "callback_state",
+            "purpose": "must not skip unresolved callback",
+            "subject": "rpc_result_cb"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh callback state rpc_result_cb/pending",
+      "drop_fact": {
+        "fact_type": "callback_state",
+        "subject": "rpc_result_cb"
+      },
+      "family": "async_callback",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "id": "rpc_result_cb",
+          "kind": "callback",
+          "unit": "callback_gate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "callback_id": "rpc_result_cb",
+        "callback_state": "pending",
+        "callback_unit": "callback_gate",
+        "operation": "rpc_result"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "callback_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "webhook_delivery_cb",
+      "case_id": "crb-holdout-async_callback-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "callback_state",
+            "purpose": "must not skip unresolved callback",
+            "subject": "webhook_delivery_cb"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh callback state webhook_delivery_cb/pending",
+      "drop_fact": {
+        "fact_type": "callback_state",
+        "subject": "webhook_delivery_cb"
+      },
+      "family": "async_callback",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "id": "webhook_delivery_cb",
+          "kind": "callback",
+          "unit": "callback_gate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "callback_id": "webhook_delivery_cb",
+        "callback_state": "pending",
+        "callback_unit": "callback_gate",
+        "operation": "webhook_delivery"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "callback_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "async_job_cb",
+      "case_id": "crb-holdout-async_callback-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "callback_state",
+            "purpose": "must not skip unresolved callback",
+            "subject": "async_job_cb"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh callback state async_job_cb/absent",
+      "drop_fact": {
+        "fact_type": "callback_state",
+        "subject": "async_job_cb"
+      },
+      "family": "async_callback",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "callback_id": "async_job_cb",
+        "callback_state": "absent",
+        "callback_unit": "callback_gate",
+        "operation": "async_job"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "callback_closed"
+        }
+      ],
+      "variant_expectations": {
+        "complete_negative_snapshot": "safe_completion",
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "complete_negative_snapshot"
+      ]
+    },
+    {
+      "alias_subject": "timeout_race_cb",
+      "case_id": "crb-holdout-async_callback-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "callback_state",
+            "purpose": "must not skip unresolved callback",
+            "subject": "timeout_race_cb"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "fresh callback state timeout_race_cb/pending",
+      "drop_fact": {
+        "fact_type": "callback_state",
+        "subject": "timeout_race_cb"
+      },
+      "family": "async_callback",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "id": "timeout_race_cb",
+          "kind": "callback",
+          "unit": "callback_gate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "callback_id": "timeout_race_cb",
+        "callback_state": "pending",
+        "callback_unit": "callback_gate",
+        "operation": "timeout_race"
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "callback_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "approve_contract_close",
+      "case_id": "crb-holdout-composite-h01",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "effect_status",
+            "purpose": "effect replay decision",
+            "subject": "contract_charge"
+          },
+          {
+            "fact_type": "approval_state",
+            "purpose": "approval obligation",
+            "subject": "approve_contract_close"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "composite effect + approval",
+      "drop_fact": {
+        "fact_type": "approval_state",
+        "subject": "approve_contract_close"
+      },
+      "family": "composite",
+      "index": 1,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "charge_ack"
+        },
+        {
+          "id": "approve_contract_close",
+          "kind": "approval",
+          "unit": "close_gate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "components": [
+          {
+            "kind": "effect_commitment",
+            "params": {
+              "ack_unit": "charge_ack",
+              "effect_status": "committed",
+              "effect_unit": "charge_attempt",
+              "operation": "contract_charge"
+            }
+          },
+          {
+            "kind": "approval_wait",
+            "params": {
+              "approval_state": "pending",
+              "approval_unit": "close_gate",
+              "request_id": "approve_contract_close"
+            }
+          }
+        ]
+      },
+      "source_plan": [
+        {
+          "kind": "effect",
+          "operation": "contract_charge",
+          "unit": "charge_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "approval_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_without_binding": "safe_rejection",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_without_binding"
+      ]
+    },
+    {
+      "alias_subject": null,
+      "case_id": "crb-holdout-composite-h02",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "retry_current",
+            "purpose": "retry position",
+            "subject": "sync_retry"
+          },
+          {
+            "fact_type": "retry_bound",
+            "purpose": "retry budget",
+            "subject": "sync_retry"
+          },
+          {
+            "fact_type": "callback_state",
+            "purpose": "callback obligation",
+            "subject": "sync_done_cb"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "composite retry + callback",
+      "drop_fact": {
+        "fact_type": "callback_state",
+        "subject": "sync_done_cb"
+      },
+      "family": "composite",
+      "index": 2,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "sync_try_3"
+        },
+        {
+          "key": "retry:sync_retry",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "id": "sync_done_cb",
+          "kind": "callback",
+          "unit": "sync_callback"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "components": [
+          {
+            "kind": "retry_pause",
+            "params": {
+              "attempt_prefix": "sync_try_",
+              "counter_key": "retry:sync_retry",
+              "current_attempt": 2,
+              "exhausted_unit": "sync_failed",
+              "max_attempts": 5,
+              "retry_unit": "sync_retry"
+            }
+          },
+          {
+            "kind": "async_callback",
+            "params": {
+              "callback_id": "sync_done_cb",
+              "callback_state": "pending",
+              "callback_unit": "sync_callback",
+              "operation": "sync_job"
+            }
+          }
+        ]
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "sync_try_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "sync_try_2"
+        },
+        {
+          "key": "retry:sync_retry",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "callback_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection",
+        "tampered_attestation": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "tampered_attestation"
+      ]
+    },
+    {
+      "alias_subject": "prepare",
+      "case_id": "crb-holdout-composite-h03",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "branch status",
+            "subject": "prepare"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "branch status",
+            "subject": "validate"
+          },
+          {
+            "fact_type": "semantic_completion",
+            "purpose": "branch status",
+            "subject": "publish"
+          },
+          {
+            "fact_type": "effect_status",
+            "purpose": "effect state",
+            "subject": "reservation_hold"
+          },
+          {
+            "fact_type": "compensation_state",
+            "purpose": "rollback obligation",
+            "subject": "release_hold"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "composite parallel + compensation",
+      "drop_fact": {
+        "fact_type": "compensation_state",
+        "subject": "release_hold"
+      },
+      "family": "composite",
+      "index": 3,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "validate"
+        },
+        {
+          "kind": "unit",
+          "unit": "publish"
+        },
+        {
+          "kind": "unit",
+          "unit": "release_join"
+        },
+        {
+          "action": "release_hold",
+          "kind": "compensation",
+          "unit": "release_comp"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "components": [
+          {
+            "kind": "parallel_join",
+            "params": {
+              "branches": [
+                "prepare",
+                "validate",
+                "publish"
+              ],
+              "completed": [
+                "prepare"
+              ],
+              "join": "release_join"
+            }
+          },
+          {
+            "kind": "compensation_pending",
+            "params": {
+              "comp_unit": "release_comp",
+              "compensation": "release_hold",
+              "compensation_state": "pending",
+              "effect_status": "committed",
+              "effect_unit": "hold_attempt",
+              "operation": "reservation_hold",
+              "skip_unit": "release_none"
+            }
+          }
+        ]
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "prepare"
+        },
+        {
+          "kind": "effect",
+          "operation": "reservation_hold",
+          "unit": "hold_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "error_detected"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_with_binding": "safe_completion",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_with_binding"
+      ]
+    },
+    {
+      "alias_subject": "approve_batch_commit",
+      "case_id": "crb-holdout-composite-h04",
+      "continuation_contract": {
+        "required_facts": [
+          {
+            "fact_type": "counter_state",
+            "purpose": "loop position",
+            "subject": "loop:batch"
+          },
+          {
+            "fact_type": "counter_bound",
+            "purpose": "loop bound",
+            "subject": "loop:batch"
+          },
+          {
+            "fact_type": "decision_state",
+            "purpose": "loop exit decision",
+            "subject": "batch_break"
+          },
+          {
+            "fact_type": "approval_state",
+            "purpose": "approval obligation",
+            "subject": "approve_batch_commit"
+          }
+        ],
+        "version": "1.0"
+      },
+      "description": "composite loop + approval",
+      "drop_fact": {
+        "fact_type": "approval_state",
+        "subject": "approve_batch_commit"
+      },
+      "family": "composite",
+      "index": 4,
+      "oracle_plan": [
+        {
+          "kind": "unit",
+          "unit": "batch_iter_4"
+        },
+        {
+          "key": "loop:batch",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_iter_5"
+        },
+        {
+          "key": "loop:batch",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_iter_6"
+        },
+        {
+          "key": "loop:batch",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_done"
+        },
+        {
+          "id": "approve_batch_commit",
+          "kind": "approval",
+          "unit": "batch_approval"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "params": {
+        "components": [
+          {
+            "kind": "loop_pause",
+            "params": {
+              "break": false,
+              "break_key": "batch_break",
+              "counter_key": "loop:batch",
+              "current": 3,
+              "exit_unit": "batch_done",
+              "iter_prefix": "batch_iter_",
+              "total": 6
+            }
+          },
+          {
+            "kind": "approval_wait",
+            "params": {
+              "approval_state": "pending",
+              "approval_unit": "batch_approval",
+              "request_id": "approve_batch_commit"
+            }
+          }
+        ]
+      },
+      "source_plan": [
+        {
+          "kind": "unit",
+          "unit": "batch_iter_1"
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_iter_2"
+        },
+        {
+          "kind": "unit",
+          "unit": "batch_iter_3"
+        },
+        {
+          "key": "loop:batch",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "key": "batch_break",
+          "kind": "decision",
+          "value": false
+        },
+        {
+          "kind": "unit",
+          "unit": "approval_requested"
+        }
+      ],
+      "variant_expectations": {
+        "enough_evidence": "safe_completion",
+        "identity_alias_without_binding": "safe_rejection",
+        "irrelevant_noise": "safe_completion",
+        "missing_critical_fact": "safe_rejection"
+      },
+      "variants": [
+        "enough_evidence",
+        "missing_critical_fact",
+        "irrelevant_noise",
+        "identity_alias_without_binding"
+      ]
+    }
+  ],
+  "holdout_generation_seed_hex": "eaf7aa910c36f0e20aab4e6046edd5fe",
+  "mechanism_frozen_sha256": "4e6fdd6d0fc949a7e337b02be9d71706a40f5fc87971f8030e0a5a02a32f6194"
+}

@@ -1,0 +1,80 @@
+{
+  "framework": "maf",
+  "case_id": "crb-holdout-retry_pause-h02",
+  "checkpoint_ref": "a0ea4775-3e4e-41cb-9e21-b1e2c024dcf1",
+  "native_kind": "maf_superstep_file_checkpoint",
+  "pending_work": [
+    "resume"
+  ],
+  "app_state": {
+    "phase": "mid_execution"
+  },
+  "native_observation": {
+    "framework": "maf",
+    "workflow_name": "mccv3-holdout-crb-holdout-retry_pause-h02-source-maf-crb-holdout-retry_pause-h02",
+    "checkpoint_id": "a0ea4775-3e4e-41cb-9e21-b1e2c024dcf1",
+    "checkpoint_count": 2,
+    "event_trace": [
+      {
+        "type": "started",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "status",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "superstep_started",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "executor_invoked",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "executor_completed",
+        "class": "WorkflowEvent"
+      },
+      {
+        "type": "superstep_completed",
+        "class": "WorkflowEvent"
+      }
+    ],
+    "handler_typing_mode": "explicit"
+  },
+  "source_store": {
+    "effects": {},
+    "units": {
+      "retry_try_1": 1,
+      "retry_try_2": 1,
+      "retry_try_3": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "retry:retry_job": 3
+    },
+    "decisions": {},
+    "finish_count": 0,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "retry_try_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "retry_try_3"
+      },
+      {
+        "key": "retry:retry_job",
+        "kind": "counter",
+        "value": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "configs": [
+    "full",
+    "minus_closed_world",
+    "minus_authentication",
+    "minus_identity_binding",
+    "minus_complete_snapshot",
+    "minus_dependency_reasoning",
+    "minus_certificate_verification"
+  ],
+  "challenge_variants": [
+    "enough",
+    "missing_critical",
+    "contradictory_fact",
+    "identity_missing",
+    "dependency_unresolved",
+    "incomplete_snapshot",
+    "tampered_certificate"
+  ]
+}

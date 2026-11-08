@@ -1,0 +1,34 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "notification_send_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "notification_send_attempt_recorded"
+    },
+    {
+      "kind": "effect",
+      "operation": "notification_send_op",
+      "unit": "notification_send_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "notification_send_ack"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "notification_send_ack": 1,
+    "notification_send_attempt": 1,
+    "notification_send_attempt_recorded": 1
+  }
+}

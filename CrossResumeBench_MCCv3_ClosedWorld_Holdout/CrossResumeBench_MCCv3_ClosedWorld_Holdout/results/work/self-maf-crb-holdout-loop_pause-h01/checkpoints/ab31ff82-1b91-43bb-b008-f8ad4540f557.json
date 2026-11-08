@@ -1,0 +1,19 @@
+{
+  "workflow_name": "mccv3-holdout-crb-holdout-loop_pause-h01-self-maf-crb-holdout-loop_pause-h01",
+  "graph_signature_hash": "883f0379a4b44c5402d6caef6ebd7522cce53a78ac493bccfa3f39813b3d51cf",
+  "checkpoint_id": "ab31ff82-1b91-43bb-b008-f8ad4540f557",
+  "previous_checkpoint_id": "c88c72e8-946a-4b51-8344-b230541b730d",
+  "timestamp": "2026-08-27T19:10:02.235141+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

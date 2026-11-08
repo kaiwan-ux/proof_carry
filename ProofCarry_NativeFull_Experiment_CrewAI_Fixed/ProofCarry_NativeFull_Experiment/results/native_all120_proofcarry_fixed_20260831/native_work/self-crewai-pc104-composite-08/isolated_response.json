@@ -1,0 +1,135 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-08",
+      "checkpoint_ref": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\self-crewai-pc104-composite-08\\checkpoints\\main\\20260830T204702_38075d6b_p-none.json",
+      "framework": "crewai",
+      "native_kind": "crewai_flow_checkpoint",
+      "native_observation": {
+        "checkpoint_count": 1,
+        "checkpoint_event_mode": "method_execution_finished",
+        "checkpoint_file": "F:\\agentic wala\\ProofCarry_NativeFull_Experiment_CrewAI_Fixed\\ProofCarry_NativeFull_Experiment\\results\\native_all120_proofcarry_fixed_20260831\\native_work\\self-crewai-pc104-composite-08\\checkpoints\\main\\20260830T204702_38075d6b_p-none.json",
+        "framework": "crewai",
+        "identifier_label": "task_id",
+        "pause_protocol": "subprocess_external_gate",
+        "pause_status": "pending",
+        "semantic_namespace": "crew.task"
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "loop_plus_comp_a_index": 5
+        },
+        "decisions": {},
+        "effects": {
+          "loop_plus_comp_b_op": 1
+        },
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "loop_plus_comp_a_index",
+            "kind": "counter",
+            "value": 5
+          },
+          {
+            "kind": "effect",
+            "operation": "loop_plus_comp_b_op",
+            "unit": "loop_plus_comp_b_effect"
+          }
+        ],
+        "units": {
+          "loop_plus_comp_b_effect": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "resume_api": "Flow.from_checkpoint",
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {
+        "loop_plus_comp_b_rollback": 1
+      },
+      "counters": {
+        "loop_plus_comp_a_index": 8
+      },
+      "decisions": {},
+      "effects": {
+        "loop_plus_comp_b_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "effect",
+          "operation": "loop_plus_comp_b_op",
+          "unit": "loop_plus_comp_b_effect"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_iter_6"
+        },
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_iter_7"
+        },
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 7
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_iter_8"
+        },
+        {
+          "key": "loop_plus_comp_a_index",
+          "kind": "counter",
+          "value": 8
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_comp_a_exit"
+        },
+        {
+          "action": "loop_plus_comp_b_rollback",
+          "kind": "compensation",
+          "unit": "loop_plus_comp_b_compensate"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "loop_plus_comp_a_exit": 1,
+        "loop_plus_comp_a_iter_6": 1,
+        "loop_plus_comp_a_iter_7": 1,
+        "loop_plus_comp_a_iter_8": 1,
+        "loop_plus_comp_b_compensate": 1,
+        "loop_plus_comp_b_effect": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 32.86000000000058
+}

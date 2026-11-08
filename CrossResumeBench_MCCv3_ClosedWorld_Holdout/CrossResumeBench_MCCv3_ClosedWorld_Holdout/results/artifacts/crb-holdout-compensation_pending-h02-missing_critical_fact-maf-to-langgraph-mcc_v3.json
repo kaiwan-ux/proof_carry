@@ -1,0 +1,87 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h02-missing_critical_fact-maf-to-langgraph-mcc_v3",
+    "source": "maf",
+    "target": "langgraph",
+    "case_id": "crb-holdout-compensation_pending-h02",
+    "family": "compensation_pending",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 966,
+    "payload_sha256": "78fa637d0d0bd982e5be36ee3cc23dda57450b0b982618e21b190a5aff289ea5",
+    "expected_plan": [
+      {
+        "action": "release_seat",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h02",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "maf",
+    "target_runtime": "langgraph",
+    "workflow_spec_hash": "799109b9622567b78f4b49f8ad55f0e5ca5f24c14ade9247af99b395cf703072",
+    "continuation_contract_hash": "3aa34e94ddb7aeffff90d2fcd2fcf2175a743c1f3b818da02cb498276c4e51a8",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "seat_hold",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "6dcfbcfd1304969ff734",
+        "fact_type": "effect_commitment",
+        "subject": "seat_hold",
+        "value": "committed",
+        "scope": "crb-holdout-compensation_pending-h02",
+        "evidence": {
+          "native_checkpoint_ref": "c8537446-9bac-4f55-828f-fbc5d1278f73"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "8eeeeaede168b36ed614231ea41f71b200308919debe3855af941acaa57d8c9e"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "compensation_state",
+        "subject": "release_seat",
+        "purpose": "know whether rollback remains required"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "effect_status|seat_hold": [
+        "certificate"
+      ]
+    }
+  }
+}

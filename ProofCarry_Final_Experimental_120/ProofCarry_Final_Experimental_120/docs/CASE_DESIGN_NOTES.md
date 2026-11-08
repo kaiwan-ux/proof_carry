@@ -1,0 +1,124 @@
+# Expanded120 Case Design
+
+The benchmark contains 15 distinct scenario concepts per family. Each row below has a distinct semantic obligation and scenario description; evidence variants are applied *after* base-case construction and therefore do not count as new base cases.
+
+- **PC-EFF-01 — Lost acknowledgement after external commit** (effect_commitment): Payment/effect may have committed although the response was lost. Safe continuation plan: `ack_committed_effect`.
+- **PC-EFF-02 — Idempotency key with missing receipt** (effect_commitment): An idempotency token exists but the authoritative commit receipt is absent. Safe continuation plan: `recover_effect_receipt`.
+- **PC-EFF-03 — Partial multi-effect commit** (effect_commitment): One member of a two-effect operation committed while the second remains pending. Safe continuation plan: `resume_second_effect_only`.
+- **PC-EFF-04 — Stale read after committed write** (effect_commitment): A write committed but a stale read makes the target observe the pre-write value. Safe continuation plan: `skip_duplicate_write`.
+- **PC-EFF-05 — Tool timeout at commit boundary** (effect_commitment): A tool timed out exactly at the point where a remote side effect could have committed. Safe continuation plan: `resolve_then_ack`.
+- **PC-EFF-06 — Retryable error emitted after commit** (effect_commitment): The service returned a retryable error after persisting the effect. Safe continuation plan: `do_not_retry_effect`.
+- **PC-EFF-07 — Duplicate delivery uncertainty** (effect_commitment): The source cannot tell whether a duplicate-delivered command was already applied. Safe continuation plan: `dedupe_and_continue`.
+- **PC-EFF-08 — Partially committed transaction batch** (effect_commitment): A batch has mixed committed and uncommitted members. Safe continuation plan: `resume_uncommitted_members`.
+- **PC-EFF-09 — Committed effect awaiting compensation** (effect_commitment): The effect committed but the workflow has transitioned to rollback. Safe continuation plan: `schedule_compensation`.
+- **PC-EFF-10 — Authorized but not executed** (effect_commitment): Authorization was granted, but execution never began. Safe continuation plan: `execute_authorized_effect`.
+- **PC-EFF-11 — Cancellation after dispatch** (effect_commitment): A cancellation raced with dispatch and commit state must be proven. Safe continuation plan: `resolve_cancel_commit`.
+- **PC-EFF-12 — Effect committed under runtime alias** (effect_commitment): The committed effect is recorded under a source-native identifier that differs at target. Safe continuation plan: `map_and_ack_effect`.
+- **PC-EFF-13 — Receipt belongs to prior execution** (effect_commitment): A valid-looking receipt is for a previous execution of the same workflow. Safe continuation plan: `ignore_prior_receipt`.
+- **PC-EFF-14 — Commit with versioned payload mismatch** (effect_commitment): A committed effect used payload version N while the target proposes N+1. Safe continuation plan: `preserve_committed_version`.
+- **PC-EFF-15 — Effect inside completed parallel branch** (effect_commitment): One parallel branch committed an effect before the join migrated. Safe continuation plan: `preserve_branch_effect`.
+- **PC-RET-01 — Retry budget available** (retry): A failed unit still has retry budget and may be attempted again. Safe continuation plan: `retry_once`.
+- **PC-RET-02 — Retry budget exhausted** (retry): The maximum retry count has been reached and another attempt is unsafe. Safe continuation plan: `stop_retrying`.
+- **PC-RET-03 — Retry after timeout** (retry): A timeout occurred and retry eligibility depends on whether work committed. Safe continuation plan: `retry_if_uncommitted`.
+- **PC-RET-04 — Duplicate retry request** (retry): A retry command was emitted twice across a migration boundary. Safe continuation plan: `dedupe_retry`.
+- **PC-RET-05 — Partial retry budget consumption** (retry): The source incremented the retry counter before failing to persist the rest of state. Safe continuation plan: `resume_with_remaining_budget`.
+- **PC-RET-06 — Retry with changed parameters** (retry): A retry request carries parameters that differ from the failed attempt. Safe continuation plan: `reject_parameter_drift`.
+- **PC-RET-07 — Retry after external effect** (retry): A step failed after an external effect and naive retry could duplicate it. Safe continuation plan: `resume_after_effect`.
+- **PC-RET-08 — Retry with missing evidence** (retry): Retry state is not present in transferable history and requires certification. Safe continuation plan: `resume_certified_retry`.
+- **PC-RET-09 — Contradictory retry counters** (retry): History and certified state disagree on the consumed retry count. Safe continuation plan: `resolve_retry_conflict`.
+- **PC-RET-10 — Retry with expired authorization** (retry): The retry budget remains but the authorization window has expired. Safe continuation plan: `do_not_retry_expired`.
+- **PC-RET-11 — Retry across runtime identity change** (retry): The retrying semantic unit has different source and target task identifiers. Safe continuation plan: `map_retry_identity`.
+- **PC-RET-12 — Retry depends on callback** (retry): A retry is legal only after an asynchronous callback indicates failure. Safe continuation plan: `retry_after_callback`.
+- **PC-RET-13 — Retry after compensation** (retry): The failed operation was compensated and retry legality depends on rollback completion. Safe continuation plan: `retry_after_rollback`.
+- **PC-RET-14 — Retry inside parallel branch** (retry): Only one failed branch should retry while completed siblings must remain completed. Safe continuation plan: `retry_failed_branch`.
+- **PC-RET-15 — Composite retry obligation** (retry): A retry is nested under approval and effect-commit obligations. Safe continuation plan: `resume_composite_retry`.
+- **PC-APR-01 — Single pending approval** (approval): A human approval is pending before the next action. Safe continuation plan: `wait_for_approval`.
+- **PC-APR-02 — Multi-approver quorum** (approval): Continuation requires a two-of-three approval quorum. Safe continuation plan: `continue_after_quorum`.
+- **PC-APR-03 — Granted approval not propagated** (approval): Approval was granted but the source checkpoint predates propagation. Safe continuation plan: `apply_granted_approval`.
+- **PC-APR-04 — Revoked approval** (approval): A previously granted approval was revoked before migration. Safe continuation plan: `block_revoked_request`.
+- **PC-APR-05 — Expired approval** (approval): An approval token expired before the target continuation. Safe continuation plan: `request_new_approval`.
+- **PC-APR-06 — Conditional amount approval** (approval): Approval authority depends on the transaction amount threshold. Safe continuation plan: `enforce_amount_approval`.
+- **PC-APR-07 — Delegated approver** (approval): Approval was delegated and delegation validity must be established. Safe continuation plan: `honor_valid_delegation`.
+- **PC-APR-08 — Request changed after approval** (approval): The approved request was modified after the approval decision. Safe continuation plan: `invalidate_stale_approval`.
+- **PC-APR-09 — Parallel approval gates** (approval): Two independent approvals gate different branches before a join. Safe continuation plan: `resume_approved_branches`.
+- **PC-APR-10 — Approval identity alias** (approval): The approval request is represented by different IDs across runtimes. Safe continuation plan: `map_approval_identity`.
+- **PC-APR-11 — Approval pending callback** (approval): A third-party approval callback has not yet arrived. Safe continuation plan: `wait_for_approval_callback`.
+- **PC-APR-12 — Approval after retry exhaustion** (approval): Human approval is required to override an exhausted retry budget. Safe continuation plan: `wait_for_override`.
+- **PC-APR-13 — Approval before committed effect** (approval): An approved operation committed just before migration and must not be repeated. Safe continuation plan: `ack_approved_effect`.
+- **PC-APR-14 — Separation-of-duties approval** (approval): The actor who executes cannot be the actor who approved. Safe continuation plan: `enforce_role_separation`.
+- **PC-APR-15 — Escalated approval path** (approval): A timed-out approval was escalated to a higher authority. Safe continuation plan: `follow_escalated_decision`.
+- **PC-PAR-01 — One branch complete, one pending** (parallel): A two-way fork has one completed branch and one unfinished branch. Safe continuation plan: `resume_pending_branch`.
+- **PC-PAR-02 — All branches complete, join pending** (parallel): All branches finished but the join node has not executed. Safe continuation plan: `run_join_only`.
+- **PC-PAR-03 — Failed branch with compensation** (parallel): A failed branch requires compensation while siblings must remain stable. Safe continuation plan: `compensate_failed_branch`.
+- **PC-PAR-04 — First-wins race** (parallel): The workflow continues with the first successful branch and cancels others. Safe continuation plan: `preserve_race_winner`.
+- **PC-PAR-05 — Parallel branch external effect** (parallel): One branch committed an external effect before its completion marker. Safe continuation plan: `preserve_effect_branch`.
+- **PC-PAR-06 — Parallel branch retry** (parallel): A failed branch is retrying while sibling results are already final. Safe continuation plan: `retry_one_branch`.
+- **PC-PAR-07 — Dynamic fan-out count** (parallel): The number of spawned branches was computed at runtime. Safe continuation plan: `resume_dynamic_fanout`.
+- **PC-PAR-08 — Nested parallel regions** (parallel): An inner parallel region is partially complete inside an outer branch. Safe continuation plan: `resume_inner_parallel`.
+- **PC-PAR-09 — Branch cancellation** (parallel): One branch was explicitly cancelled before the migration checkpoint. Safe continuation plan: `preserve_branch_cancel`.
+- **PC-PAR-10 — Quorum join** (parallel): The join may fire after a quorum rather than after every branch. Safe continuation plan: `evaluate_quorum_join`.
+- **PC-PAR-11 — Branch identity remapping** (parallel): Source and target runtimes use different identifiers for the same branch. Safe continuation plan: `map_branch_identity`.
+- **PC-PAR-12 — Partial result aggregation** (parallel): Several branch outputs are already folded into an accumulator. Safe continuation plan: `resume_unaggregated_only`.
+- **PC-PAR-13 — Callback-waiting branch** (parallel): One branch waits on an external callback while another is complete. Safe continuation plan: `wait_callback_branch`.
+- **PC-PAR-14 — Inconsistent branch snapshot** (parallel): Two snapshot fragments disagree about whether a branch completed. Safe continuation plan: `reject_inconsistent_parallel`.
+- **PC-PAR-15 — Approval barrier after fork** (parallel): Completed branches cannot join until an approval barrier is satisfied. Safe continuation plan: `wait_or_join_after_approval`.
+- **PC-LOP-01 — Mid-iteration pause** (loop): The workflow pauses after part of an iteration but before its semantic completion. Safe continuation plan: `resume_current_iteration`.
+- **PC-LOP-02 — Loop accumulator state** (loop): Continuation requires preserving an accumulator produced by prior iterations. Safe continuation plan: `resume_with_accumulator`.
+- **PC-LOP-03 — Maximum iteration boundary** (loop): The loop is at its maximum bound and must not execute an extra iteration. Safe continuation plan: `stop_at_max`.
+- **PC-LOP-04 — Break condition satisfied** (loop): A break predicate became true before migration. Safe continuation plan: `exit_loop`.
+- **PC-LOP-05 — Continue condition triggered** (loop): The current iteration should skip the remaining body and start the next iteration. Safe continuation plan: `advance_iteration`.
+- **PC-LOP-06 — External effect inside loop** (loop): A loop iteration committed an effect before the iteration marker was persisted. Safe continuation plan: `preserve_iteration_effect`.
+- **PC-LOP-07 — Retry inside loop** (loop): The current iteration contains a retrying operation with its own budget. Safe continuation plan: `resume_loop_retry`.
+- **PC-LOP-08 — Nested loop indices** (loop): Two nested loop indices must be preserved without replaying outer work. Safe continuation plan: `resume_nested_indices`.
+- **PC-LOP-09 — Loop unit identity alias** (loop): The target runtime names the loop body differently from the source. Safe continuation plan: `map_loop_identity`.
+- **PC-LOP-10 — Dynamic loop bound** (loop): The terminal bound is computed from prior workflow data. Safe continuation plan: `resume_dynamic_loop`.
+- **PC-LOP-11 — Callback-driven early termination** (loop): An external callback requests early loop termination. Safe continuation plan: `exit_on_callback`.
+- **PC-LOP-12 — Per-iteration approval** (loop): Each iteration requires an approval scoped to its index. Safe continuation plan: `resume_approved_iteration`.
+- **PC-LOP-13 — Partial iteration commit** (loop): Some iteration-local state committed while the semantic iteration remains incomplete. Safe continuation plan: `finish_partial_iteration`.
+- **PC-LOP-14 — Loop after compensation** (loop): A failed iteration was compensated and loop continuation depends on rollback completion. Safe continuation plan: `advance_after_compensation`.
+- **PC-LOP-15 — Loop with parallel body** (loop): Each loop iteration fans out into parallel branches whose progress must be preserved. Safe continuation plan: `resume_parallel_loop_body`.
+- **PC-COM-01 — Rollback queued after effect** (compensation): A committed effect has a queued but unexecuted compensating action. Safe continuation plan: `execute_compensation`.
+- **PC-COM-02 — Partial rollback** (compensation): A multi-step compensation has completed only its first reversal. Safe continuation plan: `resume_remaining_compensation`.
+- **PC-COM-03 — Failed compensation** (compensation): A compensation attempt failed and may itself require retry policy. Safe continuation plan: `retry_compensation`.
+- **PC-COM-04 — Nested saga compensation** (compensation): An inner saga is rolling back while an outer saga remains active. Safe continuation plan: `resume_inner_rollback`.
+- **PC-COM-05 — Compensation ordering** (compensation): Rollback must occur in reverse order of committed effects. Safe continuation plan: `compensate_reverse_order`.
+- **PC-COM-06 — Retrying compensation** (compensation): The rollback action is in a retry loop with bounded attempts. Safe continuation plan: `resume_compensation_retry`.
+- **PC-COM-07 — Uncertain compensating effect** (compensation): A compensation call timed out and may already have applied. Safe continuation plan: `resolve_compensation_commit`.
+- **PC-COM-08 — Compensation idempotency** (compensation): A compensating action is idempotent only under a specific key. Safe continuation plan: `dedupe_compensation`.
+- **PC-COM-09 — Parallel branch compensation** (compensation): Only failed branches should compensate while successful siblings remain intact. Safe continuation plan: `compensate_failed_branches`.
+- **PC-COM-10 — Loop compensation** (compensation): Several loop iterations committed effects and rollback must stop at a known boundary. Safe continuation plan: `rollback_loop_suffix`.
+- **PC-COM-11 — Approval before destructive rollback** (compensation): A destructive compensation requires explicit human approval. Safe continuation plan: `wait_for_rollback_approval`.
+- **PC-COM-12 — Timeout during rollback** (compensation): A rollback timed out near the external commit boundary. Safe continuation plan: `resolve_rollback_timeout`.
+- **PC-COM-13 — Expired compensation window** (compensation): The rollback time window expired before migration. Safe continuation plan: `escalate_uncompensated_effect`.
+- **PC-COM-14 — Compensation identity alias** (compensation): The source and target use different identifiers for the compensating unit. Safe continuation plan: `map_compensation_identity`.
+- **PC-COM-15 — Mixed reversible and irreversible effects** (compensation): Only the reversible subset may be compensated; irreversible effects require escalation. Safe continuation plan: `compensate_reversible_subset`.
+- **PC-CBK-01 — Webhook pending** (callback): The workflow is waiting for a correlated external webhook. Safe continuation plan: `wait_for_webhook`.
+- **PC-CBK-02 — Duplicate callback delivery** (callback): The same callback may arrive more than once and must be deduplicated. Safe continuation plan: `dedupe_callback`.
+- **PC-CBK-03 — Callback received but unprocessed** (callback): The callback arrived but its semantic handler has not executed. Safe continuation plan: `process_callback_once`.
+- **PC-CBK-04 — Callback correlation identity alias** (callback): Source and target runtimes encode the callback correlation differently. Safe continuation plan: `map_callback_identity`.
+- **PC-CBK-05 — Expired callback** (callback): The callback validity window expired before continuation. Safe continuation plan: `reject_expired_callback`.
+- **PC-CBK-06 — Callback after cancellation** (callback): A late callback arrives for a workflow action that was cancelled. Safe continuation plan: `ignore_cancelled_callback`.
+- **PC-CBK-07 — Callback triggers retry** (callback): A failure callback authorizes retry of a specific unit. Safe continuation plan: `retry_after_callback`.
+- **PC-CBK-08 — Callback confirms external effect** (callback): The callback is the authoritative evidence that an effect committed. Safe continuation plan: `ack_callback_effect`.
+- **PC-CBK-09 — Multiple callback quorum** (callback): Continuation requires a quorum of callbacks from independent services. Safe continuation plan: `continue_after_callback_quorum`.
+- **PC-CBK-10 — Ordered callbacks** (callback): Callbacks must be processed in monotonically increasing sequence order. Safe continuation plan: `process_next_callback`.
+- **PC-CBK-11 — Out-of-order stale callback** (callback): An older callback arrives after a newer state transition. Safe continuation plan: `ignore_stale_callback`.
+- **PC-CBK-12 — Invalid callback token** (callback): A callback carries a token that does not match the active execution. Safe continuation plan: `reject_invalid_callback`.
+- **PC-CBK-13 — Callback in parallel branch** (callback): One branch waits for a callback while sibling branches progress. Safe continuation plan: `resume_callback_branch`.
+- **PC-CBK-14 — Callback inside loop** (callback): A callback belongs to one specific loop iteration. Safe continuation plan: `apply_callback_to_iteration`.
+- **PC-CBK-15 — Callback after compensation** (callback): A late success callback arrives after the original action was compensated. Safe continuation plan: `reconcile_late_callback`.
+- **PC-MIX-01 — Effect plus approval** (composite): An approved operation may already have committed before the approval acknowledgement migrated. Safe continuation plan: `reconcile_approval_effect`.
+- **PC-MIX-02 — Retry plus callback** (composite): Retry eligibility depends on a correlated asynchronous failure callback. Safe continuation plan: `resume_retry_callback`.
+- **PC-MIX-03 — Parallel plus compensation** (composite): A failed parallel branch requires rollback while completed siblings must be preserved. Safe continuation plan: `compensate_one_branch`.
+- **PC-MIX-04 — Loop plus approval** (composite): A loop iteration cannot advance until its scoped approval is proven. Safe continuation plan: `resume_approved_loop`.
+- **PC-MIX-05 — Effect, retry, and approval** (composite): A retried approved effect has an uncertain commit boundary. Safe continuation plan: `resolve_composite_effect`.
+- **PC-MIX-06 — Callback-driven parallel join** (composite): A callback completes the last outstanding branch before a join. Safe continuation plan: `run_join_after_callback`.
+- **PC-MIX-07 — Saga rollback with callback retry** (composite): Compensation failure waits for a callback before retrying rollback. Safe continuation plan: `resume_saga_retry`.
+- **PC-MIX-08 — Nested loop and parallel** (composite): A loop iteration contains a partially completed fan-out with an accumulator. Safe continuation plan: `resume_nested_composite`.
+- **PC-MIX-09 — Approval expiry around effect** (composite): An approval may have expired after authorization but before effect commit. Safe continuation plan: `resolve_authorization_commit`.
+- **PC-MIX-10 — Cross-runtime identity chain** (composite): Approval, task, and callback identifiers all change across runtimes. Safe continuation plan: `resolve_identity_chain`.
+- **PC-MIX-11 — Partial batch with rollback** (composite): Some batch members committed, one failed, and selected members require compensation. Safe continuation plan: `resume_batch_recovery`.
+- **PC-MIX-12 — Race, callback, and cancellation** (composite): A winning callback races with cancellation of losing branches. Safe continuation plan: `preserve_race_outcome`.
+- **PC-MIX-13 — Retry nested under approval** (composite): A retry consumes budget only while the associated approval remains current. Safe continuation plan: `resume_authorized_retry`.
+- **PC-MIX-14 — Compensation with late effect callback** (composite): A late commit callback arrives after a compensation decision was made. Safe continuation plan: `reconcile_compensated_commit`.
+- **PC-MIX-15 — Full obligation stack** (composite): A workflow combines approval, retry, parallel progress, effect commitment, and callback state. Safe continuation plan: `resume_full_stack`.

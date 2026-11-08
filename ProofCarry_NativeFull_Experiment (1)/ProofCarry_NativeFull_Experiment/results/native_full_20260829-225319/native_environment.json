@@ -1,0 +1,65 @@
+{
+  "crewai": {
+    "details": {
+      "framework": "crewai",
+      "identifier_label": "task_id",
+      "installed": true,
+      "pause_kind": "flow_checkpoint_external_gate",
+      "pause_status": "pending",
+      "ready": true,
+      "semantic_namespace": "crew.task",
+      "supports_class_from_checkpoint": true,
+      "supports_kickoff_from_checkpoint": true,
+      "version": "1.15.17"
+    },
+    "duration_ms": 21289.083699999537,
+    "error": "",
+    "framework": "crewai",
+    "installed": 1,
+    "pause_kind": "flow_checkpoint_external_gate",
+    "ready": 1,
+    "semantic_namespace": "crew.task",
+    "version": "1.15.17"
+  },
+  "langgraph": {
+    "details": {
+      "framework": "langgraph",
+      "identifier_label": "node_id",
+      "installed": true,
+      "pause_kind": "checkpoint_interrupt_before_resume",
+      "pause_status": "waiting",
+      "ready": true,
+      "semantic_namespace": "lg.node",
+      "version": "unknown"
+    },
+    "duration_ms": 8577.047599999787,
+    "error": "",
+    "framework": "langgraph",
+    "installed": 1,
+    "pause_kind": "checkpoint_interrupt_before_resume",
+    "ready": 1,
+    "semantic_namespace": "lg.node",
+    "version": "unknown"
+  },
+  "maf": {
+    "details": {
+      "explicit_handler_types": true,
+      "framework": "maf",
+      "identifier_label": "activity_id",
+      "installed": true,
+      "pause_kind": "superstep_completed_file_checkpoint",
+      "pause_status": "suspended",
+      "ready": true,
+      "semantic_namespace": "maf.activity",
+      "version": "1.15.0"
+    },
+    "duration_ms": 423.50079999960144,
+    "error": "",
+    "framework": "maf",
+    "installed": 1,
+    "pause_kind": "superstep_completed_file_checkpoint",
+    "ready": 1,
+    "semantic_namespace": "maf.activity",
+    "version": "1.15.0"
+  }
+}

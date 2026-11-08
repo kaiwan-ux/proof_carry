@@ -1,0 +1,20 @@
+{
+  "langgraph": {
+    "namespace": "lg.node",
+    "identifier_label": "node_id",
+    "pause_status": "waiting",
+    "example": "lg.node::<semantic_subject>"
+  },
+  "crewai": {
+    "namespace": "crew.task",
+    "identifier_label": "task_id",
+    "pause_status": "pending",
+    "example": "crew.task::<semantic_subject>"
+  },
+  "maf": {
+    "namespace": "maf.activity",
+    "identifier_label": "activity_id",
+    "pause_status": "suspended",
+    "example": "maf.activity::<semantic_subject>"
+  }
+}

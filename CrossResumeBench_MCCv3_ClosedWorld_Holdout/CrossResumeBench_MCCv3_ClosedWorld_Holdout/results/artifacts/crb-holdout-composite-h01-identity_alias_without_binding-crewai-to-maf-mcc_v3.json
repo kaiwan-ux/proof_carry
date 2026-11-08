@@ -1,0 +1,117 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h01-identity_alias_without_binding-crewai-to-maf-mcc_v3",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-composite-h01",
+    "family": "composite",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1907,
+    "payload_sha256": "8d8d55d9b9b1fd64c01aaf0ed912866238e263d671f41379531e56096f5bd4f2",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "charge_ack"
+      },
+      {
+        "id": "approve_contract_close",
+        "kind": "approval",
+        "unit": "close_gate"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-composite-h01",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "db60e1e372b813315a0f4ac4b231e39288214a0a5dd98567ba51cbf8e01a5c03",
+    "continuation_contract_hash": "10f661f0f7d85f12e6f3bb894242dd3647b4422b0c265a027b66e12098151ba5",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "charge_attempt",
+        "data": {
+          "operation": "contract_charge",
+          "commit_status": "unknown",
+          "parent_unit": "charge_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "approval_requested",
+        "semantic_unit": "close_gate",
+        "data": {
+          "request_id": "src_alias__approve_contract_close",
+          "blocks": "close_gate"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "c957ef6235d01b236788",
+        "fact_type": "effect_commitment",
+        "subject": "contract_charge",
+        "value": "committed",
+        "scope": "crb-holdout-composite-h01",
+        "evidence": {
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h01\\checkpoints\\main\\20260827T190901_d6344952_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "7e93b9ec7ddd4ee82298633b708b461961f11acadc53b8491e1c8063e766ac75"
+      },
+      {
+        "certificate_id": "f5047cd942376d8eee5f",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__approve_contract_close",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h01",
+        "evidence": {
+          "kind": "approval",
+          "blocks": "close_gate",
+          "native_checkpoint_ref": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\source-crewai-crb-holdout-composite-h01\\checkpoints\\main\\20260827T190901_d6344952_p-none.json"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "11cde7312c440685bd509f267b4d9176dc5a2babceb940c38e4f7faf337801b5"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "approval_state",
+        "subject": "approve_contract_close",
+        "purpose": "approval obligation"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "approval_state|src_alias__approve_contract_close": [
+        "history",
+        "certificate"
+      ],
+      "effect_status|contract_charge": [
+        "certificate"
+      ]
+    }
+  }
+}

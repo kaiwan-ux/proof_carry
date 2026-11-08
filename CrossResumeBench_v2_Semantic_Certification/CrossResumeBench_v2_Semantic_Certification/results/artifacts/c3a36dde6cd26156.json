@@ -1,0 +1,165 @@
+{
+  "source_capture": {
+    "case_id": "crb2-compensation_scope_closure-v01",
+    "workflow": "compensation_scope_closure",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-compensation_scope_closure-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "debit",
+        "semantic_unit": "debit_scope",
+        "data": {
+          "operation": "debit",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "debit_scope",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "compensation_required",
+        "step": "need_refund",
+        "semantic_unit": "refund",
+        "data": {
+          "effect": "debit",
+          "compensation_action": "refund"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "8e7b37d6447c72e043b2",
+        "fact_type": "effect_commitment",
+        "subject": "debit",
+        "value": "committed",
+        "scope": "debit_scope",
+        "evidence": {
+          "operation_id": "crb2-compensation_scope_closure-v01:debit",
+          "idempotency_key": "idem:crb2-compensation_scope_closure-v01:debit",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "9ce72e609cc29e616263afe82485b56c93da057d5d4080aa4cd4ec5e6f551fba"
+      },
+      {
+        "certificate_id": "a480ac7813c99e4b49ec",
+        "fact_type": "semantic_completion",
+        "subject": "debit_scope",
+        "value": "completed",
+        "scope": "debit_scope",
+        "evidence": {
+          "operation": "debit",
+          "native_marker": "debit",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "364f8fe365c680b2da39754fa8d88cf26fbbc9527b302e81806ae5677129e763"
+      }
+    ],
+    "source_ledger": {
+      "debit": 1
+    },
+    "native_observation": {
+      "kind": "langgraph_checkpoint",
+      "framework": "langgraph",
+      "real_native": true,
+      "next": [],
+      "values_keys": [
+        "ctx"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb2-src-crb2-compensation_scope_closure-v01",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a17a2-89ca-69a2-8002-50bd51b2693e"
+        }
+      },
+      "native_action_nodes": 2
+    },
+    "truth_completed_units": [
+      "debit_scope"
+    ],
+    "truth_pending_obligations": [
+      {
+        "type": "compensation",
+        "action": "refund",
+        "effect": "debit"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-compensation_scope_closure-v01",
+      "amount": 101
+    },
+    "completed_units": [
+      "debit_scope"
+    ],
+    "pending_obligations": [
+      {
+        "type": "compensation",
+        "action": "refund",
+        "effect": "debit"
+      }
+    ],
+    "effect_facts": {
+      "debit": {
+        "status": "committed",
+        "source": "oracle_source_ledger"
+      }
+    },
+    "dependencies": {},
+    "decisions": {},
+    "counters": {}
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "debit_scope",
+      "finish",
+      "refund"
+    ],
+    "executed_units": [
+      "refund",
+      "finish"
+    ],
+    "final_ledger": {
+      "debit": 1,
+      "compensate:debit": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "58913d69-11e8-457a-94a9-d004544831b5",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 3
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

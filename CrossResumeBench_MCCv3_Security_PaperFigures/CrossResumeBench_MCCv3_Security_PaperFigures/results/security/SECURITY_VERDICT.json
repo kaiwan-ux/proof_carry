@@ -1,0 +1,47 @@
+{
+  "suite_version": "1.0",
+  "rows": 768,
+  "summary": {
+    "safe_completion": 96,
+    "safe_rejection": 480,
+    "unsafe": 192
+  },
+  "by_variant": {
+    "valid_control": {
+      "safe_completion": 96
+    },
+    "value_tamper_no_rehash": {
+      "safe_rejection": 96
+    },
+    "subject_tamper_no_rehash": {
+      "safe_rejection": 96
+    },
+    "evidence_tamper_no_rehash": {
+      "safe_rejection": 96
+    },
+    "contract_hash_tamper": {
+      "safe_rejection": 96
+    },
+    "conflicting_valid_certificates": {
+      "safe_rejection": 96
+    },
+    "cross_context_replay": {
+      "unsafe": 96
+    },
+    "forged_rehash_wrong_value": {
+      "unsafe": 96
+    }
+  },
+  "by_attack_class": {
+    "in_threat_model": {
+      "safe_completion": 96,
+      "safe_rejection": 480
+    },
+    "out_of_threat_model": {
+      "unsafe": 192
+    }
+  },
+  "in_model_integrity_gate_pass": true,
+  "trust_boundary_exposed": true,
+  "claim_boundary": "Hash integrity detects non-rehashed mutation, but does not authenticate issuer authority or bind certificates to a unique case/context. Out-of-model forged/replayed valid hashes are expected to expose this boundary."
+}

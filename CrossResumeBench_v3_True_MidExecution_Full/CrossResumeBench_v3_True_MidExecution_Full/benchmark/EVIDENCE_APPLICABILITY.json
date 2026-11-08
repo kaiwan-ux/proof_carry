@@ -1,0 +1,138 @@
+{
+  "crb3-effect_commitment-c01": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "crb3-effect_commitment-c02": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "crb3-effect_commitment-c03": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "crb3-effect_commitment-c04": [
+    "enough_evidence",
+    "ambiguous_external_commit"
+  ],
+  "crb3-retry_pause-c01": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-retry_pause-c02": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-retry_pause-c03": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-retry_pause-c04": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-approval_wait-c01": [
+    "enough_evidence",
+    "partially_observable_progress"
+  ],
+  "crb3-approval_wait-c02": [
+    "enough_evidence",
+    "partially_observable_progress"
+  ],
+  "crb3-approval_wait-c03": [
+    "enough_evidence",
+    "partially_observable_progress"
+  ],
+  "crb3-approval_wait-c04": [
+    "enough_evidence",
+    "partially_observable_progress"
+  ],
+  "crb3-parallel_join-c01": [
+    "enough_evidence",
+    "missing_semantic_completion",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-parallel_join-c02": [
+    "enough_evidence",
+    "missing_semantic_completion",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-parallel_join-c03": [
+    "enough_evidence",
+    "missing_semantic_completion",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-parallel_join-c04": [
+    "enough_evidence",
+    "missing_semantic_completion",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-loop_pause-c01": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-loop_pause-c02": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-loop_pause-c03": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-loop_pause-c04": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-compensation_pending-c01": [
+    "enough_evidence",
+    "ambiguous_external_commit",
+    "partially_observable_progress"
+  ],
+  "crb3-compensation_pending-c02": [
+    "enough_evidence",
+    "ambiguous_external_commit",
+    "partially_observable_progress"
+  ],
+  "crb3-compensation_pending-c03": [
+    "enough_evidence",
+    "ambiguous_external_commit",
+    "partially_observable_progress"
+  ],
+  "crb3-compensation_pending-c04": [
+    "enough_evidence",
+    "ambiguous_external_commit",
+    "partially_observable_progress"
+  ],
+  "crb3-async_callback-c01": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-async_callback-c02": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-async_callback-c03": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ],
+  "crb3-async_callback-c04": [
+    "enough_evidence",
+    "partially_observable_progress",
+    "conflicting_granularity"
+  ]
+}

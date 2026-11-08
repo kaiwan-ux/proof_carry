@@ -1,0 +1,16 @@
+{
+  "framework": "crewai",
+  "status": "ok",
+  "flow_id": "132474aa-dda1-4b53-89c8-b9af629ac5a1",
+  "before_reload_kickoff": [
+    "A",
+    "B"
+  ],
+  "after_reload_kickoff": [
+    "A",
+    "B",
+    "A",
+    "B"
+  ],
+  "reexecuted": true
+}

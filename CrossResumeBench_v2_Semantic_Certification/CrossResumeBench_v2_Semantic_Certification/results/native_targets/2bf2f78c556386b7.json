@@ -1,0 +1,24 @@
+{
+  "completed_units": [
+    "finish",
+    "submission"
+  ],
+  "executed_units": [
+    "reconcile:submission",
+    "callback_without_obligation:submission",
+    "finish"
+  ],
+  "final_ledger": {
+    "submit": 1
+  },
+  "outcome": "done",
+  "terminated": true,
+  "native_artifact": {
+    "kind": "maf_workflow_checkpoint",
+    "framework": "maf",
+    "real_native": true,
+    "workflow_name": "WorkflowBuilder-b0cad34f-7aa0-4931-89ac-61bde25b5bc9",
+    "checkpoint_count": 5,
+    "native_action_executors": 3
+  }
+}

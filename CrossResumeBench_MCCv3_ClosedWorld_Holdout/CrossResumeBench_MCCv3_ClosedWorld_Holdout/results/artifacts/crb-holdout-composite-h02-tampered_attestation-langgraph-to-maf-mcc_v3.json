@@ -1,0 +1,110 @@
+{
+  "row": {
+    "run_id": "crb-holdout-composite-h02-tampered_attestation-langgraph-to-maf-mcc_v3",
+    "source": "langgraph",
+    "target": "maf",
+    "case_id": "crb-holdout-composite-h02",
+    "family": "composite",
+    "evidence_variant": "tampered_attestation",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "INVALID_ATTESTATION",
+    "failure_types": [],
+    "payload_bytes": 1054,
+    "payload_sha256": "fccec9cbd68fc7f3cd145db97296ffbfc48621c1f67a57a29152664cb68ec480",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "sync_try_3"
+      },
+      {
+        "key": "retry:sync_retry",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "id": "sync_done_cb",
+        "kind": "callback",
+        "unit": "sync_callback"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-composite-h02",
+    "workflow": "mccv3_holdout_composite",
+    "source_runtime": "langgraph",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "0ea7bcef21fb1f387f65287847167981b9284c9da5d7cdfb725fe96b111ba392",
+    "continuation_contract_hash": "38b238c2fc97a785f42549efb6c6069761892b60c7f2cf5865aa1fec64b8ad50",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "retry_failed",
+        "semantic_unit": "sync_retry",
+        "data": {
+          "attempt": 2,
+          "max_attempts": 5
+        }
+      },
+      {
+        "type": "callback_pending",
+        "semantic_unit": "sync_callback",
+        "data": {
+          "callback_id": "sync_done_cb",
+          "operation": "sync_job",
+          "blocks": "sync_callback"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "b7a5225459dc066e77d7",
+        "fact_type": "obligation_state",
+        "subject": "sync_done_cb",
+        "value": "pending",
+        "scope": "crb-holdout-composite-h02",
+        "evidence": {
+          "kind": "callback",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-composite-h02-source-langgraph-crb-holdout-composite-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "INVALID_ATTESTATION",
+    "unresolved": [
+      {
+        "type": "INVALID_ATTESTATION",
+        "ids": [
+          "b7a5225459dc066e77d7"
+        ]
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "retry_current|sync_retry": [
+        "history"
+      ],
+      "retry_bound|sync_retry": [
+        "history"
+      ],
+      "callback_state|sync_done_cb": [
+        "history"
+      ]
+    }
+  }
+}

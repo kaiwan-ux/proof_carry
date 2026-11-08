@@ -1,0 +1,149 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-04",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-composite-04-self-langgraph-pc104-composite-04",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bd3-d476-63fa-8001-8c5af4c1bed5",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-composite-04-self-langgraph-pc104-composite-04"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "loop_plus_approval_a_index": 2
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "key": "loop_plus_approval_a_index",
+            "kind": "counter",
+            "value": 2
+          },
+          {
+            "kind": "unit",
+            "unit": "loop_plus_approval_b_requested"
+          }
+        ],
+        "units": {
+          "loop_plus_approval_b_requested": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {
+        "loop_plus_approval_b_request": 1
+      },
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "loop_plus_approval_a_index": 6
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_b_requested"
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_3"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 3
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_4"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 4
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_5"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 5
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_iter_6"
+        },
+        {
+          "key": "loop_plus_approval_a_index",
+          "kind": "counter",
+          "value": 6
+        },
+        {
+          "kind": "unit",
+          "unit": "loop_plus_approval_a_exit"
+        },
+        {
+          "id": "loop_plus_approval_b_request",
+          "kind": "approval",
+          "unit": "loop_plus_approval_b_approval_wait"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "loop_plus_approval_a_exit": 1,
+        "loop_plus_approval_a_iter_3": 1,
+        "loop_plus_approval_a_iter_4": 1,
+        "loop_plus_approval_a_iter_5": 1,
+        "loop_plus_approval_a_iter_6": 1,
+        "loop_plus_approval_b_approval_wait": 1,
+        "loop_plus_approval_b_requested": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 3.42200000000048
+}

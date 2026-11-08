@@ -1,0 +1,29 @@
+{
+  "experiment_name": "portaflow_pcc_v1_generalization_minimality",
+  "frameworks": ["langgraph", "crewai", "maf"],
+  "workflows": [
+    "branch_effect_approval",
+    "loop_effect",
+    "parallel_retry_join",
+    "retry_effect_uncertain",
+    "approval_loop",
+    "saga_compensation",
+    "nested_parallel_effect",
+    "branch_parallel_merge"
+  ],
+  "conditions": [
+    "state_only",
+    "raw_history",
+    "history_inference",
+    "full_pcc_v1",
+    "pcc_minus_history",
+    "pcc_minus_frontier",
+    "pcc_minus_obligations",
+    "pcc_minus_receipts",
+    "pcc_minus_contract"
+  ],
+  "expected_source_captures": 24,
+  "expected_target_rows": 432,
+  "llm_enabled": false,
+  "statistics_note": "Deterministic designed cases. Report exact case counts/proportions; do not treat the 432 rows as iid samples."
+}

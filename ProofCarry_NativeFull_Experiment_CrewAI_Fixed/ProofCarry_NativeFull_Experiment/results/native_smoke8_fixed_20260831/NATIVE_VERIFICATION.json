@@ -1,0 +1,30 @@
+{
+  "actual": {
+    "family_gate_rows": 24,
+    "migration_rows": 48,
+    "self_resume_rows": 24,
+    "source_capture_rows": 24
+  },
+  "checks": {
+    "all_run_ids_unique": true,
+    "exclusive_outcome_flags": true,
+    "family_gate_row_count": true,
+    "migration_row_count": true,
+    "self_resume_row_count": true,
+    "source_capture_row_count": true,
+    "technical_not_safe": true
+  },
+  "expected": {
+    "cases": 8,
+    "families": 8,
+    "family_gate_rows": 24,
+    "frameworks": 3,
+    "methods": 1,
+    "migration_rows": 48,
+    "pairs": 6,
+    "self_resume_rows": 24,
+    "source_capture_rows": 24,
+    "variants": 1
+  },
+  "passed": true
+}

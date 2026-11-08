@@ -1,0 +1,22 @@
+{
+  "framework": "langgraph",
+  "status": "ok",
+  "effect_count_after_pause": 1,
+  "effect_count_after_resume": 2,
+  "reentered_node": true,
+  "final": {
+    "completed": [
+      "A",
+      "B"
+    ]
+  },
+  "snapshot": {
+    "values": {
+      "completed": [
+        "A",
+        "B"
+      ]
+    },
+    "next": []
+  }
+}

@@ -1,0 +1,38 @@
+framework,framework_version,case_id,family,safe,technical_failure,lifecycle_returned,status,duration_ms,error
+langgraph,unknown,pc104-approval-01,approval,1,0,1,ok,10071.199500000148,
+langgraph,unknown,pc104-callback-01,callback,1,0,1,ok,10391.057499999079,
+langgraph,unknown,pc104-compensation-01,compensation,1,0,1,ok,9964.749999999185,
+langgraph,unknown,pc104-composite-01,composite,1,0,1,ok,11128.886399999828,
+langgraph,unknown,pc104-effect_commitment-01,effect_commitment,1,0,1,ok,10105.273600000146,
+langgraph,unknown,pc104-loop-01,loop,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+langgraph,unknown,pc104-parallel-01,parallel,1,0,1,ok,9956.917600000452,
+langgraph,unknown,pc104-retry-01,retry,1,0,1,ok,10110.01700000088,
+crewai,1.15.17,pc104-approval-01,approval,0,1,0,technical_failure,92180.59580000045,"Traceback (most recent call last):
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\native_full_study.py"", line 259, in run_native_full
+    out = runtime_factory(fw).self_resume_case(case, rd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 32, in self_resume_case
+    d=self._call('self_resume',case,run_dir,self.self_timeout)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\isolated_runtime.py"", line 25, in _call
+    return run_json_worker(root=ROOT,worker=WORKER,request=req,run_dir=Path(run_dir),timeout_seconds=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""F:\agentic wala\ProofCarry_NativeFull_Experiment (1)\ProofCarry_NativeFull_Experiment\src\crossresumebench_proofcarry\infra\process_guard.py"", line 65, in run_json_worker
+    raise IsolatedCallTimeout(f'isolated operation timed out after {timeout_seconds}s; see {outp.name} / {errp.name}')
+crossresumebench_proofcarry.infra.process_guard.IsolatedCallTimeout: isolated operation timed out after 90.0s; see isolated_worker.stdout.txt / isolated_worker.stderr.txt
+"
+crewai,1.15.17,pc104-callback-01,callback,1,0,1,ok,56874.52750000011,
+crewai,1.15.17,pc104-compensation-01,compensation,1,0,1,ok,58063.93279999975,
+crewai,1.15.17,pc104-composite-01,composite,1,0,1,ok,63940.76639999912,
+crewai,1.15.17,pc104-effect_commitment-01,effect_commitment,0,1,0,,0.0,ENVIRONMENT_OR_FAMILY_GATE_FAILED
+crewai,1.15.17,pc104-loop-01,loop,1,0,1,ok,56024.46389999932,
+crewai,1.15.17,pc104-parallel-01,parallel,1,0,1,ok,64414.83829999925,
+crewai,1.15.17,pc104-retry-01,retry,1,0,1,ok,49024.93390000018,
+maf,1.15.0,pc104-approval-01,approval,1,0,1,ok,1752.7466000010463,
+maf,1.15.0,pc104-callback-01,callback,1,0,1,ok,1706.9773000002897,
+maf,1.15.0,pc104-compensation-01,compensation,1,0,1,ok,1879.0649000002304,
+maf,1.15.0,pc104-composite-01,composite,1,0,1,ok,1988.35119999967,
+maf,1.15.0,pc104-effect_commitment-01,effect_commitment,1,0,1,ok,1674.136499999804,
+maf,1.15.0,pc104-loop-01,loop,1,0,1,ok,1837.470200000098,
+maf,1.15.0,pc104-parallel-01,parallel,1,0,1,ok,1636.740699999791,
+maf,1.15.0,pc104-retry-01,retry,1,0,1,ok,1845.4263000003266,

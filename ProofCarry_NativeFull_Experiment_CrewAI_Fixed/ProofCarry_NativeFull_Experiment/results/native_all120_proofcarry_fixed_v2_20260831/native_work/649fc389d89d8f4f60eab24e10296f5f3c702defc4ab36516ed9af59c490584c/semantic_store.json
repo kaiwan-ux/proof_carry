@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "bank_callback_request_sent"
+    },
+    {
+      "kind": "unit",
+      "unit": "bank_callback_request_new_callback"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "bank_callback_request_new_callback": 1,
+    "bank_callback_request_sent": 1
+  }
+}

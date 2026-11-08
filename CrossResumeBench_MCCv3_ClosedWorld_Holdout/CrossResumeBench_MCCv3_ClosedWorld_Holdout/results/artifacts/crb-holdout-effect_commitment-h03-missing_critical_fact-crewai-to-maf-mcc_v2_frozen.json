@@ -1,0 +1,64 @@
+{
+  "row": {
+    "run_id": "crb-holdout-effect_commitment-h03-missing_critical_fact-crewai-to-maf-mcc_v2_frozen",
+    "source": "crewai",
+    "target": "maf",
+    "case_id": "crb-holdout-effect_commitment-h03",
+    "family": "effect_commitment",
+    "evidence_variant": "missing_critical_fact",
+    "method": "mcc_v2_frozen",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "AMBIGUOUS_EXTERNAL_COMMIT",
+    "failure_types": [],
+    "payload_bytes": 505,
+    "payload_sha256": "3e32de14c19b1be8a47ff21db79bbbb0838023a9d0705ac198c49389ade29353",
+    "expected_plan": [
+      {
+        "kind": "unit",
+        "unit": "effect_ack"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "2.0",
+    "case_id": "crb-holdout-effect_commitment-h03",
+    "workflow": "mccv3_holdout_effect_commitment",
+    "source_runtime": "crewai",
+    "target_runtime": "maf",
+    "workflow_spec_hash": "9983bca743b768f2f2287c2263ee219e61e0d1b63d33cd5bf82f149dec48b19b",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "audit_emit",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      }
+    ],
+    "certificates": []
+  },
+  "report": {
+    "ambiguities": [
+      {
+        "type": "AMBIGUOUS_EXTERNAL_COMMIT",
+        "operation": "audit_emit"
+      }
+    ],
+    "certificate_log": [],
+    "inference_log": []
+  }
+}

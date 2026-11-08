@@ -1,0 +1,163 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-composite-14",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-composite-14-self-langgraph-pc104-composite-14",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4bd5-ffe0-6342-8001-3f5f834f3047",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-composite-14-self-langgraph-pc104-composite-14"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {
+          "effect_plus_parallel_a_op::partial": 1
+        },
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "effect",
+            "operation": "effect_plus_parallel_a_op::partial",
+            "unit": "effect_plus_parallel_a_partial_started"
+          },
+          {
+            "kind": "unit",
+            "unit": "effect_plus_parallel_b_b1"
+          },
+          {
+            "kind": "unit",
+            "unit": "effect_plus_parallel_b_b2_failed"
+          },
+          {
+            "kind": "unit",
+            "unit": "effect_plus_parallel_b_b4"
+          }
+        ],
+        "units": {
+          "effect_plus_parallel_a_partial_started": 1,
+          "effect_plus_parallel_b_b1": 1,
+          "effect_plus_parallel_b_b2_failed": 1,
+          "effect_plus_parallel_b_b4": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {
+        "effect_plus_parallel_a_partial_rollback": 1
+      },
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "effect_plus_parallel_a_op": 1,
+        "effect_plus_parallel_a_op::partial": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "effect_plus_parallel_a_op::partial",
+          "unit": "effect_plus_parallel_a_partial_started"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b1"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b2_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b4"
+        },
+        {
+          "action": "effect_plus_parallel_a_partial_rollback",
+          "kind": "compensation",
+          "unit": "effect_plus_parallel_a_partial_compensate"
+        },
+        {
+          "kind": "effect",
+          "operation": "effect_plus_parallel_a_op",
+          "unit": "effect_plus_parallel_a_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_a_ack"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b2_recover"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b3"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_b5"
+        },
+        {
+          "kind": "unit",
+          "unit": "effect_plus_parallel_b_join"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "effect_plus_parallel_a_ack": 1,
+        "effect_plus_parallel_a_attempt": 1,
+        "effect_plus_parallel_a_partial_compensate": 1,
+        "effect_plus_parallel_a_partial_started": 1,
+        "effect_plus_parallel_b_b1": 1,
+        "effect_plus_parallel_b_b2": 1,
+        "effect_plus_parallel_b_b2_failed": 1,
+        "effect_plus_parallel_b_b2_recover": 1,
+        "effect_plus_parallel_b_b3": 1,
+        "effect_plus_parallel_b_b4": 1,
+        "effect_plus_parallel_b_b5": 1,
+        "effect_plus_parallel_b_join": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.42200000000048
+}

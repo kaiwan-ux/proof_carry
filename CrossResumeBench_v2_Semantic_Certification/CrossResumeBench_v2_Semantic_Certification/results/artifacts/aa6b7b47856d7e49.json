@@ -1,0 +1,228 @@
+{
+  "case": {
+    "case_id": "crb2-pending_tool_then_semantic_close-v04",
+    "family": "pending_tool_then_semantic_close",
+    "variant": 4,
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-pending_tool_then_semantic_close-v04",
+      "amount": 104
+    },
+    "source_actions": [
+      {
+        "action_id": "tool_send",
+        "semantic_unit": "tool_scope",
+        "kind": "effect",
+        "operation": "toolop",
+        "depends_on": [],
+        "parent_unit": "tool_scope",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "committed",
+          "unit_completed": false,
+          "emit_completion": false,
+          "certify_effect": false
+        }
+      },
+      {
+        "action_id": "callback",
+        "semantic_unit": "tool_scope",
+        "kind": "callback",
+        "operation": "toolop",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "callback_id": "toolcb"
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "tool_t",
+        "semantic_unit": "tool_scope",
+        "kind": "effect",
+        "operation": "toolop",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "callback_t",
+        "semantic_unit": "tool_scope",
+        "kind": "callback",
+        "operation": "toolop",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "callback_id": "toolcb",
+          "completes_unit": false
+        }
+      },
+      {
+        "action_id": "post",
+        "semantic_unit": "tool_scope",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "completes_unit": true
+        }
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "tool_scope",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "toolop": 1
+    },
+    "mismatch_tags": [
+      "pending-tool",
+      "semantic-close",
+      "source:superstep_end",
+      "target:method_boundary"
+    ],
+    "source_boundary": "superstep_end",
+    "target_boundary": "method_boundary",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-pending_tool_then_semantic_close-v04",
+    "workflow": "pending_tool_then_semantic_close",
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-pending_tool_then_semantic_close-v04",
+      "amount": 104
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "tool_send",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "operation": "toolop",
+          "commit_status": "committed",
+          "result": "timeout",
+          "parent_unit": "tool_scope",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "callback_id": "toolcb",
+          "operation": "toolop"
+        }
+      }
+    ],
+    "certificates": [],
+    "source_ledger": {
+      "toolop": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [],
+    "truth_pending_obligations": [
+      {
+        "type": "callback",
+        "id": "toolcb",
+        "operation": "toolop"
+      }
+    ],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "case_id": "crb2-pending_tool_then_semantic_close-v04",
+    "workflow": "pending_tool_then_semantic_close",
+    "app_state": {
+      "variant": 4,
+      "request_id": "crb2-pending_tool_then_semantic_close-v04",
+      "amount": 104
+    },
+    "history": [
+      {
+        "seq": 1,
+        "type": "tool_call_observed",
+        "step": "tool_send",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "operation": "toolop",
+          "commit_status": "committed",
+          "result": "timeout",
+          "parent_unit": "tool_scope",
+          "unit_completion_observable": false
+        }
+      },
+      {
+        "seq": 2,
+        "type": "callback_pending",
+        "step": "callback",
+        "semantic_unit": "tool_scope",
+        "data": {
+          "callback_id": "toolcb",
+          "operation": "toolop"
+        }
+      }
+    ]
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "tool_scope"
+    ],
+    "executed_units": [
+      "tool_scope",
+      "callback_without_obligation:tool_scope",
+      "tool_scope",
+      "finish"
+    ],
+    "final_ledger": {
+      "toolop": 2
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "failure_types": [
+      "DUPLICATE_EXTERNAL_EFFECT",
+      "LEDGER_MISMATCH"
+    ],
+    "duplicate_effects": 1,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 1,
+    "wrong_outcome": 0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "finance_approval_requested"
+    },
+    {
+      "kind": "unit",
+      "unit": "finance_approval_abort_revoked"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "finance_approval_abort_revoked": 1,
+    "finance_approval_requested": 1
+  }
+}

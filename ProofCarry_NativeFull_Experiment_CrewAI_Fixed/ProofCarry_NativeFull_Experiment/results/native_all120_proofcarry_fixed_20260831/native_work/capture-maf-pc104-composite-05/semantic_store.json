@@ -1,0 +1,26 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "effect_plus_callback_a_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "effect_plus_callback_a_op",
+      "unit": "effect_plus_callback_a_attempt"
+    },
+    {
+      "kind": "unit",
+      "unit": "effect_plus_callback_b_request_sent"
+    }
+  ],
+  "units": {
+    "effect_plus_callback_a_attempt": 1,
+    "effect_plus_callback_b_request_sent": 1
+  }
+}

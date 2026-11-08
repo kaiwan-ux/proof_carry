@@ -1,0 +1,19 @@
+{
+  "workflow_name": "proofcarry-104-pc104-composite-01-self-maf-pc104-composite-01",
+  "graph_signature_hash": "6ddf2216f05acead1d7d0add7940b6b381b0d5651cd18d56e039cb537f1adf47",
+  "checkpoint_id": "e434e236-a1ca-4fa1-b1c2-6ec155cd9b8d",
+  "previous_checkpoint_id": "815d304b-fd5a-4b3c-892a-0de2faf1452c",
+  "timestamp": "2026-08-30T19:45:19.054505+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "source_boundary": {},
+      "resume": {}
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 2,
+  "metadata": {},
+  "version": "1.0"
+}

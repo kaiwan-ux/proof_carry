@@ -1,0 +1,18 @@
+{
+  "base_case_count": 120,
+  "cases_per_family": 15,
+  "families": 8,
+  "frozen_before_results": true,
+  "mechanism_bundle_files": [
+    "mechanism/proofcarry.py",
+    "mechanism/crypto.py",
+    "mechanism/certificates.py",
+    "src/crossresumebench_proofcarry/evidence.py",
+    "src/crossresumebench_proofcarry/semantics.py",
+    "src/crossresumebench_proofcarry/baselines.py"
+  ],
+  "notes": "Updated pre-result freeze includes 120 cases (15 per family), preserving the original 104 cases and adding 16 new cases; mechanism, runtime semantics, variants, methods, and certificate design are unchanged.",
+  "prior_mccv3_plain_source": "CrossResumeBench_MCCv3_Holdout_InfraFixA",
+  "proofcarry_mechanism_sha256": "5900e121047a1a9e293102f5edaa5cd0bd47107a4a312663d8b7d3163cda29cc",
+  "suite_sha256": "2005a143a97bcb33c1bec3136dc3992eac8d4a34f20bab43513fbbc1d54ccbe1"
+}

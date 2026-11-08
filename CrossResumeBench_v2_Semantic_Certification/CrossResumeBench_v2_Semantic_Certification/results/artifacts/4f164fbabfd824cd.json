@@ -1,0 +1,245 @@
+{
+  "case": {
+    "case_id": "crb2-conditional_effect_merge-v02",
+    "family": "conditional_effect_merge",
+    "variant": 2,
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-conditional_effect_merge-v02",
+      "amount": 102
+    },
+    "source_actions": [
+      {
+        "action_id": "route",
+        "semantic_unit": "route",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {
+          "decision": [
+            "route",
+            "left"
+          ]
+        }
+      },
+      {
+        "action_id": "left_effect",
+        "semantic_unit": "left_branch",
+        "kind": "effect",
+        "operation": "left_write",
+        "depends_on": [],
+        "parent_unit": "left_branch",
+        "metadata": {
+          "actual_commit": true,
+          "observed_commit": "unknown",
+          "unit_completed": true,
+          "emit_completion": true,
+          "certify_completion": false
+        }
+      }
+    ],
+    "target_actions": [
+      {
+        "action_id": "route_t",
+        "semantic_unit": "route",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "left_t",
+        "semantic_unit": "left_branch",
+        "kind": "effect",
+        "operation": "left_write",
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "merge",
+        "semantic_unit": "merge",
+        "kind": "step",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      },
+      {
+        "action_id": "finish",
+        "semantic_unit": "finish",
+        "kind": "finish",
+        "operation": null,
+        "depends_on": [],
+        "parent_unit": null,
+        "metadata": {}
+      }
+    ],
+    "target_dependencies": {},
+    "expected_semantic_units": [
+      "route",
+      "left_branch",
+      "merge",
+      "finish"
+    ],
+    "expected_effect_counts": {
+      "left_write": 1
+    },
+    "mismatch_tags": [
+      "conditional-merge",
+      "branch-completion",
+      "source:callback_wait",
+      "target:method_boundary"
+    ],
+    "source_boundary": "callback_wait",
+    "target_boundary": "method_boundary",
+    "metadata": {
+      "seed": 26082701,
+      "suite": "v2-independent-holdout",
+      "mechanism_frozen_before_suite": true
+    }
+  },
+  "source_capture": {
+    "case_id": "crb2-conditional_effect_merge-v02",
+    "workflow": "conditional_effect_merge",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-conditional_effect_merge-v02",
+      "amount": 102
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "route",
+        "semantic_unit": "route",
+        "data": {
+          "source_label": "route"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "route",
+        "semantic_unit": "route",
+        "data": {
+          "unit": "route"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "decision_made",
+        "step": "route",
+        "semantic_unit": "route",
+        "data": {
+          "key": "route",
+          "choice": "left"
+        }
+      },
+      {
+        "seq": 4,
+        "type": "tool_call_observed",
+        "step": "left_effect",
+        "semantic_unit": "left_branch",
+        "data": {
+          "operation": "left_write",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "left_branch",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "seq": 5,
+        "type": "semantic_unit_completed",
+        "step": "left_effect",
+        "semantic_unit": "left_branch",
+        "data": {
+          "unit": "left_branch"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "ac835ef6091b9b7ef420",
+        "fact_type": "effect_commitment",
+        "subject": "left_write",
+        "value": "committed",
+        "scope": "left_branch",
+        "evidence": {
+          "operation_id": "crb2-conditional_effect_merge-v02:left_write",
+          "idempotency_key": "idem:crb2-conditional_effect_merge-v02:left_write",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "71919a02099f8896a4902d7a82c7af61d7404bdc2b3b06b6e52d07222b19ebe4"
+      }
+    ],
+    "source_ledger": {
+      "left_write": 1
+    },
+    "native_observation": {
+      "kind": "semantic_simulator",
+      "framework": "semantic"
+    },
+    "truth_completed_units": [
+      "route",
+      "left_branch"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {
+      "route": "left"
+    },
+    "truth_counters": {}
+  },
+  "transfer": {
+    "case_id": "crb2-conditional_effect_merge-v02",
+    "workflow": "conditional_effect_merge",
+    "app_state": {
+      "variant": 2,
+      "request_id": "crb2-conditional_effect_merge-v02",
+      "amount": 102
+    }
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "left_branch",
+      "merge",
+      "route"
+    ],
+    "executed_units": [
+      "route",
+      "left_branch",
+      "merge",
+      "finish"
+    ],
+    "final_ledger": {
+      "left_write": 2
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "semantic_target"
+    }
+  },
+  "evaluation": {
+    "safe_completion": 0,
+    "safe_rejection": 0,
+    "unsafe_violation": 1,
+    "failure_types": [
+      "COMPLETED_SEMANTIC_UNIT_REPLAYED",
+      "DUPLICATE_EXTERNAL_EFFECT",
+      "LEDGER_MISMATCH"
+    ],
+    "duplicate_effects": 1,
+    "replayed_units": 2,
+    "missing_units": 0,
+    "wrong_ledger": 1,
+    "wrong_outcome": 0
+  }
+}

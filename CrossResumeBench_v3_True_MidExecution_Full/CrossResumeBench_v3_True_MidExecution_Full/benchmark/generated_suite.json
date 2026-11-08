@@ -1,0 +1,475 @@
+{
+  "benchmark": "CrossResumeBench_v3_True_MidExecution_Full",
+  "cases": [
+    {
+      "case_id": "crb3-effect_commitment-c01",
+      "family": "effect_commitment",
+      "description": "HTTP POST committed, ack pending",
+      "index": 1,
+      "params": {
+        "operation": "payment_post",
+        "effect_status": "committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit"
+      ]
+    },
+    {
+      "case_id": "crb3-effect_commitment-c02",
+      "family": "effect_commitment",
+      "description": "DB write not committed, ack pending",
+      "index": 2,
+      "params": {
+        "operation": "db_write",
+        "effect_status": "not_committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit"
+      ]
+    },
+    {
+      "case_id": "crb3-effect_commitment-c03",
+      "family": "effect_commitment",
+      "description": "Message publish committed, ack pending",
+      "index": 3,
+      "params": {
+        "operation": "message_publish",
+        "effect_status": "committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit"
+      ]
+    },
+    {
+      "case_id": "crb3-effect_commitment-c04",
+      "family": "effect_commitment",
+      "description": "Tool side effect not committed, ack pending",
+      "index": 4,
+      "params": {
+        "operation": "tool_side_effect",
+        "effect_status": "not_committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit"
+      ]
+    },
+    {
+      "case_id": "crb3-retry_pause-c01",
+      "family": "retry_pause",
+      "description": "after first failure",
+      "index": 1,
+      "params": {
+        "unit": "retry_task",
+        "current_attempt": 1,
+        "max_attempts": 3
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-retry_pause-c02",
+      "family": "retry_pause",
+      "description": "after second failure",
+      "index": 2,
+      "params": {
+        "unit": "retry_task",
+        "current_attempt": 2,
+        "max_attempts": 4
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-retry_pause-c03",
+      "family": "retry_pause",
+      "description": "near exhaustion",
+      "index": 3,
+      "params": {
+        "unit": "retry_task",
+        "current_attempt": 4,
+        "max_attempts": 5
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-retry_pause-c04",
+      "family": "retry_pause",
+      "description": "retry budget exhausted",
+      "index": 4,
+      "params": {
+        "unit": "retry_task",
+        "current_attempt": 3,
+        "max_attempts": 3
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-approval_wait-c01",
+      "family": "approval_wait",
+      "description": "single approval",
+      "index": 1,
+      "params": {
+        "request_id": "approve_release",
+        "approval_unit": "approval_gate"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-approval_wait-c02",
+      "family": "approval_wait",
+      "description": "approval with context",
+      "index": 2,
+      "params": {
+        "request_id": "approve_with_context",
+        "approval_unit": "approval_gate"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-approval_wait-c03",
+      "family": "approval_wait",
+      "description": "second approval",
+      "index": 3,
+      "params": {
+        "request_id": "approve_stage_2",
+        "approval_unit": "approval_gate"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-approval_wait-c04",
+      "family": "approval_wait",
+      "description": "sensitive action approval",
+      "index": 4,
+      "params": {
+        "request_id": "approve_sensitive_action",
+        "approval_unit": "approval_gate"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-parallel_join-c01",
+      "family": "parallel_join",
+      "description": "two branches, one completed",
+      "index": 1,
+      "params": {
+        "branches": [
+          "branch_a",
+          "branch_b"
+        ],
+        "completed": [
+          "branch_a"
+        ],
+        "join": "join",
+        "certified_branch": "branch_a"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "missing_semantic_completion",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-parallel_join-c02",
+      "family": "parallel_join",
+      "description": "three branches, one completed",
+      "index": 2,
+      "params": {
+        "branches": [
+          "branch_a",
+          "branch_b",
+          "branch_c"
+        ],
+        "completed": [
+          "branch_a"
+        ],
+        "join": "join",
+        "certified_branch": "branch_a"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "missing_semantic_completion",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-parallel_join-c03",
+      "family": "parallel_join",
+      "description": "three branches, two completed",
+      "index": 3,
+      "params": {
+        "branches": [
+          "branch_a",
+          "branch_b",
+          "branch_c"
+        ],
+        "completed": [
+          "branch_a",
+          "branch_b"
+        ],
+        "join": "join",
+        "certified_branch": "branch_b"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "missing_semantic_completion",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-parallel_join-c04",
+      "family": "parallel_join",
+      "description": "all branches complete, join pending",
+      "index": 4,
+      "params": {
+        "branches": [
+          "branch_a",
+          "branch_b",
+          "branch_c"
+        ],
+        "completed": [
+          "branch_a",
+          "branch_b",
+          "branch_c"
+        ],
+        "join": "join",
+        "certified_branch": "branch_c"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "missing_semantic_completion",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-loop_pause-c01",
+      "family": "loop_pause",
+      "description": "mid loop 2/5",
+      "index": 1,
+      "params": {
+        "counter_key": "loop:main",
+        "current": 2,
+        "total": 5,
+        "break": false
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-loop_pause-c02",
+      "family": "loop_pause",
+      "description": "mid loop 3/6",
+      "index": 2,
+      "params": {
+        "counter_key": "loop:main",
+        "current": 3,
+        "total": 6,
+        "break": false
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-loop_pause-c03",
+      "family": "loop_pause",
+      "description": "break condition already met",
+      "index": 3,
+      "params": {
+        "counter_key": "loop:main",
+        "current": 4,
+        "total": 10,
+        "break": true
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-loop_pause-c04",
+      "family": "loop_pause",
+      "description": "nested-inner equivalent 2/4",
+      "index": 4,
+      "params": {
+        "counter_key": "loop:main",
+        "current": 2,
+        "total": 4,
+        "break": false
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-compensation_pending-c01",
+      "family": "compensation_pending",
+      "description": "refund pending",
+      "index": 1,
+      "params": {
+        "operation": "payment",
+        "compensation": "refund_payment",
+        "effect_status": "committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-compensation_pending-c02",
+      "family": "compensation_pending",
+      "description": "release pending",
+      "index": 2,
+      "params": {
+        "operation": "reservation",
+        "compensation": "release_reservation",
+        "effect_status": "committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-compensation_pending-c03",
+      "family": "compensation_pending",
+      "description": "effect absent; compensation should be skipped",
+      "index": 3,
+      "params": {
+        "operation": "notification",
+        "compensation": "retract_notification",
+        "effect_status": "not_committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-compensation_pending-c04",
+      "family": "compensation_pending",
+      "description": "inventory rollback pending",
+      "index": 4,
+      "params": {
+        "operation": "inventory",
+        "compensation": "restore_inventory",
+        "effect_status": "committed"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "ambiguous_external_commit",
+        "partially_observable_progress"
+      ]
+    },
+    {
+      "case_id": "crb3-async_callback-c01",
+      "family": "async_callback",
+      "description": "tool result pending",
+      "index": 1,
+      "params": {
+        "callback_id": "tool_callback",
+        "operation": "tool_result",
+        "callback_unit": "callback_unit"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-async_callback-c02",
+      "family": "async_callback",
+      "description": "webhook callback pending",
+      "index": 2,
+      "params": {
+        "callback_id": "webhook_callback",
+        "operation": "webhook",
+        "callback_unit": "callback_unit"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-async_callback-c03",
+      "family": "async_callback",
+      "description": "async subtask completion pending",
+      "index": 3,
+      "params": {
+        "callback_id": "subtask_callback",
+        "operation": "async_subtask",
+        "callback_unit": "callback_unit"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    },
+    {
+      "case_id": "crb3-async_callback-c04",
+      "family": "async_callback",
+      "description": "callback vs timeout race pending",
+      "index": 4,
+      "params": {
+        "callback_id": "timeout_race_callback",
+        "operation": "timeout_race",
+        "callback_unit": "callback_unit"
+      },
+      "applicable_variants": [
+        "enough_evidence",
+        "partially_observable_progress",
+        "conflicting_granularity"
+      ]
+    }
+  ]
+}

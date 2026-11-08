@@ -1,0 +1,161 @@
+{
+  "source_capture": {
+    "case_id": "crb2-effect_parent_completion_gap-v01",
+    "workflow": "effect_parent_completion_gap",
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-effect_parent_completion_gap-v01",
+      "amount": 101
+    },
+    "portable_history": [
+      {
+        "seq": 1,
+        "type": "step_observed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "source_label": "prepare"
+        }
+      },
+      {
+        "seq": 2,
+        "type": "semantic_unit_completed",
+        "step": "prepare",
+        "semantic_unit": "prepare",
+        "data": {
+          "unit": "prepare"
+        }
+      },
+      {
+        "seq": 3,
+        "type": "tool_call_observed",
+        "step": "charge_native",
+        "semantic_unit": "purchase",
+        "data": {
+          "operation": "charge",
+          "commit_status": "unknown",
+          "result": "timeout",
+          "parent_unit": "purchase",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "39d73cd79057b967ab90",
+        "fact_type": "effect_commitment",
+        "subject": "charge",
+        "value": "committed",
+        "scope": "purchase",
+        "evidence": {
+          "operation_id": "crb2-effect_parent_completion_gap-v01:charge",
+          "idempotency_key": "idem:crb2-effect_parent_completion_gap-v01:charge",
+          "replay": "forbidden"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "f6d1ef9c730ed22b27b16f9f73c658dc7bf1abe8963c34a33d74666060c6397b"
+      },
+      {
+        "certificate_id": "305c794ade7f0177ff0b",
+        "fact_type": "semantic_completion",
+        "subject": "purchase",
+        "value": "completed",
+        "scope": "purchase",
+        "evidence": {
+          "operation": "charge",
+          "native_marker": "charge_native",
+          "reason": "effect_and_postconditions_completed"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "de207d2c26f63a80bb6f023dccc9432e9ebd68658d22107e738d83ba89736105"
+      }
+    ],
+    "source_ledger": {
+      "charge": 1
+    },
+    "native_observation": {
+      "kind": "langgraph_checkpoint",
+      "framework": "langgraph",
+      "real_native": true,
+      "next": [],
+      "values_keys": [
+        "ctx"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb2-src-crb2-effect_parent_completion_gap-v01",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a17a2-8958-6256-8002-92d8c5ea35cc"
+        }
+      },
+      "native_action_nodes": 2
+    },
+    "truth_completed_units": [
+      "prepare",
+      "purchase"
+    ],
+    "truth_pending_obligations": [],
+    "truth_dependencies": {},
+    "truth_decisions": {},
+    "truth_counters": {}
+  },
+  "transfer": {
+    "app_state": {
+      "variant": 1,
+      "request_id": "crb2-effect_parent_completion_gap-v01",
+      "amount": 101
+    },
+    "completed_units": [
+      "prepare",
+      "purchase"
+    ],
+    "pending_obligations": [],
+    "effect_facts": {
+      "charge": {
+        "status": "committed",
+        "source": "oracle_source_ledger"
+      }
+    },
+    "dependencies": {},
+    "decisions": {},
+    "counters": {}
+  },
+  "inference": {},
+  "target": {
+    "completed_units": [
+      "finish",
+      "prepare",
+      "purchase"
+    ],
+    "executed_units": [
+      "finish"
+    ],
+    "final_ledger": {
+      "charge": 1
+    },
+    "outcome": "done",
+    "terminated": true,
+    "native_artifact": {
+      "kind": "crewai_flow_state",
+      "framework": "crewai",
+      "real_native": true,
+      "flow_id": "72680b94-ac62-4387-be42-48d1f68bfa99",
+      "state_keys": [
+        "ctx",
+        "id"
+      ],
+      "native_action_count": 4
+    }
+  },
+  "evaluation": {
+    "safe_completion": 1,
+    "safe_rejection": 0,
+    "unsafe_violation": 0,
+    "failure_types": [],
+    "duplicate_effects": 0,
+    "replayed_units": 0,
+    "missing_units": 0,
+    "wrong_ledger": 0,
+    "wrong_outcome": 0
+  }
+}

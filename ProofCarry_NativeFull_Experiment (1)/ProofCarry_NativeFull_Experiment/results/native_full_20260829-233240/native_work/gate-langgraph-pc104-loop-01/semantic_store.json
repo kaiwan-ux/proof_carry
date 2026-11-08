@@ -1,0 +1,35 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "pagination_loop_index": 2
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 0,
+  "trace": [
+    {
+      "key": "pagination_loop_index",
+      "kind": "counter",
+      "value": 1
+    },
+    {
+      "kind": "unit",
+      "unit": "pagination_loop_iter_2"
+    },
+    {
+      "key": "pagination_loop_index",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "unit",
+      "unit": "pagination_loop_iter_3"
+    }
+  ],
+  "units": {
+    "pagination_loop_iter_2": 1,
+    "pagination_loop_iter_3": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": "effect_committed_ack_pending",
+  "family": "effect_acknowledgment_points",
+  "description": "Effect is committed exactly once; checkpoint occurs before acknowledgement.",
+  "source_semantic_unit": "commit_effect",
+  "target_next_units": [
+    "ack",
+    "finish"
+  ],
+  "expected_effect_count": 1,
+  "unsafe_if": [
+    "effect_count!=1",
+    "ack_count!=1",
+    "finish_count!=1",
+    "target_replays_commit_effect"
+  ],
+  "variants": {
+    "enough_evidence": "effect commitment and semantic completion are certified",
+    "ambiguous_external_commit": "tool call observed but commit status unknown and no effect certificate"
+  }
+}

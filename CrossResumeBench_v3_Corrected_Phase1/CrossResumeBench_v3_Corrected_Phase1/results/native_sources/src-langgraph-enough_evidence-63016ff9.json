@@ -1,0 +1,114 @@
+{
+  "native": {
+    "framework": "langgraph",
+    "case_id": "effect_committed_ack_pending",
+    "checkpoint_ref": "thread:crb3-lg-src-langgraph-enough_evidence-63016ff9",
+    "native_kind": "langgraph_state_snapshot",
+    "pending_work": [
+      "ack"
+    ],
+    "app_state": {
+      "phase": "effect_committed"
+    },
+    "history": [],
+    "certificates": [],
+    "native_observation": {
+      "next": [
+        "ack"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb3-lg-src-langgraph-enough_evidence-63016ff9",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a1800-5e26-64a4-8001-50aa6404c43b"
+        }
+      },
+      "values": {
+        "ledger_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_v3_Corrected_Phase1\\CrossResumeBench_v3_Corrected_Phase1\\results\\work\\src-langgraph-enough_evidence-63016ff9\\ledger.json",
+        "phase": "effect_committed"
+      }
+    },
+    "effect_count": 1
+  },
+  "capture": {
+    "case_id": "effect_committed_ack_pending",
+    "workflow": "phase1_effect_ack",
+    "app_state": {
+      "phase": "effect_committed"
+    },
+    "portable_history": [
+      {
+        "type": "tool_call_observed",
+        "step": "commit_effect",
+        "semantic_unit": "commit_effect",
+        "data": {
+          "operation": "effect",
+          "commit_status": "unknown",
+          "parent_unit": "commit_effect",
+          "unit_completion_observable": false
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "74ce30e2f4b83e928be6",
+        "fact_type": "effect_commitment",
+        "subject": "effect",
+        "value": "committed",
+        "scope": "effect_committed_ack_pending",
+        "evidence": {
+          "idempotency_key": "phase1-effect",
+          "native_checkpoint_ref": "thread:crb3-lg-src-langgraph-enough_evidence-63016ff9"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "69fcb2ca6607c8cdd5b751010187dc65fc15a692e8c43ea34cfc1b9ae5cd65e4"
+      },
+      {
+        "certificate_id": "fbbf4edf6309fea9799d",
+        "fact_type": "semantic_completion",
+        "subject": "commit_effect",
+        "value": "completed",
+        "scope": "effect_committed_ack_pending",
+        "evidence": {
+          "checkpoint_ref": "thread:crb3-lg-src-langgraph-enough_evidence-63016ff9"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "36534694e3062180ddaf92a4a2dbe690904a23d11341b4f0f64ae8845da71fd9"
+      }
+    ],
+    "source_ledger": {
+      "effect": 1
+    },
+    "native_observation": {
+      "next": [
+        "ack"
+      ],
+      "config": {
+        "configurable": {
+          "thread_id": "crb3-lg-src-langgraph-enough_evidence-63016ff9",
+          "checkpoint_ns": "",
+          "checkpoint_id": "1f1a1800-5e26-64a4-8001-50aa6404c43b"
+        }
+      },
+      "values": {
+        "ledger_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_v3_Corrected_Phase1\\CrossResumeBench_v3_Corrected_Phase1\\results\\work\\src-langgraph-enough_evidence-63016ff9\\ledger.json",
+        "phase": "effect_committed"
+      }
+    },
+    "truth_completed_units": [
+      "commit_effect"
+    ],
+    "truth_pending_obligations": [
+      {
+        "type": "ack"
+      }
+    ],
+    "truth_dependencies": {
+      "finish": [
+        "ack"
+      ]
+    },
+    "truth_decisions": {},
+    "truth_counters": {}
+  }
+}

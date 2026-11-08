@@ -1,0 +1,6 @@
+{
+  "case_id": "pc104-retry-01",
+  "framework": "crewai",
+  "operation": "self_resume",
+  "run_dir": "F:\\agentic wala\\CrossResumeBench_ProofCarry_104\\CrossResumeBench_ProofCarry_104\\results\\native_work\\probe-crewai-pc104-retry-01"
+}

@@ -1,0 +1,106 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-retry-04",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-retry-04-self-langgraph-pc104-retry-04",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a4ae0-b455-6d59-8001-429ffe6c3021",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-retry-04-self-langgraph-pc104-retry-04"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {
+          "inventory_retry_task_attempt": 1
+        },
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "inventory_retry_task_failed_1"
+          },
+          {
+            "key": "inventory_retry_task_attempt",
+            "kind": "counter",
+            "value": 1
+          }
+        ],
+        "units": {
+          "inventory_retry_task_failed_1": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "inventory_retry_task_attempt": 2
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "inventory_retry_task_failed_1"
+        },
+        {
+          "key": "inventory_retry_task_attempt",
+          "kind": "counter",
+          "value": 1
+        },
+        {
+          "kind": "unit",
+          "unit": "inventory_retry_task_attempt_2"
+        },
+        {
+          "key": "inventory_retry_task_attempt",
+          "kind": "counter",
+          "value": 2
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "inventory_retry_task_attempt_2": 1,
+        "inventory_retry_task_failed_1": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.95299999999952
+}

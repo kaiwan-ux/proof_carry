@@ -1,0 +1,5 @@
+# What to Tell the Supervisor Before Results Exist
+
+We are not assuming that PortaFlow is necessary. Our first deliverable is a falsification-oriented experiment. We implement equivalent continuation-sensitive workflows in the target frameworks, inspect their native persistence/resume behavior, and test whether ordinary application state is sufficient for continuation. We score correctness using hard behavioral contracts, especially duplicate side effects, replay, retry state, human approval and termination. Only if the problem is observed do we derive the PortaFlow continuation representation from the exact information that was lost.
+
+This makes the proposal stronger because the research contribution is not a predetermined common JSON schema. The representation is an experimental outcome: we will identify the minimal semantic information required for safe continuation, then evaluate whether explicitly preserving that information improves cross-runtime continuation over state-copy, history replay and restart baselines.

@@ -1,0 +1,142 @@
+{
+  "all_three_native_family_gates_pass": true,
+  "claim_level": "THREE_RUNTIME_NATIVE_MATRIX",
+  "framework_gate": {
+    "crewai": {
+      "passed": 8,
+      "total": 8
+    },
+    "langgraph": {
+      "passed": 8,
+      "total": 8
+    },
+    "maf": {
+      "passed": 8,
+      "total": 8
+    }
+  },
+  "methods": [
+    {
+      "method": "proofcarry",
+      "rows": 48,
+      "safe_completion": 48,
+      "safe_completion_rate_nontechnical": 1.0,
+      "safe_rejection": 0,
+      "technical": 0,
+      "unsafe": 0,
+      "unsafe_rate_nontechnical": 0.0
+    }
+  ],
+  "migration_rows": 48,
+  "proofcarry_nontechnical_rows": 48,
+  "proofcarry_pairs": [
+    {
+      "method": "proofcarry",
+      "rows": 8,
+      "safe_completion": 8,
+      "safe_completion_rate_nontechnical": 1.0,
+      "safe_rejection": 0,
+      "source": "crewai",
+      "target": "langgraph",
+      "technical": 0,
+      "unsafe": 0,
+      "unsafe_rate_nontechnical": 0.0
+    },
+    {
+      "method": "proofcarry",
+      "rows": 8,
+      "safe_completion": 8,
+      "safe_completion_rate_nontechnical": 1.0,
+      "safe_rejection": 0,
+      "source": "crewai",
+      "target": "maf",
+      "technical": 0,
+      "unsafe": 0,
+      "unsafe_rate_nontechnical": 0.0
+    },
+    {
+      "method": "proofcarry",
+      "rows": 8,
+      "safe_completion": 8,
+      "safe_completion_rate_nontechnical": 1.0,
+      "safe_rejection": 0,
+      "source": "langgraph",
+      "target": "crewai",
+      "technical": 0,
+      "unsafe": 0,
+      "unsafe_rate_nontechnical": 0.0
+    },
+    {
+      "method": "proofcarry",
+      "rows": 8,
+      "safe_completion": 8,
+      "safe_completion_rate_nontechnical": 1.0,
+      "safe_rejection": 0,
+      "source": "langgraph",
+      "target": "maf",
+      "technical": 0,
+      "unsafe": 0,
+      "unsafe_rate_nontechnical": 0.0
+    },
+    {
+      "method": "proofcarry",
+      "rows": 8,
+      "safe_completion": 8,
+      "safe_completion_rate_nontechnical": 1.0,
+      "safe_rejection": 0,
+      "source": "maf",
+      "target": "crewai",
+      "technical": 0,
+      "unsafe": 0,
+      "unsafe_rate_nontechnical": 0.0
+    },
+    {
+      "method": "proofcarry",
+      "rows": 8,
+      "safe_completion": 8,
+      "safe_completion_rate_nontechnical": 1.0,
+      "safe_rejection": 0,
+      "source": "maf",
+      "target": "langgraph",
+      "technical": 0,
+      "unsafe": 0,
+      "unsafe_rate_nontechnical": 0.0
+    }
+  ],
+  "proofcarry_zero_observed_unsafe": true,
+  "self_resume": {
+    "crewai": {
+      "safe": 8,
+      "technical": 0,
+      "total": 8
+    },
+    "langgraph": {
+      "safe": 8,
+      "technical": 0,
+      "total": 8
+    },
+    "maf": {
+      "safe": 8,
+      "technical": 0,
+      "total": 8
+    }
+  },
+  "source_capture": {
+    "crewai": {
+      "success": 8,
+      "technical": 0,
+      "total": 8
+    },
+    "langgraph": {
+      "success": 8,
+      "technical": 0,
+      "total": 8
+    },
+    "maf": {
+      "success": 8,
+      "technical": 0,
+      "total": 8
+    }
+  },
+  "technical_failures": 0
+}

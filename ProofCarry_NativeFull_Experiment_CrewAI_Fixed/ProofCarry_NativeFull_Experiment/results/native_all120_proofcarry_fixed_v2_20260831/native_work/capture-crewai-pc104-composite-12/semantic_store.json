@@ -1,0 +1,33 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "retry_plus_comp_a_task_attempt": 4
+  },
+  "decisions": {},
+  "effects": {
+    "retry_plus_comp_b_op": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "retry_plus_comp_a_task_failed_4"
+    },
+    {
+      "key": "retry_plus_comp_a_task_attempt",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "effect",
+      "operation": "retry_plus_comp_b_op",
+      "unit": "retry_plus_comp_b_effect"
+    }
+  ],
+  "units": {
+    "retry_plus_comp_a_task_failed_4": 1,
+    "retry_plus_comp_b_effect": 1
+  }
+}

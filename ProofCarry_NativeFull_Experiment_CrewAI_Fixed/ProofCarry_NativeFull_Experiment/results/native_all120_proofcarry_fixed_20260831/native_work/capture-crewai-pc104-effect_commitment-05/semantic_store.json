@@ -1,0 +1,21 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "cloud_job_start_op::partial": 1
+  },
+  "finish_count": 0,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "cloud_job_start_op::partial",
+      "unit": "cloud_job_start_partial_started"
+    }
+  ],
+  "units": {
+    "cloud_job_start_partial_started": 1
+  }
+}

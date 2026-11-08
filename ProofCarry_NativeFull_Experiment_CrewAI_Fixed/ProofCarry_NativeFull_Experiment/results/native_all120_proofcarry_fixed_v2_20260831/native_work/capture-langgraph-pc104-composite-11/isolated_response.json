@@ -1,0 +1,72 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-composite-11",
+    "checkpoint_ref": "thread:proofcarry-104-pc104-composite-11-capture-langgraph-pc104-composite-11",
+    "framework": "langgraph",
+    "native_kind": "langgraph_checkpoint",
+    "native_observation": {
+      "config": {
+        "configurable": {
+          "checkpoint_id": "1f1a4bd5-7598-64f9-8001-ec722a9b6b6b",
+          "checkpoint_ns": "",
+          "thread_id": "proofcarry-104-pc104-composite-11-capture-langgraph-pc104-composite-11"
+        }
+      },
+      "framework": "langgraph",
+      "identifier_label": "node_id",
+      "next": [
+        "resume"
+      ],
+      "pause_status": "waiting",
+      "semantic_namespace": "lg.node",
+      "values_keys": [
+        "case_id",
+        "phase",
+        "store_path"
+      ]
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {},
+      "finish_count": 0,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_approval_a_b2"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_approval_a_b3"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_approval_a_b4_failed"
+        },
+        {
+          "kind": "unit",
+          "unit": "parallel_plus_approval_b_requested"
+        }
+      ],
+      "units": {
+        "parallel_plus_approval_a_b2": 1,
+        "parallel_plus_approval_a_b3": 1,
+        "parallel_plus_approval_a_b4_failed": 1,
+        "parallel_plus_approval_b_requested": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 2.609999999998763
+}

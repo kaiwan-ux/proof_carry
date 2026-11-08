@@ -1,0 +1,44 @@
+{
+  "experiment_name": "PortaFlow_PCC_v3_True_Heldout_Generalization",
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "workflows": [
+    "inventory_callback_fulfillment",
+    "multi_effect_order_dispatch",
+    "quorum_parallel_2of3",
+    "race_first_success_cancel",
+    "nested_loop_branch_retry_v2",
+    "human_edit_publish",
+    "saga_dual_compensation",
+    "lease_renewal_handoff",
+    "mixed_idempotency_effects",
+    "map_reduce_threshold"
+  ],
+  "frozen_candidates": {
+    "hybrid_minimal": {
+      "components": [
+        "history",
+        "receipts"
+      ],
+      "inference_mode": "hybrid"
+    },
+    "explicit_minimal": {
+      "components": [
+        "frontier",
+        "obligations",
+        "receipts",
+        "contract"
+      ],
+      "inference_mode": "explicit"
+    }
+  },
+  "llm": {
+    "enabled_by_default": false,
+    "model": "openai/gpt-oss-120b",
+    "base_url": "https://api.groq.com/openai/v1",
+    "repeats": 3
+  }
+}

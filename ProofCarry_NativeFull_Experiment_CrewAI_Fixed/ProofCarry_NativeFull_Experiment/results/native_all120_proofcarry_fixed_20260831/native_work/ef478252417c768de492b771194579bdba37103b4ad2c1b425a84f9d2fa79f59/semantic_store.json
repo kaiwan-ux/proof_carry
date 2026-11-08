@@ -1,0 +1,32 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {
+    "vendor_comp_rollback": 1
+  },
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "vendor_comp_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "vendor_comp_op",
+      "unit": "vendor_comp_effect"
+    },
+    {
+      "action": "vendor_comp_rollback",
+      "kind": "compensation",
+      "unit": "vendor_comp_compensate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "vendor_comp_compensate": 1,
+    "vendor_comp_effect": 1
+  }
+}

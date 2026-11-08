@@ -1,0 +1,32 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {
+    "order_comp_rollback": 1
+  },
+  "counters": {},
+  "decisions": {},
+  "effects": {
+    "order_comp_op": 1
+  },
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "effect",
+      "operation": "order_comp_op",
+      "unit": "order_comp_effect"
+    },
+    {
+      "action": "order_comp_rollback",
+      "kind": "compensation",
+      "unit": "order_comp_compensate"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "order_comp_compensate": 1,
+    "order_comp_effect": 1
+  }
+}

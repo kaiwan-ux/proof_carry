@@ -1,0 +1,112 @@
+{
+  "row": {
+    "run_id": "crb-holdout-compensation_pending-h02-identity_alias_without_binding-langgraph-to-crewai-mcc_v3",
+    "source": "langgraph",
+    "target": "crewai",
+    "case_id": "crb-holdout-compensation_pending-h02",
+    "family": "compensation_pending",
+    "evidence_variant": "identity_alias_without_binding",
+    "method": "mcc_v3",
+    "safe_completion": 0,
+    "safe_rejection": 1,
+    "unsafe_violation": 0,
+    "technical_failure": 0,
+    "reject_reason": "UNPROVEN_REQUIRED_FACT",
+    "failure_types": [],
+    "payload_bytes": 1652,
+    "payload_sha256": "819c66df9346090e84ed3dcbac1d2285180587420d6c6785e4486b70f643b656",
+    "expected_plan": [
+      {
+        "action": "release_seat",
+        "kind": "compensation",
+        "unit": "compensation"
+      },
+      {
+        "kind": "finish"
+      }
+    ],
+    "actual_plan": [],
+    "error": ""
+  },
+  "payload": {
+    "mcc_version": "3.0",
+    "case_id": "crb-holdout-compensation_pending-h02",
+    "workflow": "mccv3_holdout_compensation_pending",
+    "source_runtime": "langgraph",
+    "target_runtime": "crewai",
+    "workflow_spec_hash": "799109b9622567b78f4b49f8ad55f0e5ca5f24c14ade9247af99b395cf703072",
+    "continuation_contract_hash": "3aa34e94ddb7aeffff90d2fcd2fcf2175a743c1f3b818da02cb498276c4e51a8",
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "history": [
+      {
+        "type": "tool_call_observed",
+        "semantic_unit": "effect_attempt",
+        "data": {
+          "operation": "seat_hold",
+          "commit_status": "unknown",
+          "parent_unit": "effect_attempt",
+          "unit_completion_observable": true
+        }
+      },
+      {
+        "type": "compensation_required",
+        "semantic_unit": "compensation",
+        "data": {
+          "compensation_action": "src_alias__release_seat",
+          "effect": "seat_hold"
+        }
+      }
+    ],
+    "certificates": [
+      {
+        "certificate_id": "5189656acde06675070d",
+        "fact_type": "effect_commitment",
+        "subject": "seat_hold",
+        "value": "committed",
+        "scope": "crb-holdout-compensation_pending-h02",
+        "evidence": {
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h02-source-langgraph-crb-holdout-compensation_pending-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "53334a84219f40bc76715d56fdca889f2ef823f16ba67ab8111cebcc5324a1f1"
+      },
+      {
+        "certificate_id": "4a24b6813bcbf604eece",
+        "fact_type": "obligation_state",
+        "subject": "src_alias__release_seat",
+        "value": "pending",
+        "scope": "crb-holdout-compensation_pending-h02",
+        "evidence": {
+          "kind": "compensation",
+          "native_checkpoint_ref": "thread:mccv3-holdout-crb-holdout-compensation_pending-h02-source-langgraph-crb-holdout-compensation_pending-h02"
+        },
+        "issuer": "crossresumebench_witness",
+        "evidence_hash": "d87c5f02cef179b75fcb8bc83cecd10b188c83ff0a70e54114752194be850ea3"
+      }
+    ]
+  },
+  "report": {
+    "admissible": false,
+    "reason": "UNPROVEN_REQUIRED_FACT",
+    "unresolved": [
+      {
+        "type": "UNPROVEN_REQUIRED_FACT",
+        "fact_type": "compensation_state",
+        "subject": "release_seat",
+        "purpose": "know whether rollback remains required"
+      }
+    ],
+    "bindings": {},
+    "provenance": {
+      "compensation_state|src_alias__release_seat": [
+        "history",
+        "certificate"
+      ],
+      "effect_status|seat_hold": [
+        "certificate"
+      ]
+    }
+  }
+}

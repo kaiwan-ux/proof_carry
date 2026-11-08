@@ -1,0 +1,17 @@
+{
+  "seed": 20260830,
+  "semantic_variants": [
+    "enough",
+    "irrelevant_noise",
+    "missing_critical",
+    "contradictory_fact",
+    "identity_missing",
+    "dependency_unresolved",
+    "incomplete_snapshot"
+  ],
+  "performance_warmups": 5,
+  "performance_repetitions": 30,
+  "test_key_env": "PROOFCARRY_TEST_KEY",
+  "native_mode": "auto",
+  "note": "Test HMAC key is deterministic unless environment override is supplied."
+}

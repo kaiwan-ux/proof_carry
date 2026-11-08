@@ -1,0 +1,38 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "payment_retry_task_attempt": 2
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "payment_retry_task_failed_1"
+    },
+    {
+      "key": "payment_retry_task_attempt",
+      "kind": "counter",
+      "value": 1
+    },
+    {
+      "kind": "unit",
+      "unit": "payment_retry_task_attempt_2"
+    },
+    {
+      "key": "payment_retry_task_attempt",
+      "kind": "counter",
+      "value": 2
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "payment_retry_task_attempt_2": 1,
+    "payment_retry_task_failed_1": 1
+  }
+}

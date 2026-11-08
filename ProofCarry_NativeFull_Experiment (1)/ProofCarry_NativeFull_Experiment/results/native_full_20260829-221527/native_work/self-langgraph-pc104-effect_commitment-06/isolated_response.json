@@ -1,0 +1,95 @@
+{
+  "lifecycle_returned": true,
+  "operation": "self_resume",
+  "result": {
+    "pause": {
+      "app_state": {
+        "phase": "mid_execution"
+      },
+      "case_id": "pc104-effect_commitment-06",
+      "checkpoint_ref": "thread:proofcarry-104-pc104-effect_commitment-06-self-langgraph-pc104-effect_commitment-06",
+      "framework": "langgraph",
+      "native_kind": "langgraph_checkpoint",
+      "native_observation": {
+        "config": {
+          "configurable": {
+            "checkpoint_id": "1f1a3cfa-0fc3-6c7e-8001-3022140ffdc2",
+            "checkpoint_ns": "",
+            "thread_id": "proofcarry-104-pc104-effect_commitment-06-self-langgraph-pc104-effect_commitment-06"
+          }
+        },
+        "framework": "langgraph",
+        "identifier_label": "node_id",
+        "next": [
+          "resume"
+        ],
+        "pause_status": "waiting",
+        "semantic_namespace": "lg.node",
+        "values_keys": [
+          "case_id",
+          "phase",
+          "store_path"
+        ]
+      },
+      "pending_work": [
+        "resume"
+      ],
+      "source_store": {
+        "approvals": {},
+        "callbacks": {},
+        "compensations": {},
+        "counters": {},
+        "decisions": {},
+        "effects": {},
+        "finish_count": 0,
+        "trace": [
+          {
+            "kind": "unit",
+            "unit": "webhook_dispatch_attempt_recorded"
+          }
+        ],
+        "units": {
+          "webhook_dispatch_attempt_recorded": 1
+        }
+      }
+    },
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "webhook_dispatch_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "unit",
+          "unit": "webhook_dispatch_attempt_recorded"
+        },
+        {
+          "kind": "effect",
+          "operation": "webhook_dispatch_op",
+          "unit": "webhook_dispatch_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "webhook_dispatch_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "webhook_dispatch_ack": 1,
+        "webhook_dispatch_attempt": 1,
+        "webhook_dispatch_attempt_recorded": 1
+      }
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 4.078000000000429
+}

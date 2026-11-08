@@ -1,0 +1,128 @@
+{
+  "store": {
+    "effects": {},
+    "units": {
+      "approval_requested": 1,
+      "batch_done": 1,
+      "batch_iter_1": 1,
+      "batch_iter_2": 1,
+      "batch_iter_3": 1,
+      "batch_iter_4": 1,
+      "batch_iter_5": 1,
+      "batch_iter_6": 1
+    },
+    "approvals": {},
+    "callbacks": {},
+    "compensations": {},
+    "counters": {
+      "loop:batch": 6
+    },
+    "decisions": {
+      "batch_break": false
+    },
+    "finish_count": 1,
+    "trace": [
+      {
+        "kind": "unit",
+        "unit": "batch_iter_1"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_2"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_3"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 3
+      },
+      {
+        "key": "batch_break",
+        "kind": "decision",
+        "value": false
+      },
+      {
+        "kind": "unit",
+        "unit": "approval_requested"
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_4"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 4
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_5"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 5
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_iter_6"
+      },
+      {
+        "key": "loop:batch",
+        "kind": "counter",
+        "value": 6
+      },
+      {
+        "kind": "unit",
+        "unit": "batch_done"
+      },
+      {
+        "kind": "finish"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "batch_iter_4"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_5"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 5
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_iter_6"
+    },
+    {
+      "kind": "counter",
+      "key": "loop:batch",
+      "value": 6
+    },
+    {
+      "kind": "unit",
+      "unit": "batch_done"
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "native_kind": "langgraph_target_graph",
+  "final": {
+    "store_path": "C:\\Users\\Tech Mehal\\Desktop\\agentic wala\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\CrossResumeBench_MCCv3_ClosedWorld_Holdout\\results\\work\\crb-holdout-composite-h04-identity_alias_without_binding-maf-to-langgraph-aaif_reference\\semantic_store.json",
+    "phase": "finished"
+  }
+}

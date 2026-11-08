@@ -1,0 +1,39 @@
+{
+  "lifecycle_returned": false,
+  "operation": "self_resume",
+  "result": {
+    "restore_completed": true,
+    "safe": true,
+    "store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {},
+      "decisions": {},
+      "effects": {
+        "payment_capture_op": 1
+      },
+      "finish_count": 1,
+      "trace": [
+        {
+          "kind": "effect",
+          "operation": "payment_capture_op",
+          "unit": "payment_capture_attempt"
+        },
+        {
+          "kind": "unit",
+          "unit": "payment_capture_ack"
+        },
+        {
+          "kind": "finish"
+        }
+      ],
+      "units": {
+        "payment_capture_ack": 1,
+        "payment_capture_attempt": 1
+      }
+    }
+  },
+  "status": "semantic_complete_lifecycle_hang",
+  "worker_duration_sec": 66.64099999999962
+}

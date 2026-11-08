@@ -1,0 +1,33 @@
+{
+  "benchmark_version": "2.0",
+  "frameworks": [
+    "langgraph",
+    "crewai",
+    "maf"
+  ],
+  "native_baselines": [
+    "history_inference",
+    "aaif_reference",
+    "caplease_reference",
+    "aaif_plus_caplease_reference",
+    "explicit_minimal",
+    "mcc_v2",
+    "oracle"
+  ],
+  "native_cases": "canonical_variant_1_per_family",
+  "require_zero_technical_failures": true,
+  "seed": 26082701,
+  "semantic_baselines": [
+    "state_only",
+    "raw_history",
+    "history_inference",
+    "aaif_reference",
+    "caplease_reference",
+    "aaif_plus_caplease_reference",
+    "explicit_minimal",
+    "full_pcc",
+    "mcc_v2",
+    "oracle"
+  ],
+  "variants_per_family": 5
+}

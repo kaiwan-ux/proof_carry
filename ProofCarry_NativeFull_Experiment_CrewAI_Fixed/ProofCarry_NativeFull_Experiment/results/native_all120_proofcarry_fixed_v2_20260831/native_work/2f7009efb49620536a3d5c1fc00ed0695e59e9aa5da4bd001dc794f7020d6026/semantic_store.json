@@ -1,0 +1,38 @@
+{
+  "approvals": {},
+  "callbacks": {},
+  "compensations": {},
+  "counters": {
+    "credential_retry_task_attempt": 5
+  },
+  "decisions": {},
+  "effects": {},
+  "finish_count": 1,
+  "trace": [
+    {
+      "kind": "unit",
+      "unit": "credential_retry_task_failed_4"
+    },
+    {
+      "key": "credential_retry_task_attempt",
+      "kind": "counter",
+      "value": 4
+    },
+    {
+      "kind": "unit",
+      "unit": "credential_retry_task_attempt_5"
+    },
+    {
+      "key": "credential_retry_task_attempt",
+      "kind": "counter",
+      "value": 5
+    },
+    {
+      "kind": "finish"
+    }
+  ],
+  "units": {
+    "credential_retry_task_attempt_5": 1,
+    "credential_retry_task_failed_4": 1
+  }
+}

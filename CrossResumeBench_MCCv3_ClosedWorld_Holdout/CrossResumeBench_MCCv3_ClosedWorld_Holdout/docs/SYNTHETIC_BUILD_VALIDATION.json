@@ -1,0 +1,77 @@
+{
+  "gate": {
+    "go_for_mccv3_claims": true,
+    "mcc_v3_matches_preregistered_expectations": true,
+    "mcc_v3_zero_unsafe": true,
+    "native_self_resume_all": true,
+    "row_count_exact": true,
+    "self_rows_exact": true,
+    "source_capture_all": true,
+    "source_rows_exact": true,
+    "zero_technical": true
+  },
+  "methods": {
+    "aaif_plus_caplease_reference": {
+      "rows": 768,
+      "safe_completion": 462,
+      "safe_rejection": 0,
+      "technical": 0,
+      "unsafe": 306
+    },
+    "aaif_reference": {
+      "rows": 768,
+      "safe_completion": 294,
+      "safe_rejection": 240,
+      "technical": 0,
+      "unsafe": 234
+    },
+    "caplease_reference": {
+      "rows": 768,
+      "safe_completion": 462,
+      "safe_rejection": 0,
+      "technical": 0,
+      "unsafe": 306
+    },
+    "explicit_minimal": {
+      "rows": 768,
+      "safe_completion": 768,
+      "safe_rejection": 0,
+      "technical": 0,
+      "unsafe": 0
+    },
+    "history_inference": {
+      "rows": 768,
+      "safe_completion": 402,
+      "safe_rejection": 0,
+      "technical": 0,
+      "unsafe": 366
+    },
+    "mcc_v2_frozen": {
+      "rows": 768,
+      "safe_completion": 420,
+      "safe_rejection": 54,
+      "technical": 0,
+      "unsafe": 294
+    },
+    "mcc_v3": {
+      "rows": 768,
+      "safe_completion": 486,
+      "safe_rejection": 282,
+      "technical": 0,
+      "unsafe": 0
+    },
+    "oracle": {
+      "rows": 768,
+      "safe_completion": 768,
+      "safe_rejection": 0,
+      "technical": 0,
+      "unsafe": 0
+    }
+  },
+  "migration_rows": 6144,
+  "note": "This validates benchmark orchestration and mechanism expectations only. Native LangGraph/CrewAI/MAF results must be produced by the user run.",
+  "role": "BUILD_VALIDATION_ONLY_NOT_RESEARCH_EVIDENCE",
+  "self_resume_rows": 96,
+  "source_capture_rows": 96,
+  "synthetic_runtime": "FakeRuntime"
+}

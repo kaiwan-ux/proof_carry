@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCC v1",
+  "type": "object",
+  "required": [
+    "history",
+    "effect_receipts"
+  ],
+  "properties": {
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "effect_receipts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "operation_id",
+          "status",
+          "replay"
+        ],
+        "properties": {
+          "operation_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "committed",
+              "not_committed"
+            ]
+          },
+          "replay": {
+            "enum": [
+              "forbidden",
+              "allowed"
+            ]
+          },
+          "idempotency_key": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

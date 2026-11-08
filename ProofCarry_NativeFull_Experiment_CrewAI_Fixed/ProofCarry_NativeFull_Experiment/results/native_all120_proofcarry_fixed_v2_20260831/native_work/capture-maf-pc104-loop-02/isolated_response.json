@@ -1,0 +1,73 @@
+{
+  "lifecycle_returned": true,
+  "operation": "capture",
+  "result": {
+    "app_state": {
+      "phase": "mid_execution"
+    },
+    "case_id": "pc104-loop-02",
+    "checkpoint_ref": "cc6590e4-5534-42c6-95a1-4a34ee4366f2",
+    "framework": "maf",
+    "native_kind": "maf_superstep_file_checkpoint",
+    "native_observation": {
+      "checkpoint_count": 2,
+      "checkpoint_id": "cc6590e4-5534-42c6-95a1-4a34ee4366f2",
+      "event_trace": [
+        {
+          "class": "WorkflowEvent",
+          "type": "started"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "status"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "superstep_started"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "executor_invoked"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "executor_completed"
+        },
+        {
+          "class": "WorkflowEvent",
+          "type": "superstep_completed"
+        }
+      ],
+      "framework": "maf",
+      "handler_typing_mode": "explicit",
+      "identifier_label": "activity_id",
+      "pause_status": "suspended",
+      "semantic_namespace": "maf.activity",
+      "workflow_name": "proofcarry-104-pc104-loop-02-capture-maf-pc104-loop-02"
+    },
+    "pending_work": [
+      "resume"
+    ],
+    "source_store": {
+      "approvals": {},
+      "callbacks": {},
+      "compensations": {},
+      "counters": {
+        "batch_loop_index": 2
+      },
+      "decisions": {},
+      "effects": {},
+      "finish_count": 0,
+      "trace": [
+        {
+          "key": "batch_loop_index",
+          "kind": "counter",
+          "value": 2
+        }
+      ],
+      "units": {}
+    }
+  },
+  "status": "ok",
+  "worker_duration_sec": 0.5309999999990396
+}
